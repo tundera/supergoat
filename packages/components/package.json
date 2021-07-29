@@ -17,8 +17,8 @@
   "main": "dist/components.js",
   "module": "dist/components.module.js",
   "scripts": {
-    "build": "rimraf --no-glob ./dist && microbundle --tsconfig ./tsconfig.build.json --jsx React.createElement --compress",
-    "build:react17jsx": "microbundle --tsconfig ./tsconfig.build.json --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx --compress",
+    "build": "microbundle --tsconfig ./tsconfig.build.json --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx --compress",
+    "build:legacy": "rimraf --no-glob ./dist && microbundle --tsconfig ./tsconfig.build.json --jsx React.createElement --compress",
     "dev": "microbundle watch",
     "clean": "rimraf --no-glob ./dist ./tsconfig.tsbuildinfo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
