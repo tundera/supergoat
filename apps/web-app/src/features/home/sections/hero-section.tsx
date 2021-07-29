@@ -4,6 +4,8 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { useTranslation } from 'next-i18next';
 
+import workflowLogo from '../../../../public/images/workflow-logo.svg';
+
 type Props = {
   children?: never;
 };
@@ -93,11 +95,12 @@ export const HeroSection: React.FC<Props> = () => {
                       <div className="px-5 pt-4 flex items-center justify-between">
                         <div>
                           <Image
-                            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                            src={workflowLogo}
                             width={500}
                             height={500}
                             className="h-8 w-auto"
                             alt="Workflow logo"
+                            placeholder="blur"
                           />
                         </div>
                         <div className="-mr-2">
