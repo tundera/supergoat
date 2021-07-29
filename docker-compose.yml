@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  web-app-dev:
+    # Service must be started explicitly with docker-compose up web-app
+    profiles:
+      - donotstart
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    stdin_open: true
+    ports:
+      - target: 8000
+        published: 8000
+        protocol: tcp
+    container_name: web-app-dev
+    volumes:
+      - .:/app/
+      # the volumes below prevents our host system's node_modules to be mounted
+      - nm_exclude_root:/app/node_modules/
+      - nm_exclude_web-app:/app/apps/web-app/node_modules/
+      - nm_exclude_blog-app:/app/apps/blog-app/node_modules/
+      - nm_exclude_core:/app/packages/core/node_modules/
+      - nm_exclude_db:/app/packages/db/node_modules/
+      - nm_exclude_components:/app/packages/components/node_modules/
+      # the volume below prevents our host system's build to be mounted
+      - build_excl_web-app:/app/apps/web-app/.next/
+    depends_on:
+      - main-db
+
+  main-db:
+    image: postgres:13-alpine
+    ports:
+      - target: 5432
+        published: 5432
+        protocol: tcp
+    environment:
+      - POSTGRES_DB=maindb
+      - POSTGRES_PASSWORD=!ChangeMe!
+      - POSTGRES_USER=nextjs
+    volumes:
+      - db_data:/var/lib/postgresql/data:rw
+      # you may use a bind-mounted host directory instead,
+      # so that it is harder to accidentally remove the volume and lose all your data!
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+
+volumes:
+  nm_exclude_root:
+  nm_exclude_web-app:
+  nm_exclude_blog-app:
+  nm_exclude_core:
+  nm_exclude_db:
+  nm_exclude_components:
+  build_excl_web-app:
+  db_data:
