@@ -9,7 +9,7 @@ import Document, {
 import { ColorModeScript } from '@chakra-ui/react'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
