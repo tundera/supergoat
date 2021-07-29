@@ -34,7 +34,6 @@
   },
   "scripts": {
     "clean": "wsrun clean",
-    "build": "ultra -r build",
     "test:unit": "ultra -r --concurrency 15 test:unit",
     "fix:staged-files": "ultra -r fix:staged-files",
     "fix:all-files": "ultra -r fix:all-files",
@@ -78,6 +77,9 @@
     "pretty-quick": "^3.1.1",
     "rimraf": "3.0.2",
     "shell-quote": "1.7.2",
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8",
+    "tslib": "^2.3.0",
     "ultra-runner": "^3.10.5",
     "wsrun": "^5.2.4"
   },

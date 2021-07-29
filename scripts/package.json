@@ -1,0 +1,37 @@
+{
+  "name": "@monorepo/scripts",
+  "version": "0.1.0",
+  "author": {
+    "name": "Philip Johnston",
+    "email": "tunderadev@gmail.com",
+    "url": "https://github.com/tundera"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tundera/sherbet.git",
+    "directory": "scripts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "ts": "node -r esbuild-register"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "chalk": "^4.1.1",
+    "eslint": "^7.27.0",
+    "find-yarn-workspace-root": "^2.0.0",
+    "prettier": "^2.3.0",
+    "ultra-runner": "^3.10.5"
+  },
+  "dependencies": {
+    "change-case": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "dotenv-expand": "^5.1.0",
+    "dotenv-flow": "^3.2.0",
+    "esbuild-register": "^2.6.0",
+    "execa": "^5.1.1",
+    "ora": "^5.4.1",
+    "ts-node": "^10.1.0",
+    "tsconfig-paths": "^3.10.1"
+  }
+}
