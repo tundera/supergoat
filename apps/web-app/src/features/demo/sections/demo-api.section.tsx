@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useQuery } from 'react-query';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
@@ -67,7 +68,7 @@ const Poem: React.FC<{
 
   return (
     <BlogCtn>
-      <img loading="lazy" src={img} alt={'cool'} />
+      <Image width={800} height={600} src={img} alt={'cool'} />
       <div>
         <h3>{poem.title}</h3>
       </div>

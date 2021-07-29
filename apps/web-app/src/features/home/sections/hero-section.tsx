@@ -42,8 +42,10 @@ export const HeroSection: React.FC<Props> = () => {
                       <div className="flex items-center justify-between w-full md:w-auto">
                         <a href="#">
                           <span className="sr-only">Workflow</span>
-                          <img
-                            alt={''}
+                          <Image
+                            width={500}
+                            height={500}
+                            alt="Workflow logo"
                             className="h-8 w-auto sm:h-10"
                             src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                           />
@@ -90,10 +92,12 @@ export const HeroSection: React.FC<Props> = () => {
                     <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <div className="px-5 pt-4 flex items-center justify-between">
                         <div>
-                          <img
-                            className="h-8 w-auto"
+                          <Image
                             src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                            alt=""
+                            width={500}
+                            height={500}
+                            className="h-8 w-auto"
+                            alt="Workflow logo"
                           />
                         </div>
                         <div className="-mr-2">
