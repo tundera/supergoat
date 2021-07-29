@@ -1,0 +1,21 @@
+{
+  "files": {
+    "dist": "1627523703796.8965",
+    "node_modules": "1627524612342.607",
+    ".eslintignore": "fd372fb3c89736f8ba1555103c1822a21aa85cde",
+    ".eslintrc.json": "56cc01c208579f55b1a6f8907400cf52fea5b62d",
+    ".gitignore": "02ff6ab3e198458e75944a7ba05dde8c20555a08",
+    "CHANGELOG.md": "af73814c0cfb36583cc5c179cc032e571f0f86e8",
+    "LICENSE": "b6a78d62232f61a44d1929932b96c0d1f3535200",
+    "README.md": "e5c0c709537ec9fb7e0e008b7cb2bd9e1b909d2f",
+    "lint-staged.config.js": "074d39a0df35bdab8aff9136eefb1d6d96ae494f",
+    "package.json": "7a5b2e5639c1b5e21aa1f1a009408a3638d89f35",
+    "src/async-message.tsx": "2864c49779cc2d8cc9bdaed604f1d6334e2fd333",
+    "src/component/info-card.tsx": "e456592f191a871eb59f3debf7882dbde5003073",
+    "src/index.ts": "b5bc7dea7d51239d5a57cdbcbd20bef8b7926b88",
+    "src/message.tsx": "9eea01b3089fb11cfb3f4ee6d7ab62215f8020bb",
+    "tsconfig.build.json": "62934970fb367c4b44cb784be2b99b08a75482f3",
+    "tsconfig.json": "ccf621c7d084a00c611aac958a92f44e957e738b.1627524675738.1482"
+  },
+  "deps": {}
+}

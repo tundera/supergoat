@@ -128,7 +128,7 @@ If needed static resources like **locales**, **images**,... can be shared by usi
 ├── .yarnrc.yml
 ├── docker-compose.yml           (database service for now)
 ├── package.json                 (the workspace config)
-└── tsconfig.base.json           (base typescript config)
+└── tsconfig.json                (base typescript config)
 ```
 
 ## 3. Quick start
@@ -150,7 +150,7 @@ yarn dev
 ### 3.1 How create a new shared package ?
 
 1. Workspace config lives in the root [package.json](./package.json), see workspace section.
-   there's already 2 roots defined: ./packages/_ and ./apps/_. So nothing to do.
+   there's already 2 roots defined: ./packages/_and ./apps/_. So nothing to do.
 
 2. Create a new folder, i.e: `mkdir packages/magnificent-poney`.
 
@@ -179,7 +179,7 @@ yarn dev
    }
    ```
 
-   > PS: The packages aliases should be declared per app (not in the tsconfig.base.json), so
+   > PS: The packages aliases should be declared per app (not in the root tsconfig.json), so
    > to keep being explicit with the dependencies.
 
 7. Be sure your next.config.js app overrides webpack like in [nextjs.config.js](./apps/web-app/next.config.js):
@@ -222,7 +222,7 @@ yarn dev
    and it's simple as typing:
 
    ```bash
-   $ yarn changeset
+   yarn changeset
    ```
 
    Follow the instructions... and commit the changeset file. A "Version Packages" P/R will appear after CI checks.
@@ -333,7 +333,7 @@ To ensure decent performance, those features are present in the example actions:
   >    - "apps/blog-app/**"
   >    - "packages/**"
   >    - "package.json"
-  >    - "tsconfig.base.json"
+  >    - "tsconfig.json"
   >    - "yarn.lock"
   >    - ".yarnrc.yml"
   >    - ".github/workflows/**"
