@@ -1,6 +1,6 @@
 {
   "files": {
-    ".next": "1627524816772.3623",
+    ".next": "1627525662136.9895",
     "node_modules": "1627524612538.633",
     ".env": "52fa4fad45ab0500d2cc81994086231368527ec7",
     ".eslintignore": "1186b553ffd388494b678496359cdb4182c5ef83",
@@ -15,7 +15,7 @@
     "lint-staged.config.js": "68a8105352f9df9ba984e1c4906e1716369a8cfa",
     "next-env.d.ts": "c6643fda12ff6f86da14e44369faa91fd9877a29",
     "next.config.js": "8e891fa61f49b388af136cd1bb550f0d42064d29",
-    "package.json": "936c9a2d99a883dd55adaa6a135732845a4b9508.1627524505870.251",
+    "package.json": "8d14be256413d09d3387523effd3f5e19536f6c5",
     "postcss.config.js": "3687d286ecd7c992f3f12ff7a564bf997df09388",
     "public/images/nextjs-logo.png": "bf8ffbc3349779896de6194ca86ba42391722c24",
     "public/shared-assets": "75ac548d70173c63fc579579c3457f35364af4f1",
@@ -30,10 +30,10 @@
     "src/pages/index.tsx": "a6dc0c46c040be8e75b62114bdd9cdf8a4d10985",
     "tailwind.config.js": "d7929f25371d22edde002d59bafec277591bca05",
     "tsconfig.jest.json": "d6c8988d9451e9630db4d755eec9d18874cacea7",
-    "tsconfig.json": "f21ace33e6d6d898cfb1edf5dae2d7ce9af8fc2e.1627524667100.2642"
+    "tsconfig.json": "21d57cba264b18094b724bb09c117fbc7acc8a8a"
   },
   "deps": {
-    "@monorepo/core": 1627524807992.1465,
-    "@monorepo/components": 1627524807046.3496
+    "@monorepo/core": 1627525652711.157,
+    "@monorepo/components": 1627525651761.7617
   }
 }

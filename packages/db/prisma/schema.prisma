@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["napi"]
+  previewFeatures = ["nApi"]
   // output = "../src/generated"
 }
 

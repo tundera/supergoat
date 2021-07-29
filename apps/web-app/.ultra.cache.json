@@ -1,6 +1,6 @@
 {
   "files": {
-    ".next": "1627524855987.834",
+    ".next": "1627525669150.7788",
     "node_modules": "1627524613090.04",
     ".env": "7e454682bc76358ba0bf12f0602e2c51eafe503d",
     ".env.development": "689cff6612f85ef5f1455c368eb3d921ba227052",
@@ -19,10 +19,11 @@
     "next-env.emotion.d.ts": "882ba92eee638a7aec4e2274400deb8aefe48474",
     "next-i18next.config.js": "247180db233462c8a1f82e51169e63df6baf1f99",
     "next.config.js": "136bd820ea64f01b6adfc081d2b8fc80d640d05e",
-    "package.json": "5c99622b64e378fa1f8b94d41b10f611d0e9a9d5.1627524530096.2715",
+    "package.json": "0294a9e6cb2a8473020a8ab7318d338acc508a3b",
     "postcss.config.js": "45b7e58b5f7c381ea4df350b774943ce19b714ac",
     "public/assets/unsplash-photo-1551434678.jpg": "f82ba481a24fb2ec4c74c8740bbf355776f46eea",
     "public/images/nextjs-logo.png": "bf8ffbc3349779896de6194ca86ba42391722c24",
+    "public/images/workflow-logo.svg": "3b9bad5569c56e4d2753190d9e8af27e1173fd1e",
     "public/locales/en/common.json": "a4ec48cae066cb944f2e7726717fb1059d49f777",
     "public/locales/en/demo.json": "3e342252c5e72c627ae596e455024d05d2627a4c",
     "public/locales/en/home.json": "d401e40a6c40a9980175a61d88f2ba0af5593345",
@@ -31,8 +32,8 @@
     "public/locales/fr/home.json": "d011d22bca5a0812f0122dd8ac34c1b9b627c9c1",
     "public/shared-assets": "75ac548d70173c63fc579579c3457f35364af4f1",
     "src/app-providers.tsx": "3e01a7032bcceedf110420f86863e43e5513d074",
-    "src/backend/api/rest/poem-repository.ssr.ts": "83b40918b140f5d99ed2b47a38b808997e6e7f24",
-    "src/backend/api/rest/post-repository.ssr.ts": "991c29b581ece7803bf4669faa321da1cc3d776b",
+    "src/backend/api/rest/poem-repository.ssr.ts": "22e6eb36dcf256df30387b92d53ba858b0ca2f05",
+    "src/backend/api/rest/post-repository.ssr.ts": "991c29b581ece7803bf4669faa321da1cc3d776b.1627525613880.2974",
     "src/backend/config/container.config.ts": "7969a3fdf317b4297c2361cc7d0ed262b09c601d",
     "src/components/banner.tsx": "2f2bd8bd2142bf31a25a63f2a4d355e7871fb1da",
     "src/components/layout/__tests__/main-layout.test.tsx": "4310fdb1de495834a8f1ac28cac6714496f244be",
@@ -42,12 +43,12 @@
     "src/features/demo/api/fetch-posts-ky.api.ts": "5c1e6a052e3e85aa4b790dd2647350a3765cc974",
     "src/features/demo/demo.config.ts": "7768af0523d726e22e4e14732bae34673021ba0c",
     "src/features/demo/demo.page.tsx": "857dccabbb100cefc726f5315033c69f54bfe5b1",
-    "src/features/demo/sections/demo-api.section.tsx": "651548daf6cd2843b248a14c6609be902df845e1",
+    "src/features/demo/sections/demo-api.section.tsx": "fa4c88b26136b48acdf7fa30cde8a39174ecf01c",
     "src/features/home/home.config.ts": "4b615d6f2d07af864c9737e9e13e7e9908921a65",
-    "src/features/home/home.page.tsx": "b5ea22ec7a33d680be5350a564524ccb3d42e2e5",
+    "src/features/home/home.page.tsx": "e85184f1ee4e21373172137feb55fc376e43614c",
     "src/features/home/sections/cta-section.tsx": "594b4bf38f57ac7ca4ea9eff9795da1ae5670aac",
     "src/features/home/sections/features-section.tsx": "232e7b6d1302afd6d4ab775cccc391e1523bdf85",
-    "src/features/home/sections/hero-section.tsx": "2aca50c0617ff86fc300718a587fdcac814f6ffe",
+    "src/features/home/sections/hero-section.tsx": "ee39fb82da976a70b1f3650271aa050338e8abd8",
     "src/pages/_app.tsx": "9eaaeefc7cb3b4ea32aa512736ba56fe89543c96",
     "src/pages/_document.tsx": "38dcedb8e34013e939bdf19ad8870c8bc8083e0e",
     "src/pages/api/hello.ts": "ddedc8e426eb49e97a6350724c32d96401d5021d",
@@ -60,11 +61,11 @@
     "src/typings/react-i18next.d.ts": "e5624d9d39302bf5a089d40da15a688a1b52418d",
     "tailwind.config.js": "aeefce129a016273852b43f79348a4d2721df556",
     "tsconfig.jest.json": "878dc76994986a2926dfe7a8182f9a81509ae2a7",
-    "tsconfig.json": "6dce26ea922def3da6a1df31e60469241aa03ef5.1627524671415.002"
+    "tsconfig.json": "601ae5425938efdb8faf0de27f2f311ec5c1a876"
   },
   "deps": {
-    "@monorepo/core": 1627524807992.1465,
+    "@monorepo/core": 1627525652711.157,
     "@monorepo/db": 0,
-    "@monorepo/components": 1627524807046.3496
+    "@monorepo/components": 1627525651761.7617
   }
 }

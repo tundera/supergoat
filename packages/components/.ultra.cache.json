@@ -15,7 +15,7 @@
     "src/index.ts": "b5bc7dea7d51239d5a57cdbcbd20bef8b7926b88",
     "src/message.tsx": "9eea01b3089fb11cfb3f4ee6d7ab62215f8020bb",
     "tsconfig.build.json": "62934970fb367c4b44cb784be2b99b08a75482f3",
-    "tsconfig.json": "ccf621c7d084a00c611aac958a92f44e957e738b.1627524675738.1482"
+    "tsconfig.json": "e7066b882ab0f25b90189dff0493f72fc164c39d"
   },
   "deps": {}
 }

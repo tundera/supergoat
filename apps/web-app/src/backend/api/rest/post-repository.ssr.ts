@@ -1,4 +1,4 @@
-import { PrismaClient } from '@monorepo/db';
+import { PrismaClient, Post } from '@monorepo/db';
 import { InternalServerError, NotFound } from '@tsed/exceptions';
 import { Asserts, UnPromisify } from '@monorepo/core';
 
@@ -12,7 +12,7 @@ export class PostRepositorySsr {
   /**
    * @throws Error
    */
-  getPost = async (postId: number) => {
+  getPost = async (postId: number): Promise<Post | null> => {
     try {
       const post = this.prisma.post.findUnique({
         where: { id: postId },
@@ -31,7 +31,10 @@ export class PostRepositorySsr {
   /**
    * @throws Error
    */
-  getPosts = async (options?: { limit?: number; offset?: number }) => {
+  getPosts = async (options?: {
+    limit?: number;
+    offset?: number;
+  }): Promise<Post[]> => {
     const { limit, offset } = options ?? {};
     try {
       return await this.prisma.post.findMany({
