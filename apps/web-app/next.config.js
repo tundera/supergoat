@@ -67,10 +67,8 @@ const config = withBundleAnalyzer(
   withTM({
     target: NEXTJS_BUILD_TARGET,
     reactStrictMode: true,
-    webpack5: true,
     productionBrowserSourceMaps: !disableSourceMaps,
     i18n,
-    optimizeFonts: true,
 
     // @link https://nextjs.org/docs/basic-features/image-optimization
     images: {
