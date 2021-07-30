@@ -1,9 +1,9 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+  mode: "jit",
+  purge: ["./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -15,7 +15,7 @@ module.exports = {
       blue: colors.sky,
     },
     fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
       serif: [...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono],
     },
@@ -31,8 +31,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/line-clamp'),
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/forms'),
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/forms"),
   ],
 };

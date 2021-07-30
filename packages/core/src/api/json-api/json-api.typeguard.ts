@@ -2,21 +2,21 @@ import {
   JsonApiErrorResponse,
   JsonApiResponse,
   JsonApiSuccessResponse,
-} from './json-api-response.types';
-import { isPlainObject } from '../../utils/typeguards';
+} from "./json-api-response.types";
+import { isPlainObject } from "../../utils/typeguards";
 
 export const isJsonApiResponse = <T = unknown>(
   val: unknown
 ): val is JsonApiResponse<T> => {
   return (
-    isPlainObject(val) && 'success' in val && typeof val.success === 'boolean'
+    isPlainObject(val) && "success" in val && typeof val.success === "boolean"
   );
 };
 
 export const isJsonApiSuccessResponse = <T = unknown>(
   val: unknown
 ): val is JsonApiSuccessResponse<T> => {
-  return isJsonApiResponse<T>(val) && val.success && 'data' in val;
+  return isJsonApiResponse<T>(val) && val.success && "data" in val;
 };
 
 export const isJsonApiErrorResponse = (
@@ -25,7 +25,7 @@ export const isJsonApiErrorResponse = (
   return (
     isJsonApiResponse<unknown>(val) &&
     !val.success &&
-    'errors' in val &&
+    "errors" in val &&
     Array.isArray(val.errors)
   );
 };

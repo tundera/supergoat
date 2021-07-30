@@ -1,23 +1,23 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { prismaClient } from '@/backend/config/container.config';
-import { BadRequest, MethodNotAllowed } from '@tsed/exceptions';
-import { Asserts } from '@monorepo/core';
-import { StringConvert } from '@monorepo/core/utils/string-convert';
-import { JsonApiResponseFactory } from '@monorepo/core/api/json-api';
-import { JsonApiErrorFactory } from '@monorepo/core/api/json-api/json-api-error.factory';
-import { PostRepositorySsr } from '@/backend/api/rest/post-repository.ssr';
+import type { NextApiRequest, NextApiResponse } from "next";
+import { prismaClient } from "@/backend/config/container.config";
+import { BadRequest, MethodNotAllowed } from "@tsed/exceptions";
+import { Asserts } from "@monorepo/core";
+import { StringConvert } from "@monorepo/core/utils/string-convert";
+import { JsonApiResponseFactory } from "@monorepo/core/api/json-api";
+import { JsonApiErrorFactory } from "@monorepo/core/api/json-api/json-api-error.factory";
+import { PostRepositorySsr } from "@/backend/api/rest/post-repository.ssr";
 
 export default async function handleGetPost(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === 'GET') {
+  if (req.method === "GET") {
     const { id } = req.query;
     const postId = StringConvert.toSafeInteger(id);
     const postRepo = new PostRepositorySsr(prismaClient);
 
     try {
-      Asserts.safeInteger(postId, () => new BadRequest('Wrong param id'));
+      Asserts.safeInteger(postId, () => new BadRequest("Wrong param id"));
 
       return res.json(
         JsonApiResponseFactory.fromSuccess(await postRepo.getPost(postId))

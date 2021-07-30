@@ -1,5 +1,5 @@
-import { PrismaClient } from '@prisma/client';
-import { Asserts } from '@monorepo/core';
+import { PrismaClient } from "@prisma/client";
+import { Asserts } from "@monorepo/core";
 
 declare let global: {
   __PRISMA_CLIENT__: PrismaClient | undefined;
@@ -22,33 +22,33 @@ export class PrismaFactory {
       },
       log: [
         {
-          emit: 'event',
-          level: 'query',
+          emit: "event",
+          level: "query",
         },
         {
-          emit: 'stdout',
-          level: 'error',
+          emit: "stdout",
+          level: "error",
         },
         {
-          emit: 'stdout',
-          level: 'info',
+          emit: "stdout",
+          level: "info",
         },
         {
-          emit: 'stdout',
-          level: 'warn',
+          emit: "stdout",
+          level: "warn",
         },
       ],
     });
-    if (process.env.NODE_ENV === 'development') {
-      prismaClient.$on('query', (e) => {
-        console.log('Query: ' + e.query);
-        console.log('Duration: ' + e.duration + 'ms');
+    if (process.env.NODE_ENV === "development") {
+      prismaClient.$on("query", (e) => {
+        console.log("Query: " + e.query);
+        console.log("Duration: " + e.duration + "ms");
       });
     }
     return prismaClient;
   }
   static getInstance() {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       if (!PrismaFactory.instance) {
         PrismaFactory.instance = PrismaFactory.createNewInstance();
       }
@@ -61,7 +61,7 @@ export class PrismaFactory {
       // https://pris.ly/d/help/next-js-best-practices
       if (!global.__PRISMA_CLIENT__) {
         global.__PRISMA_CLIENT__ = PrismaFactory.createNewInstance();
-        console.log('Development: Created DB connection.');
+        console.log("Development: Created DB connection.");
       }
       return global.__PRISMA_CLIENT__;
     }

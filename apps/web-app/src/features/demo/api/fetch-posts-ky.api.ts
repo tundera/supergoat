@@ -1,13 +1,13 @@
-import ky from 'ky';
+import ky from "ky";
 import {
   isJsonApiSuccessResponse,
   JsonApiResponse,
-} from '@monorepo/core/api/json-api';
-import { GetPosts } from '@/backend/api/rest/post-repository.ssr';
+} from "@monorepo/core/api/json-api";
+import { GetPosts } from "@/backend/api/rest/post-repository.ssr";
 
 export const fetchPostsWithKy = async (): Promise<GetPosts> => {
   return ky
-    .get('/api/rest/post', {
+    .get("/api/rest/post", {
       throwHttpErrors: true,
     })
     .json<JsonApiResponse<GetPosts>>()

@@ -1,9 +1,9 @@
-import { PrismaClient, Post } from '@monorepo/db';
-import { InternalServerError, NotFound } from '@tsed/exceptions';
-import { Asserts, UnPromisify } from '@monorepo/core';
+import { PrismaClient, Post } from "@monorepo/db";
+import { InternalServerError, NotFound } from "@tsed/exceptions";
+import { Asserts, UnPromisify } from "@monorepo/core";
 
 export type GetPosts = UnPromisify<
-  ReturnType<typeof PostRepositorySsr['prototype']['getPosts']>
+  ReturnType<typeof PostRepositorySsr["prototype"]["getPosts"]>
 >;
 
 export class PostRepositorySsr {
@@ -54,7 +54,7 @@ export class PostRepositorySsr {
             },
           },
         },
-        orderBy: { publishedAt: 'desc' },
+        orderBy: { publishedAt: "desc" },
       });
     } catch (e) {
       throw new InternalServerError(`Posts can't be retrieved`, e);

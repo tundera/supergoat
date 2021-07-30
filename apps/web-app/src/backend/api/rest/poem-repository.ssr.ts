@@ -1,9 +1,9 @@
-import { PrismaClient } from '@monorepo/db';
-import { InternalServerError } from '@tsed/exceptions';
-import { UnPromisify } from '@monorepo/core';
+import { PrismaClient } from "@monorepo/db";
+import { InternalServerError } from "@tsed/exceptions";
+import { UnPromisify } from "@monorepo/core";
 
 export type GetPoems = UnPromisify<
-  ReturnType<typeof PoemRepositorySsr['prototype']['getPoems']>
+  ReturnType<typeof PoemRepositorySsr["prototype"]["getPoems"]>
 >;
 
 export class PoemRepositorySsr {
@@ -18,7 +18,7 @@ export class PoemRepositorySsr {
       return await this.prisma.poem.findMany({
         skip: offset,
         take: limit,
-        orderBy: { author: 'desc' },
+        orderBy: { author: "desc" },
       });
     } catch (e) {
       throw new InternalServerError(`Poems can't be retrieved`, e);

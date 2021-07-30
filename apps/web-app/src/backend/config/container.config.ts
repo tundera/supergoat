@@ -1,1 +1,1 @@
-export { prismaClient } from '@monorepo/db';
+export { prismaClient } from "@monorepo/db";

@@ -1,8 +1,8 @@
-const path = require('path');
-const { i18n } = require('./next-i18next.config');
-const NEXTJS_BUILD_TARGET = process.env.NEXTJS_BUILD_TARGET || 'server';
-const NEXTJS_IGNORE_ESLINT = process.env.NEXTJS_IGNORE_ESLINT === '1' || false;
-const isProd = process.env.NODE_ENV === 'production';
+const path = require("path");
+const { i18n } = require("./next-i18next.config");
+const NEXTJS_BUILD_TARGET = process.env.NEXTJS_BUILD_TARGET || "server";
+const NEXTJS_IGNORE_ESLINT = process.env.NEXTJS_IGNORE_ESLINT === "1" || false;
+const isProd = process.env.NODE_ENV === "production";
 
 // Tell webpack to compile those packages
 // @link https://www.npmjs.com/package/next-transpile-modules
@@ -18,10 +18,10 @@ const tmModules = [
   // @link https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
   ...[
     // ie: newer versions of https://github.com/sindresorhus packages
-    'ky',
+    "ky",
   ],
 ];
-const withTM = require('next-transpile-modules')(tmModules, {
+const withTM = require("next-transpile-modules")(tmModules, {
   resolveSymlinks: true,
   debug: false,
 });
@@ -31,20 +31,20 @@ const withTM = require('next-transpile-modules')(tmModules, {
  * to deliver an image or deploy the files.
  * @link https://nextjs.org/docs/advanced-features/source-maps
  */
-const disableSourceMaps = process.env.NEXT_DISABLE_SOURCEMAPS === 'true';
+const disableSourceMaps = process.env.NEXT_DISABLE_SOURCEMAPS === "true";
 if (disableSourceMaps) {
   console.log(
-    '[INFO]: Sourcemaps generation have been disabled through NEXT_DISABLE_SOURCEMAPS'
+    "[INFO]: Sourcemaps generation have been disabled through NEXT_DISABLE_SOURCEMAPS"
   );
 }
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
 });
 
 // Example of setting up secure headers
 // @link https://github.com/jagaapple/next-secure-headers
-const { createSecureHeaders } = require('next-secure-headers');
+const { createSecureHeaders } = require("next-secure-headers");
 const secureHeaders = createSecureHeaders({
   contentSecurityPolicy: {
     directives: {
@@ -60,7 +60,7 @@ const secureHeaders = createSecureHeaders({
         ],
       }
     : {}),
-  referrerPolicy: 'same-origin',
+  referrerPolicy: "same-origin",
 });
 
 const config = withBundleAnalyzer(
@@ -76,23 +76,23 @@ const config = withBundleAnalyzer(
       imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
       disableStaticImages: false,
       // Allowed domains for next/image
-      domains: ['source.unsplash.com'],
+      domains: ["source.unsplash.com"],
     },
 
     eslint: {
       ignoreDuringBuilds: NEXTJS_IGNORE_ESLINT,
-      dirs: ['src'],
+      dirs: ["src"],
     },
 
     async headers() {
-      return [{ source: '/(.*)', headers: secureHeaders }];
+      return [{ source: "/(.*)", headers: secureHeaders }];
     },
 
     webpack: (config, { defaultLoaders, isServer }) => {
       // This extra config allows to use paths defined in tsconfig
       // rather than next-transpile-modules.
       // @link https://github.com/vercel/next.js/pull/13542
-      const resolvedBaseUrl = path.resolve(config.context, '../../');
+      const resolvedBaseUrl = path.resolve(config.context, "../../");
       config.module.rules = [
         ...config.module.rules,
         {
@@ -107,13 +107,13 @@ const config = withBundleAnalyzer(
 
       // A temp workaround for https://github.com/prisma/prisma/issues/6899#issuecomment-849126557
       if (isServer) {
-        config.externals.push('_http_common');
+        config.externals.push("_http_common");
       }
 
       config.module.rules.push({
         test: /\.svg$/,
         issuer: /\.(js|ts)x?$/,
-        use: ['@svgr/webpack'],
+        use: ["@svgr/webpack"],
       });
 
       return config;

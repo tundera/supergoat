@@ -1,15 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { prismaClient } from '@/backend/config/container.config';
-import { MethodNotAllowed } from '@tsed/exceptions';
-import { JsonApiResponseFactory } from '@monorepo/core/api/json-api';
-import { JsonApiErrorFactory } from '@monorepo/core/api/json-api/json-api-error.factory';
-import { PoemRepositorySsr } from '@/backend/api/rest/poem-repository.ssr';
+import type { NextApiRequest, NextApiResponse } from "next";
+import { prismaClient } from "@/backend/config/container.config";
+import { MethodNotAllowed } from "@tsed/exceptions";
+import { JsonApiResponseFactory } from "@monorepo/core/api/json-api";
+import { JsonApiErrorFactory } from "@monorepo/core/api/json-api/json-api-error.factory";
+import { PoemRepositorySsr } from "@/backend/api/rest/poem-repository.ssr";
 
 export default async function handleListPoems(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === 'GET') {
+  if (req.method === "GET") {
     const poemRepo = new PoemRepositorySsr(prismaClient);
     try {
       return res.json(

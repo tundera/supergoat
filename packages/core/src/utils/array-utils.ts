@@ -1,4 +1,4 @@
-import { RandomUtils } from './random-utils';
+import { RandomUtils } from "./random-utils";
 
 export class ArrayUtils {
   static getRandom<T>(items: T[]): T {

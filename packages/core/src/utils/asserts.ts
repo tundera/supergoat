@@ -1,4 +1,4 @@
-import { isNonEmptyString } from './typeguards';
+import { isNonEmptyString } from "./typeguards";
 
 export class Asserts {
   static isPresent<T>(
@@ -8,7 +8,7 @@ export class Asserts {
     if (v === null || v == undefined) {
       throw Asserts.createException(
         msgOrErrorFactory,
-        'Value is null or undefined.'
+        "Value is null or undefined."
       );
     }
   }
@@ -17,10 +17,10 @@ export class Asserts {
     v: unknown,
     msgOrErrorFactory?: string | (() => Error)
   ): asserts v is number {
-    if (typeof v !== 'number' || !Number.isSafeInteger(v)) {
+    if (typeof v !== "number" || !Number.isSafeInteger(v)) {
       throw Asserts.createException(
         msgOrErrorFactory,
-        'Value is not a safe integer'
+        "Value is not a safe integer"
       );
     }
   }
@@ -37,7 +37,7 @@ export class Asserts {
   }
 
   static never(v: never, msg?: string): never {
-    throw new Error(msg ?? 'Unexpected value');
+    throw new Error(msg ?? "Unexpected value");
   }
 
   private static createException(
@@ -45,11 +45,11 @@ export class Asserts {
     fallbackMsg?: string
   ) {
     if (
-      typeof msgOrErrorFactory === 'string' ||
+      typeof msgOrErrorFactory === "string" ||
       msgOrErrorFactory === undefined
     ) {
       throw new Error(
-        msgOrErrorFactory ?? fallbackMsg ?? 'Assertion did not pass.'
+        msgOrErrorFactory ?? fallbackMsg ?? "Assertion did not pass."
       );
     }
     throw msgOrErrorFactory();

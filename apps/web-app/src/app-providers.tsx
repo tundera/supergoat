@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient({
   defaultOptions: {

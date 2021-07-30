@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
-import { useDeepCompareMemoize } from './use-deep-compare-memoize';
+import { useCallback, useEffect, useReducer, useRef, useState } from "react";
+import { useDeepCompareMemoize } from "./use-deep-compare-memoize";
 
 export type AsyncFnParams<TParams> = TParams;
 

@@ -9,15 +9,15 @@ module.exports = function (api) {
   return {
     presets: [
       [
-        'next/babel',
+        "next/babel",
         {
-          'preset-react': {
-            runtime: 'automatic',
-            importSource: '@emotion/react',
+          "preset-react": {
+            runtime: "automatic",
+            importSource: "@emotion/react",
           },
         },
       ],
     ],
-    plugins: ['@emotion/babel-plugin'],
+    plugins: ["@emotion/babel-plugin"],
   };
 };

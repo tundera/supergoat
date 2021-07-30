@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 /**
  * Set your global app-providers (i.e: redux, react-query,...) here

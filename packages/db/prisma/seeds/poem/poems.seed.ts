@@ -1,13 +1,13 @@
-import { Prisma } from '@prisma/client';
-import keywordExtractor from 'keyword-extractor';
-import { slugify } from 'transliteration';
+import { Prisma } from "@prisma/client";
+import keywordExtractor from "keyword-extractor";
+import { slugify } from "transliteration";
 
 // Taken from https://medium.com/@EmEmbarty/31-of-the-best-and-most-famous-short-classic-poems-of-all-time-e445986e6df
 
 export const poemsSeed: Prisma.PoemCreateInput[] = [
   {
-    author: 'John Donne',
-    title: 'No man is an island',
+    author: "John Donne",
+    title: "No man is an island",
     content: `
       No man is an island,
       Entire of itself,
@@ -25,8 +25,8 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Robert Frost',
-    title: 'Stopping by Woods On a Snowy Evening',
+    author: "Robert Frost",
+    title: "Stopping by Woods On a Snowy Evening",
     content: `
       Whose woods these are I think I know.
       His house is in the village though;
@@ -47,8 +47,8 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Maya Angelou',
-    title: 'Still I rise',
+    author: "Maya Angelou",
+    title: "Still I rise",
     content: `
       You may write me down in history
       With your bitter, twisted lies,
@@ -96,7 +96,7 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'William Shakespeare',
+    author: "William Shakespeare",
     title: `Shall I Compare Thee To A Summer's Day?`,
     content: `
       Shall I compare thee to a summer’s day?
@@ -116,7 +116,7 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Sara Teasdale',
+    author: "Sara Teasdale",
     title: `There Will Come Soft Rain`,
     content: `
       There will come soft rain and the smell of the ground,
@@ -134,7 +134,7 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Sara Teasdale',
+    author: "Sara Teasdale",
     title: `There Will Come Soft Rain`,
     content: `
       There will come soft rain and the smell of the ground,
@@ -152,7 +152,7 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Pablo Neruda',
+    author: "Pablo Neruda",
     title: `If You Forget Me`,
     content: `
       I want you to know
@@ -206,7 +206,7 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Robert Frost',
+    author: "Robert Frost",
     title: `Fire And Ice`,
     content: `
       Some say the world will end in fire,
@@ -221,7 +221,7 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Robert Frost',
+    author: "Robert Frost",
     title: `The Road Not Taken`,
     content: `
       Two roads diverged in a yellow wood,
@@ -247,7 +247,7 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Langston Hughes',
+    author: "Langston Hughes",
     title: `Dreams`,
     content: `
       Hold fast to dreams
@@ -261,7 +261,7 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     `,
   },
   {
-    author: 'Joyce Kilmer',
+    author: "Joyce Kilmer",
     title: `Trees`,
     content: `
       I think that I shall never see
@@ -283,11 +283,11 @@ export const poemsSeed: Prisma.PoemCreateInput[] = [
     .split(/(\n|\r|\r\n)/)
     .map((line) => line.trim())
     .filter((line) => line.length > 0)
-    .join('\n')
+    .join("\n")
     .trim();
 
   const keywords = keywordExtractor.extract(partial.title, {
-    language: 'english',
+    language: "english",
     remove_digits: true,
     return_changed_case: true,
     remove_duplicates: false,

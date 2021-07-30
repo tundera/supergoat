@@ -3,34 +3,34 @@ import {
   GlobeAltIcon,
   LightningBoltIcon,
   ScaleIcon,
-} from '@heroicons/react/outline';
-import styled from '@emotion/styled';
+} from "@heroicons/react/outline";
+import styled from "@emotion/styled";
 
 type Props = {
   children?: never;
 };
 
 const lorem =
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.';
+  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.";
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: "Competitive exchange rates",
     description: lorem,
     icon: GlobeAltIcon,
   },
   {
-    name: 'No hidden fees',
+    name: "No hidden fees",
     description: lorem,
     icon: ScaleIcon,
   },
   {
-    name: 'Transfers are instant',
+    name: "Transfers are instant",
     description: lorem,
     icon: LightningBoltIcon,
   },
   {
-    name: 'Mobile notifications',
+    name: "Mobile notifications",
     description: lorem,
     icon: AnnotationIcon,
   },
@@ -50,7 +50,7 @@ const Ctn = styled.div`
 export const FeaturesSection: React.FC<Props> = () => {
   return (
     <Ctn>
-      <div className="py-12 bg-white" style={{ width: '100%' }}>
+      <div className="py-12 bg-white" style={{ width: "100%" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">

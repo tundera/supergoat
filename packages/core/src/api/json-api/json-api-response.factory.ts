@@ -2,8 +2,8 @@ import {
   JsonApiError,
   JsonApiErrorResponse,
   JsonApiSuccessResponse,
-} from './json-api-response.types';
-import { isPlainObject } from '../../utils/typeguards';
+} from "./json-api-response.types";
+import { isPlainObject } from "../../utils/typeguards";
 
 export class JsonApiResponseFactory {
   static fromError = (
@@ -12,7 +12,7 @@ export class JsonApiResponseFactory {
     httpStatus?: number
   ): JsonApiErrorResponse => {
     let errs: JsonApiError[];
-    if (typeof errors === 'string') {
+    if (typeof errors === "string") {
       errs = [{ title: errors, ...(httpStatus ? { status: httpStatus } : {}) }];
     } else if (isPlainObject(errors)) {
       errs = [errors];
@@ -26,7 +26,7 @@ export class JsonApiResponseFactory {
   };
   static fromSuccess = <T>(
     data: T,
-    metadata?: JsonApiSuccessResponse<T>['meta']
+    metadata?: JsonApiSuccessResponse<T>["meta"]
   ): JsonApiSuccessResponse<T> => {
     return {
       success: true,

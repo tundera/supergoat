@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import { useQuery } from 'react-query';
-import styled from '@emotion/styled';
-import { css } from '@emotion/react';
-import { fetchPoemsWithKy } from '../api/fetch-poems-ky.api';
-import { GetPoems } from '@/backend/api/rest/poem-repository.ssr';
-import { ArrayUtils } from '@monorepo/core';
+import Image from "next/image";
+import { useQuery } from "react-query";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+import { fetchPoemsWithKy } from "../api/fetch-poems-ky.api";
+import { GetPoems } from "@/backend/api/rest/poem-repository.ssr";
+import { ArrayUtils } from "@monorepo/core";
 
 type Props = {
   children?: never;
@@ -47,8 +47,8 @@ const BlogCtn = styled.div`
   }
 `;
 
-const waterImages = new Array(25).fill('').map((img, idx) => {
-  const index = String(idx + 1).padStart(2, '0');
+const waterImages = new Array(25).fill("").map((img, idx) => {
+  const index = String(idx + 1).padStart(2, "0");
   return `/shared-assets/images/water/water-${index}.jpg`;
 });
 
@@ -64,11 +64,11 @@ const Poem: React.FC<{
     defaultImg ??
     `https://source.unsplash.com/random/800x600?${(poem.keywords ?? [])
       .map((keyword) => encodeURIComponent(keyword))
-      .join(',')}`;
+      .join(",")}`;
 
   return (
     <BlogCtn>
-      <Image width={800} height={600} src={img} alt={'cool'} />
+      <Image width={800} height={600} src={img} alt={"cool"} />
       <div>
         <h3>{poem.title}</h3>
       </div>
@@ -115,7 +115,7 @@ const PoemList: React.FC<{ poems: GetPoems; children?: never }> = (props) => {
 
 const ReactQueryApi: React.FC = () => {
   const { data, isLoading, error } = useQuery(
-    'posts',
+    "posts",
     () => fetchPoemsWithKy(),
     {}
   );
@@ -133,7 +133,8 @@ export const DemoApiSection: React.FC<Props> = () => {
     <div
       css={css`
         width: 100%;
-      `}>
+      `}
+    >
       <ReactQueryApi />
     </div>
   );

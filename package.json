@@ -42,7 +42,7 @@
     "deps:check": "npm-check-updates --configFileName ncurc.yml --deep --dep prod,dev,optional",
     "deps:update": "npm-check-updates --configFileName ncurc.yml -u --deep --dep prod,dev,optional",
     "typecheck": "ultra typecheck",
-    "lint": "ultra -r lint",
+    "lint": "ultra -r lint --fix",
     "share:static:symlink": "ultra --filter \"*-app\" share:static:symlink",
     "share:static:hardlink": "ultra --filter \"*-app\" share:static:hardlink",
     "apps:build": "ultra --filter \"*-app\" build",

@@ -1,5 +1,5 @@
-import { dequal } from 'dequal';
-import { useRef } from 'react';
+import { dequal } from "dequal";
+import { useRef } from "react";
 
 type SupportedValue =
   | Record<string, unknown>

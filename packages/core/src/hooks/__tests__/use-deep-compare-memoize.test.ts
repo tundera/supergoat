@@ -1,8 +1,8 @@
-import { useDeepCompareMemoize } from '../use-deep-compare-memoize';
-import { renderHook } from '@testing-library/react-hooks';
+import { useDeepCompareMemoize } from "../use-deep-compare-memoize";
+import { renderHook } from "@testing-library/react-hooks";
 
-describe('useDeepCompareMemoize', () => {
-  it('should not mutate references', () => {
+describe("useDeepCompareMemoize", () => {
+  it("should not mutate references", () => {
     const val = {
       fn: () => {},
     };
