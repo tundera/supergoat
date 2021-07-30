@@ -8,7 +8,7 @@ import findWorkspaceRoot from 'find-yarn-workspace-root';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv-expand')(require('dotenv-flow').config({ silent: true }));
 
-const workspaceRoot = findWorkspaceRoot(__dirname) as string;
+const workspaceRoot = findWorkspaceRoot(process.cwd()) as string;
 
 const buildApps = async () => {
   await execa('yarn', ['ultra', '-r', '--filter', '*-app', 'build'], {

@@ -1,7 +1,7 @@
 {
   "files": {
-    ".next": "1627601543421.72",
-    "node_modules": "1627600377124.4265",
+    ".next": "1627604696085.6345",
+    "node_modules": "1627601752178.2163",
     ".env": "52fa4fad45ab0500d2cc81994086231368527ec7",
     ".eslintignore": "1186b553ffd388494b678496359cdb4182c5ef83",
     ".eslintrc.json": "1caf7b01d256f0a67fdbf4ed9bad2fa81c224110",
@@ -33,7 +33,7 @@
     "tsconfig.json": "21d57cba264b18094b724bb09c117fbc7acc8a8a"
   },
   "deps": {
-    "@monorepo/core": 1627598571221.0605,
-    "@monorepo/components": 1627598570307.9165
+    "@monorepo/core": 1627601614980.7136,
+    "@monorepo/components": 1627601614969.2305
   }
 }
