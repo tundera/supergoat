@@ -34,5 +34,5 @@
     "baseUrl": "."
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "src", "pages", "db", "scripts", "services", ".storybook"]
+  "include": ["next-env.d.ts"]
 }
