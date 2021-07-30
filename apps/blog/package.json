@@ -5,13 +5,14 @@
   "scripts": {
     "start": "next-remote-watch ./data",
     "dev": "next dev",
-    "build": "next build && node ./scripts/generate-sitemap",
+    "build": "next build && yarn generate:sitemap",
+    "generate:sitemap": "ts-node ./scripts/generate-sitemap",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
-    "prepare": "husky install"
+    "lint": "next lint --fix --dir src --dir scripts"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",
@@ -21,6 +22,7 @@
     "mdx-bundler": "^5.1.2",
     "next": "11.0.1",
     "next-themes": "^0.0.14",
+    "next-transpile-modules": "^8.0.0",
     "postcss": "^8.3.5",
     "preact": "^10.5.13",
     "react": "17.0.2",
@@ -38,6 +40,9 @@
   "devDependencies": {
     "@next/bundle-analyzer": "11.0.1",
     "@svgr/webpack": "^5.5.0",
+    "@types/node": "^16.4.7",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
     "cross-env": "^7.0.3",
     "dedent": "^0.7.0",
     "eslint": "^7.29.0",
@@ -56,6 +61,8 @@
     "remark-frontmatter": "3.0.0",
     "remark-parse": "9.0.0",
     "remark-stringify": "9.0.1",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5",
     "unified": "9.2.1",
     "unist-util-visit": "2.0.3"
   },
