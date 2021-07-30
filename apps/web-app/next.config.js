@@ -18,7 +18,7 @@ const tmModules = [
   // @link https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
   ...[
     // ie: newer versions of https://github.com/sindresorhus packages
-    "ky",
+    "@monorepo/components",
   ],
 ];
 const withTM = require("next-transpile-modules")(tmModules, {

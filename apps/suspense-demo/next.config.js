@@ -32,7 +32,7 @@ const nextConfig = {
 }
 
 const plugins = [
-  withTM(['@chakra-ui/react']),
+  withTM(['@monorepo/components']),
   withMDX({
     extension: /\.mdx?$/,
   }),

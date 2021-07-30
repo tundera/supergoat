@@ -13,9 +13,7 @@ const tmModules = [
       ]
     : []),
   // esm modules not yet supported by nextjs
-  ...[
-    // ie: 'ky'..
-  ],
+  ...["@monorepo/components"],
 ];
 const withTM = require("next-transpile-modules")(tmModules, {
   resolveSymlinks: true,
