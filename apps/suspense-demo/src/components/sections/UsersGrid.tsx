@@ -3,7 +3,7 @@ import { Box, Spinner, Text, SimpleGrid } from '@chakra-ui/react'
 
 import Image from 'src/components/NextChakraImage'
 import { client } from 'src/lib/graphql'
-import { useAllUsersQuery } from 'services/graphql/generated/hooks'
+import { useAllUsersQuery } from 'src/services/graphql/generated/hooks'
 
 const UsersGrid: FC = () => {
   const { data } = useAllUsersQuery(client)

@@ -4,7 +4,7 @@ import type {
   TeamQueryVariables,
   ColorScheme,
   Player,
-} from 'services/graphql/generated/types'
+} from 'src/services/graphql/generated/types'
 
 import { useRouter } from 'next/router'
 import { Text, Flex, SimpleGrid, Spinner, Stack, useColorModeValue } from '@chakra-ui/react'
@@ -14,7 +14,7 @@ import Head from 'next/head'
 import { PageTitle } from './PageTitle'
 import IntersectionSlide from './IntersectionSlide'
 import { client } from 'src/lib/graphql'
-import { useTeamQuery } from 'services/graphql/generated/hooks'
+import { useTeamQuery } from 'src/services/graphql/generated/hooks'
 import PlayerCard from './PlayerCard'
 import Image from 'src/components/NextChakraImage'
 import { useImageUrlBuilder } from 'src/hooks/useImageUrlBuilder'

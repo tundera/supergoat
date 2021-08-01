@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { Player, ColorScheme } from 'services/graphql/generated/types'
+import type { Player, ColorScheme } from 'src/services/graphql/generated/types'
 
 import { Suspense } from 'react'
 import Image from 'src/components/NextChakraImage'

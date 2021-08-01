@@ -14,7 +14,7 @@ const build = async () => {
   }
 
   const generateNexusResolvers = async () => {
-    await execa('yarn', ['pal', 'g'])
+    await execa('yarn', ['ts-node', 'scripts/generate-graphql-resolvers'])
   }
 
   const generateThemeTypes = async () => {
@@ -50,6 +50,10 @@ const build = async () => {
       {
         title: 'Generating Nexus Types',
         task: async () => await generateNexusTypes(),
+      },
+      {
+        title: 'Generating Nexus Resolvers',
+        task: async () => await generateNexusResolvers(),
       },
       {
         title: 'Generating GraphQL artifacts',

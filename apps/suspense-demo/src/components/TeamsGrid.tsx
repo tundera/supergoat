@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { Team } from 'services/graphql/generated/types'
+import type { Team } from 'src/services/graphql/generated/types'
 
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
@@ -8,7 +8,7 @@ import { SuspenseList, Suspense } from 'react'
 import { QueryErrorResetBoundary, useQueryErrorResetBoundary } from 'react-query'
 import { ErrorBoundary } from 'react-error-boundary'
 
-import { useAllTeamsQuery } from 'services/graphql/generated/hooks'
+import { useAllTeamsQuery } from 'src/services/graphql/generated/hooks'
 import { client } from 'src/lib/graphql'
 
 const IntersectionSlide = dynamic(() => import('src/components/IntersectionSlide'))

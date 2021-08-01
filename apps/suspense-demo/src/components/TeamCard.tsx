@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { Team } from 'services/graphql/generated/types'
+import type { Team } from 'src/services/graphql/generated/types'
 
 import Image from 'next/image'
 import { Suspense, useTransition } from 'react'
