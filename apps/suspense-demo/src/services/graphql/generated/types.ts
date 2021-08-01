@@ -1,5 +1,5 @@
 import type { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from 'graphql';
-import type { NexusContext } from 'services/graphql/context';
+import type { NexusContext } from 'src/services/graphql/context';
 export type Maybe<T> = T extends PromiseLike<infer U> ? Promise<U | null> : T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };

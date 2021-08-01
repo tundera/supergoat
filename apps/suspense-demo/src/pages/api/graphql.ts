@@ -9,8 +9,8 @@ import { NextApiRequest, NextApiResponse } from 'next/types'
 
 import nc from 'next-connect'
 
-import { schema } from 'services/graphql/schema'
-import { createContext, NexusContext } from 'services/graphql/context'
+import { schema } from 'src/services/graphql/schema'
+import { createContext, NexusContext } from 'src/services/graphql/context'
 
 import { $settings } from 'nexus-prisma'
 

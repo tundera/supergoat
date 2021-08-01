@@ -5,7 +5,7 @@ import type {
   TeamQueryVariables,
   AllTeamsQuery,
   AllTeamsQueryVariables,
-} from 'services/graphql/generated/types'
+} from 'src/services/graphql/generated/types'
 
 import db from 'db'
 import { Suspense, SuspenseList } from 'react'

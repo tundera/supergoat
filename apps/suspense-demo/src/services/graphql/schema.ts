@@ -2,22 +2,22 @@ import { join } from 'path'
 import { makeSchema } from 'nexus'
 import { applyMiddleware } from 'graphql-middleware'
 
-import { permissions } from 'services/graphql/permissions'
+import { permissions } from 'src/services/graphql/permissions'
 
-import * as inputTypes from 'services/graphql/inputs'
-import * as moduleTypes from 'services/graphql/modules'
-import * as scalarTypes from 'services/graphql/scalars'
+import * as inputTypes from 'src/services/graphql/inputs'
+import * as moduleTypes from 'src/services/graphql/modules'
+import * as scalarTypes from 'src/services/graphql/scalars'
 
 const cwd = process.cwd()
 
 const baseSchema = makeSchema({
   types: [moduleTypes, scalarTypes, inputTypes],
   outputs: {
-    schema: join(cwd, 'services/graphql/generated/schema.graphql'),
-    typegen: join(cwd, 'services/graphql/generated/nexus.ts'),
+    schema: join(cwd, 'src/services/graphql/generated/schema.graphql'),
+    typegen: join(cwd, 'src/services/graphql/generated/nexus.ts'),
   },
   contextType: {
-    module: join(cwd, 'services/graphql/context.ts'),
+    module: join(cwd, 'src/services/graphql/context.ts'),
     export: 'NexusContext',
     alias: 'ctx',
   },

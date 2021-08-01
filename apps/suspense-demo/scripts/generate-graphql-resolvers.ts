@@ -6,7 +6,7 @@ const cwd = process.cwd()
 const main = async () => {
   const generator = new Generator(
     { name: 'nexus', schemaPath: join(cwd, './db/schema.prisma') },
-    { prismaName: 'db', output: join(cwd, 'src/services/graphql/generated') },
+    { prismaName: 'db', output: join(cwd, 'src/services/graphql/generated/resolvers') },
   )
 
   await generator.run()

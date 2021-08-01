@@ -1,6 +1,6 @@
 import type { NextPage } from 'types'
 import type { GetStaticProps } from 'next'
-import type { AllTeamsQuery } from 'services/graphql/generated/types'
+import type { AllTeamsQuery } from 'src/services/graphql/generated/types'
 
 import { Suspense } from 'react'
 import Head from 'next/head'

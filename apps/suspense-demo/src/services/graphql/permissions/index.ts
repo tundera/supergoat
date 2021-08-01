@@ -1,6 +1,6 @@
 import { shield, allow } from 'graphql-shield'
 
-import { isAuthenticated } from 'services/graphql/permissions/rules/isAuthenticated'
+import { isAuthenticated } from 'src/services/graphql/permissions/rules/isAuthenticated'
 
 export const permissions = shield({
   Query: {
