@@ -1,14 +1,10 @@
-export {}
+import { Client } from 'pg'
 
-// eslint-disable-next-line
-const url = require('url')
+const connectionString = process.env.DATABASE_URL as string
 
-const Client = require('pg').Client
-
-const connectionString = process.env.DATABASE_URL
-const { auth: user, hostname: host, port, path } = url.parse(connectionString)
-const db = new Client({ user, host, port })
-const dbName = path.slice(1).substring(0, path.slice(1).lastIndexOf('?'))
+const { username: user, hostname: host, port, pathname: path } = new URL(connectionString)
+const db = new Client({ user: user as string, host: host as string, port: Number(port) })
+const dbName = path?.slice(1).substring(0, path.slice(1).lastIndexOf('?'))
 
 async function drop() {
   await db.connect()

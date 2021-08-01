@@ -1,29 +1,29 @@
-schema: 'services/graphql/generated/schema.graphql'
+schema: 'src/services/graphql/generated/schema.graphql'
 documents: 'src/lib/graphql/operations/**/*.ts'
 generates:
-  services/graphql/generated/types.ts:
+  src/services/graphql/generated/types.ts:
     plugins:
       - typescript
       - typescript-operations
       - typescript-resolvers
     config:
-      contextType: services/graphql/context#NexusContext
+      contextType: src/services/graphql/context#NexusContext
       maybeValue: 'T extends PromiseLike<infer U> ? Promise<U | null> : T | null'
       useTypeImports: true
 
-  services/graphql/generated/client.ts:
+  src/services/graphql/generated/client.ts:
     preset: import-types
     presetConfig:
-      typesPath: services/graphql/generated/types
+      typesPath: src/services/graphql/generated/types
     plugins:
       - typescript-react-query
     config:
       fetcher: graphql-request
 
-  services/graphql/generated/hooks.ts:
+  src/services/graphql/generated/hooks.ts:
     preset: import-types
     presetConfig:
-      typesPath: services/graphql/generated/types
+      typesPath: src/services/graphql/generated/types
     plugins:
       - typescript-react-query
     config:

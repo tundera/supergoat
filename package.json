@@ -65,6 +65,7 @@
     "@changesets/cli": "2.16.0",
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
+    "@paljs/cli": "^3.7.1",
     "@types/eslint": "^7",
     "eslint": "^7.32.0",
     "husky": "7.0.1",

@@ -10,7 +10,11 @@ const build = async () => {
   }
 
   const generateNexusTypes = async () => {
-    await execa('yarn', ['ts-node', 'services/graphql/schema'])
+    await execa('yarn', ['ts-node', 'src/services/graphql/schema'])
+  }
+
+  const generateNexusResolvers = async () => {
+    await execa('yarn', ['pal', 'g'])
   }
 
   const generateThemeTypes = async () => {
