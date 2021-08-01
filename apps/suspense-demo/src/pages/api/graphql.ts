@@ -10,9 +10,9 @@ import { NextApiRequest, NextApiResponse } from 'next/types'
 import nc from 'next-connect'
 
 import { schema } from 'src/services/graphql/schema'
-import { createContext, NexusContext } from 'src/services/graphql/context'
+import { createContext, Context } from 'src/services/graphql/context'
 
-import { $settings } from 'nexus-prisma'
+// import { $settings } from 'nexus-prisma'
 
 const handler = nc<NextApiRequest, NextApiResponse>()
   .get((req, res) => {
@@ -37,7 +37,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
 
     const { operationName, query, variables } = getGraphQLParameters(request)
 
-    const result = await processRequest<NexusContext>({
+    const result = await processRequest<Context>({
       operationName,
       query,
       variables,
@@ -99,8 +99,8 @@ const handler = nc<NextApiRequest, NextApiResponse>()
     }
   })
 
-$settings({
-  prismaClientContextField: 'db',
-})
+// $settings({
+//   prismaClientContextField: 'db',
+// })
 
 export default handler

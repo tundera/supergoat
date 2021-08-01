@@ -11,7 +11,7 @@ const UsersGrid: FC = () => {
   return (
     <SimpleGrid minChildWidth={30} spacing={10}>
       <SuspenseList revealOrder="forwards" tail="collapsed">
-        {data?.users?.map((user) => (
+        {data?.findManyUser?.map((user) => (
           <Suspense fallback={<Spinner size="lg" />} key={user?.id ?? ''}>
             <Box>
               <Image

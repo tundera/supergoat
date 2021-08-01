@@ -7,18 +7,9 @@ generates:
       - typescript-operations
       - typescript-resolvers
     config:
-      contextType: src/services/graphql/context#NexusContext
+      contextType: src/services/graphql/context#Context
       maybeValue: 'T extends PromiseLike<infer U> ? Promise<U | null> : T | null'
       useTypeImports: true
-
-  src/services/graphql/generated/client.ts:
-    preset: import-types
-    presetConfig:
-      typesPath: src/services/graphql/generated/types
-    plugins:
-      - typescript-react-query
-    config:
-      fetcher: graphql-request
 
   src/services/graphql/generated/hooks.ts:
     preset: import-types

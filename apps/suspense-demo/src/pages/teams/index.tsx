@@ -1,11 +1,10 @@
 import type { NextPage } from 'types'
 import type { GetStaticProps } from 'next'
-import type { AllTeamsQuery } from 'src/services/graphql/generated/types'
 
 import { Suspense } from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { QueryClient, useQueryClient } from 'react-query'
+import { QueryClient } from 'react-query'
 import { dehydrate } from 'react-query/hydration'
 import { Flex } from '@chakra-ui/react'
 

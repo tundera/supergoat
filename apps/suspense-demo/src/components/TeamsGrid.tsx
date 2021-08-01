@@ -27,7 +27,7 @@ const TeamsGrid: FC = () => {
     <Flex direction="column" alignItems="center">
       <SimpleGrid columns={[1, null, 3]} alignItems="center" spacingX={8} spacingY={16}>
         <SuspenseList revealOrder="forwards" tail="collapsed">
-          {data?.allTeams?.map((team) => (
+          {data?.findManyTeam?.map((team) => (
             <IntersectionSlide key={team?.id}>
               <Suspense fallback={<Spinner size="md" />}>
                 <TeamCard team={team as Team} />

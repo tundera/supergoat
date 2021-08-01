@@ -24,27 +24,27 @@ const TeamInfo: FC = () => {
   const id = router.query.id as string
 
   const { data } = useTeamQuery<TeamQuery, TeamQueryVariables>(client, { id })
-  const { imageURL, blurDataURL } = useImageUrlBuilder(data?.team?.logo?.id as string)
+  const { imageURL, blurDataURL } = useImageUrlBuilder(data?.findUniqueTeam?.logo?.id as string)
 
   const headingColor = useColorModeValue(
-    data?.team?.colorScheme?.secondary,
-    data?.team?.colorScheme?.primary,
+    data?.findUniqueTeam?.colorScheme?.secondary,
+    data?.findUniqueTeam?.colorScheme?.primary,
   )
   const bgGradient = useColorModeValue(
-    `linear(to-b, ${data?.team?.colorScheme?.primary}, ${data?.team?.colorScheme?.secondary})`,
-    `linear(to-b, ${data?.team?.colorScheme?.secondary}, ${data?.team?.colorScheme?.primary})`,
+    `linear(to-b, ${data?.findUniqueTeam?.colorScheme?.primary}, ${data?.findUniqueTeam?.colorScheme?.secondary})`,
+    `linear(to-b, ${data?.findUniqueTeam?.colorScheme?.secondary}, ${data?.findUniqueTeam?.colorScheme?.primary})`,
   )
 
   return (
     <>
       <Head>
         <title>
-          {data?.team?.city} {data?.team?.name}
+          {data?.findUniqueTeam?.city} {data?.findUniqueTeam?.name}
         </title>
       </Head>
       <Stack alignItems="center" spacing={4} bgGradient={bgGradient} py={8} w="full">
         <PageTitle as="h1" color={headingColor} textTransform="uppercase" fontSize="6xl">
-          {data?.team?.city} {data?.team?.name}
+          {data?.findUniqueTeam?.city} {data?.findUniqueTeam?.name}
         </PageTitle>
         <Image
           src={imageURL}
@@ -57,12 +57,16 @@ const TeamInfo: FC = () => {
         />
         <SimpleGrid columns={[1, null, 3]}>
           <SuspenseList revealOrder="forwards" tail="collapsed">
-            {data?.team?.players?.map((player) => (
+            {data?.findUniqueTeam?.players?.map((player) => (
               <IntersectionSlide key={player?.number}>
-                <Suspense fallback={<Spinner size="md" color={data?.team?.colorScheme?.primary} />}>
+                <Suspense
+                  fallback={
+                    <Spinner size="md" color={data?.findUniqueTeam?.colorScheme?.primary} />
+                  }
+                >
                   <PlayerCard
                     player={player as Player}
-                    colorScheme={data?.team?.colorScheme as ColorScheme}
+                    colorScheme={data?.findUniqueTeam?.colorScheme as ColorScheme}
                   />
                 </Suspense>
               </IntersectionSlide>

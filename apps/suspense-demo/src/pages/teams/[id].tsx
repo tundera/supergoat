@@ -1,30 +1,23 @@
+import type { NextPage } from 'types'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import type { Team } from 'db'
-import type {
-  TeamQuery,
-  TeamQueryVariables,
-  AllTeamsQuery,
-  AllTeamsQueryVariables,
-} from 'src/services/graphql/generated/types'
 
 import db from 'db'
-import { Suspense, SuspenseList } from 'react'
-import { useRouter } from 'next/router'
-import { Center, Heading, Box, Text, Flex, SimpleGrid, Spinner, Stack } from '@chakra-ui/react'
-import { QueryClient, useQuery } from 'react-query'
-import { GraphQLClient, request } from 'graphql-request'
+import { Suspense } from 'react'
+import { Flex } from '@chakra-ui/react'
+import { QueryClient } from 'react-query'
 import { dehydrate } from 'react-query/hydration'
 
 import { FullPageSpinner } from 'src/components/FullPageSpinner'
 import { getLayout as getPageLayout } from 'src/layouts/PageLayout'
-import { prefetchTeamQuery, fetchAllTeamsQuery, getAllTeamsQuery } from 'src/lib/teams'
+import { prefetchTeamQuery } from 'src/lib/teams'
 import TeamInfo from 'src/components/TeamInfo'
 
 type RouteParams = {
   id: string
 }
 
-export const TeamPage = () => {
+export const TeamPage: NextPage = () => {
   return (
     <>
       <Suspense fallback={<FullPageSpinner />}>

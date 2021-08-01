@@ -14,6 +14,7 @@ import { upsertCoachData } from 'db/helpers/coaches'
 import { upsertPlayerData } from 'db/helpers/players'
 
 async function getTeamInfo(teamId: number): Promise<TeamData> {
+  // return await nba.stats.teamInfoCommon({ TeamID: teamId })
   return await nba.stats.teamInfoCommon({ TeamID: teamId })
 }
 
