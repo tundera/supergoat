@@ -1,30 +1,30 @@
 #!/usr/bin/env ts-node
 
-import execa from 'execa';
-import ora from 'ora';
-import chalk from 'chalk';
-import findWorkspaceRoot from 'find-yarn-workspace-root';
+import execa from "execa";
+import ora from "ora";
+import chalk from "chalk";
+import findWorkspaceRoot from "find-yarn-workspace-root";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-require('dotenv-expand')(require('dotenv-flow').config({ silent: true }));
+require("dotenv-expand")(require("dotenv-flow").config({ silent: true }));
 
 const workspaceRoot = findWorkspaceRoot(process.cwd()) as string;
 
 const buildApps = async () => {
-  await execa('yarn', ['ultra', '-r', '--filter', '*-app', 'build'], {
-    stdio: 'pipe',
+  await execa("yarn", ["ultra", "-r", "--filter", "*-app", "build"], {
+    stdio: "pipe",
     cwd: workspaceRoot,
   });
 };
 
 const buildSuspenseDemo = async () => {
-  await execa('yarn', ['workspace', '@monorepo/suspense-demo', 'build']);
+  await execa("yarn", ["workspace", "@monorepo/suspense-demo", "build"]);
 };
 
 const main = async () => {
   const spinner = ora({
     text: `Building ${chalk.cyanBright.bold`suspense-demo`}`,
-    spinner: 'dots',
+    spinner: "dots",
   }).start();
 
   try {

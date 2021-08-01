@@ -46,9 +46,9 @@ This app relies on packages in the monorepo, see detailed instructions in [READM
 ```json5
 {
   dependencies: {
-    "@monorepo/core": "workspace:*",
-    "@monorepo/db": "workspace:*",
-    "@monorepo/components": "workspace:*",
+    "@monorepo/core": "0.1.0",
+    "@monorepo/db": "0.1.0",
+    "@monorepo/components": "0.1.0",
   },
 }
 ```

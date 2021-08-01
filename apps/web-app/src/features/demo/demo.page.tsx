@@ -1,6 +1,6 @@
 import { NextSeo } from "next-seo";
-import { MainLayout } from "@/components/layout/main-layout";
-import { Banner } from "@/components/banner";
+import { MainLayout } from "src/components/layout/main-layout";
+import { Banner } from "src/components/banner";
 import { useTranslation } from "next-i18next";
 import { demoConfig } from "./demo.config";
 import { sayHello } from "@monorepo/core";

@@ -1,0 +1,12 @@
+tsconfig.tsbuildinfo
+.next
+**/migrations/**
+.log
+.DS_Store
+.jest-*
+dist
+node_modules
+reports
+*.log
+**/.env*
+.yarn*

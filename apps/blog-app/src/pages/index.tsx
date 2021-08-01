@@ -1,6 +1,6 @@
 import { sayHello } from "@monorepo/core";
 import { getPosts, Post } from "../data/blog";
-import { MainLayout } from "@/components/layout/main-layout";
+import { MainLayout } from "src/components/layout/main-layout";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 

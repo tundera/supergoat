@@ -159,7 +159,7 @@ yarn dev
    you might need (tsconfig.json...). Place sources in the `magnificent-poney/src` folder.
 
 4. To use it in an app first declare the dependency in its package.json deps by adding
-   `"@monorepo/magnificent-poney": "workspace:*"`. Inspiration in [web-app/package.json](./apps/web-app/package.json).
+   `"@monorepo/magnificent-poney": "0.1.0"`. Inspiration in [web-app/package.json](./apps/web-app/package.json).
 
 5. Run `yarn install` to update the workspace and create symlinks.
 
