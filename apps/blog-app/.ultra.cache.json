@@ -1,1 +1,39 @@
-{"files":{".next":"1627710428942.345","node_modules":"1627708436266.185",".env":"52fa4fad45ab0500d2cc81994086231368527ec7",".eslintignore":"1186b553ffd388494b678496359cdb4182c5ef83",".eslintrc.json":"1caf7b01d256f0a67fdbf4ed9bad2fa81c224110",".gitignore":"b780291bb3595f567dbf34c9dd8d3bfa00534314","CHANGELOG.md":"75f5bf34351460f6313571c67e9141539ce9d07f","LICENSE":"b6a78d62232f61a44d1929932b96c0d1f3535200","README.md":"a9a8b8cdabd12227a9318f8437c83dcc462a9366","babel.config.js":"44a92b5f971e4826da48a7aed47a4106db17e968","config/jest/test-utils.tsx":"ae7d750367bddd285e7ee34c9a4069dd0011a665","jest.config.js":"a9cde7a02de173f1473e03b409ad1332732158ea","lint-staged.config.js":"158a6e7f0f7a1ea3dad952d25eedf8880fd81300","next-env.d.ts":"c6643fda12ff6f86da14e44369faa91fd9877a29","next.config.js":"4b5261a35687f88f1f7f66e0ec7dc11ebb0988e4","package.json":"02a4a65bc3411b9551d69463734f5481541c8f61.1627708065046.0298","postcss.config.js":"3687d286ecd7c992f3f12ff7a564bf997df09388","public/images/nextjs-logo.png":"bf8ffbc3349779896de6194ca86ba42391722c24","public/shared-assets":"75ac548d70173c63fc579579c3457f35364af4f1","src/app-providers.tsx":"4ff89fb414fc208284df73fe8a2cff36e89ecf81","src/components/layout/__tests__/main-layout.test.tsx":"fa11a41ca273d74481f0308f31341a745eb2b3d1.1627623375308.3796","src/components/layout/main-footer.tsx":"e694e5235d447ee9f275cfcf76ecff5126c46021","src/components/layout/main-header.tsx":"2e2e5813a5338f9dfb07f91fae9eb96f58b200ed","src/components/layout/main-layout.tsx":"d50fee0a5953ce9642ca742dc3a858e5c07a8a77.1627708704755.3982","src/data/blog.ts":"127eee8ace4fafedab0c94bbd38c5781a7b0b5c5","src/pages/_app.tsx":"dff06cf75d1898517cdc61e4aabec846a35836cd","src/pages/_document.tsx":"60beee5780d00983128fb1a81682f8240600577e","src/pages/index.tsx":"b1d7245c297ce1188b1af8ff07ee1bbbd2f33a65.1627623380898.379","tailwind.config.js":"4d191bdf8da2a86da0c01a596d309b85246c3c91","tsconfig.jest.json":"d6c8988d9451e9630db4d755eec9d18874cacea7","tsconfig.json":"21d57cba264b18094b724bb09c117fbc7acc8a8a.1627708880252.6892"},"deps":{"@monorepo/components":1627710059329.9504,"@monorepo/core":1627710060325.3372}}
+{
+  "files": {
+    ".next": "1627820317040.853",
+    "node_modules": "1627820148385.994",
+    ".env": "52fa4fad45ab0500d2cc81994086231368527ec7",
+    ".eslintignore": "1186b553ffd388494b678496359cdb4182c5ef83",
+    ".eslintrc.json": "1caf7b01d256f0a67fdbf4ed9bad2fa81c224110",
+    ".gitignore": "b780291bb3595f567dbf34c9dd8d3bfa00534314",
+    "CHANGELOG.md": "75f5bf34351460f6313571c67e9141539ce9d07f",
+    "LICENSE": "b6a78d62232f61a44d1929932b96c0d1f3535200",
+    "README.md": "a9a8b8cdabd12227a9318f8437c83dcc462a9366",
+    "babel.config.js": "44a92b5f971e4826da48a7aed47a4106db17e968",
+    "config/jest/test-utils.tsx": "ae7d750367bddd285e7ee34c9a4069dd0011a665",
+    "jest.config.js": "a9cde7a02de173f1473e03b409ad1332732158ea",
+    "lint-staged.config.js": "158a6e7f0f7a1ea3dad952d25eedf8880fd81300",
+    "next-env.d.ts": "c6643fda12ff6f86da14e44369faa91fd9877a29",
+    "next.config.js": "4b5261a35687f88f1f7f66e0ec7dc11ebb0988e4",
+    "package.json": "0747318d727538db758ddb4b2e4229d986a78767",
+    "postcss.config.js": "3687d286ecd7c992f3f12ff7a564bf997df09388",
+    "public/images/nextjs-logo.png": "bf8ffbc3349779896de6194ca86ba42391722c24",
+    "public/shared-assets": "75ac548d70173c63fc579579c3457f35364af4f1",
+    "src/app-providers.tsx": "4ff89fb414fc208284df73fe8a2cff36e89ecf81",
+    "src/components/layout/__tests__/main-layout.test.tsx": "c01c00753aeb09487a5c125753dbae8265e44e50",
+    "src/components/layout/main-footer.tsx": "e694e5235d447ee9f275cfcf76ecff5126c46021",
+    "src/components/layout/main-header.tsx": "2e2e5813a5338f9dfb07f91fae9eb96f58b200ed",
+    "src/components/layout/main-layout.tsx": "0de2532645fac66d6c740b2e4c5a2a43ff35dbfa",
+    "src/data/blog.ts": "127eee8ace4fafedab0c94bbd38c5781a7b0b5c5",
+    "src/pages/_app.tsx": "dff06cf75d1898517cdc61e4aabec846a35836cd",
+    "src/pages/_document.tsx": "60beee5780d00983128fb1a81682f8240600577e",
+    "src/pages/index.tsx": "687f048895d23a43717ecf06bb4d2b8d02f8d37d",
+    "tailwind.config.js": "4d191bdf8da2a86da0c01a596d309b85246c3c91",
+    "tsconfig.jest.json": "d6c8988d9451e9630db4d755eec9d18874cacea7",
+    "tsconfig.json": "1b16093ab1dad409da3b845fef08477f65a08e80"
+  },
+  "deps": {
+    "@monorepo/components": 1627789210131.3137,
+    "@monorepo/core": 1627789210133.4849
+  }
+}
