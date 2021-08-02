@@ -1,14 +1,15 @@
-import { ContactForm } from '@/components/contact-form'
-import { LayoutGrid } from '@/components/layout-grid'
-import { Layout } from '@/components/layout'
+import { ContactForm } from "@/components/contact-form";
+import { LayoutGrid } from "@/components/layout-grid";
+import { Layout } from "@/components/layout";
 
 export default function ContactPage() {
   return (
     <Layout
       meta={{
-        title: 'Contact',
-        description: 'Say hello at hello@example.com or use the contact form below!',
-        path: '/contact',
+        title: "Contact",
+        description:
+          "Say hello at hello@example.com or use the contact form below!",
+        path: "/contact",
       }}
     >
       <LayoutGrid>
@@ -21,5 +22,5 @@ export default function ContactPage() {
         </div>
       </LayoutGrid>
     </Layout>
-  )
+  );
 }

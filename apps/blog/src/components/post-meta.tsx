@@ -1,21 +1,23 @@
-import Link from 'next/link'
-import { formatDate } from 'src/utils/format-date'
-import { Post } from 'types'
+import { FC } from "react";
+import Link from "next/link";
+
+import { Post } from "types";
+import { formatDate } from "src/utils/format-date";
 
 export interface PostMetaProps extends React.HTMLAttributes<HTMLDivElement> {
-  post: Post
+  post: Post;
 }
 
-export function PostMeta({ post, ...props }: PostMetaProps) {
-  const [author] = post.relationships.author
-  const [category] = post.relationships.category
+export const PostMeta: FC<PostMetaProps> = ({ post, ...props }) => {
+  const [author] = post.relationships.author;
+  const [category] = post.relationships.category;
 
   return (
     <div {...props}>
       <p color="textLighter">
         {author && (
           <>
-            Posted by{' '}
+            Posted by{" "}
             <Link href={author.url} passHref>
               <a variant="text.link" fontWeight="semibold">
                 {author.frontMatter.name}
@@ -37,5 +39,5 @@ export function PostMeta({ post, ...props }: PostMetaProps) {
         {post.readingTime && <>&nbsp;-&nbsp;{post.readingTime?.text}</>}
       </p>
     </div>
-  )
-}
+  );
+};

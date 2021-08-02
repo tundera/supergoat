@@ -1,1 +1,22 @@
-{"files":{"dist":"1627710059218.9172","node_modules":"1627708435581.4604","yarn-error.log":"1627706945951.992",".eslintignore":"fd372fb3c89736f8ba1555103c1822a21aa85cde",".eslintrc.json":"56cc01c208579f55b1a6f8907400cf52fea5b62d",".gitignore":"02ff6ab3e198458e75944a7ba05dde8c20555a08","CHANGELOG.md":"af73814c0cfb36583cc5c179cc032e571f0f86e8","LICENSE":"b6a78d62232f61a44d1929932b96c0d1f3535200","README.md":"e5c0c709537ec9fb7e0e008b7cb2bd9e1b909d2f","lint-staged.config.js":"158a6e7f0f7a1ea3dad952d25eedf8880fd81300","package.json":"7a5b2e5639c1b5e21aa1f1a009408a3638d89f35.1627708105817.5063","src/async-message.tsx":"75830d32846671024085308efb30de8ac7bc7b44","src/component/info-card.tsx":"7b2a4b0b3ae6101328a295b4cb33903d75276c55","src/index.ts":"f509093c6919d6314c1a62ad9485a2bf1c6fa41b","src/message.tsx":"b580aecdf9ed71d775a7b53cd9dd338c5ee3ef18","tsconfig.build.json":"62934970fb367c4b44cb784be2b99b08a75482f3","tsconfig.json":"e7066b882ab0f25b90189dff0493f72fc164c39d"},"deps":{}}
+{
+  "files": {
+    "dist": "1627863614159.0857",
+    "node_modules": "1627864484113.818",
+    "yarn-error.log": "1627706945951.992",
+    ".eslintignore": "fd372fb3c89736f8ba1555103c1822a21aa85cde",
+    ".eslintrc.json": "56cc01c208579f55b1a6f8907400cf52fea5b62d",
+    ".gitignore": "02ff6ab3e198458e75944a7ba05dde8c20555a08",
+    "CHANGELOG.md": "af73814c0cfb36583cc5c179cc032e571f0f86e8",
+    "LICENSE": "b6a78d62232f61a44d1929932b96c0d1f3535200",
+    "README.md": "e5c0c709537ec9fb7e0e008b7cb2bd9e1b909d2f",
+    "lint-staged.config.js": "158a6e7f0f7a1ea3dad952d25eedf8880fd81300",
+    "package.json": "719599c7a3832fcf9c68d9a6ea1e2c6313991632",
+    "src/async-message.tsx": "75830d32846671024085308efb30de8ac7bc7b44",
+    "src/component/info-card.tsx": "7b2a4b0b3ae6101328a295b4cb33903d75276c55",
+    "src/index.ts": "f509093c6919d6314c1a62ad9485a2bf1c6fa41b",
+    "src/message.tsx": "b580aecdf9ed71d775a7b53cd9dd338c5ee3ef18",
+    "tsconfig.build.json": "62934970fb367c4b44cb784be2b99b08a75482f3",
+    "tsconfig.json": "e7066b882ab0f25b90189dff0493f72fc164c39d"
+  },
+  "deps": {}
+}

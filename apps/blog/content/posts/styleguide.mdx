@@ -146,7 +146,7 @@ export function Footer({ copyright, ...props }: FooterProps) {
 
 ```jsx
 /** @jsx jsx */
-import { jsx } from "reflexjs"
+import { jsx } from "reflexjs";
 
 export function Footer({ copyright, ...props }: FooterProps) {
   return (
@@ -155,7 +155,7 @@ export function Footer({ copyright, ...props }: FooterProps) {
         {copyright}
       </p>
     </section>
-  )
+  );
 }
 ```
 
@@ -185,7 +185,7 @@ export async function getStaticProps() {
     // - when a request comes in
     // - at most once every second
     revalidate: 1,
-  }
+  };
 }
 ```
 
@@ -204,7 +204,7 @@ module.exports = {
 ```js title=path/to/next.config.js
 module.exports = {
   basePath: "/docs",
-}
+};
 ```
 
 ### Line Highlighting
@@ -233,7 +233,7 @@ export async function getStaticProps() {
 export async function getStaticProps() {
   // highlight-start
   // Fetch all MDX posts.
-  const posts = await getAllMdxNodes("post")
+  const posts = await getAllMdxNodes("post");
   // highlight-end
 
   return {
@@ -241,7 +241,7 @@ export async function getStaticProps() {
       posts,
     },
     revalidate: 1, // highlight-line
-  }
+  };
 }
 ```
 

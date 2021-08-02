@@ -1,6 +1,13 @@
-import Link from 'next/link'
+import { FC } from "react";
+import { Post } from "types";
 
-export function Posts({ posts }) {
+import Link from "next/link";
+
+interface Props {
+  posts: Post[];
+}
+
+export const Posts: FC<Props> = ({ posts }) => {
   return (
     <ul>
       {posts.map((post) => (
@@ -15,5 +22,5 @@ export function Posts({ posts }) {
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};

@@ -1,11 +1,17 @@
-import { Icon } from 'reflexjs'
+import { FC } from "react";
+import { Icon } from "reflexjs";
 
-export type SearchFormProps = React.InputHTMLAttributes<HTMLInputElement>
+export type SearchFormProps = React.InputHTMLAttributes<HTMLInputElement>;
 
-export function SearchForm({ ...props }: SearchFormProps) {
+export const SearchForm: FC<SearchFormProps> = ({ ...props }) => {
   return (
     <div rounded="lg" position="relative">
-      <input placeholder="Type to search..." variant="input" pr="12" {...props} />
+      <input
+        placeholder="Type to search..."
+        variant="input"
+        pr="12"
+        {...props}
+      />
       <div
         display="flex"
         position="absolute"
@@ -20,5 +26,5 @@ export function SearchForm({ ...props }: SearchFormProps) {
         <Icon name="search" size="6" />
       </div>
     </div>
-  )
-}
+  );
+};

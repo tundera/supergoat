@@ -1,22 +1,22 @@
-import Image from 'next/image'
-import { getMdxNode, getMdxPaths } from 'next-mdx/server'
-import { useHydrate } from 'next-mdx/client'
-import readingTime from 'reading-time'
+import Image from "next/image";
+import { getMdxNode, getMdxPaths } from "next-mdx/server";
+import { useHydrate } from "next-mdx/client";
+import readingTime from "reading-time";
 
-import { Post } from 'types'
-import { Layout } from '@/components/layout'
-import { PostMeta } from '@/components/post-meta'
-import { LayoutGrid } from '@/components/layout-grid'
-import { mdxComponents } from '@/components/mdx-components'
+import { Post } from "types";
+import { Layout } from "@/components/layout";
+import { PostMeta } from "@/components/post-meta";
+import { LayoutGrid } from "@/components/layout-grid";
+import { mdxComponents } from "@/components/mdx-components";
 
 export interface PostPageProps {
-  post: Post
+  post: Post;
 }
 
 export default function PostPage({ post }: PostPageProps) {
   const content = useHydrate(post, {
     components: mdxComponents,
-  })
+  });
 
   return (
     <Layout
@@ -26,7 +26,7 @@ export default function PostPage({ post }: PostPageProps) {
         image: post.frontMatter.image,
         date: new Date(post.frontMatter.date).toISOString(),
         path: post.url,
-        type: 'article',
+        type: "article",
       }}
     >
       <LayoutGrid>
@@ -49,32 +49,34 @@ export default function PostPage({ post }: PostPageProps) {
               />
             </figure>
             {post.frontMatter.caption && (
-              <figcaption variant="text.caption">{post.frontMatter.caption}</figcaption>
+              <figcaption variant="text.caption">
+                {post.frontMatter.caption}
+              </figcaption>
             )}
           </div>
         )}
         {content}
       </LayoutGrid>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticPaths() {
   return {
-    paths: await getMdxPaths('post'),
+    paths: await getMdxPaths("post"),
     fallback: false,
-  }
+  };
 }
 
 export async function getStaticProps(context) {
-  const post = await getMdxNode<Post>('post', context, {
+  const post = await getMdxNode<Post>("post", context, {
     components: mdxComponents,
-  })
+  });
 
   if (!post) {
     return {
       notFound: true,
-    }
+    };
   }
 
   return {
@@ -84,5 +86,5 @@ export async function getStaticProps(context) {
         readingTime: readingTime(post.content),
       },
     },
-  }
+  };
 }

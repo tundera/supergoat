@@ -2,8 +2,6 @@ import Listr from 'listr'
 import execa from 'execa'
 import concurrently from 'concurrently'
 
-require('dotenv-expand')(require('dotenv-flow').config({ silent: false }))
-
 const cwd = process.cwd()
 
 const generateThemeTypes = async () => {

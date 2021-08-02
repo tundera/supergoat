@@ -9,10 +9,10 @@ export class PrismaFactory {
   private static instance: PrismaClient | undefined;
   private constructor() {}
   private static createNewInstance(): PrismaClient {
-    const url = process.env?.PRISMA_DATABASE_URL ?? null;
+    const url = process.env?.DATABASE_URL ?? null;
     Asserts.nonEmptyString(
       url,
-      `Cannot create prisma client instance, missing env variable PRISMA_DATABASE_URL.`
+      `Cannot create prisma client instance, missing env variable DATABASE_URL.`
     );
     const prismaClient = new PrismaClient({
       datasources: {

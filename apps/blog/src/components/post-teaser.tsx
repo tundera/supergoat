@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import { Post } from 'types'
-import { PostMeta } from '@/components/post-meta'
+import Link from "next/link";
+import { Post } from "types";
+import { PostMeta } from "@/components/post-meta";
 
 export interface PostTeaserProps {
-  post: Post
+  post: Post;
 }
 
 export function PostTeaser({ post, ...props }: PostTeaserProps) {
@@ -16,7 +16,7 @@ export function PostTeaser({ post, ...props }: PostTeaserProps) {
             color="heading"
             textDecoration="none"
             _hover={{
-              color: 'primary',
+              color: "primary",
             }}
           >
             {post.frontMatter.title}
@@ -30,5 +30,5 @@ export function PostTeaser({ post, ...props }: PostTeaserProps) {
       ) : null}
       <PostMeta post={post} fontSize="sm" />
     </article>
-  )
+  );
 }

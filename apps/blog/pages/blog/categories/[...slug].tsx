@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import { getAllNodes, getMdxPaths, getNode } from 'next-mdx/server'
+import Link from "next/link";
+import { getAllNodes, getMdxPaths, getNode } from "next-mdx/server";
 
-import { Category, Post } from 'types'
-import { Layout } from '@/components/layout'
-import { LayoutGrid } from '@/components/layout-grid'
+import { Category, Post } from "types";
+import { Layout } from "@/components/layout";
+import { LayoutGrid } from "@/components/layout-grid";
 
 export interface CategoryPageProps {
-  category: Category
-  posts: Post[]
+  category: Category;
+  posts: Post[];
 }
 
 export default function AuthorPage({ category, posts }: CategoryPageProps) {
@@ -29,7 +29,9 @@ export default function AuthorPage({ category, posts }: CategoryPageProps) {
               {posts.map((post) => (
                 <li key={post.slug} mb="2">
                   <Link href={post.url} passHref>
-                    <a variant="heading.h4 text.link">{post.frontMatter.title}</a>
+                    <a variant="heading.h4 text.link">
+                      {post.frontMatter.title}
+                    </a>
                   </Link>
                 </li>
               ))}
@@ -38,33 +40,33 @@ export default function AuthorPage({ category, posts }: CategoryPageProps) {
         ) : null}
       </LayoutGrid>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticPaths() {
   return {
-    paths: await getMdxPaths('category'),
+    paths: await getMdxPaths("category"),
     fallback: false,
-  }
+  };
 }
 
 export async function getStaticProps(context) {
-  const category = await getNode<Category>('category', context)
+  const category = await getNode<Category>("category", context);
 
   if (!category) {
     return {
       notFound: true,
-    }
+    };
   }
 
-  const posts = await getAllNodes<Post>('post')
+  const posts = await getAllNodes<Post>("post");
 
   return {
     props: {
       category,
       posts: posts.filter((post) =>
-        post.relationships.category.some(({ slug }) => slug === category.slug),
+        post.relationships.category.some(({ slug }) => slug === category.slug)
       ),
     },
-  }
+  };
 }

@@ -30,7 +30,7 @@ yarn prisma:db:seed
 
 #### Option 1: Postgresql local
 
-The default env for `PRISMA_DATABASE_URL` is defined in the main [.env](.env) file.
+The default env for `DATABASE_URL` is defined in the main [.env](.env) file.
 By default, it connects to the postgresql service defined in [../../docker-compose.yml](../../docker-compose.yml).
 
 Ensure you have docker and docker-compose and run
@@ -49,7 +49,7 @@ To quick start, you can use a free tier at supabase.io, but all providers will w
 As an example, simply create an `.env.local` and set the supabase pgbouncer url:
 
 ```env
-PRISMA_DATABASE_URL=postgresql://postgres:[PASSWORD]@[HOST]:[PORT]/postgres?schema=public&pgbouncer=true&sslmode=require&sslaccept=strict&sslcert=../config/certs/supabase-prod-ca-2021.crt
+DATABASE_URL=postgresql://postgres:[PASSWORD]@[HOST]:[PORT]/postgres?schema=public&pgbouncer=true&sslmode=require&sslaccept=strict&sslcert=../config/certs/supabase-prod-ca-2021.crt
 ```
 
 > You can append `&connection_limit=1` if deploying on a serverless/lambda provider (ie: vercel, netlify...)

@@ -1,19 +1,19 @@
-import { getMdxNode, getMdxPaths } from 'next-mdx/server'
-import { useHydrate } from 'next-mdx/client'
+import { getMdxNode, getMdxPaths } from "next-mdx/server";
+import { useHydrate } from "next-mdx/client";
 
-import { Page } from 'types'
-import { Layout } from '@/components/layout'
-import { LayoutGrid } from '@/components/layout-grid'
-import { mdxComponents } from '@/components/mdx-components'
+import { Page } from "types";
+import { Layout } from "@/components/layout";
+import { LayoutGrid } from "@/components/layout-grid";
+import { mdxComponents } from "@/components/mdx-components";
 
 export interface PageProps {
-  page: Page
+  page: Page;
 }
 
 export default function PagePage({ page }: PageProps) {
   const content = useHydrate(page, {
     components: mdxComponents,
-  })
+  });
 
   return (
     <Layout
@@ -33,24 +33,24 @@ export default function PagePage({ page }: PageProps) {
         {content}
       </LayoutGrid>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticPaths() {
   return {
-    paths: await getMdxPaths('page'),
+    paths: await getMdxPaths("page"),
     fallback: false,
-  }
+  };
 }
 
 export async function getStaticProps(context) {
-  const page = await getMdxNode('page', context, {
+  const page = await getMdxNode("page", context, {
     components: mdxComponents,
-  })
+  });
 
   return {
     props: {
       page,
     },
-  }
+  };
 }

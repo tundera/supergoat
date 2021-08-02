@@ -1,25 +1,44 @@
-import { Icon, VisuallyHidden } from 'reflexjs'
+import { FC } from "react";
+import { Icon, VisuallyHidden } from "reflexjs";
 
-export function ContactForm() {
+export const ContactForm: FC = () => {
   return (
     <form display="grid" col="1|2" gap="4" mt="4" w="full|auto">
       <div>
         <VisuallyHidden>
           <label htmlFor="name">Name</label>
         </VisuallyHidden>
-        <input variant="input" type="text" id="name" name="name" placeholder="Name" />
+        <input
+          variant="input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name"
+        />
       </div>
       <div>
         <VisuallyHidden>
           <label htmlFor="email">Email</label>
         </VisuallyHidden>
-        <input variant="input" type="email" id="email" name="email" placeholder="Email" />
+        <input
+          variant="input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+        />
       </div>
       <div>
         <VisuallyHidden>
           <label htmlFor="phone">Phone</label>
         </VisuallyHidden>
-        <input variant="input" type="tel" id="phone" name="phone" placeholder="Phone" />
+        <input
+          variant="input"
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone"
+        />
       </div>
       <div>
         <VisuallyHidden>
@@ -35,7 +54,13 @@ export function ContactForm() {
         <VisuallyHidden>
           <label htmlFor="message">Message</label>
         </VisuallyHidden>
-        <textarea variant="textarea" placeholder="Message" id="message" name="message" rows={10} />
+        <textarea
+          variant="textarea"
+          placeholder="Message"
+          id="message"
+          name="message"
+          rows={10}
+        />
       </div>
       <div display="grid" col="1|2" gap="4" colStart="span 2">
         <button type="submit" variant="button.primary">
@@ -44,5 +69,5 @@ export function ContactForm() {
         <button variant="button.secondary">Button</button>
       </div>
     </form>
-  )
-}
+  );
+};

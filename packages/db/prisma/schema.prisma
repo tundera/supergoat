@@ -1,38 +1,38 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["nApi"]
   // output = "../src/generated"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("PRISMA_DATABASE_URL")
+  url      = env("DATABASE_URL")
 }
 
 model Poem {
-  id        Int     @id @default(autoincrement())
-  slug      String  @unique
-  title     String
-  content   String
-  keywords  String[]
-  author    String
-  link      String?
-  image     String?
+  id       Int      @id @default(autoincrement())
+  slug     String   @unique
+  title    String
+  content  String
+  keywords String[]
+  author   String
+  link     String?
+  image    String?
 
   @@map(name: "poem")
 }
 
 model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  link      String?
-  image     String?
-  author    User?   @relation(fields: [authorId], references: [id])
-  authorId  Int?
-  publishedAt   DateTime?  @map(name: "published_at")
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  id          Int       @id @default(autoincrement())
+  title       String
+  content     String?
+  link        String?
+  image       String?
+  author      User?     @relation(fields: [authorId], references: [id])
+  authorId    Int?
+  publishedAt DateTime? @map(name: "published_at")
+  createdAt   DateTime  @default(now()) @map(name: "created_at")
+  updatedAt   DateTime  @updatedAt @map(name: "updated_at")
 
   @@map(name: "post")
 }
