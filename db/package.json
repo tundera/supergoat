@@ -24,7 +24,7 @@
   },
   "scripts": {
     "generate": "prisma generate",
-    "lint": "yarn eslint --ignore-path '../../.eslintignore' --ext '.js,.ts,.tsx' .",
+    "lint": "yarn eslint --ignore-path '../.eslintignore' --ext '.js,.ts,.tsx' .",
     "ts-script": "node -r esbuild-register"
   },
   "dependencies": {
