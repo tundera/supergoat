@@ -1,9 +1,8 @@
 import type { FC } from 'react'
 import type { Player, ColorScheme } from 'src/services/graphql/generated/types'
 
-import { Suspense } from 'react'
 import Image from 'src/components/NextChakraImage'
-import { chakra, Box, Text, Flex, useColorModeValue, Link } from '@chakra-ui/react'
+import { Box, Text, Flex, useColorModeValue, Link } from '@chakra-ui/react'
 
 import MotionBox from 'src/components/MotionBox'
 import colors from 'src/styles/theme/colors'
@@ -24,31 +23,32 @@ const PlayerCard: FC<Props> = ({ player, colorScheme }) => {
   const { imageURL, blurDataURL } = useImageUrlBuilder(player?.image?.id as string)
 
   return (
-    <Flex p={50} w="full" alignItems="center" justifyContent="center">
+    <Box w="full" h="full" bg="whiteAlpha.300" p="8">
       <MotionBox
         w="full"
+        h="full"
+        justifyContent="center"
+        alignItems="center"
         shadow="lg"
         rounded="lg"
         overflow="hidden"
-        mx="auto"
         textAlign="center"
-        _hover={{
-          shadow: '2xl',
-          borderWidth: '2px',
-          borderColor: colors.indigo[500],
-        }}
+        bgGradient={bgGradient}
+        color={textColor}
       >
-        <Image
-          src={imageURL}
-          height={760}
-          width={1040}
-          layout="responsive"
-          objectFit="cover"
-          alt="Player avatar"
-          placeholder="blur"
-          blurDataURL={blurDataURL}
-        />
-        <Box pt={10} pb={4} bgGradient={bgGradient} color={textColor}>
+        <Box shadow="lg">
+          <Image
+            src={imageURL}
+            height={760}
+            width={1040}
+            layout="responsive"
+            objectFit="cover"
+            alt="Player avatar"
+            placeholder="blur"
+            blurDataURL={blurDataURL}
+          />
+        </Box>
+        <Flex direction="column" h="auto" pt={10} pb={4}>
           <Link
             display="block"
             fontSize="2xl"
@@ -64,9 +64,9 @@ const PlayerCard: FC<Props> = ({ player, colorScheme }) => {
           <Text fontSize="sm">
             {player.height} / {player.weight}
           </Text>
-        </Box>
+        </Flex>
       </MotionBox>
-    </Flex>
+    </Box>
   )
 }
 

@@ -2,7 +2,6 @@ import { join } from 'path'
 import { makeSchema } from 'nexus'
 import { applyMiddleware } from 'graphql-middleware'
 import { paljs } from '@paljs/nexus'
-
 import { permissions } from 'src/services/graphql/permissions'
 
 // import * as inputTypes from 'src/services/graphql/inputs'

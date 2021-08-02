@@ -1,29 +1,38 @@
 import type { FC } from 'react'
 
-import { Button, ButtonProps } from '@chakra-ui/button'
-import { useColorModeValue } from '@chakra-ui/color-mode'
-import { Box, Flex, HStack } from '@chakra-ui/layout'
-import { IconButton, useDisclosure } from '@chakra-ui/react'
+import {
+  useColorModeValue,
+  Box,
+  Flex,
+  HStack,
+  Icon,
+  ButtonProps,
+  IconButton,
+  LinkOverlay,
+  LinkBox,
+  useDisclosure,
+} from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { FaBars, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import ColorModeToggle from './ColorModeToggle'
 import NavButton from './buttons/NavButton'
-
+import useBrandLogo from 'src/hooks/useBrandLogo'
 import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
 
 const MobileDrawer = dynamic(() => import('./MobileMenu'), {
   ssr: false,
 })
 
 const Header: FC = () => {
-  const color = useColorModeValue('#202020', 'white')
+  const color = useColorModeValue('#blackAlpha.800', 'white')
   const bgColor = useColorModeValue('whiteAlpha.50', 'blackAlpha.50')
   const bgColorFallback = useColorModeValue('whiteAlpha.900', 'rgba(29, 29, 29, 0.9)')
   const borderBottomColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.200')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const hoverBg = useColorModeValue('blackAlpha.300', 'whiteAlpha.300')
-  const skipColor = useColorModeValue('white', '#202020')
+  const skipColor = useColorModeValue('white', 'blackAlpha.800')
+
+  const BrandLogoIcon = useBrandLogo(color)
 
   const buttonStyle: ButtonProps = {
     as: 'a',
@@ -81,14 +90,17 @@ const Header: FC = () => {
       top={0}
     >
       <Flex mx="auto" w="full" maxW="5xl" pos="relative">
-        <NextLink href="/" passHref>
-          <Button as="a" {...buttonStyle} fontSize={{ base: 'lg', md: 'xl' }}>
-            tundera.dev
-          </Button>
-        </NextLink>
+        <LinkBox as={HStack} mr={2}>
+          <Icon as={BrandLogoIcon} w={16} h={16} />
+          <NextLink href="/" passHref>
+            <LinkOverlay fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold">
+              tundera
+            </LinkOverlay>
+          </NextLink>
+        </LinkBox>
         {/* normal nav */}
-        <Flex d={['none', 'flex']} justifyContent="space-between" flex="1">
-          <HStack spacing={0}>
+        <Flex display={['none', 'flex']} justifyContent="space-between" flex="1">
+          <HStack spacing={4} mx={4}>
             {links.map((link) => (
               <NavButton href={link.url} key={link.text}>
                 {link.text}

@@ -16,7 +16,7 @@ const styles: GlobalStyles = {
       lineHeight: 'base',
       bgGradient: mode(
         'linear(to-t, brand.300, white)',
-        'linear(to-t, brand.300, gray.800)',
+        'linear(to-t, brand.300, transparent)',
       )(props),
     },
   }),

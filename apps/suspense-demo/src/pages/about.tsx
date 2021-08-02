@@ -8,7 +8,7 @@ import FeaturesWithCards from 'src/components/blocks/FeaturesWithCards'
 const AboutPage: NextPage = () => {
   return (
     <>
-      <Stack direction="column" align="center" w="full" spacing={4}>
+      <Stack direction="column" align="center" w="full" spacing={4} py={16}>
         <Heading as="h2" fontSize="6xl" mb="4">
           About
         </Heading>
