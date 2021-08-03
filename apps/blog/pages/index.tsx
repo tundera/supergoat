@@ -1,24 +1,24 @@
-import type { NextPage, GetStaticProps } from "next";
+import type { NextPage, GetStaticProps } from 'next'
 
-import { getAllNodes } from "next-mdx/server";
-import readingTime from "reading-time";
+import { getAllNodes } from 'next-mdx/server'
+import readingTime from 'reading-time'
 
-import { Post } from "types";
-import { useSearch } from "@/hooks/use-search";
-import { Layout } from "@/components/layout";
-import { PostTeaser } from "@/components/post-teaser";
-import { LayoutGrid } from "@/components/layout-grid";
-import { SearchForm } from "@/components/search-form";
+import { Post } from 'types'
+import { useSearch } from '@/hooks/use-search'
+import { Layout } from '@/components/layout'
+import { PostTeaser } from '@/components/post-teaser'
+import { LayoutGrid } from '@/components/layout-grid'
+import { SearchForm } from '@/components/search-form'
 
 export interface IndexPageProps {
-  posts: Post[];
+  posts: Post[]
 }
 
 const IndexPage: NextPage<IndexPageProps> = ({ posts }) => {
   const { hits, search, query } = useSearch<Post>(posts, {
     useExtendedSearch: true,
-    keys: ["frontMatter.title", "frontMatter.excerpt"],
-  });
+    keys: ['frontMatter.title', 'frontMatter.excerpt'],
+  })
 
   return (
     <Layout>
@@ -33,9 +33,7 @@ const IndexPage: NextPage<IndexPageProps> = ({ posts }) => {
             alignItems="center"
           >
             <h1 variant="heading.h1">All Posts.</h1>
-            <SearchForm
-              onChange={(event) => search(event.target.value.trim())}
-            />
+            <SearchForm onChange={(event) => search(event.target.value.trim())} />
           </div>
           {hits.length ? (
             hits.map((hit) => <PostTeaser key={hit.slug} post={hit} />)
@@ -44,7 +42,7 @@ const IndexPage: NextPage<IndexPageProps> = ({ posts }) => {
               No posts found
               {query && (
                 <>
-                  {" "}
+                  {' '}
                   for <strong>{query}</strong>
                 </>
               )}
@@ -54,13 +52,13 @@ const IndexPage: NextPage<IndexPageProps> = ({ posts }) => {
         </div>
       </LayoutGrid>
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
-  const posts = await getAllNodes<Post>("post");
+  const posts = await getAllNodes<Post>('post')
 
   return {
     props: {
@@ -69,5 +67,5 @@ export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
         readingTime: readingTime(post.content),
       })),
     },
-  };
-};
+  }
+}

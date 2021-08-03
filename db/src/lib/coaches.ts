@@ -1,5 +1,7 @@
-import type { BackupCoachData, Coach, CoachData } from "../../types";
-import db from "../index";
+import type { Coach } from 'db'
+import type { BackupCoachData, CoachData } from 'db/types'
+
+import db from 'db'
 
 export const transformCoachData = (coach: BackupCoachData) => {
   return {
@@ -10,8 +12,8 @@ export const transformCoachData = (coach: BackupCoachData) => {
     handle: coach.handle,
     isAssistant: coach.isAssistant,
     teamId: coach.teamId,
-  };
-};
+  }
+}
 
 export const upsertCoachData = async (coach: CoachData) => {
   // Update or create coach if not present in database
@@ -32,7 +34,7 @@ export const upsertCoachData = async (coach: CoachData) => {
       type: coach.coachType,
       isAssistant: coach.isAssistant.toString(),
     },
-  });
+  })
 
   // Connect coaches to or remove coaches from teams
   if (coach.teamId) {
@@ -45,7 +47,7 @@ export const upsertCoachData = async (coach: CoachData) => {
           },
         },
       },
-    });
+    })
   } else {
     await db.coach.update({
       where: { id: coach.coachId.toString() },
@@ -54,9 +56,9 @@ export const upsertCoachData = async (coach: CoachData) => {
           disconnect: true,
         },
       },
-    });
+    })
   }
-};
+}
 
 export const seedCoachData = async (coach: Coach) => {
   // Create coach in database
@@ -70,7 +72,7 @@ export const seedCoachData = async (coach: Coach) => {
       type: coach.type,
       isAssistant: coach.isAssistant,
     },
-  });
+  })
 
   // Connect coaches to or remove coaches from teams
   if (coach.teamId) {
@@ -83,7 +85,7 @@ export const seedCoachData = async (coach: Coach) => {
           },
         },
       },
-    });
+    })
   } else {
     await db.coach.update({
       where: { id: coach.id.toString() },
@@ -92,6 +94,20 @@ export const seedCoachData = async (coach: Coach) => {
           disconnect: true,
         },
       },
-    });
+    })
   }
-};
+
+  // Connect coaches to images
+  if (coach.imageId) {
+    await db.coach.update({
+      where: { id: coach.id.toString() },
+      data: {
+        image: {
+          connect: {
+            id: coach.imageId as string,
+          },
+        },
+      },
+    })
+  }
+}

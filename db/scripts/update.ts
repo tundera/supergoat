@@ -1,28 +1,31 @@
-#!/usr/bin/env node
+import teams from 'nba/data/teams.json'
 
-import teams from "nba/data/teams.json";
-import db from "../src/index";
-import { getUpdatedTeamData, updateTeamData } from "../src/lib/teams";
+import db from '@/db'
+import { getUpdatedTeamData, updateTeamData } from '@/db/lib/teams'
 
-export async function main() {
-  console.log("Start updating ...");
+export async function main(): Promise<void> {
+  console.log('Start updating ...')
+
+  const teamData: any[] = []
 
   for (const team of teams) {
-    const data = await getUpdatedTeamData(team.teamId);
-
-    await updateTeamData(data);
-    console.log(`Updated team: ${team.teamId} (${team.teamName})`);
+    const data = await getUpdatedTeamData(team.teamId)
+    teamData.push(data)
   }
 
-  console.log("Updates finished.");
+  for (const team of teamData) {
+    await updateTeamData(team)
+  }
+
+  console.log('Updates finished.')
 }
 
 main()
-  .catch((e) => {
-    console.error(e);
-    process.exit(1);
+  .catch((err) => {
+    console.error(err)
+    process.exit(1)
   })
   .finally(async () => {
-    await db.$disconnect();
-    process.exit(0);
-  });
+    await db.$disconnect()
+    process.exit(0)
+  })

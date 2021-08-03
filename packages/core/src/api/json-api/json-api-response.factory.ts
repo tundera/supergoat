@@ -2,36 +2,36 @@ import {
   JsonApiError,
   JsonApiErrorResponse,
   JsonApiSuccessResponse,
-} from "./json-api-response.types";
-import { isPlainObject } from "../../utils/typeguards";
+} from './json-api-response.types'
+import { isPlainObject } from '../../utils/typeguards'
 
 export class JsonApiResponseFactory {
   static fromError = (
     errors: string | JsonApiError | JsonApiError[],
     /** fallback http status if not present in JsonApiError */
-    httpStatus?: number
+    httpStatus?: number,
   ): JsonApiErrorResponse => {
-    let errs: JsonApiError[];
-    if (typeof errors === "string") {
-      errs = [{ title: errors, ...(httpStatus ? { status: httpStatus } : {}) }];
+    let errs: JsonApiError[]
+    if (typeof errors === 'string') {
+      errs = [{ title: errors, ...(httpStatus ? { status: httpStatus } : {}) }]
     } else if (isPlainObject(errors)) {
-      errs = [errors];
+      errs = [errors]
     } else {
-      errs = errors;
+      errs = errors
     }
     return {
       success: false,
       errors: errs,
-    };
-  };
+    }
+  }
   static fromSuccess = <T>(
     data: T,
-    metadata?: JsonApiSuccessResponse<T>["meta"]
+    metadata?: JsonApiSuccessResponse<T>['meta'],
   ): JsonApiSuccessResponse<T> => {
     return {
       success: true,
       data: data,
       ...(isPlainObject(metadata) ? { meta: metadata } : {}),
-    };
-  };
+    }
+  }
 }

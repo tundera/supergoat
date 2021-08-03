@@ -1,5 +1,5 @@
-import type { BackupColorSchemeData, ColorScheme } from "../../types";
-import db from "../index";
+import type { BackupColorSchemeData, ColorScheme } from '../../types'
+import db from '../index'
 
 export const transformColorSchemeData = (scheme: BackupColorSchemeData) => {
   return {
@@ -8,8 +8,8 @@ export const transformColorSchemeData = (scheme: BackupColorSchemeData) => {
     createdAt: new Date(scheme.createdAt),
     updatedAt: new Date(),
     teamId: scheme.teamId,
-  };
-};
+  }
+}
 
 export const seedColorSchemes = async (scheme: ColorScheme) => {
   await db.colorScheme.create({
@@ -20,7 +20,7 @@ export const seedColorSchemes = async (scheme: ColorScheme) => {
       primary: scheme.primary,
       secondary: scheme.secondary,
     },
-  });
+  })
 
   // // Connect schemes to teams
   if (scheme.teamId) {
@@ -33,7 +33,7 @@ export const seedColorSchemes = async (scheme: ColorScheme) => {
           },
         },
       },
-    });
+    })
   } else {
     await db.colorScheme.update({
       where: { id: scheme.id },
@@ -42,6 +42,6 @@ export const seedColorSchemes = async (scheme: ColorScheme) => {
           disconnect: true,
         },
       },
-    });
+    })
   }
-};
+}

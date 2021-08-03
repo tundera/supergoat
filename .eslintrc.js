@@ -5,13 +5,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:jest/recommended',
   ],
-  plugins: [
-    '@typescript-eslint',
-    'prettier',
-    'react-hooks',
-    'jest',
-    'jest-formatting',
-  ],
+  plugins: ['@typescript-eslint', 'prettier', 'react-hooks', 'jest', 'jest-formatting'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -32,14 +26,11 @@ module.exports = {
       'error',
       { allow: ['private-constructors', 'decoratedFunctions'] },
     ],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
   overrides: [
     {
-      files: [
-        'jest.config.ts',
-        '**/config/jest/**/*.ts',
-        '**/config/jest/**/*.tsx',
-      ],
+      files: ['jest.config.ts', '**/config/jest/**/*.ts', '**/config/jest/**/*.tsx'],
       rules: {
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-var-requires': 'off',
@@ -67,4 +58,4 @@ module.exports = {
       },
     },
   ],
-};
+}

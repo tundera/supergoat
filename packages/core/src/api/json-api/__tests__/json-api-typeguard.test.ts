@@ -2,64 +2,64 @@ import {
   isJsonApiErrorResponse,
   isJsonApiResponse,
   isJsonApiSuccessResponse,
-} from "../json-api.typeguard";
+} from '../json-api.typeguard'
 
-describe("json-api typeguards", () => {
-  describe("isJsonApiResponse", () => {
-    it("should accept valid json responses", () => {
+describe('json-api typeguards', () => {
+  describe('isJsonApiResponse', () => {
+    it('should accept valid json responses', () => {
       const payload = {
         success: true,
-        data: "cool",
+        data: 'cool',
         meta: {},
-      };
-      expect(isJsonApiResponse(payload)).toBeTruthy();
-    });
+      }
+      expect(isJsonApiResponse(payload)).toBeTruthy()
+    })
 
-    it("should reject invalid json responses", () => {
+    it('should reject invalid json responses', () => {
       const payload = {
-        success: "biloute",
+        success: 'biloute',
         meta: {},
-      };
-      expect(isJsonApiResponse(payload)).toBeFalsy();
-    });
-  });
+      }
+      expect(isJsonApiResponse(payload)).toBeFalsy()
+    })
+  })
 
-  describe("isJsonApiSuccessResponse", () => {
-    it("should say yes when payload is success", () => {
+  describe('isJsonApiSuccessResponse', () => {
+    it('should say yes when payload is success', () => {
       const payload = {
         success: true,
-        data: "cool",
+        data: 'cool',
         meta: {},
-      };
-      expect(isJsonApiSuccessResponse(payload)).toBeTruthy();
-    });
+      }
+      expect(isJsonApiSuccessResponse(payload)).toBeTruthy()
+    })
 
-    it("should say no when payload is success", () => {
+    it('should say no when payload is success', () => {
       const payload = {
         success: false,
-        data: "cool",
+        data: 'cool',
         meta: {},
-      };
-      expect(isJsonApiSuccessResponse(payload)).toBeFalsy();
-    });
-  });
+      }
+      expect(isJsonApiSuccessResponse(payload)).toBeFalsy()
+    })
+  })
 
-  describe("isJsonApiErrorResponse", () => {
-    it("should say false when payload is success", () => {
+  describe('isJsonApiErrorResponse', () => {
+    it('should say false when payload is success', () => {
       const payload = {
         success: true,
-        data: "cool",
+        data: 'cool',
         meta: {},
-      };
-      expect(isJsonApiErrorResponse(payload)).toBeFalsy();
-    });
+      }
+      expect(isJsonApiErrorResponse(payload)).toBeFalsy()
+    })
 
-    it("should say yes when payload is error", () => {
+    it('should say yes when payload is error', () => {
       const payload = {
         success: false,
         errors: [],
-      };
-      expect(isJsonApiErrorResponse(payload)).toBeTruthy();
-    });
-  });
-});
+      }
+      expect(isJsonApiErrorResponse(payload)).toBeTruthy()
+    })
+  })
+})

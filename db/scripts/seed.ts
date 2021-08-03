@@ -1,78 +1,92 @@
-#!/usr/bin/env node
+import Listr from 'listr'
+import db from '@/db'
 
-import rawCoaches from "../backups/documents/coaches.json";
-import rawSchemes from "../backups/documents/color-schemes.json";
-import rawPlayers from "../backups/documents/players.json";
-import rawTeams from "../backups/documents/teams.json";
-import db from "../src/index";
-import { seedCoachData, transformCoachData } from "../src/lib/coaches";
-import { seedColorSchemes, transformColorSchemeData } from "../src/lib/colors";
-import { seedPlayerData, transformPlayerData } from "../src/lib/players";
-import { seedTeamData, transformTeamData } from "../src/lib/teams";
+import { colorSchemes, images, coaches, players, teams } from '@/db/lib/data'
+import { seedCoachData, transformCoachData } from '@/db/lib/coaches'
+import { seedColorSchemesData, transformColorSchemeData } from '@/db/lib/colorSchemes'
+import { seedPlayerData, transformPlayerData } from '@/db/lib/players'
+import { seedTeamData, transformTeamData } from '@/db/lib/teams'
+import { seedImageData, transformImageData } from '@/db/lib/images'
 
-async function main() {
-  console.log("Start seeding ...");
-
-  const teams = [];
-
-  for (const rawTeam of rawTeams) {
-    teams.push(transformTeamData(rawTeam));
+const seeds: () => void = async () => {
+  const seedTeams = async () => {
+    for (const team of teams) {
+      const data = transformTeamData(team)
+      await seedTeamData(data)
+    }
   }
 
-  for (const team of teams) {
-    await seedTeamData(team);
-    console.log(`Updated team with id ${team.id} (${team.name})`);
+  const seedPlayers = async () => {
+    for (const player of players) {
+      const data = transformPlayerData(player)
+      await seedPlayerData(data)
+    }
   }
 
-  console.log("Done seeding teams");
-
-  const players = [];
-
-  for (const rawPlayer of rawPlayers) {
-    players.push(transformPlayerData(rawPlayer));
+  const seedCoaches = async () => {
+    for (const coach of coaches) {
+      const data = transformCoachData(coach)
+      await seedCoachData(data)
+    }
   }
 
-  for (const player of players) {
-    await seedPlayerData(player);
-    console.log(`Updated Player with id ${player.id} (${player.name})`);
+  const seedColorSchemes = async () => {
+    for (const colorScheme of colorSchemes) {
+      const data = transformColorSchemeData(colorScheme)
+      await seedColorSchemesData(data)
+    }
   }
 
-  console.log("Done seeding players");
-
-  const coaches = [];
-
-  for (const rawCoach of rawCoaches) {
-    coaches.push(transformCoachData(rawCoach));
+  const seedImages = async () => {
+    for (const image of images) {
+      const data = transformImageData(image)
+      await seedImageData(data)
+    }
   }
 
-  for (const coach of coaches) {
-    await seedCoachData(coach);
-    console.log(`Updated Coach with id ${coach.id} (${coach.name})`);
-  }
+  const seedTasks = new Listr(
+    [
+      {
+        title: 'Seeding colorSchemes',
+        task: async () => await seedColorSchemes(),
+      },
+      {
+        title: 'Seeding images',
+        task: async () => await seedImages(),
+      },
+      {
+        title: 'Seeding teams',
+        task: async () => await seedTeams(),
+      },
+      {
+        title: 'Seeding players',
+        task: async () => await seedPlayers(),
+      },
+      {
+        title: 'Seeding coaches',
+        task: async () => await seedCoaches(),
+      },
+    ],
+    { exitOnError: true },
+  )
 
-  const schemes = [];
+  await seedTasks.run()
 
-  for (const rawScheme of rawSchemes) {
-    schemes.push(transformColorSchemeData(rawScheme));
-  }
+  console.log('✅ Seeding finished.')
+}
 
-  for (const scheme of schemes) {
-    await seedColorSchemes(scheme);
-    console.log(`Updated color scheme for team with id ${scheme.teamId}`);
-  }
-
-  console.log("Done seeding color schemes");
-
-  console.log("✅ Seeding finished.");
+const main = async () => {
+  await seeds()
 }
 
 main()
-  .catch((e) => {
-    console.error(e);
-    process.exit(1);
+  .catch((err) => {
+    console.error(err)
+    process.exit(1)
   })
   .finally(async () => {
-    await db.$disconnect();
-    console.log("Prisma client disconnected");
-    process.exit(0);
-  });
+    await db.$disconnect()
+    process.exit(0)
+  })
+
+export default seeds

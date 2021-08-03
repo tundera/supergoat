@@ -1,5 +1,7 @@
-import type { BackupPlayerData, Player, PlayerData } from "../../types";
-import db from "../index";
+import type { Player } from 'db'
+import type { BackupPlayerData, PlayerData } from 'db/types'
+
+import db from 'db'
 
 export const transformPlayerData = (player: BackupPlayerData) => {
   return {
@@ -12,8 +14,8 @@ export const transformPlayerData = (player: BackupPlayerData) => {
     height: player.height,
     number: player.number,
     teamId: player.teamId,
-  };
-};
+  }
+}
 
 export const upsertPlayerData = async (player: PlayerData) => {
   await db.player.upsert({
@@ -38,7 +40,7 @@ export const upsertPlayerData = async (player: PlayerData) => {
       number: player.num,
       position: player.position,
     },
-  });
+  })
 
   // Connect players to or remove players from teams
   if (player.teamID) {
@@ -51,7 +53,7 @@ export const upsertPlayerData = async (player: PlayerData) => {
           },
         },
       },
-    });
+    })
   } else {
     await db.player.update({
       where: { id: player.playerId.toString() },
@@ -60,9 +62,9 @@ export const upsertPlayerData = async (player: PlayerData) => {
           disconnect: true,
         },
       },
-    });
+    })
   }
-};
+}
 
 export const seedPlayerData = async (player: Player) => {
   // Create player in database
@@ -79,7 +81,7 @@ export const seedPlayerData = async (player: Player) => {
       number: player.number,
       position: player.position,
     },
-  });
+  })
 
   // Connect players to or remove players from teams
   if (player.teamId) {
@@ -92,7 +94,7 @@ export const seedPlayerData = async (player: Player) => {
           },
         },
       },
-    });
+    })
   } else {
     await db.player.update({
       where: { id: player.id.toString() },
@@ -101,6 +103,20 @@ export const seedPlayerData = async (player: Player) => {
           disconnect: true,
         },
       },
-    });
+    })
   }
-};
+
+  // Connect players to images
+  if (player.imageId) {
+    await db.player.update({
+      where: { id: player.id.toString() },
+      data: {
+        image: {
+          connect: {
+            id: player.imageId as string,
+          },
+        },
+      },
+    })
+  }
+}
