@@ -26,7 +26,7 @@ const FeaturesWithCards: FC = () => {
         mt="6"
         bg={bg}
         shadow="lg"
-        rounded="lg"
+        rounded={{ base: 'none', md: 'lg' }}
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">
@@ -55,7 +55,7 @@ const FeaturesWithCards: FC = () => {
         mt={{ base: '6', sm: '16', md: '20', lg: '24' }}
         bg={bg}
         shadow="lg"
-        rounded="lg"
+        rounded={{ base: 'none', md: 'lg' }}
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">
@@ -84,7 +84,7 @@ const FeaturesWithCards: FC = () => {
         py="4"
         bg={bg}
         shadow="lg"
-        rounded="lg"
+        rounded={{ base: 'none', md: 'lg' }}
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">

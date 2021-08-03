@@ -100,7 +100,7 @@ const Header: FC = () => {
               transition: { ease: 'easeInOut', duration: 0.25 },
             }}
           >
-            <Icon as={BrandLogoIcon} w={12} h={12} />
+            <Icon as={BrandLogoIcon} w={8} h={8} />
             <NextLink href="/" passHref>
               <LinkOverlay fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold">
                 tundera

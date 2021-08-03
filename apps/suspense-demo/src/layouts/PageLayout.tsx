@@ -8,6 +8,7 @@ import { Flex, useColorModeValue, Box, Button, Heading } from '@chakra-ui/react'
 import NProgress from 'next-nprogress-emotion'
 import { ErrorBoundary } from 'react-error-boundary'
 import { useQueryErrorResetBoundary } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 import { FiRefreshCw } from 'react-icons/fi'
 
 import ThemeProvider from 'src/providers/ThemeProvider'
@@ -55,6 +56,8 @@ const PageLayout: FC<Props> = ({ title, children }) => {
           </ErrorBoundary>
         </ThemeProvider>
       </FormProvider>
+
+      <ReactQueryDevtools />
     </>
   )
 }

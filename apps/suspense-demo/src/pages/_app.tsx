@@ -50,7 +50,6 @@ function MyApp({ Component, pageProps }: AppProps) {
                 {getLayout(<Component {...pageProps} />)}
               </Suspense>
             </Inspect>
-            <ReactQueryDevtools />
           </Hydrate>
         </QueryClientProvider>
       </ErrorBoundary>
