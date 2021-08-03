@@ -1,28 +1,19 @@
-/* eslint-disable no-var */
-import { PrismaClient } from '@prisma/client'
+import express from 'express'
 
-// add prisma to the NodeJS global type
-// Prevent multiple instances of Prisma Client in development
-declare global {
-  var db: PrismaClient
-}
+import { buildApp } from './app'
 
-const db = global.db || new PrismaClient()
+const app = express()
 
-if (process.env.NODE_ENV === 'development') global.db = db
+buildApp({
+  app,
+  async prepare() {
+    await import('./resolvers')
+  },
+}).then((mod) => {
+  app.use(mod.router)
 
-export async function disconnect(): Promise<boolean> {
-  await db.$disconnect()
-
-  return true
-}
-
-export async function connect(): Promise<boolean> {
-  await db.$connect()
-
-  return true
-}
-
-export default db
-
-export * from '@prisma/client'
+  const port = process.env.PORT ?? 3000
+  app.listen(port, () => {
+    console.log(`Express listening on port ${port}`)
+  })
+})
