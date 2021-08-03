@@ -1,8 +1,6 @@
 import path from 'path'
 import db from 'db'
 
-import colorSchemes from 'db/backups/documents/color-schemes.json'
-
 // const updateTeamColorSchemes = async () => {
 //   for (const colorScheme of colorSchemes) {
 //     // Add color scheme id to team

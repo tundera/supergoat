@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { Flex, useColorModeValue } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/react'
 import MotionBox from 'src/components/MotionBox'
 import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'

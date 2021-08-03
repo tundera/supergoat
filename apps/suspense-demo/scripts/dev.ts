@@ -31,14 +31,14 @@ const dev = async () => {
     [
       { command: 'yarn dev:next', name: 'NEXT', prefixColor: 'green.bold' },
       {
-        command: 'yarn watch:codegen',
-        name: 'CODEGEN',
-        prefixColor: 'cyan.bold',
-      },
-      {
         command: 'yarn watch:nexus',
         name: 'NEXUS',
         prefixColor: 'magenta.bold',
+      },
+      {
+        command: 'yarn watch:codegen',
+        name: 'CODEGEN',
+        prefixColor: 'cyan.bold',
       },
       {
         command: 'stripe listen --forward-to localhost:3000/api/stripe/webhook',

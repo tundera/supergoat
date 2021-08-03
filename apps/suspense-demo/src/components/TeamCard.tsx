@@ -1,9 +1,6 @@
 import type { FC } from 'react'
 import type { Team } from 'src/services/graphql/generated/types'
 
-import Image from 'next/image'
-import { Suspense, useTransition } from 'react'
-import { useRouter } from 'next/router'
 import NextChakraImage from 'next/image'
 import NextLink from 'next/link'
 import { Box, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
@@ -18,7 +15,6 @@ interface Props {
 }
 
 const TeamCard: FC<Props> = ({ team }) => {
-  const textColor = useColorModeValue('gray.700', 'gray.200')
   const bgGradient = useColorModeValue(
     `linear(to-t, ${team?.colorScheme?.secondary}, black)`,
     `linear(to-t, white, ${team?.colorScheme?.secondary})`,

@@ -1,11 +1,8 @@
 import type { NextPage } from 'types'
 
-import { Suspense } from 'react'
-import { Box, Spinner, Stack } from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react'
 
 import CallToAction from 'src/components/blocks/CallToAction'
-import FeaturesGrid from 'src/components/FeaturesGrid'
-import { mainFeatures } from 'src/lib/features'
 import { getLayout as getPageLayout } from 'src/layouts/PageLayout'
 
 interface PageProps {

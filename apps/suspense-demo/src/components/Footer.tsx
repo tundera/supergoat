@@ -1,4 +1,4 @@
-import { Box, HStack, Stack, Text, useColorModeValue } from '@chakra-ui/react'
+import { HStack, Stack, Text, useColorModeValue } from '@chakra-ui/react'
 import Emoji from 'a11y-react-emoji'
 import { FC } from 'react'
 import { FiGithub, FiMail, FiTwitter, FiYoutube } from 'react-icons/fi'

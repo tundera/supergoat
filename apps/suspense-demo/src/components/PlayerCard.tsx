@@ -5,7 +5,6 @@ import Image from 'src/components/NextChakraImage'
 import { Box, Text, Flex, useColorModeValue, Link } from '@chakra-ui/react'
 
 import MotionBox from 'src/components/MotionBox'
-import colors from 'src/styles/theme/colors'
 import { useImageUrlBuilder } from 'src/hooks/useImageUrlBuilder'
 
 interface Props {

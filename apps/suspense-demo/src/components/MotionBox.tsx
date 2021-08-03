@@ -1,6 +1,8 @@
 import { Box, BoxProps } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { motion, MotionProps } from 'framer-motion'
 
-const MotionBox = motion<BoxProps>(Box)
+type MotionBoxProps = Omit<BoxProps, keyof MotionProps>
+
+const MotionBox = motion<MotionBoxProps>(Box)
 
 export default MotionBox

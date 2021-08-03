@@ -1,15 +1,13 @@
 import type { FC } from 'react'
 
 import Image from 'next/image'
-import { signIn, signOut } from 'next-auth/client'
+import { signOut } from 'next-auth/client'
 import { useSession } from '@next-auth/react-query'
-
-import { Button } from '@chakra-ui/react'
 
 import NextChakraLink from 'src/components/NextChakraLink'
 
 const UserInfo: FC = () => {
-  const [session, loading] = useSession()
+  const [session] = useSession()
 
   if (session?.user) {
     return (

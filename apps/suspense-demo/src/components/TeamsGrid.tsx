@@ -5,8 +5,6 @@ import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { Flex, SimpleGrid, Spinner } from '@chakra-ui/react'
 import { SuspenseList, Suspense } from 'react'
-import { QueryErrorResetBoundary, useQueryErrorResetBoundary } from 'react-query'
-import { ErrorBoundary } from 'react-error-boundary'
 
 import { useAllTeamsQuery } from 'src/services/graphql/generated/hooks'
 import { client } from 'src/lib/graphql'

@@ -2,9 +2,8 @@
 
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-import { promises as fs } from 'fs'
 import { join } from 'path'
-import { v2 as cloudinary } from 'cloudinary'
+// import { v2 as cloudinary } from 'cloudinary'
 
 import db from 'db'
 
