@@ -16,23 +16,21 @@ import NextLink from 'next/link'
 import { FaBars } from 'react-icons/fa'
 import ColorModeToggle from './ColorModeToggle'
 import NavButton from './buttons/NavButton'
+import MotionBox from './MotionBox'
 import useBrandLogo from 'src/hooks/useBrandLogo'
 import dynamic from 'next/dynamic'
 
-const MobileDrawer = dynamic(() => import('./MobileMenu'), {
-  ssr: false,
-})
+const MobileMenu = dynamic(() => import('src/components/MobileMenu'))
 
 const Header: FC = () => {
-  const color = useColorModeValue('#blackAlpha.800', 'white')
+  const color = useColorModeValue('blackAlpha.800', 'white')
   const bgColor = useColorModeValue('whiteAlpha.50', 'blackAlpha.50')
   const bgColorFallback = useColorModeValue('whiteAlpha.900', 'rgba(29, 29, 29, 0.9)')
   const borderBottomColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.200')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const hoverBg = useColorModeValue('blackAlpha.300', 'whiteAlpha.300')
-  const skipColor = useColorModeValue('white', 'blackAlpha.800')
 
-  const BrandLogoIcon = useBrandLogo(color)
+  const BrandLogoIcon = useBrandLogo('black', 'white')
 
   const buttonStyle: ButtonProps = {
     as: 'a',
@@ -90,17 +88,29 @@ const Header: FC = () => {
       top={0}
     >
       <Flex mx="auto" w="full" maxW="5xl" pos="relative">
-        <LinkBox as={HStack} mr={2}>
-          <Icon as={BrandLogoIcon} w={16} h={16} />
-          <NextLink href="/" passHref>
-            <LinkOverlay fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold">
-              tundera
-            </LinkOverlay>
-          </NextLink>
-        </LinkBox>
+        <HStack spacing={4} mx={2}>
+          <LinkBox
+            as={MotionBox}
+            mr={8}
+            ml={2}
+            py={2}
+            whileHover={{
+              opacity: 0.7,
+              fillOpacity: 0.7,
+              transition: { ease: 'easeInOut', duration: 0.25 },
+            }}
+          >
+            <Icon as={BrandLogoIcon} w={12} h={12} />
+            <NextLink href="/" passHref>
+              <LinkOverlay fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold">
+                tundera
+              </LinkOverlay>
+            </NextLink>
+          </LinkBox>
+        </HStack>
         {/* normal nav */}
         <Flex display={['none', 'flex']} justifyContent="space-between" flex="1">
-          <HStack spacing={4} mx={4}>
+          <HStack spacing={2} mx={2}>
             {links.map((link) => (
               <NavButton href={link.url} key={link.text}>
                 {link.text}
@@ -119,7 +129,7 @@ const Header: FC = () => {
             icon={<FaBars />}
           />
         </Flex>
-        <MobileDrawer isOpen={isOpen} onClose={onClose} />
+        <MobileMenu isOpen={isOpen} onClose={onClose} />
       </Flex>
     </Box>
   )

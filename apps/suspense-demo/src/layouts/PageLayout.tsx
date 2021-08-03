@@ -4,17 +4,19 @@ import type { FC } from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
-import { chakra, Flex, useColorModeValue, Box, Button, Heading } from '@chakra-ui/react'
+import { Flex, useColorModeValue, Box, Button, Heading } from '@chakra-ui/react'
 import NProgress from 'next-nprogress-emotion'
 import { ErrorBoundary } from 'react-error-boundary'
 import { useQueryErrorResetBoundary } from 'react-query'
 import { FiRefreshCw } from 'react-icons/fi'
 
-import { FullPageSpinner } from 'src/components/FullPageSpinner'
-import ChakraProvider from 'src/providers/ChakraProvider'
+import ThemeProvider from 'src/providers/ThemeProvider'
+import FormProvider from 'src/providers/FormProvider'
 import Main from 'src/components/containers/Main'
 import Footer from 'src/components/Footer'
 import Header from 'src/components/Header'
+
+import { FullPageSpinner } from 'src/components/FullPageSpinner'
 
 interface Props {
   title?: string
@@ -34,23 +36,25 @@ const PageLayout: FC<Props> = ({ title, children }) => {
         <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
 
-      <ChakraProvider>
-        <ErrorBoundary FallbackComponent={PageLayoutErrorFallback} onReset={reset}>
-          <Suspense fallback={<FullPageSpinner />}>
-            <NProgress
-              color={color}
-              showAfterMs={100}
-              spinner={false}
-              options={{ easing: 'ease' }}
-            />
-            <Flex minH="100vh" direction="column">
-              <Header />
-              <Main>{children}</Main>
-              <Footer />
-            </Flex>
-          </Suspense>
-        </ErrorBoundary>
-      </ChakraProvider>
+      <FormProvider>
+        <ThemeProvider>
+          <ErrorBoundary FallbackComponent={PageLayoutErrorFallback} onReset={reset}>
+            <Suspense fallback={<FullPageSpinner />}>
+              <NProgress
+                color={color}
+                showAfterMs={100}
+                spinner={false}
+                options={{ easing: 'ease' }}
+              />
+              <Flex minH="100vh" direction="column">
+                <Header />
+                <Main>{children}</Main>
+                <Footer />
+              </Flex>
+            </Suspense>
+          </ErrorBoundary>
+        </ThemeProvider>
+      </FormProvider>
     </>
   )
 }

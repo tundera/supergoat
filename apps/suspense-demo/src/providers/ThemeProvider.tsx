@@ -11,11 +11,11 @@ import defaultTheme from 'src/styles/theme'
 
 export type ServerSideProps<T> = { props: T } | Promise<{ props: T }>
 
-export interface ChakraProviderProps extends DefaultChakraProviderProps {
+export interface ThemeProviderProps extends DefaultChakraProviderProps {
   cookies?: string
 }
 
-const ChakraProvider: FC<ChakraProviderProps> = ({
+const ThemeProvider: FC<ThemeProviderProps> = ({
   cookies,
   theme = defaultTheme,
   children,
@@ -32,4 +32,4 @@ const ChakraProvider: FC<ChakraProviderProps> = ({
   )
 }
 
-export default ChakraProvider
+export default ThemeProvider

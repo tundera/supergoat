@@ -10,17 +10,17 @@ export type GetLayoutFunction = (component: JSX.Element) => JSX.Element
 
 export declare type NextComponentType<
   C = NextPageContext,
-  IP = {},
-  P = {},
+  IP = Record<string, unknown>,
+  P = Record<string, unknown>,
 > = DefaultNextComponentType<C, IP, P>
 
-export interface AppProps<P = {}> extends NextAppProps<P> {
+export interface AppProps<P = Record<string, unknown>> extends NextAppProps<P> {
   Component: NextComponentType<NextPageContext, any, P> & {
     getLayout?: GetLayoutFunction
   }
 }
 
-export declare type NextPage<P = {}, IP = P> = DefaultNextPage<P, IP> & {
+export declare type NextPage<P = Record<string, unknown>, IP = P> = DefaultNextPage<P, IP> & {
   getLayout?: GetLayoutFunction
 }
 
@@ -87,6 +87,6 @@ export class RedirectError extends Error {
 }
 
 export interface ErrorFallbackProps {
-  error: Error & Record<any, any>
+  error: Error & Record<string, unknown>
   resetErrorBoundary: (...args: Array<unknown>) => void
 }

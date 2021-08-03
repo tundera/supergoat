@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import {
   Button,
   Modal,
@@ -35,7 +36,7 @@ const links = [
     url: '/teams',
   },
 ]
-const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+const MobileMenu: FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const hoverBg = useColorModeValue('blackAlpha.300', 'whiteAlpha.300')
   const bgColor = useColorModeValue('white', 'rgba(25, 25, 25, 1)')
   const color = useColorModeValue('black', 'white')

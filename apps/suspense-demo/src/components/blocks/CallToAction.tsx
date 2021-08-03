@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  ButtonGroup,
   Icon,
   chakra,
   Flex,
@@ -26,14 +27,14 @@ interface CtaWithDescriptionProps {
 const CallToAction = ({ title, subtitle, description, link }: CtaWithDescriptionProps) => {
   const color = useColorModeValue('white', 'black')
   const bgGradient = useColorModeValue(
-    'linear(to-t, indigo.700, black)',
-    'linear(to-t, white, indigo.300)',
+    'linear(to-t, white, pink.500)',
+    'linear(to-t, white, purple.800)',
   )
 
-  const BrandLogoIcon = useBrandLogo(color)
+  const BrandLogoIcon = useBrandLogo('white', 'black')
 
   return (
-    <Stack bgGradient={bgGradient} w="full">
+    <Stack bgGradient={bgGradient} w="full" py={{ base: 0, md: 16 }}>
       <Box
         textAlign="center"
         mx="auto"
@@ -54,29 +55,56 @@ const CallToAction = ({ title, subtitle, description, link }: CtaWithDescription
         {link && (
           <Flex justify="center" mt={{ lg: '0' }} flexShrink={{ lg: 0 }}>
             <Box mt="12" display="inline-flex" rounded="md" shadow="base">
-              <NextLink href="/about" passHref>
-                <Button
-                  as="a"
-                  href="https://github.com/tundera"
-                  type="button"
-                  color="white"
-                  variant="ghost"
-                  bg="indigo.600"
-                  shadow="md"
-                  transition="ease-in"
-                  transitionDuration="200ms"
-                  w="full"
-                  textAlign="center"
-                  fontSize="md"
-                  fontWeight="semibold"
-                  py="2"
-                  px="4"
-                  rounded="lg"
-                  _hover={{ bg: 'indigo.700' }}
-                >
-                  Learn more
-                </Button>
-              </NextLink>
+              <ButtonGroup spacing={4}>
+                <NextLink href="/about" passHref>
+                  <Button
+                    as="a"
+                    href="https://github.com/tundera"
+                    type="button"
+                    color="white"
+                    variant="ghost"
+                    bg="indigo.600"
+                    shadow="md"
+                    transition="ease-in"
+                    transitionDuration="200ms"
+                    w="full"
+                    textAlign="center"
+                    fontSize="md"
+                    fontWeight="semibold"
+                    py="2"
+                    px="4"
+                    rounded="lg"
+                    _hover={{ bg: 'indigo.700' }}
+                    _active={{ bg: 'indigo.700' }}
+                  >
+                    Learn more
+                  </Button>
+                </NextLink>
+                <NextLink href="/teams" passHref>
+                  <Button
+                    as="a"
+                    href="https://github.com/tundera"
+                    type="button"
+                    color="brand.600"
+                    variant="ghost"
+                    bg="whiteAlpha.600"
+                    shadow="md"
+                    transition="ease-in"
+                    transitionDuration="200ms"
+                    w="full"
+                    textAlign="center"
+                    fontSize="md"
+                    fontWeight="semibold"
+                    py="2"
+                    px="4"
+                    rounded="lg"
+                    _hover={{ bg: 'whiteAlpha.700' }}
+                    _active={{ bg: 'whiteAlpha.700' }}
+                  >
+                    See demo
+                  </Button>
+                </NextLink>
+              </ButtonGroup>
             </Box>
           </Flex>
         )}
