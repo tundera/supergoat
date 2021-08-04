@@ -11,6 +11,9 @@ import { createWebStoragePersistor } from 'react-query/createWebStoragePersistor
 import { FullPageSpinner } from 'src/components/FullPageSpinner'
 import RootErrorFallback from 'src/components/RootErrorFallback'
 
+import '@fontsource/inter/variable.css'
+import '@fontsource/raleway/variable.css'
+
 function MyApp({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)
 
