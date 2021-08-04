@@ -7,13 +7,13 @@ import { permissions } from 'src/services/graphql/permissions'
 // import * as inputTypes from 'src/services/graphql/inputs'
 // import * as moduleTypes from 'src/services/graphql/modules'
 // import * as scalarTypes from 'src/services/graphql/scalars'
-import * as types from 'src/services/graphql/generated/resolvers'
+import * as generatedTypes from 'src/services/graphql/generated/types'
 
 const cwd = process.cwd()
 
 const baseSchema = makeSchema({
   // types: [moduleTypes, scalarTypes, inputTypes],
-  types,
+  types: [generatedTypes],
   plugins: [paljs()],
   outputs: {
     schema: join(cwd, 'src/services/graphql/generated/schema.graphql'),

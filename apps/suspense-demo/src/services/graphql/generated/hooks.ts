@@ -1,4 +1,4 @@
-import * as Types from 'src/services/graphql/generated/types'
+import * as Types from 'src/services/graphql/generated/codegen'
 
 import { GraphQLClient } from 'graphql-request'
 import { useQuery, UseQueryOptions } from 'react-query'

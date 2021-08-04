@@ -21,9 +21,11 @@ node_modules
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# build folders
+**/.next
+**/out
+**/dist
+**/build
 
 # docker-compose overrides
 ./docker-compose.override.yml

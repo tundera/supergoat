@@ -7,7 +7,7 @@ const app = express()
 buildApp({
   app,
   async prepare() {
-    await import('./resolvers')
+    await import('src/generated/types')
   },
 }).then((mod) => {
   app.use(mod.router)

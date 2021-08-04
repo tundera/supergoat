@@ -1,16 +1,25 @@
 {
   "extends": "../../tsconfig.json",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental",
+    "require": ["tsconfig-paths/register"]
+  },
   "compilerOptions": {
-    "target": "es2019",
+    "target": "esnext",
     "module": "commonjs",
     "noEmit": true,
     "sourceMap": true,
     "skipLibCheck": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
     "baseUrl": "."

@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from 'http'
 import type { ExecutionContext } from 'graphql-helix'
-import type { PrismaClient } from '@prisma/client'
+import type { PrismaClient } from '@monorepo/db'
 
 import db from '@monorepo/db'
 

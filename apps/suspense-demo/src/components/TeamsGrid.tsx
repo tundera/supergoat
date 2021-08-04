@@ -1,8 +1,8 @@
 import type { FC } from 'react'
-import type { Team } from 'src/services/graphql/generated/types'
+import type { Team } from 'src/services/graphql/generated/codegen'
 
 import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import { Flex, SimpleGrid, Spinner } from '@chakra-ui/react'
 import { SuspenseList, Suspense } from 'react'
 
@@ -13,8 +13,8 @@ const IntersectionSlide = dynamic(() => import('src/components/IntersectionSlide
 const TeamCard = dynamic(() => import('src/components/TeamCard'))
 
 const TeamsGrid: FC = () => {
-  const router = useRouter()
-  const page = Number(router.query.page) || 0
+  // const router = useRouter()
+  // const page = Number(router.query.page) || 0
 
   const { data } = useAllTeamsQuery(client)
 

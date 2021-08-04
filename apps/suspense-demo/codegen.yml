@@ -1,7 +1,7 @@
 schema: 'src/services/graphql/generated/schema.graphql'
 documents: 'src/lib/graphql/operations/**/*.ts'
 generates:
-  src/services/graphql/generated/types.ts:
+  src/services/graphql/generated/codegen.ts:
     plugins:
       - typescript
       - typescript-operations
@@ -14,7 +14,7 @@ generates:
   src/services/graphql/generated/hooks.ts:
     preset: import-types
     presetConfig:
-      typesPath: src/services/graphql/generated/types
+      typesPath: src/services/graphql/generated/codegen
     plugins:
       - typescript-react-query
     config:

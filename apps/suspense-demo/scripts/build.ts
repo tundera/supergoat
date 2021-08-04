@@ -14,7 +14,7 @@ const build = async () => {
   }
 
   const generateNexusResolvers = async () => {
-    await execa('yarn', ['ts-node', 'scripts/generate-graphql-resolvers'])
+    await execa('yarn', ['ts-node', 'scripts/generate-graphql-modules'])
   }
 
   const generateThemeTypes = async () => {

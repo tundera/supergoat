@@ -8,7 +8,7 @@ import {
   TeamQueryVariables,
   AllTeamsQuery,
   AllTeamsQueryVariables,
-} from 'src/services/graphql/generated/types'
+} from 'src/services/graphql/generated/codegen'
 import { TeamDocument, AllTeamsDocument } from 'src/services/graphql/generated/hooks'
 
 const endpoint = process.env.NEXT_PUBLIC_GRAPHQL_API as string

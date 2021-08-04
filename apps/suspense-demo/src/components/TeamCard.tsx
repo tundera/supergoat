@@ -1,6 +1,7 @@
 import type { FC } from 'react'
-import type { Team } from 'src/services/graphql/generated/types'
+import type { Team } from 'src/services/graphql/generated/codegen'
 
+import { useTransition } from 'react'
 import NextChakraImage from 'next/image'
 import NextLink from 'next/link'
 import { Box, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
@@ -23,7 +24,7 @@ const TeamCard: FC<Props> = ({ team }) => {
   const { imageURL, blurDataURL } = useImageUrlBuilder(team?.logo?.id as string)
 
   // @ts-expect-error Alpha types missing
-  const [isPending, startTransition] = useTransition({ timeoutMs: 3000 })
+  const [isPending, startTransition] = useTransition({ timeoutMs: 2000 })
   const queryClient = useQueryClient()
 
   function handleClick() {

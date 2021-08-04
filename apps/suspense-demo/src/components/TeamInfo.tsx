@@ -4,7 +4,7 @@ import type {
   TeamQueryVariables,
   ColorScheme,
   Player,
-} from 'src/services/graphql/generated/types'
+} from 'src/services/graphql/generated/codegen'
 
 import { useRouter } from 'next/router'
 import { SimpleGrid, Heading, Spinner, Stack, useColorModeValue } from '@chakra-ui/react'
@@ -41,8 +41,16 @@ const TeamInfo: FC = () => {
           {data?.findUniqueTeam?.city} {data?.findUniqueTeam?.name}
         </title>
       </Head>
+
       <Stack alignItems="center" spacing={4} bgGradient={bgGradient} p={4} w="full">
-        <Heading as="h1" color={headingColor} fontSize="6xl" overflow="hidden" textAlign="center">
+        <Heading
+          as="h1"
+          color={headingColor}
+          py={8}
+          fontSize="8xl"
+          overflow="hidden"
+          textAlign="center"
+        >
           {data?.findUniqueTeam?.city} {data?.findUniqueTeam?.name}
         </Heading>
         <Image

@@ -16,6 +16,8 @@
     "ts": "node -r esbuild-register"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.71",
+    "@swc/helpers": "^0.2.12",
     "@types/node": "^16.4.8",
     "chalk": "^4.1.2",
     "eslint": "^7.32.0",

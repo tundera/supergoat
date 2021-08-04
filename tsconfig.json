@@ -1,4 +1,13 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental",
+    "require": ["tsconfig-paths/register"]
+  },
   "compilerOptions": {
     "strict": true,
     "allowJs": true,

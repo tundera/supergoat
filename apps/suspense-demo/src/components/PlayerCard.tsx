@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { Player, ColorScheme } from 'src/services/graphql/generated/types'
+import type { Player, ColorScheme } from 'src/services/graphql/generated/codegen'
 
 import Image from 'src/components/NextChakraImage'
 import { Box, Text, Flex, useColorModeValue, Link } from '@chakra-ui/react'
@@ -22,7 +22,7 @@ const PlayerCard: FC<Props> = ({ player, colorScheme }) => {
   const { imageURL, blurDataURL } = useImageUrlBuilder(player?.image?.id as string)
 
   return (
-    <Box w="full" h="full" bg="whiteAlpha.300" p="8">
+    <Box w="full" h="full" p="8">
       <MotionBox
         w="full"
         h="full"
@@ -35,7 +35,7 @@ const PlayerCard: FC<Props> = ({ player, colorScheme }) => {
         bgGradient={bgGradient}
         color={textColor}
       >
-        <Box shadow="lg">
+        <Box shadow="xl" pt={4}>
           <Image
             src={imageURL}
             height={760}

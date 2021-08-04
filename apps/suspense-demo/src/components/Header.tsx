@@ -87,7 +87,7 @@ const Header: FC = () => {
       pos="sticky"
       top={0}
     >
-      <Flex mx="auto" w="full" maxW="5xl" pos="relative">
+      <Flex mx="auto" w="full" maxW="container.xl" pos="relative" py={2}>
         <HStack spacing={4} mx={2}>
           <LinkBox
             as={MotionBox}
