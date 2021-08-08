@@ -19,13 +19,13 @@ services:
       - .:/app/
       # the volumes below prevents our host system's node_modules to be mounted
       - nm_exclude_root:/app/node_modules/
-      - nm_exclude_web-app:/app/apps/web-app/node_modules/
-      - nm_exclude_blog-app:/app/apps/blog-app/node_modules/
+      - nm_exclude_web-app:/app/examples/web-app/node_modules/
+      - nm_exclude_blog-app:/app/examples/blog-app/node_modules/
       - nm_exclude_core:/app/packages/core/node_modules/
       - nm_exclude_db:/app/packages/db/node_modules/
       - nm_exclude_components:/app/packages/components/node_modules/
       # the volume below prevents our host system's build to be mounted
-      - build_excl_web-app:/app/apps/web-app/.next/
+      - build_excl_web-app:/app/examples/web-app/.next/
     depends_on:
       - main-db
 

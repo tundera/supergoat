@@ -21,8 +21,8 @@
       rangeStrategy: 'pin',
     },
     {
-      // Will pin dependencies found in apps/*...
-      matchPaths: ['apps/**'],
+      // Will pin dependencies found in examples/*...
+      matchPaths: ['examples/**'],
       matchDepTypes: ['dependencies'],
       rangeStrategy: 'pin',
     },

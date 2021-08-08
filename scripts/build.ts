@@ -10,22 +10,23 @@ require('dotenv-expand')(require('dotenv-flow').config({ silent: true }))
 
 const workspaceRoot = findWorkspaceRoot(process.cwd()) as string
 
-const buildApps = async () => {
-  await execa('yarn', ['ultra', '-r', 'build'], {
+const buildExamples = async () => {
+  await execa('yarn', ['workspaces', 'foreach', '-ptv', '--include', '*-example', 'run', 'build'], {
+    stdio: 'pipe',
     cwd: workspaceRoot,
   })
 }
 
 const main = async () => {
   const spinner = ora({
-    text: `Building ${chalk.cyanBright.bold`apps`}`,
+    text: `Building ${chalk.cyanBright.bold`examples`}`,
     spinner: 'dots',
   }).start()
 
   try {
-    await buildApps()
+    await buildExamples()
 
-    spinner.succeed(`Sucessfully built ${chalk.cyanBright`apps`}`)
+    spinner.succeed(`Sucessfully built ${chalk.cyanBright`examples`}`)
   } catch (err) {
     console.log(err)
   }

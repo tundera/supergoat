@@ -10,28 +10,23 @@ require('dotenv-expand')(require('dotenv-flow').config({ silent: true }))
 
 const workspaceRoot = findWorkspaceRoot(process.cwd()) as string
 
-const buildApps = async () => {
-  await execa('yarn', ['ultra', '-r', '--filter', '*-app', 'build'], {
+const generateGraphQLTypes = async () => {
+  await execa('yarn', ['ts-node', 'services/graphql/scripts/generate-graphql-types'], {
     stdio: 'pipe',
     cwd: workspaceRoot,
   })
 }
 
-const buildSuspenseDemo = async () => {
-  await execa('yarn', ['workspace', '@monorepo/suspense-demo', 'build'])
-}
-
 const main = async () => {
   const spinner = ora({
-    text: `Building ${chalk.cyanBright.bold`suspense-demo`}`,
+    text: `Generating graphql types for ${chalk.cyanBright.bold`services/graphql`}`,
     spinner: 'dots',
   }).start()
 
   try {
-    await buildApps()
-    await buildSuspenseDemo()
+    await generateGraphQLTypes()
 
-    spinner.succeed(`Sucessfully built ${chalk.cyanBright`suspense-demo`}`)
+    spinner.succeed(`Sucessfully generated graphql types for ${chalk.cyanBright`services/graphql`}`)
   } catch (err) {
     console.log(err)
   }

@@ -2,7 +2,7 @@
  * @type {import('@babel/core').TransformOptions}
  */
 module.exports = {
-  babelrcRoots: ['.', 'apps/*', 'packages/*'],
+  babelrcRoots: ['.', 'examples/*', 'packages/*', 'sites/*', 'services/*', 'db', 'scripts'],
   presets: [
     '@babel/preset-typescript',
     ['@babel/preset-react', { runtime: 'automatic' }],

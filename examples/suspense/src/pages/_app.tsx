@@ -2,7 +2,6 @@ import type { AppProps } from 'types'
 
 import { useState, Suspense } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
-import Inspect from 'inspx'
 import { QueryClient, QueryClientProvider, useQueryErrorResetBoundary } from 'react-query'
 import { Hydrate } from 'react-query/hydration'
 import { persistQueryClient } from 'react-query/persistQueryClient-experimental'
@@ -47,11 +46,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ErrorBoundary FallbackComponent={RootErrorFallback} onReset={reset}>
         <QueryClientProvider client={queryClient}>
           <Hydrate state={pageProps.dehydratedState}>
-            <Inspect>
-              <Suspense fallback={FullPageSpinner}>
-                {getLayout(<Component {...pageProps} />)}
-              </Suspense>
-            </Inspect>
+            <Suspense fallback={FullPageSpinner}>
+              {getLayout(<Component {...pageProps} />)}
+            </Suspense>
           </Hydrate>
         </QueryClientProvider>
       </ErrorBoundary>

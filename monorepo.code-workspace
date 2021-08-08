@@ -1,20 +1,20 @@
 {
   "folders": [
     {
-      "name": "🚀 @monorepo/blog",
-      "path": "apps/blog"
+      "name": "🚀 @monorepo/suspense-demo",
+      "path": "apps/suspense-demo"
     },
     {
       "name": "✨ root",
       "path": "."
     },
     {
-      "name": "🚀 @monorepo/suspense-demo",
-      "path": "apps/suspense-demo"
-    },
-    {
       "name": "@monorepo/db",
       "path": "db"
+    },
+    {
+      "name": "suspense-example",
+      "path": "examples/suspense"
     },
     {
       "name": "📦 @monorepo/components",
@@ -31,6 +31,10 @@
     {
       "name": "@monorepo/graphql",
       "path": "services/graphql"
+    },
+    {
+      "name": "@monorepo/docs",
+      "path": "sites/docs"
     }
   ],
   "settings": {}

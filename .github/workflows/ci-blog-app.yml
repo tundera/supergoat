@@ -6,7 +6,7 @@ on:
       - dev
       - main
     paths:
-      - 'apps/blog-app/**'
+      - 'examples/blog-app/**'
       - 'packages/**'
       - 'package.json'
       - 'tsconfig.json'
@@ -22,7 +22,7 @@ on:
       - synchronize
       - reopened
     paths:
-      - 'apps/blog-app/**'
+      - 'examples/blog-app/**'
       - 'packages/**'
       - 'package.json'
       - 'tsconfig.json'
@@ -50,7 +50,7 @@ jobs:
       - name: Restore nextjs build blog-app from cache
         uses: actions/cache@v2
         with:
-          path: ${{ github.workspace }}/apps/blog-app/.next/cache
+          path: ${{ github.workspace }}/examples/blog-app/.next/cache
           key: ${{ runner.os }}-nextjs-blog-app-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
@@ -62,22 +62,22 @@ jobs:
           yarn dedupe --check
 
       - name: Typecheck
-        working-directory: apps/blog-app
+        working-directory: examples/blog-app
         run: |
           yarn typecheck
 
       - name: Linter
-        working-directory: apps/blog-app
+        working-directory: examples/blog-app
         run: |
           yarn lint
 
       - name: Unit tests
-        working-directory: apps/blog-app
+        working-directory: examples/blog-app
         run: |
           yarn ci-test:unit
 
       - name: Build blog-app
-        working-directory: apps/blog-app
+        working-directory: examples/blog-app
         run: |
           yarn build
         env:

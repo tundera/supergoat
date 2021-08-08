@@ -3,23 +3,38 @@
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/belgattitude/nextjs-monorepo-example",
+  "homepage": "https://github.com/tundera/monorepo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/belgattitude/nextjs-monorepo-example",
+    "url": "https://github.com/tundera/monorepo",
     "directory": "packages/components"
   },
   "author": {
     "name": "Philip Johnston",
-    "url": "https://github.com/tundera"
+    "url": "https://github.com/tundera",
+    "email": "tunderadev@gmail.com"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": {
+      "require": "./dist/*.js",
+      "import": "./dist/*.mjs"
+    }
   },
   "source": "src/index.ts",
-  "main": "dist/components.js",
-  "module": "dist/components.module.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
-    "build": "microbundle --tsconfig ./tsconfig.build.json --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx --compress",
-    "build:legacy": "rimraf --no-glob ./dist && microbundle --tsconfig ./tsconfig.build.json --jsx React.createElement --compress",
-    "dev": "microbundle watch",
+    "build": "tsup",
+    "watch": "tsup --watch",
     "clean": "rimraf --no-glob ./dist ./tsconfig.tsbuildinfo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
@@ -32,9 +47,9 @@
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.0.0",
     "@testing-library/react-hooks": "7.0.1",
-    "@types/node": "16.4.10",
-    "@types/react": "17.0.15",
-    "@types/react-dom": "17.0.9",
+    "@types/node": "^16.4.13",
+    "@types/react": "^17.0.16",
+    "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "4.29.0",
     "@typescript-eslint/parser": "4.29.0",
     "camelcase": "6.2.0",
@@ -52,11 +67,12 @@
     "microbundle": "0.13.3",
     "npm-run-all": "4.1.5",
     "prettier": "2.3.2",
-    "react": "alpha",
-    "react-dom": "alpha",
+    "react": "18.0.0-alpha-b9934d6db-20210805",
+    "react-dom": "18.0.0-alpha-b9934d6db-20210805",
     "rimraf": "3.0.2",
     "shell-quote": "1.7.2",
     "ts-jest": "27.0.4",
+    "tsup": "^4.13.1",
     "typescript": "4.3.5"
   },
   "peerDependencies": {

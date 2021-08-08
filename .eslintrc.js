@@ -2,10 +2,11 @@ module.exports = {
   root: true,
   extends: [
     'plugin:@typescript-eslint/recommended',
+    'plugin:@next/next/recommended',
     'plugin:prettier/recommended',
     'plugin:jest/recommended',
   ],
-  plugins: ['@typescript-eslint', 'prettier', 'react-hooks', 'jest', 'jest-formatting'],
+  plugins: ['@typescript-eslint', 'prettier', 'jest', 'jest-formatting'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
