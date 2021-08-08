@@ -1,7 +1,8 @@
 {
   "files": {
-    "dist": "1628402789966.4807",
-    "node_modules": "1628402780781.3687",
+    "dist": "1628410314338.7183",
+    "node_modules": "1628410188139.381",
+    "tsup.config.ts": "1628410198004.7554",
     ".eslintignore": "63520da7dd3f43ca797679d6440ad201e84f687a",
     ".eslintrc.json": "6d473143df128a2bd18b71fbfb2bbcf7a10d66ca",
     ".gitignore": "02ff6ab3e198458e75944a7ba05dde8c20555a08",
@@ -10,7 +11,7 @@
     "README.md": "f05a68f59d99704baae1f5c52cc6b2115dc71c40",
     "jest.config.js": "20207733c21cf43caf786ccc824b765c10292fb8",
     "lint-staged.config.js": "a23e12b351bbae352ae5c1a21c4971225bbbd6ac",
-    "package.json": "9e4f4a37aa8f1a6048823b94a2c4d360e48375a2",
+    "package.json": "91f3480e56742839582b3f950047c188e4aa42ee.1628410305303.6958",
     "src/api/json-api/__tests__/json-api-response.factory.test.ts": "9f840eb64aeaecc0dd30a18bac282ac7ff513d02",
     "src/api/json-api/__tests__/json-api-typeguard.test.ts": "2beae3ed9009da34a213d6242a78d97a7ad3b6db",
     "src/api/json-api/index.ts": "cab7d5bd019554f3f41bb747031fdd8d1ebc4b2d",
@@ -23,7 +24,7 @@
     "src/hooks/__tests__/use-promise.test.tsx": "f9670483ec6853f2b308cbc52e16229ec2bcb7e0",
     "src/hooks/index.ts": "de25eb30c36abcb14e406eb730eee1f2c086b112",
     "src/hooks/use-deep-compare-memoize.ts": "5bca20f97d8b200508b088b7aa58ae0865d5bf01",
-    "src/hooks/use-promise.ts": "bea5349559031fe004da3d6cd382161a80e5b1e3",
+    "src/hooks/use-promise.ts": "bea5349559031fe004da3d6cd382161a80e5b1e3.1628409854637.1091",
     "src/index.ts": "8e3ea279824f84471650fd27df8951d39fc1471a",
     "src/utils/__tests__/array-utils.test.ts": "c49f6490dc12670f4c9ef1010ebd72c1545973da",
     "src/utils/__tests__/asserts.test.ts": "eeec2af8334fdc3de88396e2feaad42622fce570",

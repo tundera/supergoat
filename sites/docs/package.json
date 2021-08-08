@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/docs",
+  "name": "docs",
   "description": "Fontsource website built using Next.js.",
   "version": "1.0.0",
   "author": "Lotus <declininglotus@gmail.com>",

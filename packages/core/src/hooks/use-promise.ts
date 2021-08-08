@@ -62,7 +62,6 @@ export function usePromise<
         }
       })
     // Caution: keep exhaustive deps off here
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [promise, memoizedParams])
 
   useEffect(() => {
