@@ -57,7 +57,7 @@ const build = async () => {
       },
       {
         title: 'Pushing generated schema to GraphCDN',
-        task: async () => await generateNexusTypes(),
+        task: async () => await pushGraphQLSchema(),
       },
       {
         title: 'Generating GraphQL artifacts',
