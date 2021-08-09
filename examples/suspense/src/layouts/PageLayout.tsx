@@ -37,8 +37,8 @@ const PageLayout: FC<Props> = ({ title, children }) => {
         <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
 
-      <FormProvider>
-        <ThemeProvider>
+      <ThemeProvider>
+        <FormProvider>
           <ErrorBoundary FallbackComponent={PageLayoutErrorFallback} onReset={reset}>
             <Suspense fallback={<FullPageSpinner />}>
               <NProgress
@@ -54,8 +54,8 @@ const PageLayout: FC<Props> = ({ title, children }) => {
               </Flex>
             </Suspense>
           </ErrorBoundary>
-        </ThemeProvider>
-      </FormProvider>
+        </FormProvider>
+      </ThemeProvider>
 
       <ReactQueryDevtools />
     </>
