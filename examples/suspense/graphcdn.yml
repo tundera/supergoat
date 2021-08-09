@@ -1,0 +1,12 @@
+name: suspense-demo
+schema: 'https://suspense-demo.vercel.app/api/graphql'
+originUrl: 'https://suspense-demo.vercel.app/api/graphql'
+scopes:
+  AUTHENTICATED: 'cookie:session.sig|header:Authorization'
+rules:
+  - description: Cache everything (default)
+    maxAge: 900
+    scope: AUTHENTICATED
+    swr: 900
+    types:
+      Query: true

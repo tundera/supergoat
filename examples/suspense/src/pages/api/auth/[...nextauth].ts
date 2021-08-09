@@ -1,6 +1,6 @@
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
-import { PrismaAdapter } from '@next-auth/prisma-adapter'
+import Adapters from 'next-auth/adapters'
 
 import db from 'db'
 
@@ -38,7 +38,7 @@ export default NextAuth({
       clientSecret: process.env.TWITTER_CLIENT_SECRET,
     }),
   ],
-  adapter: PrismaAdapter(db),
+  adapter: Adapters.Prisma.Adapter({ prisma: db }),
   secret: process.env.SIGNING_SECRET,
   session: {
     jwt: true,
