@@ -9,12 +9,16 @@ const build = async () => {
     await execa('yarn', ['prisma', 'generate'])
   }
 
+  const generateNexusResolvers = async () => {
+    await execa('yarn', ['ts-node', 'scripts/generate-graphql-types'])
+  }
+
   const generateNexusTypes = async () => {
     await execa('yarn', ['ts-node', 'src/services/graphql/schema'])
   }
 
-  const generateNexusResolvers = async () => {
-    await execa('yarn', ['ts-node', 'scripts/generate-graphql-types'])
+  const pushGraphQLSchema = async () => {
+    await execa('npx', ['graphcdn', 'push', 'schema'])
   }
 
   const generateThemeTypes = async () => {
@@ -44,12 +48,16 @@ const build = async () => {
         task: async () => await generatePrismaClient(),
       },
       {
+        title: 'Generating Nexus Resolvers',
+        task: async () => await generateNexusResolvers(),
+      },
+      {
         title: 'Generating Nexus Types',
         task: async () => await generateNexusTypes(),
       },
       {
-        title: 'Generating Nexus Resolvers',
-        task: async () => await generateNexusResolvers(),
+        title: 'Pushing generated schema to GraphCDN',
+        task: async () => await generateNexusTypes(),
       },
       {
         title: 'Generating GraphQL artifacts',
