@@ -27,8 +27,7 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:import/warnings",
     "plugin:mdx/recommended",
-    "next",
-    "next/core-web-vitals",
+    "plugin:@next/next/recommended",
     "plugin:prettier/recommended",
   ],
   rules: {
