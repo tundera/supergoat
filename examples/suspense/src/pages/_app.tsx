@@ -7,8 +7,8 @@ import { Hydrate } from 'react-query/hydration'
 import { persistQueryClient } from 'react-query/persistQueryClient-experimental'
 import { createWebStoragePersistor } from 'react-query/createWebStoragePersistor-experimental'
 
-import { FullPageSpinner } from 'src/components/FullPageSpinner'
 import RootErrorFallback from 'src/components/RootErrorFallback'
+import { FullPageSpinner } from 'src/components/FullPageSpinner'
 
 import '@fontsource/inter/variable.css'
 import '@fontsource/raleway/variable.css'
