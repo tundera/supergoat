@@ -16,7 +16,7 @@
     "ts": "node -r esbuild-register"
   },
   "devDependencies": {
-    "@swc/core": "^1.2.71",
+    "@swc/core": "^1.2.75",
     "@swc/helpers": "^0.2.12",
     "@types/node": "^16.4.8",
     "chalk": "^4.1.2",
@@ -30,7 +30,7 @@
     "find-yarn-workspace-root": "^2.0.0",
     "ora": "5.4.1",
     "prettier": "^2.3.2",
-    "ts-node": "10.1.0",
+    "ts-node": "10.2.0",
     "tsconfig-paths": "3.10.1",
     "ultra-runner": "^3.10.5"
   }
