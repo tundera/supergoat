@@ -33,7 +33,7 @@
       "path": "services/graphql"
     },
     {
-      "name": "@monorepo/docs",
+      "name": "docs",
       "path": "sites/docs"
     }
   ],

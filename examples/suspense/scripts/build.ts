@@ -25,8 +25,8 @@ const build = async () => {
     await execa('yarn', ['chakra-cli', 'tokens', 'src/styles/theme'])
   }
 
-  const generateGraphQLArtifacts = async () => {
-    await execa('yarn', ['graphql-codegen'])
+  const generateGQlessTypes = async () => {
+    await execa('yarn', ['gqless', 'generate'])
   }
 
   const deployPrismaMigrations = async () => {
@@ -60,8 +60,8 @@ const build = async () => {
         task: async () => await pushGraphQLSchema(),
       },
       {
-        title: 'Generating GraphQL artifacts',
-        task: async () => await generateGraphQLArtifacts(),
+        title: 'Generating GQless types',
+        task: async () => await generateGQlessTypes(),
       },
     ],
     { exitOnError: true },
