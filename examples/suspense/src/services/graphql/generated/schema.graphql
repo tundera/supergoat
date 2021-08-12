@@ -4,15 +4,15 @@
 type Account {
   accessToken: String
   accessTokenExpires: DateTime
+  compoundId: String!
   createdAt: DateTime!
-  id: String!
+  id: Int!
   providerAccountId: String!
   providerId: String!
   providerType: String!
   refreshToken: String
   updatedAt: DateTime!
-  user: User!
-  userId: String!
+  userId: Int!
 }
 
 type AccountCountAggregateOutputType {
@@ -2821,11 +2821,10 @@ type Session {
   accessToken: String!
   createdAt: DateTime!
   expires: DateTime!
-  id: String!
+  id: Int!
   sessionToken: String!
   updatedAt: DateTime!
-  user: User!
-  userId: String!
+  userId: Int!
 }
 
 type SessionCountAggregateOutputType {
@@ -4008,14 +4007,6 @@ input TeamWhereUniqueInput {
 }
 
 type User {
-  accounts(
-    cursor: AccountWhereUniqueInput
-    distinct: AccountScalarFieldEnum
-    orderBy: AccountOrderByInput
-    skip: Int
-    take: Int
-    where: AccountWhereInput
-  ): [Account!]!
   apple: String
   createdAt: DateTime!
   email: String
@@ -4023,17 +4014,9 @@ type User {
   facebook: String
   github: String
   google: String
-  id: String!
+  id: Int!
   image: String
   name: String
-  sessions(
-    cursor: SessionWhereUniqueInput
-    distinct: SessionScalarFieldEnum
-    orderBy: SessionOrderByInput
-    skip: Int
-    take: Int
-    where: SessionWhereInput
-  ): [Session!]!
   twitter: String
   updatedAt: DateTime!
 }
@@ -4454,7 +4437,7 @@ input UserWhereUniqueInput {
 type VerificationRequest {
   createdAt: DateTime!
   expires: DateTime!
-  id: String!
+  id: Int!
   identifier: String!
   token: String!
   updatedAt: DateTime!

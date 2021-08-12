@@ -6,7 +6,6 @@ import {
   Flex,
   HStack,
   Icon,
-  ButtonProps,
   IconButton,
   LinkOverlay,
   LinkBox,
@@ -23,31 +22,19 @@ import dynamic from 'next/dynamic'
 const MobileMenu = dynamic(() => import('src/components/MobileMenu'))
 
 const Header: FC = () => {
-  const color = useColorModeValue('blackAlpha.800', 'white')
-  const bgColor = useColorModeValue('whiteAlpha.50', 'blackAlpha.50')
-  const bgColorFallback = useColorModeValue('whiteAlpha.900', 'rgba(29, 29, 29, 0.9)')
+  const color = useColorModeValue('black', 'white')
+  const bgColor = useColorModeValue('rgba(255, 255, 255, 0.8)', 'rgba(0, 0, 0, 0.5)')
+  const boxShadow = useColorModeValue(
+    'rgba(0, 0, 0, 0.1) 0px -1px 0px 0px inset',
+    'rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset',
+  )
+
   const borderBottomColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.200')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const hoverBg = useColorModeValue('blackAlpha.300', 'whiteAlpha.300')
 
   const BrandLogoIcon = useBrandLogo('black', 'white')
 
-  const buttonStyle: ButtonProps = {
-    as: 'a',
-    borderRadius: 'none',
-    py: [6, 8],
-    px: 2,
-    minW: ['50px', '60px'],
-    variant: 'ghost',
-    colorScheme: 'blackAlpha',
-    color,
-    _hover: {
-      bgColor: hoverBg,
-    },
-    _focus: {
-      boxShadow: 'none',
-    },
-  }
   const links = [
     {
       text: 'About',
@@ -70,18 +57,19 @@ const Header: FC = () => {
       zIndex="sticky"
       w="full"
       sx={{
-        '@supports (backdrop-filter: blur(12px))': {
-          backdropFilter: 'blur(12px)',
+        '@supports (backdrop-filter: saturate(1.8) blur(5px))': {
+          backdropFilter: 'saturate(1.8) blur(5px)',
           bgColor,
         },
-        '@supports (-webkit-backdrop-filter: blur(12px))': {
-          WebkitBackdropFilter: 'blur(12px)',
+        '@supports (-webkit-backdrop-filter: saturate(1.8) blur(5px))': {
+          WebkitBackdropFilter: 'saturate(1.8) blur(5px)',
           bgColor,
         },
-        '@supports not (backdrop-filter: blur(12px))': {
-          bgColor: bgColorFallback,
+        '@supports not (backdrop-filter: saturate(1.8) blur(5px))': {
+          bgColor,
         },
       }}
+      boxShadow={boxShadow}
       borderBottomColor={borderBottomColor}
       borderBottomWidth="2px"
       pos="sticky"
@@ -121,7 +109,6 @@ const Header: FC = () => {
         </Flex>
         <Flex d={['flex', 'none']} justifyContent="flex-end" alignItems="center" flex="1">
           <IconButton
-            {...buttonStyle}
             as="button"
             onClick={onOpen}
             variant="ghost"

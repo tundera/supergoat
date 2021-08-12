@@ -13,7 +13,7 @@ interface Props {
 }
 
 const PlayerCard: FC<Props> = ({ player, colorScheme }) => {
-  const textColor = useColorModeValue('whiteAlpha.900', 'blackAlpha.900')
+  const textColor = useColorModeValue('white', 'black')
   const bgGradient = useColorModeValue(
     `linear(to-t, ${colorScheme.primary}, black)`,
     `linear(to-t, white, ${colorScheme.primary})`,
@@ -22,7 +22,7 @@ const PlayerCard: FC<Props> = ({ player, colorScheme }) => {
   const { imageURL, blurDataURL } = useImageUrlBuilder(player?.image?.id as string)
 
   return (
-    <Box w="full" h="full" p="8">
+    <Box w="350px" h="full" p="4">
       <MotionBox
         w="full"
         h="full"

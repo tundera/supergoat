@@ -16,9 +16,9 @@
     "ts": "node -r esbuild-register"
   },
   "devDependencies": {
-    "@swc/core": "^1.2.75",
-    "@swc/helpers": "^0.2.12",
-    "@types/node": "^16.4.8",
+    "@swc/core": "^1.2.76",
+    "@swc/helpers": "^0.2.13",
+    "@types/node": "^16.6.1",
     "chalk": "^4.1.2",
     "change-case": "4.1.2",
     "dotenv": "10.0.0",

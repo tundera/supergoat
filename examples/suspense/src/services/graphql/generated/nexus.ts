@@ -3634,14 +3634,15 @@ export interface NexusGenObjects {
     // root type
     accessToken?: string | null // String
     accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
+    compoundId: string // String!
     createdAt: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: number // Int!
     providerAccountId: string // String!
     providerId: string // String!
     providerType: string // String!
     refreshToken?: string | null // String
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
-    userId: string // String!
+    userId: number // Int!
   }
   AccountCountAggregateOutputType: {
     // root type
@@ -3955,10 +3956,10 @@ export interface NexusGenObjects {
     accessToken: string // String!
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     expires: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: number // Int!
     sessionToken: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
-    userId: string // String!
+    userId: number // Int!
   }
   SessionCountAggregateOutputType: {
     // root type
@@ -4089,7 +4090,7 @@ export interface NexusGenObjects {
     facebook?: string | null // String
     github?: string | null // String
     google?: string | null // String
-    id: string // String!
+    id: number // Int!
     image?: string | null // String
     name?: string | null // String
     twitter?: string | null // String
@@ -4145,7 +4146,7 @@ export interface NexusGenObjects {
     // root type
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     expires: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: number // Int!
     identifier: string // String!
     token: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
@@ -4193,15 +4194,15 @@ export interface NexusGenFieldTypes {
     // field return type
     accessToken: string | null // String
     accessTokenExpires: NexusGenScalars['DateTime'] | null // DateTime
+    compoundId: string // String!
     createdAt: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: number // Int!
     providerAccountId: string // String!
     providerId: string // String!
     providerType: string // String!
     refreshToken: string | null // String
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
-    user: NexusGenRootTypes['User'] // User!
-    userId: string // String!
+    userId: number // Int!
   }
   AccountCountAggregateOutputType: {
     // field return type
@@ -4626,11 +4627,10 @@ export interface NexusGenFieldTypes {
     accessToken: string // String!
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     expires: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: number // Int!
     sessionToken: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
-    user: NexusGenRootTypes['User'] // User!
-    userId: string // String!
+    userId: number // Int!
   }
   SessionCountAggregateOutputType: {
     // field return type
@@ -4758,7 +4758,6 @@ export interface NexusGenFieldTypes {
   }
   User: {
     // field return type
-    accounts: NexusGenRootTypes['Account'][] // [Account!]!
     apple: string | null // String
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     email: string | null // String
@@ -4766,10 +4765,9 @@ export interface NexusGenFieldTypes {
     facebook: string | null // String
     github: string | null // String
     google: string | null // String
-    id: string // String!
+    id: number // Int!
     image: string | null // String
     name: string | null // String
-    sessions: NexusGenRootTypes['Session'][] // [Session!]!
     twitter: string | null // String
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
   }
@@ -4823,7 +4821,7 @@ export interface NexusGenFieldTypes {
     // field return type
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     expires: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: number // Int!
     identifier: string // String!
     token: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
@@ -4863,15 +4861,15 @@ export interface NexusGenFieldTypeNames {
     // field return type name
     accessToken: 'String'
     accessTokenExpires: 'DateTime'
+    compoundId: 'String'
     createdAt: 'DateTime'
-    id: 'String'
+    id: 'Int'
     providerAccountId: 'String'
     providerId: 'String'
     providerType: 'String'
     refreshToken: 'String'
     updatedAt: 'DateTime'
-    user: 'User'
-    userId: 'String'
+    userId: 'Int'
   }
   AccountCountAggregateOutputType: {
     // field return type name
@@ -5296,11 +5294,10 @@ export interface NexusGenFieldTypeNames {
     accessToken: 'String'
     createdAt: 'DateTime'
     expires: 'DateTime'
-    id: 'String'
+    id: 'Int'
     sessionToken: 'String'
     updatedAt: 'DateTime'
-    user: 'User'
-    userId: 'String'
+    userId: 'Int'
   }
   SessionCountAggregateOutputType: {
     // field return type name
@@ -5428,7 +5425,6 @@ export interface NexusGenFieldTypeNames {
   }
   User: {
     // field return type name
-    accounts: 'Account'
     apple: 'String'
     createdAt: 'DateTime'
     email: 'String'
@@ -5436,10 +5432,9 @@ export interface NexusGenFieldTypeNames {
     facebook: 'String'
     github: 'String'
     google: 'String'
-    id: 'String'
+    id: 'Int'
     image: 'String'
     name: 'String'
-    sessions: 'Session'
     twitter: 'String'
     updatedAt: 'DateTime'
   }
@@ -5493,7 +5488,7 @@ export interface NexusGenFieldTypeNames {
     // field return type name
     createdAt: 'DateTime'
     expires: 'DateTime'
-    id: 'String'
+    id: 'Int'
     identifier: 'String'
     token: 'String'
     updatedAt: 'DateTime'
@@ -6163,26 +6158,6 @@ export interface NexusGenArgTypes {
       skip?: number | null // Int
       take?: number | null // Int
       where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-    }
-  }
-  User: {
-    accounts: {
-      // args
-      cursor?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
-      distinct?: NexusGenEnums['AccountScalarFieldEnum'] | null // AccountScalarFieldEnum
-      orderBy?: NexusGenInputs['AccountOrderByInput'] | null // AccountOrderByInput
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
-    }
-    sessions: {
-      // args
-      cursor?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
-      distinct?: NexusGenEnums['SessionScalarFieldEnum'] | null // SessionScalarFieldEnum
-      orderBy?: NexusGenInputs['SessionOrderByInput'] | null // SessionOrderByInput
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
     }
   }
 }

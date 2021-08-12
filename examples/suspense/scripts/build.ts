@@ -18,15 +18,19 @@ const build = async () => {
   }
 
   const pushGraphQLSchema = async () => {
-    await execa('npx', ['graphcdn', 'push', 'schema'])
+    await execa('yarn', ['graphcdn', 'push', 'schema'])
   }
 
   const generateThemeTypes = async () => {
     await execa('yarn', ['chakra-cli', 'tokens', 'src/styles/theme'])
   }
 
-  const generateGQlessTypes = async () => {
-    await execa('yarn', ['gqless', 'generate'])
+  const generateGQtyTypes = async () => {
+    await execa('yarn', ['gqty', 'generate'])
+  }
+
+  const runGraphQLCodegen = async () => {
+    await execa('yarn', ['graphql-codegen'])
   }
 
   const deployPrismaMigrations = async () => {
@@ -60,8 +64,12 @@ const build = async () => {
         task: async () => await pushGraphQLSchema(),
       },
       {
-        title: 'Generating GQless types',
-        task: async () => await generateGQlessTypes(),
+        title: 'Generating GQty types',
+        task: async () => await generateGQtyTypes(),
+      },
+      {
+        title: 'Running GraphQL Codegen',
+        task: async () => await runGraphQLCodegen(),
       },
     ],
     { exitOnError: true },

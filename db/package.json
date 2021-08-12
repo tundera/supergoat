@@ -27,16 +27,16 @@
     "lint": "yarn eslint --ignore-path '../.eslintignore' --ext '.js,.ts,.tsx' ."
   },
   "dependencies": {
-    "@prisma/client": "^2.28.0",
+    "@prisma/client": "^2.29.0",
     "change-case": "^4.1.2",
     "fast-csv": "^4.3.6",
     "pg": "^8.7.1",
     "prettier": "^2.3.1"
   },
   "devDependencies": {
-    "@swc/core": "^1.2.75",
-    "@swc/helpers": "^0.2.12",
-    "@types/node": "^16.4.10",
+    "@swc/core": "^1.2.76",
+    "@swc/helpers": "^0.2.13",
+    "@types/node": "^16.6.1",
     "@types/pg": "^8",
     "@types/prettier": "^2",
     "nba": "4.15.0",

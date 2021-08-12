@@ -10,14 +10,11 @@ const styles: GlobalStyles = {
       display: 'flex',
       flexDirection: 'column',
       minHeight: '100vh',
+      bg: mode('white', 'black')(props),
     },
     body: {
       fontFamily: 'body',
       lineHeight: 'base',
-      bgGradient: mode(
-        'linear(to-t, brand.300, white)',
-        'linear(to-t, brand.300, transparent)',
-      )(props),
     },
   }),
 }
