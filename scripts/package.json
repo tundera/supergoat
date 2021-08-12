@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/scripts",
+  "name": "scripts",
   "version": "0.1.0",
   "author": {
     "name": "Philip Johnston",
@@ -12,9 +12,6 @@
     "directory": "scripts"
   },
   "license": "MIT",
-  "scripts": {
-    "ts": "node -r esbuild-register"
-  },
   "devDependencies": {
     "@swc/core": "^1.2.76",
     "@swc/helpers": "^0.2.13",

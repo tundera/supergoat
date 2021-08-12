@@ -14,7 +14,7 @@
     {
       "name": "Update database",
       "type": "pwa-node",
-      "program": "${workspaceFolder}/scripts/update.ts",
+      "program": "${workspaceFolder}/examples/suspense/scripts/get-updated-data.ts",
       "runtimeArgs": ["-r", "esbuild-register", "-r", "tsconfig-paths/register"],
       "envFile": "${workspaceFolder}/.env.production.local",
       "sourceMaps": true,

@@ -4,9 +4,12 @@
     {
       "name": "Seed database",
       "type": "pwa-node",
-      "program": "${workspaceFolder}/examples/suspense/scripts/seed.ts",
+      "program": "${workspaceFolder}/db/scripts/seed.ts",
       "runtimeArgs": ["-r", "esbuild-register", "-r", "tsconfig-paths/register"],
-      "envFile": "${workspaceFolder}/examples/suspense/.env.production.local",
+      "envFile": "${workspaceFolder}/db/.env.production.local",
+      "env": {
+        "TS_NODE_PROJECT": "db/tsconfig.json"
+      },
       "sourceMaps": true,
       "request": "launch",
       "skipFiles": ["<node_internals>/**"]
@@ -14,11 +17,11 @@
     {
       "name": "Update database",
       "type": "pwa-node",
-      "program": "${workspaceFolder}/examples/suspense/scripts/get-updated-data.ts",
+      "program": "${workspaceFolder}/db/scripts/update.ts",
       "runtimeArgs": ["-r", "ts-node/register", "-r", "tsconfig-paths/register"],
-      "envFile": "${workspaceFolder}/examples/suspense/.env.production.local",
+      "envFile": "${workspaceFolder}/db/.env.production.local",
       "env": {
-        "TS_NODE_PROJECT": "examples/suspense/tsconfig.json"
+        "TS_NODE_PROJECT": "db/tsconfig.json"
       },
       "sourceMaps": true,
       "request": "launch",

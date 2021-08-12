@@ -25,7 +25,8 @@
     "baseUrl": ".",
     "paths": {
       "@/db": ["src"],
-      "@/db/*": ["src/*"]
+      "@/db/*": ["src/*"],
+      "@/db/backups/*": ["backups/*"]
     }
   },
   "include": ["**/*.ts"]

@@ -1,10 +1,6 @@
 {
   "folders": [
     {
-      "name": "🚀 @monorepo/suspense-demo",
-      "path": "apps/suspense-demo"
-    },
-    {
       "name": "✨ root",
       "path": "."
     },
@@ -25,7 +21,7 @@
       "path": "packages/core"
     },
     {
-      "name": "⚙️ @monorepo/scripts",
+      "name": "⚙️ scripts",
       "path": "scripts"
     },
     {

@@ -4,13 +4,13 @@ import type {
   BackupCoachData,
   BackupPlayerData,
   BackupTeamData,
-} from 'db/types'
+} from '@/db/types'
 
-import colorSchemesJson from 'db/backups/documents/color-schemes.json'
-import imagesJson from 'db/backups/documents/images.json'
-import coachesJson from 'db/backups/documents/coaches.json'
-import playersJson from 'db/backups/documents/players.json'
-import teamsJson from 'db/backups/documents/teams.json'
+import colorSchemesJson from '@/db/backups/documents/color-schemes.json'
+import imagesJson from '@/db/backups/documents/images.json'
+import coachesJson from '@/db/backups/documents/coaches.json'
+import playersJson from '@/db/backups/documents/players.json'
+import teamsJson from '@/db/backups/documents/teams.json'
 
 export const coaches: BackupCoachData[] = coachesJson.map(({ createdAt, updatedAt, ...coach }) => ({
   createdAt: new Date(createdAt),

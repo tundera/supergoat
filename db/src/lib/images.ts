@@ -1,7 +1,7 @@
-import type { Image, ImageType } from 'db'
-import type { BackupImageData } from 'db/types'
+import type { Image, ImageType } from '@/db'
+import type { BackupImageData } from '@/db/types'
 
-import db from 'db'
+import db from '@/db'
 
 export const transformImageData = (image: BackupImageData) => {
   return {

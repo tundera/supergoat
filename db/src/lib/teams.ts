@@ -1,17 +1,17 @@
-import type { Team } from '..'
+import type { Team } from '@/db'
 import type {
   BackupTeamData,
   TeamData,
   TeamRoster,
   UpdatedTeamData,
   TeamInfoCommon,
-} from '../types'
+} from '@/db/types'
 
 import nba from 'nba'
 
 import db from '..'
-import { upsertCoachData } from '../lib/coaches'
-import { upsertPlayerData } from '../lib/players'
+import { upsertCoachData } from '@/db/lib/coaches'
+import { upsertPlayerData } from '@/db/lib/players'
 
 async function getTeamInfo(teamId: number): Promise<TeamData> {
   // return await nba.stats.teamInfoCommon({ TeamID: teamId })
