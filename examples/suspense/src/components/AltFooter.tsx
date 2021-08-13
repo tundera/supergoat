@@ -3,7 +3,6 @@ import type { ReactNode } from 'react'
 import {
   Box,
   Container,
-  Link,
   Icon,
   SimpleGrid,
   Stack,
@@ -14,16 +13,17 @@ import {
 } from '@chakra-ui/react'
 
 import useBrandLogo from 'src/hooks/useBrandLogo'
+import Link from './NextChakraLink'
 
 const Logo = () => {
   const BrandLogoIcon = useBrandLogo('black', 'white')
 
-  return <Icon as={BrandLogoIcon} w={32} h={32} />
+  return <Icon as={BrandLogoIcon} w={20} h={20} />
 }
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+    <Text fontWeight={500} fontSize="lg" mb={2}>
       {children}
     </Text>
   )
@@ -35,25 +35,20 @@ export default function LargeWithLogoCentered() {
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}
     >
-      <Container as={Stack} maxW={'6xl'} py={10}>
+      <Container as={Stack} maxW="6xl" py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={'flex-start'}>
             <ListHeader>Product</ListHeader>
-            <Link href={'#'}>Overview</Link>
-            <Stack direction={'row'} align={'center'} spacing={2}>
-              <Link href={'#'}>Features</Link>
-              <Tag
-                size={'sm'}
-                bg={useColorModeValue('brand.300', 'brand.800')}
-                ml={2}
-                color={'white'}
-              >
+            <Link href="#">Overview</Link>
+            <Stack direction="row" align="center" spacing={2}>
+              <Link href="#">Features</Link>
+              <Tag size="sm" bg={useColorModeValue('brand.500', 'brand.800')} ml={2} color="white">
                 New
               </Tag>
             </Stack>
-            <Link href={'#'}>Tutorials</Link>
-            <Link href={'#'}>Pricing</Link>
-            <Link href={'#'}>Releases</Link>
+            <Link href="#">Tutorials</Link>
+            <Link href="#">Pricing</Link>
+            <Link href="#">Releases</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
