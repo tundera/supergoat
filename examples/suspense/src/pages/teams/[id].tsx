@@ -2,16 +2,16 @@ import type { NextPage } from 'types'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import type { Team } from 'db'
 
-import db from 'db'
 import { Suspense } from 'react'
 import { Flex } from '@chakra-ui/react'
 import { QueryClient } from 'react-query'
 import { dehydrate } from 'react-query/hydration'
 
-import { FullPageSpinner } from 'src/components/FullPageSpinner'
-import { getLayout as getPageLayout } from 'src/layouts/PageLayout'
-import { prefetchTeamQuery } from 'src/lib/teams'
+import db from 'db'
 import TeamInfo from 'src/components/TeamInfo'
+import { FullPageSpinner } from 'src/components/FullPageSpinner'
+import { getLayout as getPublicLayout } from 'src/layouts/PublicLayout'
+import { prefetchTeamQuery } from 'src/lib/teams'
 
 type RouteParams = {
   id: string
@@ -29,7 +29,7 @@ export const TeamPage: NextPage = () => {
   )
 }
 
-TeamPage.getLayout = getPageLayout
+TeamPage.getLayout = getPublicLayout
 
 export default TeamPage
 

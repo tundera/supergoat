@@ -2,7 +2,7 @@ import type { NextPage } from 'types'
 
 import { Heading, Stack, useColorModeValue } from '@chakra-ui/react'
 
-import { getLayout as getPageLayout } from 'src/layouts/PageLayout'
+import { getLayout as getPublicLayout } from 'src/layouts/PublicLayout'
 import FeaturesWithCards from 'src/components/blocks/FeaturesWithCards'
 
 const AboutPage: NextPage = () => {
@@ -31,6 +31,6 @@ const AboutPage: NextPage = () => {
   )
 }
 
-AboutPage.getLayout = getPageLayout
+AboutPage.getLayout = getPublicLayout
 
 export default AboutPage

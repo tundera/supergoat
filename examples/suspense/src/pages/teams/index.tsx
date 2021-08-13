@@ -9,7 +9,7 @@ import { dehydrate } from 'react-query/hydration'
 import { Flex } from '@chakra-ui/react'
 
 import { prefetchAllTeamsQuery } from 'src/lib/teams'
-import { getLayout as getPageLayout } from 'src/layouts/PageLayout'
+import { getLayout as getPublicLayout } from 'src/layouts/PublicLayout'
 import { FullPageSpinner } from 'src/components/FullPageSpinner'
 
 const TeamsGrid = dynamic(() => import('src/components/TeamsGrid'))
@@ -30,7 +30,7 @@ const TeamsPage: NextPage = () => {
   )
 }
 
-TeamsPage.getLayout = getPageLayout
+TeamsPage.getLayout = getPublicLayout
 
 export default TeamsPage
 

@@ -23,8 +23,8 @@ interface Props {
   title?: string
 }
 
-const PageLayout: FC<Props> = ({ title, children }) => {
-  const color = useColorModeValue('white', 'black')
+const PublicLayout: FC<Props> = ({ title, children }) => {
+  const color = useColorModeValue('black', 'white')
   const { reset } = useQueryErrorResetBoundary()
 
   return (
@@ -39,7 +39,7 @@ const PageLayout: FC<Props> = ({ title, children }) => {
 
       <ThemeProvider>
         <FormProvider>
-          <ErrorBoundary FallbackComponent={PageLayoutErrorFallback} onReset={reset}>
+          <ErrorBoundary FallbackComponent={PublicLayoutErrorFallback} onReset={reset}>
             <Suspense fallback={<FullPageSpinner />}>
               <NProgress
                 color={color}
@@ -62,15 +62,15 @@ const PageLayout: FC<Props> = ({ title, children }) => {
   )
 }
 
-export default PageLayout
+export default PublicLayout
 
 export const getLayout: GetLayoutFunction = (page) => {
-  const Layout = dynamic(() => import('src/layouts/PageLayout'))
+  const Layout = dynamic(() => import('src/layouts/PublicLayout'))
 
   return <Layout>{page}</Layout>
 }
 
-const PageLayoutErrorFallback = ({ error, resetErrorBoundary }: ErrorFallbackProps) => {
+const PublicLayoutErrorFallback = ({ error, resetErrorBoundary }: ErrorFallbackProps) => {
   return (
     <Flex
       direction="column"

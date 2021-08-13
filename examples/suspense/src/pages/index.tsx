@@ -3,7 +3,7 @@ import type { NextPage } from 'types'
 import { Stack } from '@chakra-ui/react'
 
 import CallToAction from 'src/components/blocks/CallToAction'
-import { getLayout as getPageLayout } from 'src/layouts/PageLayout'
+import { getLayout as getPublicLayout } from 'src/layouts/PublicLayout'
 
 interface PageProps {
   cookies?: string
@@ -22,6 +22,6 @@ const HomePage: NextPage<PageProps> = () => {
   )
 }
 
-HomePage.getLayout = getPageLayout
+HomePage.getLayout = getPublicLayout
 
 export default HomePage
