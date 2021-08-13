@@ -7,7 +7,7 @@ import NodeJSIcon from 'public/images/nodejs.svg'
 
 const FeaturesWithCards: FC = () => {
   const bg = useColorModeValue('white', 'gray.800')
-  const headerColor = useColorModeValue('gray.700', 'white')
+  const headerColor = useColorModeValue('black', 'white')
   const textColor = useColorModeValue('gray.500', 'gray.300')
 
   return (
@@ -25,7 +25,7 @@ const FeaturesWithCards: FC = () => {
         py="4"
         mt="6"
         bg={bg}
-        shadow="lg"
+        shadow="dark-lg"
         rounded={{ base: 'none', md: 'lg' }}
       >
         <Box flexShrink={0}>
@@ -54,7 +54,7 @@ const FeaturesWithCards: FC = () => {
         py="4"
         mt={{ base: '6', sm: '16', md: '20', lg: '24' }}
         bg={bg}
-        shadow="lg"
+        shadow="dark-lg"
         rounded={{ base: 'none', md: 'lg' }}
       >
         <Box flexShrink={0}>
@@ -83,7 +83,7 @@ const FeaturesWithCards: FC = () => {
         px="4"
         py="4"
         bg={bg}
-        shadow="lg"
+        shadow="dark-lg"
         rounded={{ base: 'none', md: 'lg' }}
       >
         <Box flexShrink={0}>

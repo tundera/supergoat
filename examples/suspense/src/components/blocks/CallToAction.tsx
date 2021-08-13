@@ -54,7 +54,7 @@ const CallToAction = ({ title, subtitle, description, link }: CtaWithDescription
         </Text>
         {link && (
           <Flex justify="center" mt={{ lg: '0' }} flexShrink={{ lg: 0 }}>
-            <Box mt="12" display="inline-flex" rounded="md" shadow="base">
+            <Box mt="12" display="inline-flex" rounded="md">
               <ButtonGroup spacing={4}>
                 <NextLink href="/about" passHref>
                   <Button
@@ -98,8 +98,8 @@ const CallToAction = ({ title, subtitle, description, link }: CtaWithDescription
                     py="2"
                     px="4"
                     rounded="lg"
-                    _hover={{ bg: 'whiteAlpha.700' }}
-                    _active={{ bg: 'whiteAlpha.700' }}
+                    _hover={{ bg: 'white' }}
+                    _active={{ bg: 'white' }}
                   >
                     See demo
                   </Button>

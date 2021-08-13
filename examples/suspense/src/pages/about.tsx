@@ -6,10 +6,10 @@ import { getLayout as getPageLayout } from 'src/layouts/PageLayout'
 import FeaturesWithCards from 'src/components/blocks/FeaturesWithCards'
 
 const AboutPage: NextPage = () => {
-  const bg = useColorModeValue('black', 'white')
+  const bg = useColorModeValue('gray.800', 'white')
   const textGradient = useColorModeValue(
-    'linear(to-tr, white,pink.400)',
-    'linear(to-tr, white, purple.500)',
+    'linear(to-tr, green.500, blue.400)',
+    'linear(to-tr, blue.500, green.400)',
   )
 
   return (

@@ -13,6 +13,7 @@ import { FullPageSpinner } from 'src/components/FullPageSpinner'
 
 import '@fontsource/inter/variable.css'
 import '@fontsource/raleway/variable.css'
+import '@fontsource/fira-code/variable.css'
 
 function MyApp({ Component, pageProps: { dehydratedState, session, ...pageProps } }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)
