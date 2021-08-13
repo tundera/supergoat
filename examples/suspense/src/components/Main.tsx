@@ -20,7 +20,6 @@ const Main: FC = ({ children }) => {
         as="main"
         exit="exit"
         h="full"
-        my={{ base: 0, md: 32 }}
         flexGrow={1}
         bg={bg}
         color={color}

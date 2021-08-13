@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import nc from 'next-connect'
-import { getSession } from 'next-auth/client'
+import { getSession } from 'next-auth/react'
 
 const handler = nc<NextApiRequest, NextApiResponse>().get(async (req, res) => {
   const session = await getSession({ req })

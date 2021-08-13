@@ -22,7 +22,7 @@ const TeamsGrid: FC = () => {
   // const goToNextPage = () => router.push({ query: { page: page + 1 } })
 
   return (
-    <Flex direction="column" alignItems="center">
+    <Flex direction="column" alignItems="center" my={{ base: 0, md: 32 }}>
       <SimpleGrid columns={[1, null, 3]} alignItems="center" spacingX={8} spacingY={16}>
         <SuspenseList revealOrder="forwards" tail="collapsed">
           {data?.findManyTeam?.map((team) => (

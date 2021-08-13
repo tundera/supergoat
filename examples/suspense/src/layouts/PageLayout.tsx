@@ -13,8 +13,9 @@ import { FiRefreshCw } from 'react-icons/fi'
 
 import ThemeProvider from 'src/providers/ThemeProvider'
 import FormProvider from 'src/providers/FormProvider'
-import Main from 'src/components/containers/Main'
+import Main from 'src/components/Main'
 import Footer from 'src/components/Footer'
+import AltFooter from 'src/components/AltFooter'
 import Header from 'src/components/Header'
 
 import { FullPageSpinner } from 'src/components/FullPageSpinner'
@@ -24,7 +25,7 @@ interface Props {
 }
 
 const PageLayout: FC<Props> = ({ title, children }) => {
-  const color = useColorModeValue('black', 'white')
+  const color = useColorModeValue('white', 'black')
   const { reset } = useQueryErrorResetBoundary()
 
   return (
@@ -50,7 +51,7 @@ const PageLayout: FC<Props> = ({ title, children }) => {
               <Flex minH="100vh" direction="column">
                 <Header />
                 <Main>{children}</Main>
-                <Footer />
+                <AltFooter />
               </Flex>
             </Suspense>
           </ErrorBoundary>

@@ -14,12 +14,12 @@ import {
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { FaWrench } from 'react-icons/fa'
-import { signOut } from 'next-auth/client'
-import { useSession } from '@next-auth/react-query'
+import { signOut } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 
 const SettingsButton: FC = () => {
   const router = useRouter()
-  const [session] = useSession()
+  const { data: session } = useSession()
 
   const color = useColorModeValue('blackAlpha.900', 'whiteAlpha.900')
   const bg = useColorModeValue('whiteAlpha.900', 'blackAlpha.900')

@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 import type { GetServerSideProps } from 'next'
-import { ClientSafeProvider, getProviders } from 'next-auth/client'
+import { ClientSafeProvider, getProviders } from 'next-auth/react'
 import { getLayout } from 'src/layouts/PageLayout'
 import LoginForm from 'src/components/forms/LoginForm'
 import type { NextPage as NextPage } from 'types'

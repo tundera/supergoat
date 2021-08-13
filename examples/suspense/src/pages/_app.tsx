@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider, useQueryErrorResetBoundary } from 're
 import { Hydrate } from 'react-query/hydration'
 import { persistQueryClient } from 'react-query/persistQueryClient-experimental'
 import { createWebStoragePersistor } from 'react-query/createWebStoragePersistor-experimental'
+import { SessionProvider } from 'next-auth/react'
 
 import RootErrorFallback from 'src/components/RootErrorFallback'
 import { FullPageSpinner } from 'src/components/FullPageSpinner'
@@ -13,7 +14,7 @@ import { FullPageSpinner } from 'src/components/FullPageSpinner'
 import '@fontsource/inter/variable.css'
 import '@fontsource/raleway/variable.css'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { dehydratedState, session, ...pageProps } }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)
 
   const [queryClient] = useState(
@@ -45,11 +46,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Suspense fallback={<FullPageSpinner />}>
       <ErrorBoundary FallbackComponent={RootErrorFallback} onReset={reset}>
         <QueryClientProvider client={queryClient}>
-          <Hydrate state={pageProps.dehydratedState}>
-            <Suspense fallback={FullPageSpinner}>
-              {getLayout(<Component {...pageProps} />)}
-            </Suspense>
-          </Hydrate>
+          <SessionProvider session={session}>
+            <Hydrate state={dehydratedState}>
+              <Suspense fallback={FullPageSpinner}>
+                {getLayout(<Component {...pageProps} />)}
+              </Suspense>
+            </Hydrate>
+          </SessionProvider>
         </QueryClientProvider>
       </ErrorBoundary>
     </Suspense>

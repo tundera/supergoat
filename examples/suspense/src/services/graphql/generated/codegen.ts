@@ -27,15 +27,15 @@ export type Account = {
   __typename?: 'Account'
   accessToken?: Maybe<Scalars['String']>
   accessTokenExpires?: Maybe<Scalars['DateTime']>
-  compoundId: Scalars['String']
   createdAt: Scalars['DateTime']
-  id: Scalars['Int']
+  id: Scalars['String']
   providerAccountId: Scalars['String']
   providerId: Scalars['String']
   providerType: Scalars['String']
   refreshToken?: Maybe<Scalars['String']>
   updatedAt: Scalars['DateTime']
-  userId: Scalars['Int']
+  user: User
+  userId: Scalars['String']
 }
 
 export type AccountCountAggregateOutputType = {
@@ -3160,10 +3160,11 @@ export type Session = {
   accessToken: Scalars['String']
   createdAt: Scalars['DateTime']
   expires: Scalars['DateTime']
-  id: Scalars['Int']
+  id: Scalars['String']
   sessionToken: Scalars['String']
   updatedAt: Scalars['DateTime']
-  userId: Scalars['Int']
+  user: User
+  userId: Scalars['String']
 }
 
 export type SessionCountAggregateOutputType = {
@@ -4360,6 +4361,7 @@ export type TeamWhereUniqueInput = {
 
 export type User = {
   __typename?: 'User'
+  accounts: Array<Account>
   apple?: Maybe<Scalars['String']>
   createdAt: Scalars['DateTime']
   email?: Maybe<Scalars['String']>
@@ -4367,11 +4369,30 @@ export type User = {
   facebook?: Maybe<Scalars['String']>
   github?: Maybe<Scalars['String']>
   google?: Maybe<Scalars['String']>
-  id: Scalars['Int']
+  id: Scalars['String']
   image?: Maybe<Scalars['String']>
   name?: Maybe<Scalars['String']>
+  sessions: Array<Session>
   twitter?: Maybe<Scalars['String']>
   updatedAt: Scalars['DateTime']
+}
+
+export type UserAccountsArgs = {
+  cursor?: Maybe<AccountWhereUniqueInput>
+  distinct?: Maybe<AccountScalarFieldEnum>
+  orderBy?: Maybe<AccountOrderByInput>
+  skip?: Maybe<Scalars['Int']>
+  take?: Maybe<Scalars['Int']>
+  where?: Maybe<AccountWhereInput>
+}
+
+export type UserSessionsArgs = {
+  cursor?: Maybe<SessionWhereUniqueInput>
+  distinct?: Maybe<SessionScalarFieldEnum>
+  orderBy?: Maybe<SessionOrderByInput>
+  skip?: Maybe<Scalars['Int']>
+  take?: Maybe<Scalars['Int']>
+  where?: Maybe<SessionWhereInput>
 }
 
 export type UserCountAggregateOutputType = {
@@ -4794,7 +4815,7 @@ export type VerificationRequest = {
   __typename?: 'VerificationRequest'
   createdAt: Scalars['DateTime']
   expires: Scalars['DateTime']
-  id: Scalars['Int']
+  id: Scalars['String']
   identifier: Scalars['String']
   token: Scalars['String']
   updatedAt: Scalars['DateTime']
@@ -4979,7 +5000,7 @@ export type AllUsersQuery = {
   __typename?: 'Query'
   findManyUser: Array<{
     __typename?: 'User'
-    id: number
+    id: string
     name?: Maybe<string>
     image?: Maybe<string>
   }>
@@ -5102,8 +5123,8 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 export type ResolversTypes = {
   Account: ResolverTypeWrapper<Account>
   String: ResolverTypeWrapper<Scalars['String']>
-  Int: ResolverTypeWrapper<Scalars['Int']>
   AccountCountAggregateOutputType: ResolverTypeWrapper<AccountCountAggregateOutputType>
+  Int: ResolverTypeWrapper<Scalars['Int']>
   AccountCreateInput: AccountCreateInput
   AccountCreateManyInput: AccountCreateManyInput
   AccountCreateManyUserInput: AccountCreateManyUserInput
@@ -5491,8 +5512,8 @@ export type ResolversTypes = {
 export type ResolversParentTypes = {
   Account: Account
   String: Scalars['String']
-  Int: Scalars['Int']
   AccountCountAggregateOutputType: AccountCountAggregateOutputType
+  Int: Scalars['Int']
   AccountCreateInput: AccountCreateInput
   AccountCreateManyInput: AccountCreateManyInput
   AccountCreateManyUserInput: AccountCreateManyUserInput
@@ -5870,15 +5891,15 @@ export type AccountResolvers<
 > = {
   accessToken?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   accessTokenExpires?: Resolver<Maybe<ResolversTypes['DateTime']>, ParentType, ContextType>
-  compoundId?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
-  id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   providerAccountId?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   providerId?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   providerType?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   refreshToken?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   updatedAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
-  userId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>
+  user?: Resolver<ResolversTypes['User'], ParentType, ContextType>
+  userId?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
@@ -7010,10 +7031,11 @@ export type SessionResolvers<
   accessToken?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
   expires?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
-  id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   sessionToken?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   updatedAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
-  userId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>
+  user?: Resolver<ResolversTypes['User'], ParentType, ContextType>
+  userId?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
@@ -7191,6 +7213,12 @@ export type UserResolvers<
   ContextType = Context,
   ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User'],
 > = {
+  accounts?: Resolver<
+    Array<ResolversTypes['Account']>,
+    ParentType,
+    ContextType,
+    RequireFields<UserAccountsArgs, never>
+  >
   apple?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
   email?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
@@ -7198,9 +7226,15 @@ export type UserResolvers<
   facebook?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   github?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   google?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
-  id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   image?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
+  sessions?: Resolver<
+    Array<ResolversTypes['Session']>,
+    ParentType,
+    ContextType,
+    RequireFields<UserSessionsArgs, never>
+  >
   twitter?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   updatedAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
@@ -7270,7 +7304,7 @@ export type VerificationRequestResolvers<
 > = {
   createdAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
   expires?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>
-  id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   identifier?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   token?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   updatedAt?: Resolver<ResolversTypes['DateTime'], ParentType, ContextType>

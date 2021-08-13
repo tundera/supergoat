@@ -7,7 +7,7 @@ export const VerificationRequest = objectType({
   },
   name: 'VerificationRequest',
   definition(t) {
-    t.int('id')
+    t.string('id')
     t.string('identifier')
     t.string('token')
     t.field('expires', { type: 'DateTime' })

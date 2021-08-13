@@ -53,7 +53,7 @@ const Header: FC = () => {
   return (
     <Box
       as="nav"
-      bgColor="whiteAlpha.50"
+      bgColor={bgColor}
       zIndex="sticky"
       w="full"
       sx={{
@@ -98,7 +98,7 @@ const Header: FC = () => {
         </HStack>
         {/* normal nav */}
         <Flex display={['none', 'flex']} justifyContent="space-between" flex="1">
-          <HStack spacing={2} mx={2}>
+          <HStack spacing={4} mx={2}>
             {links.map((link) => (
               <NavButton href={link.url} key={link.text}>
                 {link.text}
