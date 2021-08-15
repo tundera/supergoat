@@ -21,7 +21,9 @@
     "build-storybook": "build-storybook",
     "chromatic": "chromatic --project-token=4186469d590d",
     "forms:deploy": "formspree deploy -k $FORMSPREE_DEPLOY_KEY",
-    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\""
+    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
+    "test": "run-s 'test:*'",
+    "test:unit": "echo \"No tests yet\""
   },
   "prisma": {
     "schema": "db/schema.prisma"

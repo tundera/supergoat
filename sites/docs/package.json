@@ -12,7 +12,9 @@
     "start": "next start",
     "lint": "next lint",
     "format:prettier": "prettier --write **/*.{js,jsx,ts,tsx,css,md,json}",
-    "format": "yarn lint && yarn format:prettier"
+    "format": "yarn lint && yarn format:prettier",
+    "test": "run-s 'test:*'",
+    "test:unit": "echo \"No tests yet\""
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.15",
