@@ -2,7 +2,16 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "types": ["cypress", "node", "@testing-library/cypress"],
-    "isolatedModules": false
+    "isolatedModules": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/test-utils": ["../config/jest/test-utils"],
+      "@/components/*": ["./components/*"],
+      "@monorepo/components/*": ["../../packages/components/src/*"],
+      "@monorepo/components": ["../../packages/theme/src/index"],
+      "@monorepo/theme/*": ["../../packages/theme/src/*"],
+      "@monorepo/theme": ["../../packages/theme/src/index"]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx"]
 }
