@@ -24,7 +24,9 @@
   },
   "scripts": {
     "generate": "prisma generate",
-    "lint": "yarn eslint --ignore-path '../.eslintignore' --ext '.js,.ts,.tsx' ."
+    "lint": "yarn eslint --ignore-path '../.eslintignore' --ext '.js,.ts,.tsx' .",
+    "test": "run-s 'test:*'",
+    "test:unit": "echo \"No tests yet\""
   },
   "dependencies": {
     "@prisma/client": "^2.29.1",
