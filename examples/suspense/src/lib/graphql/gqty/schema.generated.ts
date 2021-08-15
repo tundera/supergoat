@@ -3597,8 +3597,8 @@ export interface PlayerUncheckedUpdateManyWithoutPlayersInput {
 }
 
 export const scalarsEnumsHash: import('gqty').ScalarsEnumsHash = {
-  Int: true,
   String: true,
+  Int: true,
   Float: true,
   Json: true,
   Decimal: true,
@@ -4228,9 +4228,8 @@ export const generatedSchema = {
   subscription: {},
   Account: {
     __typename: { __type: 'String!' },
-    id: { __type: 'Int!' },
-    compoundId: { __type: 'String!' },
-    userId: { __type: 'Int!' },
+    id: { __type: 'String!' },
+    userId: { __type: 'String!' },
     providerType: { __type: 'String!' },
     providerId: { __type: 'String!' },
     providerAccountId: { __type: 'String!' },
@@ -4239,6 +4238,7 @@ export const generatedSchema = {
     accessTokenExpires: { __type: 'DateTime' },
     createdAt: { __type: 'DateTime!' },
     updatedAt: { __type: 'DateTime!' },
+    user: { __type: 'User!' },
   },
   Coach: {
     __typename: { __type: 'String!' },
@@ -4293,13 +4293,14 @@ export const generatedSchema = {
   },
   Session: {
     __typename: { __type: 'String!' },
-    id: { __type: 'Int!' },
-    userId: { __type: 'Int!' },
+    id: { __type: 'String!' },
+    userId: { __type: 'String!' },
     expires: { __type: 'DateTime!' },
     sessionToken: { __type: 'String!' },
     accessToken: { __type: 'String!' },
     createdAt: { __type: 'DateTime!' },
     updatedAt: { __type: 'DateTime!' },
+    user: { __type: 'User!' },
   },
   Team: {
     __typename: { __type: 'String!' },
@@ -4346,7 +4347,7 @@ export const generatedSchema = {
   },
   User: {
     __typename: { __type: 'String!' },
-    id: { __type: 'Int!' },
+    id: { __type: 'String!' },
     name: { __type: 'String' },
     email: { __type: 'String' },
     emailVerified: { __type: 'DateTime' },
@@ -4358,10 +4359,32 @@ export const generatedSchema = {
     twitter: { __type: 'String' },
     createdAt: { __type: 'DateTime!' },
     updatedAt: { __type: 'DateTime!' },
+    accounts: {
+      __type: '[Account!]!',
+      __args: {
+        where: 'AccountWhereInput',
+        orderBy: 'AccountOrderByInput',
+        cursor: 'AccountWhereUniqueInput',
+        take: 'Int',
+        skip: 'Int',
+        distinct: 'AccountScalarFieldEnum',
+      },
+    },
+    sessions: {
+      __type: '[Session!]!',
+      __args: {
+        where: 'SessionWhereInput',
+        orderBy: 'SessionOrderByInput',
+        cursor: 'SessionWhereUniqueInput',
+        take: 'Int',
+        skip: 'Int',
+        distinct: 'SessionScalarFieldEnum',
+      },
+    },
   },
   VerificationRequest: {
     __typename: { __type: 'String!' },
-    id: { __type: 'Int!' },
+    id: { __type: 'String!' },
     identifier: { __type: 'String!' },
     token: { __type: 'String!' },
     expires: { __type: 'DateTime!' },
@@ -8352,9 +8375,8 @@ export interface Subscription {
 
 export interface Account {
   __typename: 'Account' | undefined
-  id: ScalarsEnums['Int']
-  compoundId: ScalarsEnums['String']
-  userId: ScalarsEnums['Int']
+  id: ScalarsEnums['String']
+  userId: ScalarsEnums['String']
   providerType: ScalarsEnums['String']
   providerId: ScalarsEnums['String']
   providerAccountId: ScalarsEnums['String']
@@ -8363,6 +8385,7 @@ export interface Account {
   accessTokenExpires?: Maybe<ScalarsEnums['DateTime']>
   createdAt: ScalarsEnums['DateTime']
   updatedAt: ScalarsEnums['DateTime']
+  user: User
 }
 
 /**
@@ -8434,13 +8457,14 @@ export interface Player {
 
 export interface Session {
   __typename: 'Session' | undefined
-  id: ScalarsEnums['Int']
-  userId: ScalarsEnums['Int']
+  id: ScalarsEnums['String']
+  userId: ScalarsEnums['String']
   expires: ScalarsEnums['DateTime']
   sessionToken: ScalarsEnums['String']
   accessToken: ScalarsEnums['String']
   createdAt: ScalarsEnums['DateTime']
   updatedAt: ScalarsEnums['DateTime']
+  user: User
 }
 
 /**
@@ -8486,7 +8510,7 @@ export interface Team {
 
 export interface User {
   __typename: 'User' | undefined
-  id: ScalarsEnums['Int']
+  id: ScalarsEnums['String']
   name?: Maybe<ScalarsEnums['String']>
   email?: Maybe<ScalarsEnums['String']>
   emailVerified?: Maybe<ScalarsEnums['DateTime']>
@@ -8498,11 +8522,27 @@ export interface User {
   twitter?: Maybe<ScalarsEnums['String']>
   createdAt: ScalarsEnums['DateTime']
   updatedAt: ScalarsEnums['DateTime']
+  accounts: (args?: {
+    where?: Maybe<AccountWhereInput>
+    orderBy?: Maybe<AccountOrderByInput>
+    cursor?: Maybe<AccountWhereUniqueInput>
+    take?: Maybe<Scalars['Int']>
+    skip?: Maybe<Scalars['Int']>
+    distinct?: Maybe<AccountScalarFieldEnum>
+  }) => Array<Account>
+  sessions: (args?: {
+    where?: Maybe<SessionWhereInput>
+    orderBy?: Maybe<SessionOrderByInput>
+    cursor?: Maybe<SessionWhereUniqueInput>
+    take?: Maybe<Scalars['Int']>
+    skip?: Maybe<Scalars['Int']>
+    distinct?: Maybe<SessionScalarFieldEnum>
+  }) => Array<Session>
 }
 
 export interface VerificationRequest {
   __typename: 'VerificationRequest' | undefined
-  id: ScalarsEnums['Int']
+  id: ScalarsEnums['String']
   identifier: ScalarsEnums['String']
   token: ScalarsEnums['String']
   expires: ScalarsEnums['DateTime']

@@ -17,7 +17,7 @@ const FeaturesWithCards: FC = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      gridGap="8"
+      gridGap={8}
     >
       <Box
         w={{ base: 'full', sm: '50%', lg: '25%' }}
@@ -30,7 +30,7 @@ const FeaturesWithCards: FC = () => {
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">
-            <Icon as={NextJSIcon} h="24" w="24" />
+            <Icon as={NextJSIcon} h={24} w={24} />
           </Flex>
         </Box>
         <Heading
@@ -52,14 +52,14 @@ const FeaturesWithCards: FC = () => {
         w={{ base: 'full', sm: '50%', lg: '25%' }}
         px="4"
         py="4"
-        mt={{ base: '6', sm: '16', md: '20', lg: '24' }}
+        mt={{ base: 6, sm: 16, md: 20, lg: 24 }}
         bg={bg}
         shadow="dark-lg"
         rounded={{ base: 'none', md: 'lg' }}
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">
-            <Icon as={GraphQLIcon} h="24" w="24" />
+            <Icon as={GraphQLIcon} h={24} w={24} />
           </Flex>
         </Box>
         <Heading
@@ -71,7 +71,7 @@ const FeaturesWithCards: FC = () => {
         >
           GraphQL
         </Heading>
-        <Text fontSize="md" color={textColor} py="4">
+        <Text fontSize="md" color={textColor} py={4}>
           Flexible data queries and mutations with GraphQL, preconfigured to work with React Query
           v3. Interface with your data layer using Prisma + Nexus integration to create highly
           customizable APIs.
@@ -88,7 +88,7 @@ const FeaturesWithCards: FC = () => {
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">
-            <Icon as={NodeJSIcon} h="24" w="24" />
+            <Icon as={NodeJSIcon} h={24} w={24} />
           </Flex>
         </Box>
         <Heading
@@ -96,11 +96,11 @@ const FeaturesWithCards: FC = () => {
           color={headerColor}
           fontSize={{ base: '2xl', sm: 'xl' }}
           fontWeight="semibold"
-          py="4"
+          py={4}
         >
           Serverless
         </Heading>
-        <Text fontSize="md" color={textColor} py="4">
+        <Text fontSize="md" color={textColor} py={4}>
           Easily integrate with headless CMS providers and setup payment services like Stripe
           Checkout using popular JAMStack FaaS platforms. Example configurations included for
           deploying your API routes functions on your existing Vercel or Netlify account.

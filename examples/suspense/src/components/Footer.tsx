@@ -15,6 +15,7 @@ import {
   Text,
   Flex,
   Tag,
+  useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FiGithub, FiMail, FiTwitter, FiYoutube, FiPlus, FiMinus } from 'react-icons/fi'
@@ -22,10 +23,14 @@ import { FiGithub, FiMail, FiTwitter, FiYoutube, FiPlus, FiMinus } from 'react-i
 import useBrandLogo from 'src/hooks/useBrandLogo'
 import Link from 'src/components/NextChakraLink'
 import MediaIconLink from 'src/components/MediaIconLink'
+import Image from 'src/components/NextChakraImage'
 
 const Footer: FC = () => {
+  const { colorMode } = useColorMode()
+
   const headingColor = useColorModeValue('black', 'white')
   const linkColor = useColorModeValue('gray.500', 'gray.400')
+
   const BrandLogoIcon = useBrandLogo('black', 'white')
 
   return (
@@ -262,6 +267,15 @@ const Footer: FC = () => {
               icon={<FiMail size="20" />}
             />
           </HStack>
+          <Image
+            src={`/images/buttercms-${colorMode}.png`}
+            width={150}
+            height={150}
+            objectFit="cover"
+            layout="responsive"
+            placeholder="blur"
+            alt="ButterCMS"
+          />
           <Text pt={4} mb={4} fontWeight="bold">
             Made with <Emoji symbol="🔥" label="Fire emoji" /> in Colorado
           </Text>

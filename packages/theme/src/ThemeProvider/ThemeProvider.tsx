@@ -7,7 +7,7 @@ import {
   ChakraProvider as DefaultChakraProvider,
 } from '@chakra-ui/react'
 
-import defaultTheme from 'src/styles/theme'
+import defaultTheme from 'src/theme'
 
 export type ServerSideProps<T> = { props: T } | Promise<{ props: T }>
 
@@ -15,7 +15,7 @@ export interface ThemeProviderProps extends ChakraProviderProps {
   cookies?: string
 }
 
-const ThemeProvider: FC<ThemeProviderProps> = ({
+export const ThemeProvider: FC<ThemeProviderProps> = ({
   cookies,
   theme = defaultTheme,
   children,
@@ -31,5 +31,3 @@ const ThemeProvider: FC<ThemeProviderProps> = ({
     </DefaultChakraProvider>
   )
 }
-
-export default ThemeProvider

@@ -1,5 +1,6 @@
 import type { AppProps } from 'types'
 
+import { ThemeProvider } from '@monorepo/theme'
 import { useState, Suspense } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { QueryClient, QueryClientProvider, useQueryErrorResetBoundary } from 'react-query'
@@ -7,8 +8,10 @@ import { Hydrate } from 'react-query/hydration'
 import { persistQueryClient } from 'react-query/persistQueryClient-experimental'
 import { createWebStoragePersistor } from 'react-query/createWebStoragePersistor-experimental'
 import { SessionProvider } from 'next-auth/react'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 import RootErrorFallback from 'src/components/RootErrorFallback'
+import FormProvider from 'src/providers/FormProvider'
 import { FullPageSpinner } from 'src/components/FullPageSpinner'
 
 import '@fontsource/inter/variable.css'
@@ -46,15 +49,20 @@ function MyApp({ Component, pageProps: { dehydratedState, session, ...pageProps 
   return (
     <Suspense fallback={<FullPageSpinner />}>
       <ErrorBoundary FallbackComponent={RootErrorFallback} onReset={reset}>
-        <QueryClientProvider client={queryClient}>
-          <SessionProvider session={session}>
-            <Hydrate state={dehydratedState}>
-              <Suspense fallback={FullPageSpinner}>
-                {getLayout(<Component {...pageProps} />)}
-              </Suspense>
-            </Hydrate>
-          </SessionProvider>
-        </QueryClientProvider>
+        <ThemeProvider>
+          <FormProvider>
+            <SessionProvider session={session}>
+              <QueryClientProvider client={queryClient}>
+                <Hydrate state={dehydratedState}>
+                  <Suspense fallback={FullPageSpinner}>
+                    {getLayout(<Component {...pageProps} />)}
+                  </Suspense>
+                </Hydrate>
+                <ReactQueryDevtools />
+              </QueryClientProvider>
+            </SessionProvider>
+          </FormProvider>
+        </ThemeProvider>
       </ErrorBoundary>
     </Suspense>
   )

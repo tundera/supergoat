@@ -21,6 +21,10 @@
       "path": "packages/core"
     },
     {
+      "name": "📦 @monorepo/theme",
+      "path": "packages/theme"
+    },
+    {
       "name": "⚙️ scripts",
       "path": "scripts"
     },

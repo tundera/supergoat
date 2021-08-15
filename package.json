@@ -14,8 +14,7 @@
   "keywords": [
     "example",
     "workspace",
-    "nextjs",
-    "next-transpile-modules"
+    "nextjs"
   ],
   "workspaces": {
     "packages": [
@@ -26,43 +25,39 @@
       "static/*",
       "scripts",
       "db"
-    ],
-    "nohoist": [
-      "**/@prisma",
-      "**/@prisma/**",
-      "**/@paljs",
-      "**/@paljs/**"
     ]
   },
   "scripts": {
-    "clean": "ultra -r clean",
+    "clean": "yarn workspaces foreach -ptv run clean",
     "test": "run-s 'test:*'",
-    "test:unit": "ultra -r test:unit",
-    "fix:staged-files": "ultra -r fix:staged-files",
-    "fix:all-files": "ultra -r fix:all-files",
+    "test:unit": "yarn workspaces foreach -ptv run test:unit",
+    "fix:staged-files": "yarn workspaces foreach -t run fix:staged-files",
+    "fix:all-files": "yarn workspaces foreach -ptv run fix:all-files",
     "changeset": "changeset",
     "release": "yarn build && changeset publish",
     "deps:check": "npm-check-updates --deep --dep prod,dev,optional",
     "deps:update": "npm-check-updates -u --deep --dep prod,dev,optional",
-    "typecheck": "ultra -r typecheck",
+    "typecheck": "yarn workspaces foreach -ptv run typecheck",
     "lint": "ultra -r lint",
-    "share:static:symlink": "ultra -r --filter '*-app' share:static:symlink",
-    "share:static:hardlink": "ultra -r --filter '*-app' share:static:hardlink",
-    "examples:build": "ultra -r --filter '*-example' build",
-    "examples:clean": "ultra -r --filter '*-example' clean",
-    "packages:build": "ultra -r --filter '@monorepo/*' build",
+    "check:install": "yarn dlx @yarnpkg/doctor .",
+    "share:static:symlink": "yarn workspaces foreach -pv --include '*-example' run share:static:symlink",
+    "share:static:hardlink": "yarn workspaces foreach -pv --include '*-example' run share:static:hardlink",
+    "examples:build": "yarn workspaces foreach -ptv --include '*-example' run build",
+    "examples:clean": "yarn workspaces foreach -ptv --include '*-example' run clean",
     "build": "yarn packages:build && yarn examples:build",
-    "packages:lint": "ultra -r --filter '@monorepo/*' lint",
-    "packages:typecheck": "ultra -r --filter '@monorepo/*' typecheck",
-    "packages:clean": "ultra -r --filter '@monorepo/*' clean",
+    "packages:watch": "yarn workspaces foreach -ptv --include '@monorepo/*' run watch",
+    "packages:build": "yarn workspaces foreach -ptv --include '@monorepo/*' run build",
+    "packages:lint": "yarn workspaces foreach -ptv --include '@monorepo/*' run lint",
+    "packages:typecheck": "yarn workspaces foreach -ptv --include '@monorepo/*' run typecheck",
+    "packages:clean": "yarn workspaces foreach -ptv --include '@monorepo/*' run clean",
     "postinstall": "is-ci || yarn husky install",
     "docker:up": "docker-compose up -d",
     "docker:up:database": "docker-compose up -d database",
     "docker:down": "docker-compose down"
   },
   "resolutions": {
-    "react": "18.0.0-alpha-b9934d6db-20210805",
-    "react-dom": "18.0.0-alpha-b9934d6db-20210805"
+    "react": "18.0.0-alpha-e4e8226c6-20210812",
+    "react-dom": "18.0.0-alpha-e4e8226c6-20210812"
   },
   "dependencies": {
     "find-yarn-workspace-root": "^2.0.0"
@@ -76,7 +71,7 @@
     "@changesets/cli": "2.16.0",
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
-    "@swc/core": "^1.2.76",
+    "@swc/core": "^1.2.77",
     "@swc/helpers": "^0.2.13",
     "@testing-library/jest-dom": "^5.14.1",
     "@types/dotenv-flow": "3.1.1",

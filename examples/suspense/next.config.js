@@ -1,5 +1,5 @@
 const withPlugins = require('next-compose-plugins')
-const withTM = require('next-transpile-modules')
+// const withTM = require('next-transpile-modules')
 const withMDX = require('@next/mdx')
 const withBundleAnalyzer = require('@next/bundle-analyzer')
 
@@ -9,6 +9,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
  */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    esmExternals: false,
+  },
   images: {
     domains: [
       'res.cloudinary.com',
@@ -32,7 +35,6 @@ const nextConfig = {
 }
 
 const plugins = [
-  withTM(['@monorepo/components']),
   withMDX({
     extension: /\.mdx?$/,
   }),
