@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "NODE_ENV='development' ts-node scripts/dev",
     "dev:next": "NODE_OPTIONS='--inspect' next dev",
-    "clean": "rimraf ./.next",
+    "clean": "rimraf .next",
     "build": "NODE_ENV='production' ts-node scripts/build",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
