@@ -33,7 +33,8 @@
     "jsx": "preserve",
     "plugins": [{ "name": "nexus/typescript-language-service" }],
     "typeRoots": ["node_modules/@types", "types"],
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {}
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "src", "db", "scripts", ".storybook"]
