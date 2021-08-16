@@ -5710,6 +5710,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@monorepo/scripts@workspace:scripts":
+  version: 0.0.0-use.local
+  resolution: "@monorepo/scripts@workspace:scripts"
+  dependencies:
+    "@swc/core": ^1.2.77
+    "@swc/helpers": ^0.2.13
+    "@types/node": ^16.6.1
+    chalk: ^4.1.2
+    change-case: 4.1.2
+    dotenv: 10.0.0
+    dotenv-expand: 5.1.0
+    dotenv-flow: 3.2.0
+    esbuild-register: 3.0.0
+    eslint: ^7.32.0
+    execa: 5.1.1
+    find-yarn-workspace-root: ^2.0.0
+    ora: 5.4.1
+    prettier: ^2.3.2
+    ts-node: 10.2.0
+    tsconfig-paths: 3.10.1
+    ultra-runner: ^3.10.5
+  languageName: unknown
+  linkType: soft
+
 "@monorepo/theme@workspace:*, @monorepo/theme@workspace:packages/theme":
   version: 0.0.0-use.local
   resolution: "@monorepo/theme@workspace:packages/theme"
@@ -11502,7 +11526,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:0.21.1, axios@npm:^0.21.0, axios@npm:^0.21.1, axios@npm:~0.21.1":
+"axios@npm:0.21.1, axios@npm:^0.21.0, axios@npm:^0.21.1":
   version: 0.21.1
   resolution: "axios@npm:0.21.1"
   dependencies:
@@ -12668,15 +12692,6 @@ __metadata:
   dependencies:
     dicer: 0.3.0
   checksum: d2bcb788c4595edca4ea2168ab8bf7f9558b627ddcec2fb6bbaf0aa6a10b63da48dce35ce56936570f330c5268a3204f7037021a310a895a8b1a223568e0cc1b
-  languageName: node
-  linkType: hard
-
-"buttercms@npm:^1.2.7":
-  version: 1.2.7
-  resolution: "buttercms@npm:1.2.7"
-  dependencies:
-    axios: ~0.21.1
-  checksum: 2f4ee56bc66d0d8ae1f683d77cb42456508fb16f3705c8b697ead167602d9180c90749b1e86808d1ed7bfccafd8dec4d898894212e3f1e95ba85f675ae8d5e94
   languageName: node
   linkType: hard
 
@@ -33278,30 +33293,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"scripts@workspace:scripts":
-  version: 0.0.0-use.local
-  resolution: "scripts@workspace:scripts"
-  dependencies:
-    "@swc/core": ^1.2.77
-    "@swc/helpers": ^0.2.13
-    "@types/node": ^16.6.1
-    chalk: ^4.1.2
-    change-case: 4.1.2
-    dotenv: 10.0.0
-    dotenv-expand: 5.1.0
-    dotenv-flow: 3.2.0
-    esbuild-register: 3.0.0
-    eslint: ^7.32.0
-    execa: 5.1.1
-    find-yarn-workspace-root: ^2.0.0
-    ora: 5.4.1
-    prettier: ^2.3.2
-    ts-node: 10.2.0
-    tsconfig-paths: 3.10.1
-    ultra-runner: ^3.10.5
-  languageName: unknown
-  linkType: soft
-
 "scuid@npm:^1.1.0":
   version: 1.1.0
   resolution: "scuid@npm:1.1.0"
@@ -35269,7 +35260,6 @@ resolve@^2.0.0-next.3:
     babel-loader: ^8.2.2
     babel-plugin-module-resolver: 4.1.0
     babel-plugin-superjson-next: 0.3.0
-    buttercms: ^1.2.7
     chalk: 4.1.2
     change-case: 4.1.2
     chromatic: 5.10.0-canary.0

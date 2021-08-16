@@ -20,8 +20,16 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "@monorepo/*": ["packages/*/src"]
+      "@monorepo/components": ["packages/components/src"],
+      "@monorepo/components/*": ["packages/components/src/*"],
+      "@monorepo/db": ["packages/db/src"],
+      "@monorepo/db/*": ["packages/db/src/*"],
+      "@monorepo/graphql": ["packages/graphql/src"],
+      "@monorepo/graphql/*": ["packages/graphql/src/*"],
+      "@monorepo/scripts/*": ["packages/scripts/*"],
+      "@monorepo/theme": ["packages/theme/src"],
+      "@monorepo/theme/*": ["packages/theme/src/*"]
     }
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".yarn"]
 }
