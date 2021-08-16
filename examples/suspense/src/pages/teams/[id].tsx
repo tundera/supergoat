@@ -11,7 +11,7 @@ import db from 'db'
 import TeamInfo from 'src/components/TeamInfo'
 import { FullPageSpinner } from 'src/components/FullPageSpinner'
 import { getLayout as getPublicLayout } from 'src/layouts/PublicLayout'
-import { prefetchTeamQuery } from 'src/lib/teams'
+import { prefetchTeamQuery, fetchAllTeamsQuery } from 'src/lib/teams'
 
 type RouteParams = {
   id: string

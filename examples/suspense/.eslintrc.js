@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: [
-    '../../.eslintrc.base.js',
+    '../../.eslintrc.js',
     'plugin:jsx-a11y/recommended',
     'plugin:@next/next/recommended',
     'plugin:testing-library/react',

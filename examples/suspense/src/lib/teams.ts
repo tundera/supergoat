@@ -1,5 +1,3 @@
-import type { QueryFunction } from 'react-query'
-
 import { QueryClient } from 'react-query'
 import { request, GraphQLClient } from 'graphql-request'
 
@@ -35,15 +33,19 @@ export const prefetchTeamQuery = async (
 
   const graphQLClient = new GraphQLClient(endpoint)
 
-  await queryClient.prefetchQuery<TeamQuery, string>(['Team', { id }], () =>
-    graphQLClient.request<TeamQuery, TeamQueryVariables>(
-      TeamDocument,
-      {
-        id,
-      },
-      requestHeaders,
-    ),
-  )
+  try {
+    await queryClient.prefetchQuery<TeamQuery, string>(['Team', { id }], () =>
+      graphQLClient.request<TeamQuery, TeamQueryVariables>(
+        TeamDocument,
+        {
+          id,
+        },
+        requestHeaders,
+      ),
+    )
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const prefetchAllTeamsQuery = async (
@@ -52,13 +54,17 @@ export const prefetchAllTeamsQuery = async (
 ) => {
   const graphQLClient = new GraphQLClient(endpoint)
 
-  await queryClient.prefetchQuery<AllTeamsQuery, string>(['AllTeams', null], () =>
-    graphQLClient.request<AllTeamsQuery, AllTeamsQueryVariables>(
-      AllTeamsDocument,
-      undefined,
-      requestHeaders,
-    ),
-  )
+  try {
+    await queryClient.prefetchQuery<AllTeamsQuery, string>(['AllTeams', null], () =>
+      graphQLClient.request<AllTeamsQuery, AllTeamsQueryVariables>(
+        AllTeamsDocument,
+        undefined,
+        requestHeaders,
+      ),
+    )
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const fetchAllTeamsQuery = async (

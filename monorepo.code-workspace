@@ -1,6 +1,10 @@
 {
   "folders": [
     {
+      "name": "📦 @monorepo/core",
+      "path": "packages/core"
+    },
+    {
       "name": "✨ root",
       "path": "."
     },
@@ -17,15 +21,11 @@
       "path": "packages/components"
     },
     {
-      "name": "📦 @monorepo/core",
-      "path": "packages/core"
-    },
-    {
       "name": "📦 @monorepo/theme",
       "path": "packages/theme"
     },
     {
-      "name": "⚙️ scripts",
+      "name": "⚙️ @monorepo/scripts",
       "path": "scripts"
     },
     {
@@ -33,7 +33,7 @@
       "path": "services/graphql"
     },
     {
-      "name": "docs",
+      "name": "@monorepo/docs",
       "path": "sites/docs"
     }
   ],
