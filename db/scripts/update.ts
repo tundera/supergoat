@@ -6,7 +6,7 @@ import { getUpdatedTeamData, updateTeamData } from '@/db/lib/teams'
 export async function main(): Promise<void> {
   console.log('Start updating ...')
 
-  const teamData: any[] = []
+  const teamData = []
 
   for (const team of teams) {
     const data = await getUpdatedTeamData(team.teamId)
