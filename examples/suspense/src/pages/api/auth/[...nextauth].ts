@@ -1,16 +1,22 @@
 import NextAuth from 'next-auth'
-import Providers from 'next-auth/providers'
+import Email from 'next-auth/providers/email'
+import Apple from 'next-auth/providers/apple'
+import Facebook from 'next-auth/providers/facebook'
+import GitHub from 'next-auth/providers/github'
+import Google from 'next-auth/providers/google'
+import Twitter from 'next-auth/providers/twitter'
+
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 
 import db from 'db'
 
 export default NextAuth({
   providers: [
-    Providers.Email({
+    Email({
       server: process.env.EMAIL_SERVER,
       from: process.env.EMAIL_FROM,
     }),
-    Providers.Apple({
+    Apple({
       clientId: process.env.APPLE_ID,
       clientSecret: {
         appleId: process.env.APPLE_ID as string,
@@ -19,21 +25,21 @@ export default NextAuth({
         keyId: process.env.APPLE_KEY_ID as string,
       },
     }),
-    Providers.Facebook({
+    Facebook({
       clientId: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     }),
-    Providers.GitHub({
+    GitHub({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
       // scope: 'read:user',
     }),
-    Providers.Google({
+    Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       // scope: 'email',
     }),
-    Providers.Twitter({
+    Twitter({
       clientId: process.env.TWITTER_CLIENT_ID,
       clientSecret: process.env.TWITTER_CLIENT_SECRET,
     }),
