@@ -8,7 +8,7 @@ on:
     paths:
       - 'packages/**'
       - 'package.json'
-      - 'tsconfig.json'
+      - 'tsconfig.base.json'
       - 'yarn.lock'
       - '.yarnrc.yml'
       - '.eslintrc.js'
@@ -23,7 +23,7 @@ on:
     paths:
       - 'packages/**'
       - 'package.json'
-      - 'tsconfig.json'
+      - 'tsconfig.base.json'
       - 'yarn.lock'
       - '.yarnrc.yml'
       - '.eslintrc.js'
