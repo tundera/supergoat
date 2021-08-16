@@ -12,7 +12,6 @@ import * as generatedTypes from 'src/services/graphql/generated/types'
 const cwd = process.cwd()
 
 const baseSchema = makeSchema({
-  // types: [moduleTypes, scalarTypes, inputTypes],
   types: [generatedTypes],
   plugins: [paljs()],
   outputs: {

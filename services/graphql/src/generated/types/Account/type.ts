@@ -7,9 +7,8 @@ export const Account = objectType({
   },
   name: 'Account',
   definition(t) {
-    t.int('id')
-    t.string('compoundId')
-    t.int('userId')
+    t.string('id')
+    t.string('userId')
     t.string('providerType')
     t.string('providerId')
     t.string('providerAccountId')
@@ -18,5 +17,11 @@ export const Account = objectType({
     t.nullable.field('accessTokenExpires', { type: 'DateTime' })
     t.field('createdAt', { type: 'DateTime' })
     t.field('updatedAt', { type: 'DateTime' })
+    t.field('user', {
+      type: 'User',
+      resolve(root: any) {
+        return root.user
+      },
+    })
   },
 })

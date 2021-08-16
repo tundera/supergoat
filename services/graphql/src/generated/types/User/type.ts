@@ -7,7 +7,7 @@ export const User = objectType({
   },
   name: 'User',
   definition(t) {
-    t.int('id')
+    t.string('id')
     t.nullable.string('name')
     t.nullable.string('email')
     t.nullable.field('emailVerified', { type: 'DateTime' })
@@ -19,5 +19,33 @@ export const User = objectType({
     t.nullable.string('twitter')
     t.field('createdAt', { type: 'DateTime' })
     t.field('updatedAt', { type: 'DateTime' })
+    t.list.field('accounts', {
+      type: 'Account',
+      args: {
+        where: 'AccountWhereInput',
+        orderBy: 'AccountOrderByInput',
+        cursor: 'AccountWhereUniqueInput',
+        take: 'Int',
+        skip: 'Int',
+        distinct: 'AccountScalarFieldEnum',
+      },
+      resolve(root: any) {
+        return root.accounts
+      },
+    })
+    t.list.field('sessions', {
+      type: 'Session',
+      args: {
+        where: 'SessionWhereInput',
+        orderBy: 'SessionOrderByInput',
+        cursor: 'SessionWhereUniqueInput',
+        take: 'Int',
+        skip: 'Int',
+        distinct: 'SessionScalarFieldEnum',
+      },
+      resolve(root: any) {
+        return root.sessions
+      },
+    })
   },
 })

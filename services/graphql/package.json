@@ -19,6 +19,9 @@
     "src",
     "dist"
   ],
+  "prisma": {
+    "schema": "../../db/schema.prisma"
+  },
   "scripts": {
     "dev": "yarn dev:mjs",
     "dev:cjs": "tsup-node --watch src --onSuccess \"node dist/index.js\"",
@@ -39,19 +42,20 @@
     "@graphql-ez/plugin-schema": "^0.5.0",
     "@graphql-ez/plugin-upload": "^0.4.2",
     "@graphql-ez/plugin-websockets": "^0.7.0",
-    "@monorepo/db": "workspace:*",
+    "@monorepo/db": "0.1.0",
     "@paljs/nexus": "^3.8.2",
     "@prisma/client": "^2.29.1",
     "express": "^4.17.1",
     "graphql": "15.5.1",
     "graphql-ez": "^0.11.0",
     "graphql-iso-date": "^3.6.1",
-    "graphql-middleware": "^6.1.1",
+    "graphql-middleware": "6.1.2",
     "nexus": "^1.1.0",
+    "nexus-prisma": "0.30.0",
     "prettier": "^2.3.2"
   },
   "devDependencies": {
-    "@paljs/cli": "^3.8.2",
+    "@paljs/cli": "3.8.2",
     "@paljs/generator": "^3.8.2",
     "@swc/core": "^1.2.77",
     "@swc/helpers": "^0.2.13",
@@ -62,7 +66,7 @@
     "@types/prettier": "^2.3.2",
     "change-case": "^4.1.2",
     "eslint": "^7.32.0",
-    "prettier-plugin-prisma": "^2.29.0",
+    "prettier-plugin-prisma": "2.29.1",
     "prisma": "^2.29.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.2.0",

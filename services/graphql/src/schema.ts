@@ -6,7 +6,7 @@ import { paljs } from '@paljs/nexus'
 
 import { permissions } from 'src/permissions'
 
-import * as scalarTypes from 'src/scalars'
+// import * as scalarTypes from 'src/scalars'
 import * as moduleTypes from 'src/modules'
 import * as generatedTypes from 'src/generated/types'
 
@@ -14,7 +14,7 @@ const cwd = process.cwd()
 const workspaceRoot = findWorkspaceRoot(cwd) as string
 
 const baseSchema = makeSchema({
-  types: [scalarTypes, moduleTypes, generatedTypes],
+  types: [generatedTypes, moduleTypes],
   plugins: [paljs()],
   outputs: {
     schema: join(cwd, 'src/generated/schema.graphql'),
