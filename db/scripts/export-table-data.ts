@@ -1,23 +1,24 @@
-#!/usr/bin/env node
+import prettier from 'prettier'
+import findWorkspaceRoot from 'find-yarn-workspace-root'
 
+import { pluralize } from 'inflection'
+import { writeToBuffer } from 'fast-csv'
 import { paramCase } from 'change-case'
-import csv from 'fast-csv'
 import { promises as fs } from 'fs'
 import { join } from 'path'
 import { Pool, QueryResultRow } from 'pg'
-import prettier from 'prettier'
 
 const cwd = process.cwd()
-const relativePathCsv = 'services/db/backups/csv'
-const relativePathJson = 'services/db/backups/documents'
+const root = findWorkspaceRoot(cwd) as string
 
-const tables = ['Team', 'Coach', 'Player', 'ColorScheme']
+const tables = ['Team', 'Coach', 'Player', 'ColorScheme', 'Image']
 
 const pool = new Pool({
-  host: process.env.PG_HOST as string,
-  user: process.env.PG_USER as string,
-  database: process.env.PG_DATABASE as string,
-  port: Number(process.env.PG_PORT),
+  host: process.env.PGHOST as string,
+  user: process.env.PGUSER as string,
+  database: process.env.PGDATABASE as string,
+  port: Number(process.env.PGPORT),
+  password: process.env.PGPASSWORD as string,
 })
 
 pool.on('error', (err) => {
@@ -26,12 +27,12 @@ pool.on('error', (err) => {
 })
 
 const exportAsCsv = async (data: QueryResultRow[], filePath: string) => {
-  const csvData = await csv.writeToBuffer(data, { headers: true })
+  const csvData = await writeToBuffer(data, { headers: true })
   await fs.writeFile(filePath, csvData, 'utf8')
 }
 
 const exportAsJson = async (data: QueryResultRow[], filePath: string) => {
-  const prettierConfig = await prettier.resolveConfig(join(process.cwd(), './.prettierrc'))
+  const prettierConfig = await prettier.resolveConfig(join(root, 'prettier.config'))
 
   const formatted = prettier.format(JSON.stringify(data), {
     ...prettierConfig,
@@ -48,8 +49,8 @@ const exportTableData = async (name: string) => {
   try {
     const { rows } = await client.query(`SELECT * FROM "${name}"`)
 
-    await exportAsCsv(rows, join(cwd, relativePathCsv, `${paramCase(name)}.csv`))
-    await exportAsJson(rows, join(cwd, relativePathJson, `${paramCase(name)}.json`))
+    await exportAsCsv(rows, join(cwd, 'backups/csv', `${paramCase(pluralize(name))}.csv`))
+    await exportAsJson(rows, join(cwd, 'backups/documents', `${paramCase(pluralize(name))}.json`))
   } finally {
     client.release()
   }

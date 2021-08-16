@@ -31,6 +31,7 @@
     "@prisma/client": "^2.29.1",
     "change-case": "^4.1.2",
     "fast-csv": "^4.3.6",
+    "find-yarn-workspace-root": "2.0.0",
     "pg": "^8.7.1",
     "prettier": "^2.3.2"
   },
