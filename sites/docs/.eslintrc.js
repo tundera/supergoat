@@ -20,6 +20,7 @@ module.exports = {
   },
   plugins: ["simple-import-sort", "import"],
   extends: [
+    "../../.eslintrc.base.js",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",

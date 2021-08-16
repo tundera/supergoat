@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "projects": {
+    "@monorepo/db": {
+      "root": "db",
+      "type": "library"
+    },
+    "suspense-example": {
+      "root": "examples/suspense",
+      "type": "library"
+    },
+    "@monorepo/components": {
+      "root": "packages/components",
+      "type": "library"
+    },
+    "@monorepo/theme": {
+      "root": "packages/theme",
+      "type": "library"
+    },
+    "@monorepo/scripts": {
+      "root": "scripts",
+      "type": "library"
+    },
+    "@monorepo/graphql": {
+      "root": "services/graphql",
+      "type": "library"
+    },
+    "@monorepo/docs": {
+      "root": "sites/docs",
+      "type": "library"
+    }
+  }
+}
