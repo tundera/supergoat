@@ -1,7 +1,7 @@
 {
-  "name": "docs",
+  "name": "@monorepo/docs",
   "description": "Fontsource website built using Next.js.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "Lotus <declininglotus@gmail.com>",
   "private": true,
   "scripts": {
@@ -37,19 +37,19 @@
     "prism-react-renderer": "^1.2.1",
     "react": "18.0.0-alpha-e4e8226c6-20210812",
     "react-dom": "18.0.0-alpha-e4e8226c6-20210812",
-    "react-icons": "^4.1.0",
-    "react-instantsearch-dom": "^6.12.0",
+    "react-icons": "^4.2.0",
+    "react-instantsearch-dom": "^6.12.1",
     "react-remove-scroll": "^2.4.3",
     "remark-slug": "^7.0.0"
   },
   "devDependencies": {
     "@types/node": "^16.6.1",
-    "@types/react": "^17.0.17",
+    "@types/react": "^17.0.18",
     "@types/react-dom": "^17.0.9",
     "@types/react-instantsearch-dom": "^6.12.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
-    "eslint": "^7.31.0",
+    "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.0",
@@ -57,7 +57,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "next-remote-watch": "^1.0.0",
-    "next-sitemap": "^1.6.140",
+    "next-sitemap": "^1.6.157",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   },

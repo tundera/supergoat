@@ -23,7 +23,7 @@
   },
   "scripts": {
     "generate": "prisma generate",
-    "lint": "yarn eslint --ignore-path '../.eslintignore' --ext '.js,.ts,.tsx' .",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "test": "run-s 'test:*'",
     "test:unit": "echo \"No tests yet\""
   },
@@ -32,15 +32,15 @@
     "change-case": "^4.1.2",
     "fast-csv": "^4.3.6",
     "pg": "^8.7.1",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.2"
   },
   "devDependencies": {
     "@swc/core": "^1.2.77",
     "@swc/helpers": "^0.2.13",
-    "@types/eslint": "^7",
+    "@types/eslint": "^7.28.0",
     "@types/node": "^16.6.1",
-    "@types/pg": "^8",
-    "@types/prettier": "^2",
+    "@types/pg": "^8.6.1",
+    "@types/prettier": "^2.3.2",
     "eslint": "^7.32.0",
     "nba": "4.15.0",
     "prisma": "2.29.1",

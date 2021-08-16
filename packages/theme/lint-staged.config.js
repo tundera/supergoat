@@ -1,2 +1,2 @@
-const config = require('../../lint-staged.config')
+const config = require('../../lint-staged.config.base')
 module.exports = config

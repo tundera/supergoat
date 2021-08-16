@@ -14,7 +14,8 @@
   "license": "MIT",
   "scripts": {
     "test": "run-s 'test:*'",
-    "test:unit": "echo \"No tests yet\""
+    "test:unit": "echo \"No tests yet\"",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
   },
   "devDependencies": {
     "@swc/core": "^1.2.77",
