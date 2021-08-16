@@ -22,6 +22,7 @@
     "esModuleInterop": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
+    "typeRoots": ["@types/node_modules", "types"],
     "baseUrl": ".",
     "paths": {
       "@/db": ["src"],
