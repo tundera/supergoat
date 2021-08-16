@@ -1,13 +1,9 @@
 import type { FC } from 'react'
 import type { ChakraProviderProps } from '@chakra-ui/react'
 
-import {
-  cookieStorageManager,
-  localStorageManager,
-  ChakraProvider as DefaultChakraProvider,
-} from '@chakra-ui/react'
+import { cookieStorageManager, localStorageManager, ChakraProvider } from '@chakra-ui/react'
 
-import defaultTheme from 'src/theme'
+import { theme as defaultTheme } from 'src/theme'
 
 export type ServerSideProps<T> = { props: T } | Promise<{ props: T }>
 
@@ -22,12 +18,12 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({
   ...props
 }) => {
   return (
-    <DefaultChakraProvider
+    <ChakraProvider
       {...props}
       theme={theme}
       colorModeManager={cookies ? cookieStorageManager(cookies) : localStorageManager}
     >
       {children}
-    </DefaultChakraProvider>
+    </ChakraProvider>
   )
 }

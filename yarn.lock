@@ -2925,6 +2925,14 @@
     "@types/cors" "^2.8.12"
     cors "^2.8.5"
 
+"@graphql-ez/nextjs@0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@graphql-ez/nextjs/-/nextjs-0.8.2.tgz#ab937f77f35ed29f6de5a7f3e791a847f0bdebce"
+  integrity sha512-mU24CvqBpRCOFwR9IKlLf0slHytzQWa4+fVeFbqJvF5Zhti1Z6tYk2UtKMdjYeCDg+ex046+QUm/Sia55RqY2Q==
+  dependencies:
+    "@types/cors" "^2.8.12"
+    cors "^2.8.5"
+
 "@graphql-ez/plugin-altair@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@graphql-ez/plugin-altair/-/plugin-altair-0.4.3.tgz#3c010f9ade3176c93c708c2c773a923e13acb480"
@@ -2951,7 +2959,7 @@
     mkdirp "^1.0.4"
     prettier "^2.3.2"
 
-"@graphql-ez/plugin-graphiql@^0.5.0":
+"@graphql-ez/plugin-graphiql@0.5.0", "@graphql-ez/plugin-graphiql@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@graphql-ez/plugin-graphiql/-/plugin-graphiql-0.5.0.tgz#23d8909aba471dcdbb2c28a52e4f99a7f4145180"
   integrity sha512-04qxchagc1i2DR03q/uRMNBtftz+0jZaN9rfpPxdkhdAt8vmtoCYuYGSH4TWSZ1qv2UZf0gg6twE2krCcby34A==
@@ -4101,10 +4109,10 @@
   resolved "https://registry.yarnpkg.com/@napi-rs/triples/-/triples-1.0.3.tgz#76d6d0c3f4d16013c61e45dfca5ff1e6c31ae53c"
   integrity sha512-jDJTpta+P4p1NZTFVLHJ/TLFVYVcOqv6l8xwOeBKNPMgY/zDYH/YH7SJbvrr/h1RcS9GzbPcLKGzpuK9cV56UA==
 
-"@next-auth/prisma-adapter@0.5.2-next.5":
-  version "0.5.2-next.5"
-  resolved "https://registry.yarnpkg.com/@next-auth/prisma-adapter/-/prisma-adapter-0.5.2-next.5.tgz#6106dd6cd27000ec7c982bc63bb3bc1de876fd76"
-  integrity sha512-hROAWw5YuFWE1E4FhogJmEAPyfVNAXs14ZzHgDPfAeubdXeOb4eFVOcl/m88+yPpY6SknSnfo3GPyg0yh5JG+g==
+"@next-auth/prisma-adapter@0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@next-auth/prisma-adapter/-/prisma-adapter-0.5.3.tgz#ccb1b055870979c01217e47caccef56c45ce8596"
+  integrity sha512-pRC5rxfCamlE5F+4901w9F5PLil9HcXM5qUec4hHl3hRKcWqQ7x0nUv8MkjCFnhu5+SPv9wDz6/n2pOuRTyWjw==
 
 "@next-auth/react-query@0.0.12":
   version "0.0.12"
@@ -11267,10 +11275,10 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-8.2.0.tgz#1e4e9f6218324e82a95c1b9cad7f3965ba663d7f"
-  integrity sha512-jg7S5VxxslwsgEyAkCE9ZCkFADxOUY1bSWScp1cWnga88K0TZgFQ0zdxyG9Mw/4spLGuvkriIZ62am+TR6C04w==
+cypress@8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-8.3.0.tgz#ba906d2170888073ad94b2be1b994a749bbb7c7d"
+  integrity sha512-zA5Rcq8AZIfRfPXU0CCcauofF+YpaU9HYbfqkunFTmFV0Kdlo14tNjH2E3++MkjXKFnv3/pXq+HgxWtw8CSe8Q==
   dependencies:
     "@cypress/request" "^2.88.5"
     "@cypress/xvfb" "^1.2.4"
@@ -15358,7 +15366,7 @@ graphql-config@^4.0.1:
     minimatch "3.0.4"
     string-env-interpolation "1.0.1"
 
-graphql-ez@^0.11.0:
+graphql-ez@0.11.0, graphql-ez@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/graphql-ez/-/graphql-ez-0.11.0.tgz#a71e6d4c86f70e7b508bcfa9afb32b86905fc115"
   integrity sha512-WX46fUIzvjjZikBYWxM2xwbk+o4yFpJuMXV07mB1Uau+d4koRlDqwMMgxUIhSrSr3HfWLxn7mgxFtwB6yFParw==

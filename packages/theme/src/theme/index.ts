@@ -14,6 +14,4 @@ const overrides: ThemeOverride = {
   colors,
 }
 
-const theme = extendTheme(overrides)
-
-export default theme
+export const theme = extendTheme(overrides)
