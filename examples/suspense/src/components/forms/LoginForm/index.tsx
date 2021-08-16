@@ -19,7 +19,7 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react'
 import { FaEnvelope } from 'react-icons/fa'
-import { signIn } from 'next-auth/client'
+import { signIn } from 'next-auth/react'
 import { useForm } from 'react-hook-form'
 
 interface Props {

@@ -7,7 +7,7 @@ import { QueryClient, QueryClientProvider, useQueryErrorResetBoundary } from 're
 import { Hydrate } from 'react-query/hydration'
 import { persistQueryClient } from 'react-query/persistQueryClient-experimental'
 import { createWebStoragePersistor } from 'react-query/createWebStoragePersistor-experimental'
-import { SessionProvider } from 'next-auth/client'
+import { SessionProvider } from 'next-auth/react'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
 import RootErrorFallback from 'src/components/RootErrorFallback'

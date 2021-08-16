@@ -33,7 +33,16 @@
     "jsx": "preserve",
     "plugins": [{ "name": "nexus/typescript-language-service" }],
     "typeRoots": ["node_modules/@types", "types"],
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@monorepo/components": ["../../packages/components/src"],
+      "@monorepo/components/*": ["../../packages/components/src/*"],
+      "@monorepo/db": ["../../packages/db/src"],
+      "@monorepo/db/*": ["../../packages/db/src/*"],
+      "@monorepo/scripts/*": ["../../packages/scripts/*"],
+      "@monorepo/theme": ["../../packages/theme/src"],
+      "@monorepo/theme/*": ["../../packages/theme/src/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "src", "db", "scripts", ".storybook"]

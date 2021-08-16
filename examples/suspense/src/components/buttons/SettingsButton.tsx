@@ -14,8 +14,8 @@ import {
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { FaWrench } from 'react-icons/fa'
-import { signOut } from 'next-auth/client'
-import { useSession } from 'next-auth/client'
+import { signOut } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 
 const SettingsButton: FC = () => {
   const router = useRouter()
