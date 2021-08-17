@@ -76,6 +76,10 @@
     "@changesets/cli": "2.16.0",
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
+    "@nrwl/cli": "latest",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/tao": "latest",
+    "@nrwl/workspace": "latest",
     "@swc/core": "^1.2.77",
     "@swc/helpers": "^0.2.13",
     "@testing-library/jest-dom": "^5.14.1",
@@ -99,6 +103,7 @@
     "lint-staged": "11.1.2",
     "npm-check-updates": "11.8.3",
     "npm-run-all": "4.1.5",
+    "nx": "12.7.1",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
     "rimraf": "3.0.2",
@@ -109,11 +114,7 @@
     "tsconfig-paths": "3.10.1",
     "tslib": "^2.3.1",
     "typescript": "^4.3.5",
-    "wsrun": "5.2.4",
-    "@nrwl/workspace": "latest",
-    "@nrwl/cli": "latest",
-    "@nrwl/tao": "latest",
-    "@nrwl/nx-cloud": "latest"
+    "wsrun": "5.2.4"
   },
   "packageManager": "yarn@1.22.5"
 }
