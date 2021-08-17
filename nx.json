@@ -12,13 +12,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "package",
-          "prepare"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "package", "prepare"],
         "accessToken": "NDk3MjQwMTgtNGFiZi00OGUzLTlhYjItNWZjYmJjNzdlYjQwfHJlYWQtd3JpdGU="
       }
     }
@@ -44,25 +38,25 @@
     ]
   },
   "projects": {
-    "@monorepo/db": {
-      "implicitDependencies": []
-    },
-    "suspense-example": {
-      "implicitDependencies": []
-    },
     "@monorepo/components": {
       "implicitDependencies": []
     },
-    "@monorepo/theme": {
+    "@monorepo/db": {
       "implicitDependencies": []
     },
-    "@monorepo/scripts": {
+    "@monorepo/docs": {
       "implicitDependencies": []
     },
     "@monorepo/graphql": {
       "implicitDependencies": []
     },
-    "@monorepo/docs": {
+    "@monorepo/scripts": {
+      "implicitDependencies": []
+    },
+    "@monorepo/theme": {
+      "implicitDependencies": []
+    },
+    "suspense-example": {
       "implicitDependencies": []
     }
   },
