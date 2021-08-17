@@ -34,7 +34,7 @@
     ]
   },
   "scripts": {
-    "clean": "wsrun --stages clean",
+    "clean": "wsrun --stages -m -e clean",
     "test": "run-s 'test:*'",
     "test:unit": "wsrun --stages -m -e test:unit",
     "fix:staged-files": "wsrun --stages -m -e fix:staged-files",

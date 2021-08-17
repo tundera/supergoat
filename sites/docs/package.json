@@ -9,6 +9,7 @@
     "dev:watch": "next-remote-watch ./content",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "clean": "rimraf .next",
     "start": "next start",
     "lint": "next lint",
     "format:prettier": "prettier --write **/*.{js,jsx,ts,tsx,css,md,json}",
