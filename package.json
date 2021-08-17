@@ -21,6 +21,7 @@
       "examples/*",
       "packages/*",
       "services/*",
+      "tools/*",
       "sites/*",
       "static/*",
       "scripts",
