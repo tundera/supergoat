@@ -27900,7 +27900,7 @@ ulid@^2.3.0:
   resolved "https://registry.yarnpkg.com/ulid/-/ulid-2.3.0.tgz#93063522771a9774121a84d126ecd3eb9804071f"
   integrity sha512-keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==
 
-ultra-runner@^3.10.5:
+ultra-runner@3.10.5, ultra-runner@^3.10.5:
   version "3.10.5"
   resolved "https://registry.yarnpkg.com/ultra-runner/-/ultra-runner-3.10.5.tgz#7a723b64326642a6d4649ca4cd51a9900c7eccd2"
   integrity sha512-0U2OPII7sbvtbu9rhDlUUkP4Au/DPz2Tzbnawd/XwDuUruDqd+t/Bmel3cLJxl3yMLHf0OY0TMcIx9zzxdlAZw==
