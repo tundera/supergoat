@@ -21,10 +21,6 @@ const build = async () => {
     await execa('yarn', ['chakra-cli', 'tokens', 'src/styles/theme'])
   }
 
-  const generateGQtyTypes = async () => {
-    await execa('yarn', ['gqty', 'generate'])
-  }
-
   const runGraphQLCodegen = async () => {
     await execa('yarn', ['graphql-codegen'])
   }
@@ -48,20 +44,12 @@ const build = async () => {
         task: async () => await generatePrismaClient(),
       },
       {
-        title: 'Generating Nexus Resolvers',
-        task: async () => await generateNexusResolvers(),
-      },
-      {
         title: 'Generating Nexus Types',
         task: async () => await generateNexusTypes(),
       },
       {
         title: 'Pushing generated schema to GraphCDN',
         task: async () => await pushGraphQLSchema(),
-      },
-      {
-        title: 'Generating GQty types',
-        task: async () => await generateGQtyTypes(),
       },
       {
         title: 'Running GraphQL Codegen',
