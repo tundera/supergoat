@@ -31,7 +31,7 @@
     "@types/css-font-loading-module": "^0.0.6",
     "algoliasearch": "^4.10.3",
     "fallback-font": "^1.0.0",
-    "framer-motion": "4.1.17",
+    "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
     "next": "^11.1.0",
     "next-mdx-remote": "^3.0.4",

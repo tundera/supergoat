@@ -16,24 +16,18 @@
   },
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "./*": {
-      "require": "./dist/*.js",
-      "import": "./dist/*.mjs"
+      "require": "./dist/monorepo-theme.cjs.js",
+      "import": "./dist/monorepo-theme.esm.js"
     }
   },
   "source": "src/index.ts",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "dist/monorepo-theme.cjs.js",
+  "module": "dist/monorepo-theme.esm.js",
+  "types": "dist/monorepo-theme.cjs.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "microbundle --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx,@chakra-ui/react=chakraReact,@chakra-ui/theme-tools=themeTools",
-    "watch": "microbundle --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx,@chakra-ui/react=chakraReact,@chakra-ui/theme-tools=themeTools --watch",
     "clean": "rimraf ./dist ./tsconfig.tsbuildinfo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
@@ -43,36 +37,40 @@
     "fix:all-files": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
   },
   "devDependencies": {
+    "@chakra-ui/icons": "^1.0.15",
     "@chakra-ui/react": "^1.6.6",
     "@chakra-ui/theme-tools": "^1.1.9",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@testing-library/jest-dom": "5.14.1",
+    "@fontsource/fira-code": "4.5.0",
+    "@fontsource/inter": "^4.5.0",
+    "@fontsource/raleway": "^4.5.0",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "12.0.0",
     "@testing-library/react-hooks": "7.0.1",
     "@types/node": "^16.6.1",
     "@types/react": "^17.0.18",
     "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "4.29.2",
-    "@typescript-eslint/parser": "4.29.2",
-    "eslint": "7.32.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.24.0",
-    "eslint-plugin-jest": "24.4.0",
-    "eslint-plugin-jest-formatting": "3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "babel-plugin-module-resolver": "4.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jest-formatting": "^3.0.0",
     "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-testing-library": "4.11.0",
     "framer-motion": "^4.1.17",
-    "jest": "27.0.6",
-    "microbundle": "0.13.3",
-    "prettier": "2.3.2",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
     "react": "18.0.0-alpha-e4e8226c6-20210812",
     "react-dom": "18.0.0-alpha-e4e8226c6-20210812",
-    "ts-jest": "27.0.5",
-    "typescript": "4.3.5"
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.3.5"
   },
   "peerDependencies": {
     "@chakra-ui/icons": "*",
