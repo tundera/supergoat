@@ -33,7 +33,7 @@ export const { registerModule, buildApp } = CreateApp({
         config: {
           federation: true,
           deepPartialResolvers: true,
-          targetPath: './src/generated/ez-codegen.ts',
+          targetPath: './src/ez.generated.ts',
           scalars: {
             DateTime: 'string',
           },
