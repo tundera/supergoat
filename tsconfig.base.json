@@ -21,14 +21,14 @@
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@monorepo/components": ["packages/components/src"],
+      "@monorepo/components": ["packages/components/src/index.ts"],
       "@monorepo/components/*": ["packages/components/src/*"],
-      "@monorepo/db": ["packages/db/src"],
+      "@monorepo/db": ["packages/db/src/index.ts"],
       "@monorepo/db/*": ["packages/db/src/*"],
-      "@monorepo/graphql": ["packages/graphql/src"],
+      "@monorepo/graphql": ["packages/graphql/src/index.ts"],
       "@monorepo/graphql/*": ["packages/graphql/src/*"],
       "@monorepo/scripts/*": ["packages/scripts/*"],
-      "@monorepo/theme": ["packages/theme/src"],
+      "@monorepo/theme": ["packages/theme/src/index.ts"],
       "@monorepo/theme/*": ["packages/theme/src/*"]
     }
   },
