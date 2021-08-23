@@ -1,5 +1,5 @@
 import Listr from 'listr'
-import db from '@/db'
+import { db } from '@/db'
 
 import { colorSchemes, images, coaches, players, teams } from '@/db/lib/data'
 import { seedCoachData, transformCoachData } from '@/db/lib/coaches'
