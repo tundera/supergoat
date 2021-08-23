@@ -25,5 +25,5 @@
     "baseUrl": "."
   },
   "include": ["**/*.ts"],
-  "exclude": ["**/generated", "ez.generated.ts"]
+  "exclude": ["**/generated", "src/ez.generated.ts"]
 }
