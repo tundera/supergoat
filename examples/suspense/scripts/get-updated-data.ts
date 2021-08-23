@@ -1,6 +1,6 @@
 import teams from 'nba/data/teams.json'
 
-import db from 'db'
+import { db } from 'db'
 import { getUpdatedTeamData, updateTeamData } from 'db/helpers/teams'
 
 export async function main() {

@@ -2,7 +2,7 @@ import gql from 'graphql-tag'
 
 export const TeamQuery = gql`
   query Team($id: String!) {
-    findUniqueTeam(where: { id: $id }) {
+    team(where: { id: $id }) {
       id
       city
       name

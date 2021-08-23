@@ -18,7 +18,7 @@ export const PlayerProfileFragmentDoc = `
     `;
 export const AllTeamsDocument = `
     query AllTeams {
-  findManyTeam {
+  teams {
     id
     city
     name
@@ -46,7 +46,7 @@ export const useAllTeamsQuery = <
     );
 export const AllUsersDocument = `
     query AllUsers {
-  findManyUser {
+  users {
     id
     name
     image
@@ -68,7 +68,7 @@ export const useAllUsersQuery = <
     );
 export const TeamDocument = `
     query Team($id: String!) {
-  findUniqueTeam(where: {id: $id}) {
+  team(where: {id: $id}) {
     id
     city
     name

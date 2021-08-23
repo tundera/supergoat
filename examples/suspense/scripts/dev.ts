@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import Listr from 'listr'
 import execa from 'execa'
 import concurrently from 'concurrently'
+
+require('dotenv-expand')(require('dotenv-flow').config({ silent: true }))
 
 const cwd = process.cwd()
 

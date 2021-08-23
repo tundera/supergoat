@@ -1,5 +1,5 @@
 import path from 'path'
-import db from 'db'
+import { db } from 'db'
 
 // const updateTeamColorSchemes = async () => {
 //   for (const colorScheme of colorSchemes) {

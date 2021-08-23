@@ -9,7 +9,7 @@ import type {
 
 import nba from 'nba'
 
-import db from 'db'
+import { db } from 'db'
 import { upsertCoachData } from 'db/helpers/coaches'
 import { upsertPlayerData } from 'db/helpers/players'
 

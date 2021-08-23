@@ -2,7 +2,7 @@ import gql from 'graphql-tag'
 
 export const AllUsersQuery = gql`
   query AllUsers {
-    findManyUser {
+    users {
       id
       name
       image

@@ -8,65 +8,87 @@ import type { core } from 'nexus'
 declare global {
   interface NexusGenCustomInputMethods<TypeName extends string> {
     /**
-     * Json custom scalar type
+     * The `BigInt` scalar type represents non-fractional signed whole numeric values.
+     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
      */
-    json<FieldName extends string>(
+    bigInt<FieldName extends string>(
       fieldName: FieldName,
       opts?: core.CommonInputFieldConfig<TypeName, FieldName>,
-    ): void // "Json";
+    ): void // "BigInt";
     /**
-     * Decimal custom scalar type
+     * The `Byte` scalar type represents byte value as a Buffer
+     */
+    bytes<FieldName extends string>(
+      fieldName: FieldName,
+      opts?: core.CommonInputFieldConfig<TypeName, FieldName>,
+    ): void // "Bytes";
+    /**
+     * A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+     */
+    dateTime<FieldName extends string>(
+      fieldName: FieldName,
+      opts?: core.CommonInputFieldConfig<TypeName, FieldName>,
+    ): void // "DateTime";
+    /**
+     * An arbitrary-precision Decimal type
      */
     decimal<FieldName extends string>(
       fieldName: FieldName,
       opts?: core.CommonInputFieldConfig<TypeName, FieldName>,
     ): void // "Decimal";
     /**
-     * BigInt custom scalar type
+     * The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
      */
-    bigint<FieldName extends string>(
+    json<FieldName extends string>(
       fieldName: FieldName,
       opts?: core.CommonInputFieldConfig<TypeName, FieldName>,
-    ): void // "BigInt";
-    /**
-     * Date custom scalar type
-     */
-    date<FieldName extends string>(
-      fieldName: FieldName,
-      opts?: core.CommonInputFieldConfig<TypeName, FieldName>,
-    ): void // "DateTime";
+    ): void // "Json";
   }
 }
 declare global {
   interface NexusGenCustomOutputMethods<TypeName extends string> {
     /**
-     * Json custom scalar type
+     * The `BigInt` scalar type represents non-fractional signed whole numeric values.
+     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
      */
-    json<FieldName extends string>(
+    bigInt<FieldName extends string>(
       fieldName: FieldName,
       ...opts: core.ScalarOutSpread<TypeName, FieldName>
-    ): void // "Json";
+    ): void // "BigInt";
     /**
-     * Decimal custom scalar type
+     * The `Byte` scalar type represents byte value as a Buffer
+     */
+    bytes<FieldName extends string>(
+      fieldName: FieldName,
+      ...opts: core.ScalarOutSpread<TypeName, FieldName>
+    ): void // "Bytes";
+    /**
+     * A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+     */
+    dateTime<FieldName extends string>(
+      fieldName: FieldName,
+      ...opts: core.ScalarOutSpread<TypeName, FieldName>
+    ): void // "DateTime";
+    /**
+     * An arbitrary-precision Decimal type
      */
     decimal<FieldName extends string>(
       fieldName: FieldName,
       ...opts: core.ScalarOutSpread<TypeName, FieldName>
     ): void // "Decimal";
     /**
-     * BigInt custom scalar type
+     * The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
      */
-    bigint<FieldName extends string>(
+    json<FieldName extends string>(
       fieldName: FieldName,
       ...opts: core.ScalarOutSpread<TypeName, FieldName>
-    ): void // "BigInt";
-    /**
-     * Date custom scalar type
-     */
-    date<FieldName extends string>(
-      fieldName: FieldName,
-      ...opts: core.ScalarOutSpread<TypeName, FieldName>
-    ): void // "DateTime";
+    ): void // "Json";
+  }
+}
+declare global {
+  interface NexusGenCustomOutputProperties<TypeName extends string> {
+    crud: NexusPrisma<TypeName, 'crud'>
+    model: NexusPrisma<TypeName, 'model'>
   }
 }
 
@@ -75,73 +97,6 @@ declare global {
 }
 
 export interface NexusGenInputs {
-  AccountCreateInput: {
-    // input type
-    accessToken?: string | null // String
-    accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    providerAccountId: string // String!
-    providerId: string // String!
-    providerType: string // String!
-    refreshToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    user: NexusGenInputs['UserCreateNestedOneWithoutAccountsInput'] // UserCreateNestedOneWithoutAccountsInput!
-  }
-  AccountCreateManyInput: {
-    // input type
-    accessToken?: string | null // String
-    accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    providerAccountId: string // String!
-    providerId: string // String!
-    providerType: string // String!
-    refreshToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    userId: string // String!
-  }
-  AccountCreateManyUserInput: {
-    // input type
-    accessToken?: string | null // String
-    accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    providerAccountId: string // String!
-    providerId: string // String!
-    providerType: string // String!
-    refreshToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  AccountCreateManyUserInputEnvelope: {
-    // input type
-    data: NexusGenInputs['AccountCreateManyUserInput'] // AccountCreateManyUserInput!
-    skipDuplicates?: boolean | null // Boolean
-  }
-  AccountCreateNestedManyWithoutUserInput: {
-    // input type
-    connect?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['AccountCreateOrConnectWithoutUserInput'] | null> | null // [AccountCreateOrConnectWithoutUserInput]
-    create?: Array<NexusGenInputs['AccountCreateWithoutUserInput'] | null> | null // [AccountCreateWithoutUserInput]
-    createMany?: NexusGenInputs['AccountCreateManyUserInputEnvelope'] | null // AccountCreateManyUserInputEnvelope
-  }
-  AccountCreateOrConnectWithoutUserInput: {
-    // input type
-    create: NexusGenInputs['AccountUncheckedCreateWithoutUserInput'] // AccountUncheckedCreateWithoutUserInput!
-    where: NexusGenInputs['AccountWhereUniqueInput'] // AccountWhereUniqueInput!
-  }
-  AccountCreateWithoutUserInput: {
-    // input type
-    accessToken?: string | null // String
-    accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    providerAccountId: string // String!
-    providerId: string // String!
-    providerType: string // String!
-    refreshToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
   AccountListRelationFilter: {
     // input type
     every?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
@@ -166,206 +121,11 @@ export interface NexusGenInputs {
     providerAccountId: string // String!
     providerId: string // String!
   }
-  AccountScalarWhereInput: {
-    // input type
-    AND?: Array<NexusGenInputs['AccountScalarWhereInput'] | null> | null // [AccountScalarWhereInput]
-    NOT?: Array<NexusGenInputs['AccountScalarWhereInput'] | null> | null // [AccountScalarWhereInput]
-    OR?: Array<NexusGenInputs['AccountScalarWhereInput'] | null> | null // [AccountScalarWhereInput]
-    accessToken?: NexusGenInputs['StringNullableFilter'] | null // StringNullableFilter
-    accessTokenExpires?: NexusGenInputs['DateTimeNullableFilter'] | null // DateTimeNullableFilter
-    createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-    id?: NexusGenInputs['StringFilter'] | null // StringFilter
-    providerAccountId?: NexusGenInputs['StringFilter'] | null // StringFilter
-    providerId?: NexusGenInputs['StringFilter'] | null // StringFilter
-    providerType?: NexusGenInputs['StringFilter'] | null // StringFilter
-    refreshToken?: NexusGenInputs['StringNullableFilter'] | null // StringNullableFilter
-    updatedAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-    userId?: NexusGenInputs['StringFilter'] | null // StringFilter
-  }
-  AccountScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['AccountScalarWhereWithAggregatesInput'] | null> | null // [AccountScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['AccountScalarWhereWithAggregatesInput'] | null> | null // [AccountScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['AccountScalarWhereWithAggregatesInput'] | null> | null // [AccountScalarWhereWithAggregatesInput]
-    accessToken?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    accessTokenExpires?: NexusGenInputs['DateTimeNullableWithAggregatesFilter'] | null // DateTimeNullableWithAggregatesFilter
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    providerAccountId?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    providerId?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    providerType?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    refreshToken?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    userId?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-  }
-  AccountUncheckedCreateInput: {
-    // input type
-    accessToken?: string | null // String
-    accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    providerAccountId: string // String!
-    providerId: string // String!
-    providerType: string // String!
-    refreshToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    userId: string // String!
-  }
-  AccountUncheckedCreateNestedManyWithoutUserInput: {
-    // input type
-    connect?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['AccountCreateOrConnectWithoutUserInput'] | null> | null // [AccountCreateOrConnectWithoutUserInput]
-    create?: Array<NexusGenInputs['AccountCreateWithoutUserInput'] | null> | null // [AccountCreateWithoutUserInput]
-    createMany?: NexusGenInputs['AccountCreateManyUserInputEnvelope'] | null // AccountCreateManyUserInputEnvelope
-  }
-  AccountUncheckedCreateWithoutUserInput: {
-    // input type
-    accessToken?: string | null // String
-    accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    providerAccountId: string // String!
-    providerId: string // String!
-    providerType: string // String!
-    refreshToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  AccountUncheckedUpdateInput: {
-    // input type
-    accessToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    accessTokenExpires?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerAccountId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerType?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    refreshToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    userId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  AccountUncheckedUpdateManyInput: {
-    // input type
-    accessToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    accessTokenExpires?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerAccountId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerType?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    refreshToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    userId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  AccountUncheckedUpdateManyWithoutAccountsInput: {
-    // input type
-    accessToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    accessTokenExpires?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerAccountId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerType?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    refreshToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  AccountUncheckedUpdateManyWithoutUserInput: {
-    // input type
-    connect?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['AccountCreateOrConnectWithoutUserInput'] | null> | null // [AccountCreateOrConnectWithoutUserInput]
-    create?: Array<NexusGenInputs['AccountCreateWithoutUserInput'] | null> | null // [AccountCreateWithoutUserInput]
-    createMany?: NexusGenInputs['AccountCreateManyUserInputEnvelope'] | null // AccountCreateManyUserInputEnvelope
-    delete?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    deleteMany?: Array<NexusGenInputs['AccountScalarWhereInput'] | null> | null // [AccountScalarWhereInput]
-    disconnect?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    set?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    update?: Array<NexusGenInputs['AccountUpdateWithWhereUniqueWithoutUserInput'] | null> | null // [AccountUpdateWithWhereUniqueWithoutUserInput]
-    updateMany?: Array<NexusGenInputs['AccountUpdateManyWithWhereWithoutUserInput'] | null> | null // [AccountUpdateManyWithWhereWithoutUserInput]
-    upsert?: Array<NexusGenInputs['AccountUpsertWithWhereUniqueWithoutUserInput'] | null> | null // [AccountUpsertWithWhereUniqueWithoutUserInput]
-  }
-  AccountUncheckedUpdateWithoutUserInput: {
-    // input type
-    accessToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    accessTokenExpires?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerAccountId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerType?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    refreshToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  AccountUpdateInput: {
-    // input type
-    accessToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    accessTokenExpires?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerAccountId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerType?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    refreshToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    user?: NexusGenInputs['UserUpdateOneRequiredWithoutAccountsInput'] | null // UserUpdateOneRequiredWithoutAccountsInput
-  }
-  AccountUpdateManyMutationInput: {
-    // input type
-    accessToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    accessTokenExpires?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerAccountId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerType?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    refreshToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  AccountUpdateManyWithWhereWithoutUserInput: {
-    // input type
-    data: NexusGenInputs['AccountUncheckedUpdateManyWithoutAccountsInput'] // AccountUncheckedUpdateManyWithoutAccountsInput!
-    where: NexusGenInputs['AccountScalarWhereInput'] // AccountScalarWhereInput!
-  }
-  AccountUpdateManyWithoutUserInput: {
-    // input type
-    connect?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['AccountCreateOrConnectWithoutUserInput'] | null> | null // [AccountCreateOrConnectWithoutUserInput]
-    create?: Array<NexusGenInputs['AccountCreateWithoutUserInput'] | null> | null // [AccountCreateWithoutUserInput]
-    createMany?: NexusGenInputs['AccountCreateManyUserInputEnvelope'] | null // AccountCreateManyUserInputEnvelope
-    delete?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    deleteMany?: Array<NexusGenInputs['AccountScalarWhereInput'] | null> | null // [AccountScalarWhereInput]
-    disconnect?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    set?: Array<NexusGenInputs['AccountWhereUniqueInput'] | null> | null // [AccountWhereUniqueInput]
-    update?: Array<NexusGenInputs['AccountUpdateWithWhereUniqueWithoutUserInput'] | null> | null // [AccountUpdateWithWhereUniqueWithoutUserInput]
-    updateMany?: Array<NexusGenInputs['AccountUpdateManyWithWhereWithoutUserInput'] | null> | null // [AccountUpdateManyWithWhereWithoutUserInput]
-    upsert?: Array<NexusGenInputs['AccountUpsertWithWhereUniqueWithoutUserInput'] | null> | null // [AccountUpsertWithWhereUniqueWithoutUserInput]
-  }
-  AccountUpdateWithWhereUniqueWithoutUserInput: {
-    // input type
-    data: NexusGenInputs['AccountUncheckedUpdateWithoutUserInput'] // AccountUncheckedUpdateWithoutUserInput!
-    where: NexusGenInputs['AccountWhereUniqueInput'] // AccountWhereUniqueInput!
-  }
-  AccountUpdateWithoutUserInput: {
-    // input type
-    accessToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    accessTokenExpires?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerAccountId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    providerType?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    refreshToken?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  AccountUpsertWithWhereUniqueWithoutUserInput: {
-    // input type
-    create: NexusGenInputs['AccountUncheckedCreateWithoutUserInput'] // AccountUncheckedCreateWithoutUserInput!
-    update: NexusGenInputs['AccountUncheckedUpdateWithoutUserInput'] // AccountUncheckedUpdateWithoutUserInput!
-    where: NexusGenInputs['AccountWhereUniqueInput'] // AccountWhereUniqueInput!
-  }
   AccountWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['AccountWhereInput'] | null> | null // [AccountWhereInput]
-    NOT?: Array<NexusGenInputs['AccountWhereInput'] | null> | null // [AccountWhereInput]
-    OR?: Array<NexusGenInputs['AccountWhereInput'] | null> | null // [AccountWhereInput]
+    AND?: NexusGenInputs['AccountWhereInput'][] | null // [AccountWhereInput!]
+    NOT?: NexusGenInputs['AccountWhereInput'][] | null // [AccountWhereInput!]
+    OR?: NexusGenInputs['AccountWhereInput'][] | null // [AccountWhereInput!]
     accessToken?: NexusGenInputs['StringNullableFilter'] | null // StringNullableFilter
     accessTokenExpires?: NexusGenInputs['DateTimeNullableFilter'] | null // DateTimeNullableFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
@@ -385,30 +145,6 @@ export interface NexusGenInputs {
       | NexusGenInputs['AccountProviderIdProviderAccountIdCompoundUniqueInput']
       | null // AccountProviderIdProviderAccountIdCompoundUniqueInput
   }
-  CoachCreateInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    id: string // String!
-    image?: NexusGenInputs['ImageCreateNestedOneWithoutCoachInput'] | null // ImageCreateNestedOneWithoutCoachInput
-    isAssistant?: string | null // String
-    name: string // String!
-    team?: NexusGenInputs['TeamCreateNestedOneWithoutCoachesInput'] | null // TeamCreateNestedOneWithoutCoachesInput
-    type?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  CoachCreateManyInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    id: string // String!
-    imageId?: string | null // String
-    isAssistant?: string | null // String
-    name: string // String!
-    teamId?: string | null // String
-    type?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
   CoachCreateManyTeamInput: {
     // input type
     createdAt?: NexusGenScalars['DateTime'] | null // DateTime
@@ -422,30 +158,30 @@ export interface NexusGenInputs {
   }
   CoachCreateManyTeamInputEnvelope: {
     // input type
-    data: NexusGenInputs['CoachCreateManyTeamInput'] // CoachCreateManyTeamInput!
+    data?: NexusGenInputs['CoachCreateManyTeamInput'][] | null // [CoachCreateManyTeamInput!]
     skipDuplicates?: boolean | null // Boolean
   }
   CoachCreateNestedManyWithoutTeamInput: {
     // input type
-    connect?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['CoachCreateOrConnectWithoutTeamInput'] | null> | null // [CoachCreateOrConnectWithoutTeamInput]
-    create?: Array<NexusGenInputs['CoachCreateWithoutTeamInput'] | null> | null // [CoachCreateWithoutTeamInput]
+    connect?: NexusGenInputs['CoachWhereUniqueInput'][] | null // [CoachWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['CoachCreateOrConnectWithoutTeamInput'][] | null // [CoachCreateOrConnectWithoutTeamInput!]
+    create?: NexusGenInputs['CoachCreateWithoutTeamInput'][] | null // [CoachCreateWithoutTeamInput!]
     createMany?: NexusGenInputs['CoachCreateManyTeamInputEnvelope'] | null // CoachCreateManyTeamInputEnvelope
   }
   CoachCreateNestedOneWithoutImageInput: {
     // input type
     connect?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
     connectOrCreate?: NexusGenInputs['CoachCreateOrConnectWithoutImageInput'] | null // CoachCreateOrConnectWithoutImageInput
-    create?: NexusGenInputs['CoachUncheckedCreateWithoutImageInput'] | null // CoachUncheckedCreateWithoutImageInput
+    create?: NexusGenInputs['CoachCreateWithoutImageInput'] | null // CoachCreateWithoutImageInput
   }
   CoachCreateOrConnectWithoutImageInput: {
     // input type
-    create: NexusGenInputs['CoachUncheckedCreateWithoutImageInput'] // CoachUncheckedCreateWithoutImageInput!
+    create: NexusGenInputs['CoachCreateWithoutImageInput'] // CoachCreateWithoutImageInput!
     where: NexusGenInputs['CoachWhereUniqueInput'] // CoachWhereUniqueInput!
   }
   CoachCreateOrConnectWithoutTeamInput: {
     // input type
-    create: NexusGenInputs['CoachUncheckedCreateWithoutTeamInput'] // CoachUncheckedCreateWithoutTeamInput!
+    create: NexusGenInputs['CoachCreateWithoutTeamInput'] // CoachCreateWithoutTeamInput!
     where: NexusGenInputs['CoachWhereUniqueInput'] // CoachWhereUniqueInput!
   }
   CoachCreateWithoutImageInput: {
@@ -488,16 +224,11 @@ export interface NexusGenInputs {
     type?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
-  CoachRelationFilter: {
-    // input type
-    is?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
-    isNot?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
-  }
   CoachScalarWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['CoachScalarWhereInput'] | null> | null // [CoachScalarWhereInput]
-    NOT?: Array<NexusGenInputs['CoachScalarWhereInput'] | null> | null // [CoachScalarWhereInput]
-    OR?: Array<NexusGenInputs['CoachScalarWhereInput'] | null> | null // [CoachScalarWhereInput]
+    AND?: NexusGenInputs['CoachScalarWhereInput'][] | null // [CoachScalarWhereInput!]
+    NOT?: NexusGenInputs['CoachScalarWhereInput'][] | null // [CoachScalarWhereInput!]
+    OR?: NexusGenInputs['CoachScalarWhereInput'][] | null // [CoachScalarWhereInput!]
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
     handle?: NexusGenInputs['StringFilter'] | null // StringFilter
     id?: NexusGenInputs['StringFilter'] | null // StringFilter
@@ -507,161 +238,6 @@ export interface NexusGenInputs {
     teamId?: NexusGenInputs['StringNullableFilter'] | null // StringNullableFilter
     type?: NexusGenInputs['StringNullableFilter'] | null // StringNullableFilter
     updatedAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-  }
-  CoachScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['CoachScalarWhereWithAggregatesInput'] | null> | null // [CoachScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['CoachScalarWhereWithAggregatesInput'] | null> | null // [CoachScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['CoachScalarWhereWithAggregatesInput'] | null> | null // [CoachScalarWhereWithAggregatesInput]
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    handle?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    imageId?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    isAssistant?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    name?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    teamId?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    type?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-  }
-  CoachUncheckedCreateInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    id: string // String!
-    imageId?: string | null // String
-    isAssistant?: string | null // String
-    name: string // String!
-    teamId?: string | null // String
-    type?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  CoachUncheckedCreateNestedManyWithoutTeamInput: {
-    // input type
-    connect?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['CoachCreateOrConnectWithoutTeamInput'] | null> | null // [CoachCreateOrConnectWithoutTeamInput]
-    create?: Array<NexusGenInputs['CoachCreateWithoutTeamInput'] | null> | null // [CoachCreateWithoutTeamInput]
-    createMany?: NexusGenInputs['CoachCreateManyTeamInputEnvelope'] | null // CoachCreateManyTeamInputEnvelope
-  }
-  CoachUncheckedCreateNestedOneWithoutImageInput: {
-    // input type
-    connect?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['CoachCreateOrConnectWithoutImageInput'] | null // CoachCreateOrConnectWithoutImageInput
-    create?: NexusGenInputs['CoachUncheckedCreateWithoutImageInput'] | null // CoachUncheckedCreateWithoutImageInput
-  }
-  CoachUncheckedCreateWithoutImageInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    id: string // String!
-    isAssistant?: string | null // String
-    name: string // String!
-    teamId?: string | null // String
-    type?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  CoachUncheckedCreateWithoutTeamInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    id: string // String!
-    imageId?: string | null // String
-    isAssistant?: string | null // String
-    name: string // String!
-    type?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  CoachUncheckedUpdateInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    imageId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    isAssistant?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    teamId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    type?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  CoachUncheckedUpdateManyInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    imageId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    isAssistant?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    teamId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    type?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  CoachUncheckedUpdateManyWithoutCoachesInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    imageId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    isAssistant?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    type?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  CoachUncheckedUpdateManyWithoutTeamInput: {
-    // input type
-    connect?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['CoachCreateOrConnectWithoutTeamInput'] | null> | null // [CoachCreateOrConnectWithoutTeamInput]
-    create?: Array<NexusGenInputs['CoachCreateWithoutTeamInput'] | null> | null // [CoachCreateWithoutTeamInput]
-    createMany?: NexusGenInputs['CoachCreateManyTeamInputEnvelope'] | null // CoachCreateManyTeamInputEnvelope
-    delete?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    deleteMany?: Array<NexusGenInputs['CoachScalarWhereInput'] | null> | null // [CoachScalarWhereInput]
-    disconnect?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    set?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    update?: Array<NexusGenInputs['CoachUpdateWithWhereUniqueWithoutTeamInput'] | null> | null // [CoachUpdateWithWhereUniqueWithoutTeamInput]
-    updateMany?: Array<NexusGenInputs['CoachUpdateManyWithWhereWithoutTeamInput'] | null> | null // [CoachUpdateManyWithWhereWithoutTeamInput]
-    upsert?: Array<NexusGenInputs['CoachUpsertWithWhereUniqueWithoutTeamInput'] | null> | null // [CoachUpsertWithWhereUniqueWithoutTeamInput]
-  }
-  CoachUncheckedUpdateOneWithoutImageInput: {
-    // input type
-    connect?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['CoachCreateOrConnectWithoutImageInput'] | null // CoachCreateOrConnectWithoutImageInput
-    create?: NexusGenInputs['CoachUncheckedCreateWithoutImageInput'] | null // CoachUncheckedCreateWithoutImageInput
-    delete?: boolean | null // Boolean
-    disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['CoachUncheckedUpdateWithoutImageInput'] | null // CoachUncheckedUpdateWithoutImageInput
-    upsert?: NexusGenInputs['CoachUpsertWithoutImageInput'] | null // CoachUpsertWithoutImageInput
-  }
-  CoachUncheckedUpdateWithoutImageInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    isAssistant?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    teamId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    type?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  CoachUncheckedUpdateWithoutTeamInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    imageId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    isAssistant?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    type?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  CoachUpdateInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['ImageUpdateOneWithoutCoachInput'] | null // ImageUpdateOneWithoutCoachInput
-    isAssistant?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    team?: NexusGenInputs['TeamUpdateOneWithoutCoachesInput'] | null // TeamUpdateOneWithoutCoachesInput
-    type?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
   }
   CoachUpdateManyMutationInput: {
     // input type
@@ -675,36 +251,36 @@ export interface NexusGenInputs {
   }
   CoachUpdateManyWithWhereWithoutTeamInput: {
     // input type
-    data: NexusGenInputs['CoachUncheckedUpdateManyWithoutCoachesInput'] // CoachUncheckedUpdateManyWithoutCoachesInput!
+    data: NexusGenInputs['CoachUpdateManyMutationInput'] // CoachUpdateManyMutationInput!
     where: NexusGenInputs['CoachScalarWhereInput'] // CoachScalarWhereInput!
   }
   CoachUpdateManyWithoutTeamInput: {
     // input type
-    connect?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['CoachCreateOrConnectWithoutTeamInput'] | null> | null // [CoachCreateOrConnectWithoutTeamInput]
-    create?: Array<NexusGenInputs['CoachCreateWithoutTeamInput'] | null> | null // [CoachCreateWithoutTeamInput]
+    connect?: NexusGenInputs['CoachWhereUniqueInput'][] | null // [CoachWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['CoachCreateOrConnectWithoutTeamInput'][] | null // [CoachCreateOrConnectWithoutTeamInput!]
+    create?: NexusGenInputs['CoachCreateWithoutTeamInput'][] | null // [CoachCreateWithoutTeamInput!]
     createMany?: NexusGenInputs['CoachCreateManyTeamInputEnvelope'] | null // CoachCreateManyTeamInputEnvelope
-    delete?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    deleteMany?: Array<NexusGenInputs['CoachScalarWhereInput'] | null> | null // [CoachScalarWhereInput]
-    disconnect?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    set?: Array<NexusGenInputs['CoachWhereUniqueInput'] | null> | null // [CoachWhereUniqueInput]
-    update?: Array<NexusGenInputs['CoachUpdateWithWhereUniqueWithoutTeamInput'] | null> | null // [CoachUpdateWithWhereUniqueWithoutTeamInput]
-    updateMany?: Array<NexusGenInputs['CoachUpdateManyWithWhereWithoutTeamInput'] | null> | null // [CoachUpdateManyWithWhereWithoutTeamInput]
-    upsert?: Array<NexusGenInputs['CoachUpsertWithWhereUniqueWithoutTeamInput'] | null> | null // [CoachUpsertWithWhereUniqueWithoutTeamInput]
+    delete?: NexusGenInputs['CoachWhereUniqueInput'][] | null // [CoachWhereUniqueInput!]
+    deleteMany?: NexusGenInputs['CoachScalarWhereInput'][] | null // [CoachScalarWhereInput!]
+    disconnect?: NexusGenInputs['CoachWhereUniqueInput'][] | null // [CoachWhereUniqueInput!]
+    set?: NexusGenInputs['CoachWhereUniqueInput'][] | null // [CoachWhereUniqueInput!]
+    update?: NexusGenInputs['CoachUpdateWithWhereUniqueWithoutTeamInput'][] | null // [CoachUpdateWithWhereUniqueWithoutTeamInput!]
+    updateMany?: NexusGenInputs['CoachUpdateManyWithWhereWithoutTeamInput'][] | null // [CoachUpdateManyWithWhereWithoutTeamInput!]
+    upsert?: NexusGenInputs['CoachUpsertWithWhereUniqueWithoutTeamInput'][] | null // [CoachUpsertWithWhereUniqueWithoutTeamInput!]
   }
   CoachUpdateOneWithoutImageInput: {
     // input type
     connect?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
     connectOrCreate?: NexusGenInputs['CoachCreateOrConnectWithoutImageInput'] | null // CoachCreateOrConnectWithoutImageInput
-    create?: NexusGenInputs['CoachUncheckedCreateWithoutImageInput'] | null // CoachUncheckedCreateWithoutImageInput
+    create?: NexusGenInputs['CoachCreateWithoutImageInput'] | null // CoachCreateWithoutImageInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['CoachUncheckedUpdateWithoutImageInput'] | null // CoachUncheckedUpdateWithoutImageInput
+    update?: NexusGenInputs['CoachUpdateWithoutImageInput'] | null // CoachUpdateWithoutImageInput
     upsert?: NexusGenInputs['CoachUpsertWithoutImageInput'] | null // CoachUpsertWithoutImageInput
   }
   CoachUpdateWithWhereUniqueWithoutTeamInput: {
     // input type
-    data: NexusGenInputs['CoachUncheckedUpdateWithoutTeamInput'] // CoachUncheckedUpdateWithoutTeamInput!
+    data: NexusGenInputs['CoachUpdateWithoutTeamInput'] // CoachUpdateWithoutTeamInput!
     where: NexusGenInputs['CoachWhereUniqueInput'] // CoachWhereUniqueInput!
   }
   CoachUpdateWithoutImageInput: {
@@ -731,20 +307,20 @@ export interface NexusGenInputs {
   }
   CoachUpsertWithWhereUniqueWithoutTeamInput: {
     // input type
-    create: NexusGenInputs['CoachUncheckedCreateWithoutTeamInput'] // CoachUncheckedCreateWithoutTeamInput!
-    update: NexusGenInputs['CoachUncheckedUpdateWithoutTeamInput'] // CoachUncheckedUpdateWithoutTeamInput!
+    create: NexusGenInputs['CoachCreateWithoutTeamInput'] // CoachCreateWithoutTeamInput!
+    update: NexusGenInputs['CoachUpdateWithoutTeamInput'] // CoachUpdateWithoutTeamInput!
     where: NexusGenInputs['CoachWhereUniqueInput'] // CoachWhereUniqueInput!
   }
   CoachUpsertWithoutImageInput: {
     // input type
-    create: NexusGenInputs['CoachUncheckedCreateWithoutImageInput'] // CoachUncheckedCreateWithoutImageInput!
-    update: NexusGenInputs['CoachUncheckedUpdateWithoutImageInput'] // CoachUncheckedUpdateWithoutImageInput!
+    create: NexusGenInputs['CoachCreateWithoutImageInput'] // CoachCreateWithoutImageInput!
+    update: NexusGenInputs['CoachUpdateWithoutImageInput'] // CoachUpdateWithoutImageInput!
   }
   CoachWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['CoachWhereInput'] | null> | null // [CoachWhereInput]
-    NOT?: Array<NexusGenInputs['CoachWhereInput'] | null> | null // [CoachWhereInput]
-    OR?: Array<NexusGenInputs['CoachWhereInput'] | null> | null // [CoachWhereInput]
+    AND?: NexusGenInputs['CoachWhereInput'][] | null // [CoachWhereInput!]
+    NOT?: NexusGenInputs['CoachWhereInput'][] | null // [CoachWhereInput!]
+    OR?: NexusGenInputs['CoachWhereInput'][] | null // [CoachWhereInput!]
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
     handle?: NexusGenInputs['StringFilter'] | null // StringFilter
     id?: NexusGenInputs['StringFilter'] | null // StringFilter
@@ -763,32 +339,15 @@ export interface NexusGenInputs {
     id?: string | null // String
     name?: string | null // String
   }
-  ColorSchemeCreateInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    primary: string // String!
-    secondary: string // String!
-    team?: NexusGenInputs['TeamCreateNestedOneWithoutColorSchemeInput'] | null // TeamCreateNestedOneWithoutColorSchemeInput
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  ColorSchemeCreateManyInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    primary: string // String!
-    secondary: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
   ColorSchemeCreateNestedOneWithoutTeamInput: {
     // input type
     connect?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
     connectOrCreate?: NexusGenInputs['ColorSchemeCreateOrConnectWithoutTeamInput'] | null // ColorSchemeCreateOrConnectWithoutTeamInput
-    create?: NexusGenInputs['ColorSchemeUncheckedCreateWithoutTeamInput'] | null // ColorSchemeUncheckedCreateWithoutTeamInput
+    create?: NexusGenInputs['ColorSchemeCreateWithoutTeamInput'] | null // ColorSchemeCreateWithoutTeamInput
   }
   ColorSchemeCreateOrConnectWithoutTeamInput: {
     // input type
-    create: NexusGenInputs['ColorSchemeUncheckedCreateWithoutTeamInput'] // ColorSchemeUncheckedCreateWithoutTeamInput!
+    create: NexusGenInputs['ColorSchemeCreateWithoutTeamInput'] // ColorSchemeCreateWithoutTeamInput!
     where: NexusGenInputs['ColorSchemeWhereUniqueInput'] // ColorSchemeWhereUniqueInput!
   }
   ColorSchemeCreateWithoutTeamInput: {
@@ -807,89 +366,14 @@ export interface NexusGenInputs {
     secondary?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
-  ColorSchemeRelationFilter: {
-    // input type
-    is?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
-    isNot?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
-  }
-  ColorSchemeScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['ColorSchemeScalarWhereWithAggregatesInput'] | null> | null // [ColorSchemeScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['ColorSchemeScalarWhereWithAggregatesInput'] | null> | null // [ColorSchemeScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['ColorSchemeScalarWhereWithAggregatesInput'] | null> | null // [ColorSchemeScalarWhereWithAggregatesInput]
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    primary?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    secondary?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-  }
-  ColorSchemeUncheckedCreateInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    primary: string // String!
-    secondary: string // String!
-    team?: NexusGenInputs['TeamUncheckedCreateNestedOneWithoutColorSchemeInput'] | null // TeamUncheckedCreateNestedOneWithoutColorSchemeInput
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  ColorSchemeUncheckedCreateWithoutTeamInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    primary: string // String!
-    secondary: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  ColorSchemeUncheckedUpdateInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    primary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    secondary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    team?: NexusGenInputs['TeamUncheckedUpdateOneWithoutColorSchemeInput'] | null // TeamUncheckedUpdateOneWithoutColorSchemeInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  ColorSchemeUncheckedUpdateManyInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    primary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    secondary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  ColorSchemeUncheckedUpdateWithoutTeamInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    primary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    secondary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  ColorSchemeUpdateInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    primary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    secondary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    team?: NexusGenInputs['TeamUpdateOneWithoutColorSchemeInput'] | null // TeamUpdateOneWithoutColorSchemeInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  ColorSchemeUpdateManyMutationInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    primary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    secondary?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
   ColorSchemeUpdateOneWithoutTeamInput: {
     // input type
     connect?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
     connectOrCreate?: NexusGenInputs['ColorSchemeCreateOrConnectWithoutTeamInput'] | null // ColorSchemeCreateOrConnectWithoutTeamInput
-    create?: NexusGenInputs['ColorSchemeUncheckedCreateWithoutTeamInput'] | null // ColorSchemeUncheckedCreateWithoutTeamInput
+    create?: NexusGenInputs['ColorSchemeCreateWithoutTeamInput'] | null // ColorSchemeCreateWithoutTeamInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['ColorSchemeUncheckedUpdateWithoutTeamInput'] | null // ColorSchemeUncheckedUpdateWithoutTeamInput
+    update?: NexusGenInputs['ColorSchemeUpdateWithoutTeamInput'] | null // ColorSchemeUpdateWithoutTeamInput
     upsert?: NexusGenInputs['ColorSchemeUpsertWithoutTeamInput'] | null // ColorSchemeUpsertWithoutTeamInput
   }
   ColorSchemeUpdateWithoutTeamInput: {
@@ -902,14 +386,14 @@ export interface NexusGenInputs {
   }
   ColorSchemeUpsertWithoutTeamInput: {
     // input type
-    create: NexusGenInputs['ColorSchemeUncheckedCreateWithoutTeamInput'] // ColorSchemeUncheckedCreateWithoutTeamInput!
-    update: NexusGenInputs['ColorSchemeUncheckedUpdateWithoutTeamInput'] // ColorSchemeUncheckedUpdateWithoutTeamInput!
+    create: NexusGenInputs['ColorSchemeCreateWithoutTeamInput'] // ColorSchemeCreateWithoutTeamInput!
+    update: NexusGenInputs['ColorSchemeUpdateWithoutTeamInput'] // ColorSchemeUpdateWithoutTeamInput!
   }
   ColorSchemeWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['ColorSchemeWhereInput'] | null> | null // [ColorSchemeWhereInput]
-    NOT?: Array<NexusGenInputs['ColorSchemeWhereInput'] | null> | null // [ColorSchemeWhereInput]
-    OR?: Array<NexusGenInputs['ColorSchemeWhereInput'] | null> | null // [ColorSchemeWhereInput]
+    AND?: NexusGenInputs['ColorSchemeWhereInput'][] | null // [ColorSchemeWhereInput!]
+    NOT?: NexusGenInputs['ColorSchemeWhereInput'][] | null // [ColorSchemeWhereInput!]
+    OR?: NexusGenInputs['ColorSchemeWhereInput'][] | null // [ColorSchemeWhereInput!]
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
     id?: NexusGenInputs['StringFilter'] | null // StringFilter
     primary?: NexusGenInputs['StringFilter'] | null // StringFilter
@@ -930,56 +414,22 @@ export interface NexusGenInputs {
     equals?: NexusGenScalars['DateTime'] | null // DateTime
     gt?: NexusGenScalars['DateTime'] | null // DateTime
     gte?: NexusGenScalars['DateTime'] | null // DateTime
-    in?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
+    in?: NexusGenScalars['DateTime'][] | null // [DateTime!]
     lt?: NexusGenScalars['DateTime'] | null // DateTime
     lte?: NexusGenScalars['DateTime'] | null // DateTime
     not?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    notIn?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
+    notIn?: NexusGenScalars['DateTime'][] | null // [DateTime!]
   }
   DateTimeNullableFilter: {
     // input type
     equals?: NexusGenScalars['DateTime'] | null // DateTime
     gt?: NexusGenScalars['DateTime'] | null // DateTime
     gte?: NexusGenScalars['DateTime'] | null // DateTime
-    in?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
+    in?: NexusGenScalars['DateTime'][] | null // [DateTime!]
     lt?: NexusGenScalars['DateTime'] | null // DateTime
     lte?: NexusGenScalars['DateTime'] | null // DateTime
     not?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    notIn?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
-  }
-  DateTimeNullableWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _max?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    _min?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    equals?: NexusGenScalars['DateTime'] | null // DateTime
-    gt?: NexusGenScalars['DateTime'] | null // DateTime
-    gte?: NexusGenScalars['DateTime'] | null // DateTime
-    in?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
-    lt?: NexusGenScalars['DateTime'] | null // DateTime
-    lte?: NexusGenScalars['DateTime'] | null // DateTime
-    max?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    min?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    not?: NexusGenInputs['NestedDateTimeNullableWithAggregatesFilter'] | null // NestedDateTimeNullableWithAggregatesFilter
-    notIn?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
-  }
-  DateTimeWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    _max?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    _min?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    equals?: NexusGenScalars['DateTime'] | null // DateTime
-    gt?: NexusGenScalars['DateTime'] | null // DateTime
-    gte?: NexusGenScalars['DateTime'] | null // DateTime
-    in?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
-    lt?: NexusGenScalars['DateTime'] | null // DateTime
-    lte?: NexusGenScalars['DateTime'] | null // DateTime
-    max?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    min?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    not?: NexusGenInputs['NestedDateTimeWithAggregatesFilter'] | null // NestedDateTimeWithAggregatesFilter
-    notIn?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
+    notIn?: NexusGenScalars['DateTime'][] | null // [DateTime!]
   }
   EnumImageTypeFieldUpdateOperationsInput: {
     // input type
@@ -988,105 +438,52 @@ export interface NexusGenInputs {
   EnumImageTypeFilter: {
     // input type
     equals?: NexusGenEnums['ImageType'] | null // ImageType
-    in?: Array<NexusGenEnums['ImageType'] | null> | null // [ImageType]
+    in?: NexusGenEnums['ImageType'][] | null // [ImageType!]
     not?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    notIn?: Array<NexusGenEnums['ImageType'] | null> | null // [ImageType]
-  }
-  EnumImageTypeWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    _max?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    _min?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    equals?: NexusGenEnums['ImageType'] | null // ImageType
-    in?: Array<NexusGenEnums['ImageType'] | null> | null // [ImageType]
-    max?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    min?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    not?: NexusGenInputs['NestedEnumImageTypeWithAggregatesFilter'] | null // NestedEnumImageTypeWithAggregatesFilter
-    notIn?: Array<NexusGenEnums['ImageType'] | null> | null // [ImageType]
+    notIn?: NexusGenEnums['ImageType'][] | null // [ImageType!]
   }
   FloatNullableFilter: {
     // input type
     equals?: number | null // Float
     gt?: number | null // Float
     gte?: number | null // Float
-    in?: Array<number | null> | null // [Float]
+    in?: number[] | null // [Float!]
     lt?: number | null // Float
     lte?: number | null // Float
     not?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    notIn?: Array<number | null> | null // [Float]
-  }
-  FloatNullableWithAggregatesFilter: {
-    // input type
-    _avg?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    _count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _max?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    _min?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    _sum?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    avg?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    equals?: number | null // Float
-    gt?: number | null // Float
-    gte?: number | null // Float
-    in?: Array<number | null> | null // [Float]
-    lt?: number | null // Float
-    lte?: number | null // Float
-    max?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    min?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    not?: NexusGenInputs['NestedFloatNullableWithAggregatesFilter'] | null // NestedFloatNullableWithAggregatesFilter
-    notIn?: Array<number | null> | null // [Float]
-    sum?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-  }
-  ImageCreateInput: {
-    // input type
-    coach?: NexusGenInputs['CoachCreateNestedOneWithoutImageInput'] | null // CoachCreateNestedOneWithoutImageInput
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    player?: NexusGenInputs['PlayerCreateNestedOneWithoutImageInput'] | null // PlayerCreateNestedOneWithoutImageInput
-    team?: NexusGenInputs['TeamCreateNestedOneWithoutLogoInput'] | null // TeamCreateNestedOneWithoutLogoInput
-    type: NexusGenEnums['ImageType'] // ImageType!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    url: string // String!
-  }
-  ImageCreateManyInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    type: NexusGenEnums['ImageType'] // ImageType!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    url: string // String!
+    notIn?: number[] | null // [Float!]
   }
   ImageCreateNestedOneWithoutCoachInput: {
     // input type
     connect?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
     connectOrCreate?: NexusGenInputs['ImageCreateOrConnectWithoutCoachInput'] | null // ImageCreateOrConnectWithoutCoachInput
-    create?: NexusGenInputs['ImageUncheckedCreateWithoutCoachInput'] | null // ImageUncheckedCreateWithoutCoachInput
+    create?: NexusGenInputs['ImageCreateWithoutCoachInput'] | null // ImageCreateWithoutCoachInput
   }
   ImageCreateNestedOneWithoutPlayerInput: {
     // input type
     connect?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
     connectOrCreate?: NexusGenInputs['ImageCreateOrConnectWithoutPlayerInput'] | null // ImageCreateOrConnectWithoutPlayerInput
-    create?: NexusGenInputs['ImageUncheckedCreateWithoutPlayerInput'] | null // ImageUncheckedCreateWithoutPlayerInput
+    create?: NexusGenInputs['ImageCreateWithoutPlayerInput'] | null // ImageCreateWithoutPlayerInput
   }
   ImageCreateNestedOneWithoutTeamInput: {
     // input type
     connect?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
     connectOrCreate?: NexusGenInputs['ImageCreateOrConnectWithoutTeamInput'] | null // ImageCreateOrConnectWithoutTeamInput
-    create?: NexusGenInputs['ImageUncheckedCreateWithoutTeamInput'] | null // ImageUncheckedCreateWithoutTeamInput
+    create?: NexusGenInputs['ImageCreateWithoutTeamInput'] | null // ImageCreateWithoutTeamInput
   }
   ImageCreateOrConnectWithoutCoachInput: {
     // input type
-    create: NexusGenInputs['ImageUncheckedCreateWithoutCoachInput'] // ImageUncheckedCreateWithoutCoachInput!
+    create: NexusGenInputs['ImageCreateWithoutCoachInput'] // ImageCreateWithoutCoachInput!
     where: NexusGenInputs['ImageWhereUniqueInput'] // ImageWhereUniqueInput!
   }
   ImageCreateOrConnectWithoutPlayerInput: {
     // input type
-    create: NexusGenInputs['ImageUncheckedCreateWithoutPlayerInput'] // ImageUncheckedCreateWithoutPlayerInput!
+    create: NexusGenInputs['ImageCreateWithoutPlayerInput'] // ImageCreateWithoutPlayerInput!
     where: NexusGenInputs['ImageWhereUniqueInput'] // ImageWhereUniqueInput!
   }
   ImageCreateOrConnectWithoutTeamInput: {
     // input type
-    create: NexusGenInputs['ImageUncheckedCreateWithoutTeamInput'] // ImageUncheckedCreateWithoutTeamInput!
+    create: NexusGenInputs['ImageCreateWithoutTeamInput'] // ImageCreateWithoutTeamInput!
     where: NexusGenInputs['ImageWhereUniqueInput'] // ImageWhereUniqueInput!
   }
   ImageCreateWithoutCoachInput: {
@@ -1127,159 +524,34 @@ export interface NexusGenInputs {
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     url?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
-  ImageRelationFilter: {
-    // input type
-    is?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
-    isNot?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
-  }
-  ImageScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['ImageScalarWhereWithAggregatesInput'] | null> | null // [ImageScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['ImageScalarWhereWithAggregatesInput'] | null> | null // [ImageScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['ImageScalarWhereWithAggregatesInput'] | null> | null // [ImageScalarWhereWithAggregatesInput]
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    type?: NexusGenInputs['EnumImageTypeWithAggregatesFilter'] | null // EnumImageTypeWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    url?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-  }
-  ImageUncheckedCreateInput: {
-    // input type
-    coach?: NexusGenInputs['CoachUncheckedCreateNestedOneWithoutImageInput'] | null // CoachUncheckedCreateNestedOneWithoutImageInput
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    player?: NexusGenInputs['PlayerUncheckedCreateNestedOneWithoutImageInput'] | null // PlayerUncheckedCreateNestedOneWithoutImageInput
-    team?: NexusGenInputs['TeamUncheckedCreateNestedOneWithoutLogoInput'] | null // TeamUncheckedCreateNestedOneWithoutLogoInput
-    type: NexusGenEnums['ImageType'] // ImageType!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    url: string // String!
-  }
-  ImageUncheckedCreateWithoutCoachInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    player?: NexusGenInputs['PlayerUncheckedCreateNestedOneWithoutImageInput'] | null // PlayerUncheckedCreateNestedOneWithoutImageInput
-    team?: NexusGenInputs['TeamUncheckedCreateNestedOneWithoutLogoInput'] | null // TeamUncheckedCreateNestedOneWithoutLogoInput
-    type: NexusGenEnums['ImageType'] // ImageType!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    url: string // String!
-  }
-  ImageUncheckedCreateWithoutPlayerInput: {
-    // input type
-    coach?: NexusGenInputs['CoachUncheckedCreateNestedOneWithoutImageInput'] | null // CoachUncheckedCreateNestedOneWithoutImageInput
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    team?: NexusGenInputs['TeamUncheckedCreateNestedOneWithoutLogoInput'] | null // TeamUncheckedCreateNestedOneWithoutLogoInput
-    type: NexusGenEnums['ImageType'] // ImageType!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    url: string // String!
-  }
-  ImageUncheckedCreateWithoutTeamInput: {
-    // input type
-    coach?: NexusGenInputs['CoachUncheckedCreateNestedOneWithoutImageInput'] | null // CoachUncheckedCreateNestedOneWithoutImageInput
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id: string // String!
-    player?: NexusGenInputs['PlayerUncheckedCreateNestedOneWithoutImageInput'] | null // PlayerUncheckedCreateNestedOneWithoutImageInput
-    type: NexusGenEnums['ImageType'] // ImageType!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    url: string // String!
-  }
-  ImageUncheckedUpdateInput: {
-    // input type
-    coach?: NexusGenInputs['CoachUncheckedUpdateOneWithoutImageInput'] | null // CoachUncheckedUpdateOneWithoutImageInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    player?: NexusGenInputs['PlayerUncheckedUpdateOneWithoutImageInput'] | null // PlayerUncheckedUpdateOneWithoutImageInput
-    team?: NexusGenInputs['TeamUncheckedUpdateOneWithoutLogoInput'] | null // TeamUncheckedUpdateOneWithoutLogoInput
-    type?: NexusGenInputs['EnumImageTypeFieldUpdateOperationsInput'] | null // EnumImageTypeFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    url?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  ImageUncheckedUpdateManyInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    type?: NexusGenInputs['EnumImageTypeFieldUpdateOperationsInput'] | null // EnumImageTypeFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    url?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  ImageUncheckedUpdateWithoutCoachInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    player?: NexusGenInputs['PlayerUncheckedUpdateOneWithoutImageInput'] | null // PlayerUncheckedUpdateOneWithoutImageInput
-    team?: NexusGenInputs['TeamUncheckedUpdateOneWithoutLogoInput'] | null // TeamUncheckedUpdateOneWithoutLogoInput
-    type?: NexusGenInputs['EnumImageTypeFieldUpdateOperationsInput'] | null // EnumImageTypeFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    url?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  ImageUncheckedUpdateWithoutPlayerInput: {
-    // input type
-    coach?: NexusGenInputs['CoachUncheckedUpdateOneWithoutImageInput'] | null // CoachUncheckedUpdateOneWithoutImageInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    team?: NexusGenInputs['TeamUncheckedUpdateOneWithoutLogoInput'] | null // TeamUncheckedUpdateOneWithoutLogoInput
-    type?: NexusGenInputs['EnumImageTypeFieldUpdateOperationsInput'] | null // EnumImageTypeFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    url?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  ImageUncheckedUpdateWithoutTeamInput: {
-    // input type
-    coach?: NexusGenInputs['CoachUncheckedUpdateOneWithoutImageInput'] | null // CoachUncheckedUpdateOneWithoutImageInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    player?: NexusGenInputs['PlayerUncheckedUpdateOneWithoutImageInput'] | null // PlayerUncheckedUpdateOneWithoutImageInput
-    type?: NexusGenInputs['EnumImageTypeFieldUpdateOperationsInput'] | null // EnumImageTypeFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    url?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  ImageUpdateInput: {
-    // input type
-    coach?: NexusGenInputs['CoachUpdateOneWithoutImageInput'] | null // CoachUpdateOneWithoutImageInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    player?: NexusGenInputs['PlayerUpdateOneWithoutImageInput'] | null // PlayerUpdateOneWithoutImageInput
-    team?: NexusGenInputs['TeamUpdateOneWithoutLogoInput'] | null // TeamUpdateOneWithoutLogoInput
-    type?: NexusGenInputs['EnumImageTypeFieldUpdateOperationsInput'] | null // EnumImageTypeFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    url?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  ImageUpdateManyMutationInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    type?: NexusGenInputs['EnumImageTypeFieldUpdateOperationsInput'] | null // EnumImageTypeFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    url?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
   ImageUpdateOneWithoutCoachInput: {
     // input type
     connect?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
     connectOrCreate?: NexusGenInputs['ImageCreateOrConnectWithoutCoachInput'] | null // ImageCreateOrConnectWithoutCoachInput
-    create?: NexusGenInputs['ImageUncheckedCreateWithoutCoachInput'] | null // ImageUncheckedCreateWithoutCoachInput
+    create?: NexusGenInputs['ImageCreateWithoutCoachInput'] | null // ImageCreateWithoutCoachInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['ImageUncheckedUpdateWithoutCoachInput'] | null // ImageUncheckedUpdateWithoutCoachInput
+    update?: NexusGenInputs['ImageUpdateWithoutCoachInput'] | null // ImageUpdateWithoutCoachInput
     upsert?: NexusGenInputs['ImageUpsertWithoutCoachInput'] | null // ImageUpsertWithoutCoachInput
   }
   ImageUpdateOneWithoutPlayerInput: {
     // input type
     connect?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
     connectOrCreate?: NexusGenInputs['ImageCreateOrConnectWithoutPlayerInput'] | null // ImageCreateOrConnectWithoutPlayerInput
-    create?: NexusGenInputs['ImageUncheckedCreateWithoutPlayerInput'] | null // ImageUncheckedCreateWithoutPlayerInput
+    create?: NexusGenInputs['ImageCreateWithoutPlayerInput'] | null // ImageCreateWithoutPlayerInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['ImageUncheckedUpdateWithoutPlayerInput'] | null // ImageUncheckedUpdateWithoutPlayerInput
+    update?: NexusGenInputs['ImageUpdateWithoutPlayerInput'] | null // ImageUpdateWithoutPlayerInput
     upsert?: NexusGenInputs['ImageUpsertWithoutPlayerInput'] | null // ImageUpsertWithoutPlayerInput
   }
   ImageUpdateOneWithoutTeamInput: {
     // input type
     connect?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
     connectOrCreate?: NexusGenInputs['ImageCreateOrConnectWithoutTeamInput'] | null // ImageCreateOrConnectWithoutTeamInput
-    create?: NexusGenInputs['ImageUncheckedCreateWithoutTeamInput'] | null // ImageUncheckedCreateWithoutTeamInput
+    create?: NexusGenInputs['ImageCreateWithoutTeamInput'] | null // ImageCreateWithoutTeamInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['ImageUncheckedUpdateWithoutTeamInput'] | null // ImageUncheckedUpdateWithoutTeamInput
+    update?: NexusGenInputs['ImageUpdateWithoutTeamInput'] | null // ImageUpdateWithoutTeamInput
     upsert?: NexusGenInputs['ImageUpsertWithoutTeamInput'] | null // ImageUpsertWithoutTeamInput
   }
   ImageUpdateWithoutCoachInput: {
@@ -1314,24 +586,24 @@ export interface NexusGenInputs {
   }
   ImageUpsertWithoutCoachInput: {
     // input type
-    create: NexusGenInputs['ImageUncheckedCreateWithoutCoachInput'] // ImageUncheckedCreateWithoutCoachInput!
-    update: NexusGenInputs['ImageUncheckedUpdateWithoutCoachInput'] // ImageUncheckedUpdateWithoutCoachInput!
+    create: NexusGenInputs['ImageCreateWithoutCoachInput'] // ImageCreateWithoutCoachInput!
+    update: NexusGenInputs['ImageUpdateWithoutCoachInput'] // ImageUpdateWithoutCoachInput!
   }
   ImageUpsertWithoutPlayerInput: {
     // input type
-    create: NexusGenInputs['ImageUncheckedCreateWithoutPlayerInput'] // ImageUncheckedCreateWithoutPlayerInput!
-    update: NexusGenInputs['ImageUncheckedUpdateWithoutPlayerInput'] // ImageUncheckedUpdateWithoutPlayerInput!
+    create: NexusGenInputs['ImageCreateWithoutPlayerInput'] // ImageCreateWithoutPlayerInput!
+    update: NexusGenInputs['ImageUpdateWithoutPlayerInput'] // ImageUpdateWithoutPlayerInput!
   }
   ImageUpsertWithoutTeamInput: {
     // input type
-    create: NexusGenInputs['ImageUncheckedCreateWithoutTeamInput'] // ImageUncheckedCreateWithoutTeamInput!
-    update: NexusGenInputs['ImageUncheckedUpdateWithoutTeamInput'] // ImageUncheckedUpdateWithoutTeamInput!
+    create: NexusGenInputs['ImageCreateWithoutTeamInput'] // ImageCreateWithoutTeamInput!
+    update: NexusGenInputs['ImageUpdateWithoutTeamInput'] // ImageUpdateWithoutTeamInput!
   }
   ImageWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['ImageWhereInput'] | null> | null // [ImageWhereInput]
-    NOT?: Array<NexusGenInputs['ImageWhereInput'] | null> | null // [ImageWhereInput]
-    OR?: Array<NexusGenInputs['ImageWhereInput'] | null> | null // [ImageWhereInput]
+    AND?: NexusGenInputs['ImageWhereInput'][] | null // [ImageWhereInput!]
+    NOT?: NexusGenInputs['ImageWhereInput'][] | null // [ImageWhereInput!]
+    OR?: NexusGenInputs['ImageWhereInput'][] | null // [ImageWhereInput!]
     coach?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
     id?: NexusGenInputs['StringFilter'] | null // StringFilter
@@ -1346,202 +618,80 @@ export interface NexusGenInputs {
     id?: string | null // String
     url?: string | null // String
   }
+  IntFilter: {
+    // input type
+    contains: number // Int!
+    endsWith: number // Int!
+    equals: number // Int!
+    gt: number // Int!
+    gte: number // Int!
+    in: number[] // [Int!]!
+    lt: number // Int!
+    lte: number // Int!
+    notIn: number[] // [Int!]!
+    startsWith: number // Int!
+  }
   IntNullableFilter: {
     // input type
     equals?: number | null // Int
     gt?: number | null // Int
     gte?: number | null // Int
-    in?: Array<number | null> | null // [Int]
+    in?: number[] | null // [Int!]
     lt?: number | null // Int
     lte?: number | null // Int
     not?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    notIn?: Array<number | null> | null // [Int]
-  }
-  IntNullableWithAggregatesFilter: {
-    // input type
-    _avg?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    _count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _max?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _min?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _sum?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    avg?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    equals?: number | null // Int
-    gt?: number | null // Int
-    gte?: number | null // Int
-    in?: Array<number | null> | null // [Int]
-    lt?: number | null // Int
-    lte?: number | null // Int
-    max?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    min?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    not?: NexusGenInputs['NestedIntNullableWithAggregatesFilter'] | null // NestedIntNullableWithAggregatesFilter
-    notIn?: Array<number | null> | null // [Int]
-    sum?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
+    notIn?: number[] | null // [Int!]
   }
   NestedDateTimeFilter: {
     // input type
     equals?: NexusGenScalars['DateTime'] | null // DateTime
     gt?: NexusGenScalars['DateTime'] | null // DateTime
     gte?: NexusGenScalars['DateTime'] | null // DateTime
-    in?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
+    in?: NexusGenScalars['DateTime'][] | null // [DateTime!]
     lt?: NexusGenScalars['DateTime'] | null // DateTime
     lte?: NexusGenScalars['DateTime'] | null // DateTime
     not?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    notIn?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
+    notIn?: NexusGenScalars['DateTime'][] | null // [DateTime!]
   }
   NestedDateTimeNullableFilter: {
     // input type
     equals?: NexusGenScalars['DateTime'] | null // DateTime
     gt?: NexusGenScalars['DateTime'] | null // DateTime
     gte?: NexusGenScalars['DateTime'] | null // DateTime
-    in?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
+    in?: NexusGenScalars['DateTime'][] | null // [DateTime!]
     lt?: NexusGenScalars['DateTime'] | null // DateTime
     lte?: NexusGenScalars['DateTime'] | null // DateTime
     not?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    notIn?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
-  }
-  NestedDateTimeNullableWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _max?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    _min?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    equals?: NexusGenScalars['DateTime'] | null // DateTime
-    gt?: NexusGenScalars['DateTime'] | null // DateTime
-    gte?: NexusGenScalars['DateTime'] | null // DateTime
-    in?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
-    lt?: NexusGenScalars['DateTime'] | null // DateTime
-    lte?: NexusGenScalars['DateTime'] | null // DateTime
-    max?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    min?: NexusGenInputs['NestedDateTimeNullableFilter'] | null // NestedDateTimeNullableFilter
-    not?: NexusGenInputs['NestedDateTimeNullableWithAggregatesFilter'] | null // NestedDateTimeNullableWithAggregatesFilter
-    notIn?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
-  }
-  NestedDateTimeWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    _max?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    _min?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    equals?: NexusGenScalars['DateTime'] | null // DateTime
-    gt?: NexusGenScalars['DateTime'] | null // DateTime
-    gte?: NexusGenScalars['DateTime'] | null // DateTime
-    in?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
-    lt?: NexusGenScalars['DateTime'] | null // DateTime
-    lte?: NexusGenScalars['DateTime'] | null // DateTime
-    max?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    min?: NexusGenInputs['NestedDateTimeFilter'] | null // NestedDateTimeFilter
-    not?: NexusGenInputs['NestedDateTimeWithAggregatesFilter'] | null // NestedDateTimeWithAggregatesFilter
-    notIn?: Array<NexusGenScalars['DateTime'] | null> | null // [DateTime]
+    notIn?: NexusGenScalars['DateTime'][] | null // [DateTime!]
   }
   NestedEnumImageTypeFilter: {
     // input type
     equals?: NexusGenEnums['ImageType'] | null // ImageType
-    in?: Array<NexusGenEnums['ImageType'] | null> | null // [ImageType]
+    in?: NexusGenEnums['ImageType'][] | null // [ImageType!]
     not?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    notIn?: Array<NexusGenEnums['ImageType'] | null> | null // [ImageType]
-  }
-  NestedEnumImageTypeWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    _max?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    _min?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    equals?: NexusGenEnums['ImageType'] | null // ImageType
-    in?: Array<NexusGenEnums['ImageType'] | null> | null // [ImageType]
-    max?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    min?: NexusGenInputs['NestedEnumImageTypeFilter'] | null // NestedEnumImageTypeFilter
-    not?: NexusGenInputs['NestedEnumImageTypeWithAggregatesFilter'] | null // NestedEnumImageTypeWithAggregatesFilter
-    notIn?: Array<NexusGenEnums['ImageType'] | null> | null // [ImageType]
+    notIn?: NexusGenEnums['ImageType'][] | null // [ImageType!]
   }
   NestedFloatNullableFilter: {
     // input type
     equals?: number | null // Float
     gt?: number | null // Float
     gte?: number | null // Float
-    in?: Array<number | null> | null // [Float]
+    in?: number[] | null // [Float!]
     lt?: number | null // Float
     lte?: number | null // Float
     not?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    notIn?: Array<number | null> | null // [Float]
-  }
-  NestedFloatNullableWithAggregatesFilter: {
-    // input type
-    _avg?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    _count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _max?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    _min?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    _sum?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    avg?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    equals?: number | null // Float
-    gt?: number | null // Float
-    gte?: number | null // Float
-    in?: Array<number | null> | null // [Float]
-    lt?: number | null // Float
-    lte?: number | null // Float
-    max?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    min?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    not?: NexusGenInputs['NestedFloatNullableWithAggregatesFilter'] | null // NestedFloatNullableWithAggregatesFilter
-    notIn?: Array<number | null> | null // [Float]
-    sum?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-  }
-  NestedIntFilter: {
-    // input type
-    equals?: number | null // Int
-    gt?: number | null // Int
-    gte?: number | null // Int
-    in?: Array<number | null> | null // [Int]
-    lt?: number | null // Int
-    lte?: number | null // Int
-    not?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    notIn?: Array<number | null> | null // [Int]
+    notIn?: number[] | null // [Float!]
   }
   NestedIntNullableFilter: {
     // input type
     equals?: number | null // Int
     gt?: number | null // Int
     gte?: number | null // Int
-    in?: Array<number | null> | null // [Int]
+    in?: number[] | null // [Int!]
     lt?: number | null // Int
     lte?: number | null // Int
     not?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    notIn?: Array<number | null> | null // [Int]
-  }
-  NestedIntNullableWithAggregatesFilter: {
-    // input type
-    _avg?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    _count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _max?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _min?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _sum?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    avg?: NexusGenInputs['NestedFloatNullableFilter'] | null // NestedFloatNullableFilter
-    count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    equals?: number | null // Int
-    gt?: number | null // Int
-    gte?: number | null // Int
-    in?: Array<number | null> | null // [Int]
-    lt?: number | null // Int
-    lte?: number | null // Int
-    max?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    min?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    not?: NexusGenInputs['NestedIntNullableWithAggregatesFilter'] | null // NestedIntNullableWithAggregatesFilter
-    notIn?: Array<number | null> | null // [Int]
-    sum?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-  }
-  NestedStringFilter: {
-    // input type
-    contains?: string | null // String
-    endsWith?: string | null // String
-    equals?: string | null // String
-    gt?: string | null // String
-    gte?: string | null // String
-    in?: Array<string | null> | null // [String]
-    lt?: string | null // String
-    lte?: string | null // String
-    not?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    notIn?: Array<string | null> | null // [String]
-    startsWith?: string | null // String
+    notIn?: number[] | null // [Int!]
   }
   NestedStringNullableFilter: {
     // input type
@@ -1550,56 +700,12 @@ export interface NexusGenInputs {
     equals?: string | null // String
     gt?: string | null // String
     gte?: string | null // String
-    in?: Array<string | null> | null // [String]
+    in?: string[] | null // [String!]
     lt?: string | null // String
     lte?: string | null // String
     not?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    notIn?: Array<string | null> | null // [String]
+    notIn?: string[] | null // [String!]
     startsWith?: string | null // String
-  }
-  NestedStringNullableWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _max?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    _min?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    contains?: string | null // String
-    count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    endsWith?: string | null // String
-    equals?: string | null // String
-    gt?: string | null // String
-    gte?: string | null // String
-    in?: Array<string | null> | null // [String]
-    lt?: string | null // String
-    lte?: string | null // String
-    max?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    min?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    not?: NexusGenInputs['NestedStringNullableWithAggregatesFilter'] | null // NestedStringNullableWithAggregatesFilter
-    notIn?: Array<string | null> | null // [String]
-    startsWith?: string | null // String
-  }
-  NestedStringWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    _max?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    _min?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    contains?: string | null // String
-    count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    endsWith?: string | null // String
-    equals?: string | null // String
-    gt?: string | null // String
-    gte?: string | null // String
-    in?: Array<string | null> | null // [String]
-    lt?: string | null // String
-    lte?: string | null // String
-    max?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    min?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    not?: NexusGenInputs['NestedStringWithAggregatesFilter'] | null // NestedStringWithAggregatesFilter
-    notIn?: Array<string | null> | null // [String]
-    startsWith?: string | null // String
-  }
-  NullableDateTimeFieldUpdateOperationsInput: {
-    // input type
-    set?: NexusGenScalars['DateTime'] | null // DateTime
   }
   NullableFloatFieldUpdateOperationsInput: {
     // input type
@@ -1621,36 +727,6 @@ export interface NexusGenInputs {
     // input type
     set?: string | null // String
   }
-  PlayerCreateInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    height: string // String!
-    id: string // String!
-    image?: NexusGenInputs['ImageCreateNestedOneWithoutPlayerInput'] | null // ImageCreateNestedOneWithoutPlayerInput
-    name: string // String!
-    number?: string | null // String
-    position?: string | null // String
-    slug: string // String!
-    team?: NexusGenInputs['TeamCreateNestedOneWithoutPlayersInput'] | null // TeamCreateNestedOneWithoutPlayersInput
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    weight: string // String!
-  }
-  PlayerCreateManyInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    height: string // String!
-    id: string // String!
-    imageId?: string | null // String
-    name: string // String!
-    number?: string | null // String
-    position?: string | null // String
-    slug: string // String!
-    teamId?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    weight: string // String!
-  }
   PlayerCreateManyTeamInput: {
     // input type
     createdAt?: NexusGenScalars['DateTime'] | null // DateTime
@@ -1667,30 +743,30 @@ export interface NexusGenInputs {
   }
   PlayerCreateManyTeamInputEnvelope: {
     // input type
-    data: NexusGenInputs['PlayerCreateManyTeamInput'] // PlayerCreateManyTeamInput!
+    data?: NexusGenInputs['PlayerCreateManyTeamInput'][] | null // [PlayerCreateManyTeamInput!]
     skipDuplicates?: boolean | null // Boolean
   }
   PlayerCreateNestedManyWithoutTeamInput: {
     // input type
-    connect?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['PlayerCreateOrConnectWithoutTeamInput'] | null> | null // [PlayerCreateOrConnectWithoutTeamInput]
-    create?: Array<NexusGenInputs['PlayerCreateWithoutTeamInput'] | null> | null // [PlayerCreateWithoutTeamInput]
+    connect?: NexusGenInputs['PlayerWhereUniqueInput'][] | null // [PlayerWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['PlayerCreateOrConnectWithoutTeamInput'][] | null // [PlayerCreateOrConnectWithoutTeamInput!]
+    create?: NexusGenInputs['PlayerCreateWithoutTeamInput'][] | null // [PlayerCreateWithoutTeamInput!]
     createMany?: NexusGenInputs['PlayerCreateManyTeamInputEnvelope'] | null // PlayerCreateManyTeamInputEnvelope
   }
   PlayerCreateNestedOneWithoutImageInput: {
     // input type
     connect?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
     connectOrCreate?: NexusGenInputs['PlayerCreateOrConnectWithoutImageInput'] | null // PlayerCreateOrConnectWithoutImageInput
-    create?: NexusGenInputs['PlayerUncheckedCreateWithoutImageInput'] | null // PlayerUncheckedCreateWithoutImageInput
+    create?: NexusGenInputs['PlayerCreateWithoutImageInput'] | null // PlayerCreateWithoutImageInput
   }
   PlayerCreateOrConnectWithoutImageInput: {
     // input type
-    create: NexusGenInputs['PlayerUncheckedCreateWithoutImageInput'] // PlayerUncheckedCreateWithoutImageInput!
+    create: NexusGenInputs['PlayerCreateWithoutImageInput'] // PlayerCreateWithoutImageInput!
     where: NexusGenInputs['PlayerWhereUniqueInput'] // PlayerWhereUniqueInput!
   }
   PlayerCreateOrConnectWithoutTeamInput: {
     // input type
-    create: NexusGenInputs['PlayerUncheckedCreateWithoutTeamInput'] // PlayerUncheckedCreateWithoutTeamInput!
+    create: NexusGenInputs['PlayerCreateWithoutTeamInput'] // PlayerCreateWithoutTeamInput!
     where: NexusGenInputs['PlayerWhereUniqueInput'] // PlayerWhereUniqueInput!
   }
   PlayerCreateWithoutImageInput: {
@@ -1742,16 +818,11 @@ export interface NexusGenInputs {
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     weight?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
-  PlayerRelationFilter: {
-    // input type
-    is?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-    isNot?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-  }
   PlayerScalarWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['PlayerScalarWhereInput'] | null> | null // [PlayerScalarWhereInput]
-    NOT?: Array<NexusGenInputs['PlayerScalarWhereInput'] | null> | null // [PlayerScalarWhereInput]
-    OR?: Array<NexusGenInputs['PlayerScalarWhereInput'] | null> | null // [PlayerScalarWhereInput]
+    AND?: NexusGenInputs['PlayerScalarWhereInput'][] | null // [PlayerScalarWhereInput!]
+    NOT?: NexusGenInputs['PlayerScalarWhereInput'][] | null // [PlayerScalarWhereInput!]
+    OR?: NexusGenInputs['PlayerScalarWhereInput'][] | null // [PlayerScalarWhereInput!]
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
     handle?: NexusGenInputs['StringFilter'] | null // StringFilter
     height?: NexusGenInputs['StringFilter'] | null // StringFilter
@@ -1764,191 +835,6 @@ export interface NexusGenInputs {
     teamId?: NexusGenInputs['StringNullableFilter'] | null // StringNullableFilter
     updatedAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
     weight?: NexusGenInputs['StringFilter'] | null // StringFilter
-  }
-  PlayerScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['PlayerScalarWhereWithAggregatesInput'] | null> | null // [PlayerScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['PlayerScalarWhereWithAggregatesInput'] | null> | null // [PlayerScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['PlayerScalarWhereWithAggregatesInput'] | null> | null // [PlayerScalarWhereWithAggregatesInput]
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    handle?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    height?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    imageId?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    name?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    number?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    position?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    slug?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    teamId?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    weight?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-  }
-  PlayerUncheckedCreateInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    height: string // String!
-    id: string // String!
-    imageId?: string | null // String
-    name: string // String!
-    number?: string | null // String
-    position?: string | null // String
-    slug: string // String!
-    teamId?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    weight: string // String!
-  }
-  PlayerUncheckedCreateNestedManyWithoutTeamInput: {
-    // input type
-    connect?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['PlayerCreateOrConnectWithoutTeamInput'] | null> | null // [PlayerCreateOrConnectWithoutTeamInput]
-    create?: Array<NexusGenInputs['PlayerCreateWithoutTeamInput'] | null> | null // [PlayerCreateWithoutTeamInput]
-    createMany?: NexusGenInputs['PlayerCreateManyTeamInputEnvelope'] | null // PlayerCreateManyTeamInputEnvelope
-  }
-  PlayerUncheckedCreateNestedOneWithoutImageInput: {
-    // input type
-    connect?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['PlayerCreateOrConnectWithoutImageInput'] | null // PlayerCreateOrConnectWithoutImageInput
-    create?: NexusGenInputs['PlayerUncheckedCreateWithoutImageInput'] | null // PlayerUncheckedCreateWithoutImageInput
-  }
-  PlayerUncheckedCreateWithoutImageInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    height: string // String!
-    id: string // String!
-    name: string // String!
-    number?: string | null // String
-    position?: string | null // String
-    slug: string // String!
-    teamId?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    weight: string // String!
-  }
-  PlayerUncheckedCreateWithoutTeamInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string // String!
-    height: string // String!
-    id: string // String!
-    imageId?: string | null // String
-    name: string // String!
-    number?: string | null // String
-    position?: string | null // String
-    slug: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    weight: string // String!
-  }
-  PlayerUncheckedUpdateInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    height?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    imageId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    number?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    position?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    teamId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    weight?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  PlayerUncheckedUpdateManyInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    height?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    imageId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    number?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    position?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    teamId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    weight?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  PlayerUncheckedUpdateManyWithoutPlayersInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    height?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    imageId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    number?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    position?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    weight?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  PlayerUncheckedUpdateManyWithoutTeamInput: {
-    // input type
-    connect?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['PlayerCreateOrConnectWithoutTeamInput'] | null> | null // [PlayerCreateOrConnectWithoutTeamInput]
-    create?: Array<NexusGenInputs['PlayerCreateWithoutTeamInput'] | null> | null // [PlayerCreateWithoutTeamInput]
-    createMany?: NexusGenInputs['PlayerCreateManyTeamInputEnvelope'] | null // PlayerCreateManyTeamInputEnvelope
-    delete?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    deleteMany?: Array<NexusGenInputs['PlayerScalarWhereInput'] | null> | null // [PlayerScalarWhereInput]
-    disconnect?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    set?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    update?: Array<NexusGenInputs['PlayerUpdateWithWhereUniqueWithoutTeamInput'] | null> | null // [PlayerUpdateWithWhereUniqueWithoutTeamInput]
-    updateMany?: Array<NexusGenInputs['PlayerUpdateManyWithWhereWithoutTeamInput'] | null> | null // [PlayerUpdateManyWithWhereWithoutTeamInput]
-    upsert?: Array<NexusGenInputs['PlayerUpsertWithWhereUniqueWithoutTeamInput'] | null> | null // [PlayerUpsertWithWhereUniqueWithoutTeamInput]
-  }
-  PlayerUncheckedUpdateOneWithoutImageInput: {
-    // input type
-    connect?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['PlayerCreateOrConnectWithoutImageInput'] | null // PlayerCreateOrConnectWithoutImageInput
-    create?: NexusGenInputs['PlayerUncheckedCreateWithoutImageInput'] | null // PlayerUncheckedCreateWithoutImageInput
-    delete?: boolean | null // Boolean
-    disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['PlayerUncheckedUpdateWithoutImageInput'] | null // PlayerUncheckedUpdateWithoutImageInput
-    upsert?: NexusGenInputs['PlayerUpsertWithoutImageInput'] | null // PlayerUpsertWithoutImageInput
-  }
-  PlayerUncheckedUpdateWithoutImageInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    height?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    number?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    position?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    teamId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    weight?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  PlayerUncheckedUpdateWithoutTeamInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    height?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    imageId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    number?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    position?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    weight?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  PlayerUpdateInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    height?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['ImageUpdateOneWithoutPlayerInput'] | null // ImageUpdateOneWithoutPlayerInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    number?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    position?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    team?: NexusGenInputs['TeamUpdateOneWithoutPlayersInput'] | null // TeamUpdateOneWithoutPlayersInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    weight?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
   }
   PlayerUpdateManyMutationInput: {
     // input type
@@ -1965,36 +851,36 @@ export interface NexusGenInputs {
   }
   PlayerUpdateManyWithWhereWithoutTeamInput: {
     // input type
-    data: NexusGenInputs['PlayerUncheckedUpdateManyWithoutPlayersInput'] // PlayerUncheckedUpdateManyWithoutPlayersInput!
+    data: NexusGenInputs['PlayerUpdateManyMutationInput'] // PlayerUpdateManyMutationInput!
     where: NexusGenInputs['PlayerScalarWhereInput'] // PlayerScalarWhereInput!
   }
   PlayerUpdateManyWithoutTeamInput: {
     // input type
-    connect?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['PlayerCreateOrConnectWithoutTeamInput'] | null> | null // [PlayerCreateOrConnectWithoutTeamInput]
-    create?: Array<NexusGenInputs['PlayerCreateWithoutTeamInput'] | null> | null // [PlayerCreateWithoutTeamInput]
+    connect?: NexusGenInputs['PlayerWhereUniqueInput'][] | null // [PlayerWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['PlayerCreateOrConnectWithoutTeamInput'][] | null // [PlayerCreateOrConnectWithoutTeamInput!]
+    create?: NexusGenInputs['PlayerCreateWithoutTeamInput'][] | null // [PlayerCreateWithoutTeamInput!]
     createMany?: NexusGenInputs['PlayerCreateManyTeamInputEnvelope'] | null // PlayerCreateManyTeamInputEnvelope
-    delete?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    deleteMany?: Array<NexusGenInputs['PlayerScalarWhereInput'] | null> | null // [PlayerScalarWhereInput]
-    disconnect?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    set?: Array<NexusGenInputs['PlayerWhereUniqueInput'] | null> | null // [PlayerWhereUniqueInput]
-    update?: Array<NexusGenInputs['PlayerUpdateWithWhereUniqueWithoutTeamInput'] | null> | null // [PlayerUpdateWithWhereUniqueWithoutTeamInput]
-    updateMany?: Array<NexusGenInputs['PlayerUpdateManyWithWhereWithoutTeamInput'] | null> | null // [PlayerUpdateManyWithWhereWithoutTeamInput]
-    upsert?: Array<NexusGenInputs['PlayerUpsertWithWhereUniqueWithoutTeamInput'] | null> | null // [PlayerUpsertWithWhereUniqueWithoutTeamInput]
+    delete?: NexusGenInputs['PlayerWhereUniqueInput'][] | null // [PlayerWhereUniqueInput!]
+    deleteMany?: NexusGenInputs['PlayerScalarWhereInput'][] | null // [PlayerScalarWhereInput!]
+    disconnect?: NexusGenInputs['PlayerWhereUniqueInput'][] | null // [PlayerWhereUniqueInput!]
+    set?: NexusGenInputs['PlayerWhereUniqueInput'][] | null // [PlayerWhereUniqueInput!]
+    update?: NexusGenInputs['PlayerUpdateWithWhereUniqueWithoutTeamInput'][] | null // [PlayerUpdateWithWhereUniqueWithoutTeamInput!]
+    updateMany?: NexusGenInputs['PlayerUpdateManyWithWhereWithoutTeamInput'][] | null // [PlayerUpdateManyWithWhereWithoutTeamInput!]
+    upsert?: NexusGenInputs['PlayerUpsertWithWhereUniqueWithoutTeamInput'][] | null // [PlayerUpsertWithWhereUniqueWithoutTeamInput!]
   }
   PlayerUpdateOneWithoutImageInput: {
     // input type
     connect?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
     connectOrCreate?: NexusGenInputs['PlayerCreateOrConnectWithoutImageInput'] | null // PlayerCreateOrConnectWithoutImageInput
-    create?: NexusGenInputs['PlayerUncheckedCreateWithoutImageInput'] | null // PlayerUncheckedCreateWithoutImageInput
+    create?: NexusGenInputs['PlayerCreateWithoutImageInput'] | null // PlayerCreateWithoutImageInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['PlayerUncheckedUpdateWithoutImageInput'] | null // PlayerUncheckedUpdateWithoutImageInput
+    update?: NexusGenInputs['PlayerUpdateWithoutImageInput'] | null // PlayerUpdateWithoutImageInput
     upsert?: NexusGenInputs['PlayerUpsertWithoutImageInput'] | null // PlayerUpsertWithoutImageInput
   }
   PlayerUpdateWithWhereUniqueWithoutTeamInput: {
     // input type
-    data: NexusGenInputs['PlayerUncheckedUpdateWithoutTeamInput'] // PlayerUncheckedUpdateWithoutTeamInput!
+    data: NexusGenInputs['PlayerUpdateWithoutTeamInput'] // PlayerUpdateWithoutTeamInput!
     where: NexusGenInputs['PlayerWhereUniqueInput'] // PlayerWhereUniqueInput!
   }
   PlayerUpdateWithoutImageInput: {
@@ -2027,20 +913,20 @@ export interface NexusGenInputs {
   }
   PlayerUpsertWithWhereUniqueWithoutTeamInput: {
     // input type
-    create: NexusGenInputs['PlayerUncheckedCreateWithoutTeamInput'] // PlayerUncheckedCreateWithoutTeamInput!
-    update: NexusGenInputs['PlayerUncheckedUpdateWithoutTeamInput'] // PlayerUncheckedUpdateWithoutTeamInput!
+    create: NexusGenInputs['PlayerCreateWithoutTeamInput'] // PlayerCreateWithoutTeamInput!
+    update: NexusGenInputs['PlayerUpdateWithoutTeamInput'] // PlayerUpdateWithoutTeamInput!
     where: NexusGenInputs['PlayerWhereUniqueInput'] // PlayerWhereUniqueInput!
   }
   PlayerUpsertWithoutImageInput: {
     // input type
-    create: NexusGenInputs['PlayerUncheckedCreateWithoutImageInput'] // PlayerUncheckedCreateWithoutImageInput!
-    update: NexusGenInputs['PlayerUncheckedUpdateWithoutImageInput'] // PlayerUncheckedUpdateWithoutImageInput!
+    create: NexusGenInputs['PlayerCreateWithoutImageInput'] // PlayerCreateWithoutImageInput!
+    update: NexusGenInputs['PlayerUpdateWithoutImageInput'] // PlayerUpdateWithoutImageInput!
   }
   PlayerWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['PlayerWhereInput'] | null> | null // [PlayerWhereInput]
-    NOT?: Array<NexusGenInputs['PlayerWhereInput'] | null> | null // [PlayerWhereInput]
-    OR?: Array<NexusGenInputs['PlayerWhereInput'] | null> | null // [PlayerWhereInput]
+    AND?: NexusGenInputs['PlayerWhereInput'][] | null // [PlayerWhereInput!]
+    NOT?: NexusGenInputs['PlayerWhereInput'][] | null // [PlayerWhereInput!]
+    OR?: NexusGenInputs['PlayerWhereInput'][] | null // [PlayerWhereInput!]
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
     handle?: NexusGenInputs['StringFilter'] | null // StringFilter
     height?: NexusGenInputs['StringFilter'] | null // StringFilter
@@ -2063,61 +949,6 @@ export interface NexusGenInputs {
     name?: string | null // String
     slug?: string | null // String
   }
-  SessionCreateInput: {
-    // input type
-    accessToken: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    sessionToken: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    user: NexusGenInputs['UserCreateNestedOneWithoutSessionsInput'] // UserCreateNestedOneWithoutSessionsInput!
-  }
-  SessionCreateManyInput: {
-    // input type
-    accessToken: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    sessionToken: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    userId: string // String!
-  }
-  SessionCreateManyUserInput: {
-    // input type
-    accessToken: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    sessionToken: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  SessionCreateManyUserInputEnvelope: {
-    // input type
-    data: NexusGenInputs['SessionCreateManyUserInput'] // SessionCreateManyUserInput!
-    skipDuplicates?: boolean | null // Boolean
-  }
-  SessionCreateNestedManyWithoutUserInput: {
-    // input type
-    connect?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['SessionCreateOrConnectWithoutUserInput'] | null> | null // [SessionCreateOrConnectWithoutUserInput]
-    create?: Array<NexusGenInputs['SessionCreateWithoutUserInput'] | null> | null // [SessionCreateWithoutUserInput]
-    createMany?: NexusGenInputs['SessionCreateManyUserInputEnvelope'] | null // SessionCreateManyUserInputEnvelope
-  }
-  SessionCreateOrConnectWithoutUserInput: {
-    // input type
-    create: NexusGenInputs['SessionUncheckedCreateWithoutUserInput'] // SessionUncheckedCreateWithoutUserInput!
-    where: NexusGenInputs['SessionWhereUniqueInput'] // SessionWhereUniqueInput!
-  }
-  SessionCreateWithoutUserInput: {
-    // input type
-    accessToken: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    sessionToken: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
   SessionListRelationFilter: {
     // input type
     every?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
@@ -2134,173 +965,11 @@ export interface NexusGenInputs {
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     userId?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
-  SessionScalarWhereInput: {
-    // input type
-    AND?: Array<NexusGenInputs['SessionScalarWhereInput'] | null> | null // [SessionScalarWhereInput]
-    NOT?: Array<NexusGenInputs['SessionScalarWhereInput'] | null> | null // [SessionScalarWhereInput]
-    OR?: Array<NexusGenInputs['SessionScalarWhereInput'] | null> | null // [SessionScalarWhereInput]
-    accessToken?: NexusGenInputs['StringFilter'] | null // StringFilter
-    createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-    expires?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-    id?: NexusGenInputs['StringFilter'] | null // StringFilter
-    sessionToken?: NexusGenInputs['StringFilter'] | null // StringFilter
-    updatedAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-    userId?: NexusGenInputs['StringFilter'] | null // StringFilter
-  }
-  SessionScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['SessionScalarWhereWithAggregatesInput'] | null> | null // [SessionScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['SessionScalarWhereWithAggregatesInput'] | null> | null // [SessionScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['SessionScalarWhereWithAggregatesInput'] | null> | null // [SessionScalarWhereWithAggregatesInput]
-    accessToken?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    expires?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    sessionToken?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    userId?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-  }
-  SessionUncheckedCreateInput: {
-    // input type
-    accessToken: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    sessionToken: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    userId: string // String!
-  }
-  SessionUncheckedCreateNestedManyWithoutUserInput: {
-    // input type
-    connect?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['SessionCreateOrConnectWithoutUserInput'] | null> | null // [SessionCreateOrConnectWithoutUserInput]
-    create?: Array<NexusGenInputs['SessionCreateWithoutUserInput'] | null> | null // [SessionCreateWithoutUserInput]
-    createMany?: NexusGenInputs['SessionCreateManyUserInputEnvelope'] | null // SessionCreateManyUserInputEnvelope
-  }
-  SessionUncheckedCreateWithoutUserInput: {
-    // input type
-    accessToken: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    sessionToken: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  SessionUncheckedUpdateInput: {
-    // input type
-    accessToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    sessionToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    userId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  SessionUncheckedUpdateManyInput: {
-    // input type
-    accessToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    sessionToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    userId?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-  }
-  SessionUncheckedUpdateManyWithoutSessionsInput: {
-    // input type
-    accessToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    sessionToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  SessionUncheckedUpdateManyWithoutUserInput: {
-    // input type
-    connect?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['SessionCreateOrConnectWithoutUserInput'] | null> | null // [SessionCreateOrConnectWithoutUserInput]
-    create?: Array<NexusGenInputs['SessionCreateWithoutUserInput'] | null> | null // [SessionCreateWithoutUserInput]
-    createMany?: NexusGenInputs['SessionCreateManyUserInputEnvelope'] | null // SessionCreateManyUserInputEnvelope
-    delete?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    deleteMany?: Array<NexusGenInputs['SessionScalarWhereInput'] | null> | null // [SessionScalarWhereInput]
-    disconnect?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    set?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    update?: Array<NexusGenInputs['SessionUpdateWithWhereUniqueWithoutUserInput'] | null> | null // [SessionUpdateWithWhereUniqueWithoutUserInput]
-    updateMany?: Array<NexusGenInputs['SessionUpdateManyWithWhereWithoutUserInput'] | null> | null // [SessionUpdateManyWithWhereWithoutUserInput]
-    upsert?: Array<NexusGenInputs['SessionUpsertWithWhereUniqueWithoutUserInput'] | null> | null // [SessionUpsertWithWhereUniqueWithoutUserInput]
-  }
-  SessionUncheckedUpdateWithoutUserInput: {
-    // input type
-    accessToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    sessionToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  SessionUpdateInput: {
-    // input type
-    accessToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    sessionToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    user?: NexusGenInputs['UserUpdateOneRequiredWithoutSessionsInput'] | null // UserUpdateOneRequiredWithoutSessionsInput
-  }
-  SessionUpdateManyMutationInput: {
-    // input type
-    accessToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    sessionToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  SessionUpdateManyWithWhereWithoutUserInput: {
-    // input type
-    data: NexusGenInputs['SessionUncheckedUpdateManyWithoutSessionsInput'] // SessionUncheckedUpdateManyWithoutSessionsInput!
-    where: NexusGenInputs['SessionScalarWhereInput'] // SessionScalarWhereInput!
-  }
-  SessionUpdateManyWithoutUserInput: {
-    // input type
-    connect?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    connectOrCreate?: Array<NexusGenInputs['SessionCreateOrConnectWithoutUserInput'] | null> | null // [SessionCreateOrConnectWithoutUserInput]
-    create?: Array<NexusGenInputs['SessionCreateWithoutUserInput'] | null> | null // [SessionCreateWithoutUserInput]
-    createMany?: NexusGenInputs['SessionCreateManyUserInputEnvelope'] | null // SessionCreateManyUserInputEnvelope
-    delete?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    deleteMany?: Array<NexusGenInputs['SessionScalarWhereInput'] | null> | null // [SessionScalarWhereInput]
-    disconnect?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    set?: Array<NexusGenInputs['SessionWhereUniqueInput'] | null> | null // [SessionWhereUniqueInput]
-    update?: Array<NexusGenInputs['SessionUpdateWithWhereUniqueWithoutUserInput'] | null> | null // [SessionUpdateWithWhereUniqueWithoutUserInput]
-    updateMany?: Array<NexusGenInputs['SessionUpdateManyWithWhereWithoutUserInput'] | null> | null // [SessionUpdateManyWithWhereWithoutUserInput]
-    upsert?: Array<NexusGenInputs['SessionUpsertWithWhereUniqueWithoutUserInput'] | null> | null // [SessionUpsertWithWhereUniqueWithoutUserInput]
-  }
-  SessionUpdateWithWhereUniqueWithoutUserInput: {
-    // input type
-    data: NexusGenInputs['SessionUncheckedUpdateWithoutUserInput'] // SessionUncheckedUpdateWithoutUserInput!
-    where: NexusGenInputs['SessionWhereUniqueInput'] // SessionWhereUniqueInput!
-  }
-  SessionUpdateWithoutUserInput: {
-    // input type
-    accessToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    sessionToken?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  SessionUpsertWithWhereUniqueWithoutUserInput: {
-    // input type
-    create: NexusGenInputs['SessionUncheckedCreateWithoutUserInput'] // SessionUncheckedCreateWithoutUserInput!
-    update: NexusGenInputs['SessionUncheckedUpdateWithoutUserInput'] // SessionUncheckedUpdateWithoutUserInput!
-    where: NexusGenInputs['SessionWhereUniqueInput'] // SessionWhereUniqueInput!
-  }
   SessionWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['SessionWhereInput'] | null> | null // [SessionWhereInput]
-    NOT?: Array<NexusGenInputs['SessionWhereInput'] | null> | null // [SessionWhereInput]
-    OR?: Array<NexusGenInputs['SessionWhereInput'] | null> | null // [SessionWhereInput]
+    AND?: NexusGenInputs['SessionWhereInput'][] | null // [SessionWhereInput!]
+    NOT?: NexusGenInputs['SessionWhereInput'][] | null // [SessionWhereInput!]
+    OR?: NexusGenInputs['SessionWhereInput'][] | null // [SessionWhereInput!]
     accessToken?: NexusGenInputs['StringFilter'] | null // StringFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
     expires?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
@@ -2322,18 +991,16 @@ export interface NexusGenInputs {
   }
   StringFilter: {
     // input type
-    contains?: string | null // String
-    endsWith?: string | null // String
-    equals?: string | null // String
-    gt?: string | null // String
-    gte?: string | null // String
-    in?: Array<string | null> | null // [String]
-    lt?: string | null // String
-    lte?: string | null // String
-    mode?: NexusGenEnums['QueryMode'] | null // QueryMode
-    not?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    notIn?: Array<string | null> | null // [String]
-    startsWith?: string | null // String
+    contains: string // String!
+    endsWith: string // String!
+    equals: string // String!
+    gt: string // String!
+    gte: string // String!
+    in: string[] // [String!]!
+    lt: string // String!
+    lte: string // String!
+    notIn: string[] // [String!]!
+    startsWith: string // String!
   }
   StringNullableFilter: {
     // input type
@@ -2342,54 +1009,12 @@ export interface NexusGenInputs {
     equals?: string | null // String
     gt?: string | null // String
     gte?: string | null // String
-    in?: Array<string | null> | null // [String]
+    in?: string[] | null // [String!]
     lt?: string | null // String
     lte?: string | null // String
     mode?: NexusGenEnums['QueryMode'] | null // QueryMode
     not?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    notIn?: Array<string | null> | null // [String]
-    startsWith?: string | null // String
-  }
-  StringNullableWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    _max?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    _min?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    contains?: string | null // String
-    count?: NexusGenInputs['NestedIntNullableFilter'] | null // NestedIntNullableFilter
-    endsWith?: string | null // String
-    equals?: string | null // String
-    gt?: string | null // String
-    gte?: string | null // String
-    in?: Array<string | null> | null // [String]
-    lt?: string | null // String
-    lte?: string | null // String
-    max?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    min?: NexusGenInputs['NestedStringNullableFilter'] | null // NestedStringNullableFilter
-    mode?: NexusGenEnums['QueryMode'] | null // QueryMode
-    not?: NexusGenInputs['NestedStringNullableWithAggregatesFilter'] | null // NestedStringNullableWithAggregatesFilter
-    notIn?: Array<string | null> | null // [String]
-    startsWith?: string | null // String
-  }
-  StringWithAggregatesFilter: {
-    // input type
-    _count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    _max?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    _min?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    contains?: string | null // String
-    count?: NexusGenInputs['NestedIntFilter'] | null // NestedIntFilter
-    endsWith?: string | null // String
-    equals?: string | null // String
-    gt?: string | null // String
-    gte?: string | null // String
-    in?: Array<string | null> | null // [String]
-    lt?: string | null // String
-    lte?: string | null // String
-    max?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    min?: NexusGenInputs['NestedStringFilter'] | null // NestedStringFilter
-    mode?: NexusGenEnums['QueryMode'] | null // QueryMode
-    not?: NexusGenInputs['NestedStringWithAggregatesFilter'] | null // NestedStringWithAggregatesFilter
-    notIn?: Array<string | null> | null // [String]
+    notIn?: string[] | null // [String!]
     startsWith?: string | null // String
   }
   TeamCreateInput: {
@@ -2413,67 +1038,37 @@ export interface NexusGenInputs {
     winPercentage?: number | null // Float
     wins?: number | null // Int
   }
-  TeamCreateManyInput: {
-    // input type
-    abbreviation: string // String!
-    city: string // String!
-    colorSchemeId?: string | null // String
-    conference: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division: string // String!
-    established: string // String!
-    handle: string // String!
-    id: string // String!
-    logoId?: string | null // String
-    losses?: number | null // Int
-    name: string // String!
-    slug: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
   TeamCreateNestedOneWithoutCoachesInput: {
     // input type
     connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
     connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutCoachesInput'] | null // TeamCreateOrConnectWithoutCoachesInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutCoachesInput'] | null // TeamUncheckedCreateWithoutCoachesInput
-  }
-  TeamCreateNestedOneWithoutColorSchemeInput: {
-    // input type
-    connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutColorSchemeInput'] | null // TeamCreateOrConnectWithoutColorSchemeInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutColorSchemeInput'] | null // TeamUncheckedCreateWithoutColorSchemeInput
+    create?: NexusGenInputs['TeamCreateWithoutCoachesInput'] | null // TeamCreateWithoutCoachesInput
   }
   TeamCreateNestedOneWithoutLogoInput: {
     // input type
     connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
     connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutLogoInput'] | null // TeamCreateOrConnectWithoutLogoInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutLogoInput'] | null // TeamUncheckedCreateWithoutLogoInput
+    create?: NexusGenInputs['TeamCreateWithoutLogoInput'] | null // TeamCreateWithoutLogoInput
   }
   TeamCreateNestedOneWithoutPlayersInput: {
     // input type
     connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
     connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutPlayersInput'] | null // TeamCreateOrConnectWithoutPlayersInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutPlayersInput'] | null // TeamUncheckedCreateWithoutPlayersInput
+    create?: NexusGenInputs['TeamCreateWithoutPlayersInput'] | null // TeamCreateWithoutPlayersInput
   }
   TeamCreateOrConnectWithoutCoachesInput: {
     // input type
-    create: NexusGenInputs['TeamUncheckedCreateWithoutCoachesInput'] // TeamUncheckedCreateWithoutCoachesInput!
-    where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
-  }
-  TeamCreateOrConnectWithoutColorSchemeInput: {
-    // input type
-    create: NexusGenInputs['TeamUncheckedCreateWithoutColorSchemeInput'] // TeamUncheckedCreateWithoutColorSchemeInput!
+    create: NexusGenInputs['TeamCreateWithoutCoachesInput'] // TeamCreateWithoutCoachesInput!
     where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
   }
   TeamCreateOrConnectWithoutLogoInput: {
     // input type
-    create: NexusGenInputs['TeamUncheckedCreateWithoutLogoInput'] // TeamUncheckedCreateWithoutLogoInput!
+    create: NexusGenInputs['TeamCreateWithoutLogoInput'] // TeamCreateWithoutLogoInput!
     where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
   }
   TeamCreateOrConnectWithoutPlayersInput: {
     // input type
-    create: NexusGenInputs['TeamUncheckedCreateWithoutPlayersInput'] // TeamUncheckedCreateWithoutPlayersInput!
+    create: NexusGenInputs['TeamCreateWithoutPlayersInput'] // TeamCreateWithoutPlayersInput!
     where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
   }
   TeamCreateWithoutCoachesInput: {
@@ -2481,26 +1076,6 @@ export interface NexusGenInputs {
     abbreviation: string // String!
     city: string // String!
     colorScheme?: NexusGenInputs['ColorSchemeCreateNestedOneWithoutTeamInput'] | null // ColorSchemeCreateNestedOneWithoutTeamInput
-    conference: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division: string // String!
-    established: string // String!
-    handle: string // String!
-    id: string // String!
-    logo?: NexusGenInputs['ImageCreateNestedOneWithoutTeamInput'] | null // ImageCreateNestedOneWithoutTeamInput
-    losses?: number | null // Int
-    name: string // String!
-    players?: NexusGenInputs['PlayerCreateNestedManyWithoutTeamInput'] | null // PlayerCreateNestedManyWithoutTeamInput
-    slug: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamCreateWithoutColorSchemeInput: {
-    // input type
-    abbreviation: string // String!
-    city: string // String!
-    coaches?: NexusGenInputs['CoachCreateNestedManyWithoutTeamInput'] | null // CoachCreateNestedManyWithoutTeamInput
     conference: string // String!
     createdAt?: NexusGenScalars['DateTime'] | null // DateTime
     division: string // String!
@@ -2575,286 +1150,6 @@ export interface NexusGenInputs {
     winPercentage?: NexusGenEnums['SortOrder'] | null // SortOrder
     wins?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
-  TeamRelationFilter: {
-    // input type
-    is?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
-    isNot?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
-  }
-  TeamScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['TeamScalarWhereWithAggregatesInput'] | null> | null // [TeamScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['TeamScalarWhereWithAggregatesInput'] | null> | null // [TeamScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['TeamScalarWhereWithAggregatesInput'] | null> | null // [TeamScalarWhereWithAggregatesInput]
-    abbreviation?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    city?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    colorSchemeId?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    conference?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    division?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    established?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    handle?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    logoId?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    losses?: NexusGenInputs['IntNullableWithAggregatesFilter'] | null // IntNullableWithAggregatesFilter
-    name?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    slug?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    winPercentage?: NexusGenInputs['FloatNullableWithAggregatesFilter'] | null // FloatNullableWithAggregatesFilter
-    wins?: NexusGenInputs['IntNullableWithAggregatesFilter'] | null // IntNullableWithAggregatesFilter
-  }
-  TeamUncheckedCreateInput: {
-    // input type
-    abbreviation: string // String!
-    city: string // String!
-    coaches?: NexusGenInputs['CoachUncheckedCreateNestedManyWithoutTeamInput'] | null // CoachUncheckedCreateNestedManyWithoutTeamInput
-    colorSchemeId?: string | null // String
-    conference: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division: string // String!
-    established: string // String!
-    handle: string // String!
-    id: string // String!
-    logoId?: string | null // String
-    losses?: number | null // Int
-    name: string // String!
-    players?: NexusGenInputs['PlayerUncheckedCreateNestedManyWithoutTeamInput'] | null // PlayerUncheckedCreateNestedManyWithoutTeamInput
-    slug: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamUncheckedCreateNestedOneWithoutColorSchemeInput: {
-    // input type
-    connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutColorSchemeInput'] | null // TeamCreateOrConnectWithoutColorSchemeInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutColorSchemeInput'] | null // TeamUncheckedCreateWithoutColorSchemeInput
-  }
-  TeamUncheckedCreateNestedOneWithoutLogoInput: {
-    // input type
-    connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutLogoInput'] | null // TeamCreateOrConnectWithoutLogoInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutLogoInput'] | null // TeamUncheckedCreateWithoutLogoInput
-  }
-  TeamUncheckedCreateWithoutCoachesInput: {
-    // input type
-    abbreviation: string // String!
-    city: string // String!
-    colorSchemeId?: string | null // String
-    conference: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division: string // String!
-    established: string // String!
-    handle: string // String!
-    id: string // String!
-    logoId?: string | null // String
-    losses?: number | null // Int
-    name: string // String!
-    players?: NexusGenInputs['PlayerUncheckedCreateNestedManyWithoutTeamInput'] | null // PlayerUncheckedCreateNestedManyWithoutTeamInput
-    slug: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamUncheckedCreateWithoutColorSchemeInput: {
-    // input type
-    abbreviation: string // String!
-    city: string // String!
-    coaches?: NexusGenInputs['CoachUncheckedCreateNestedManyWithoutTeamInput'] | null // CoachUncheckedCreateNestedManyWithoutTeamInput
-    conference: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division: string // String!
-    established: string // String!
-    handle: string // String!
-    id: string // String!
-    logoId?: string | null // String
-    losses?: number | null // Int
-    name: string // String!
-    players?: NexusGenInputs['PlayerUncheckedCreateNestedManyWithoutTeamInput'] | null // PlayerUncheckedCreateNestedManyWithoutTeamInput
-    slug: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamUncheckedCreateWithoutLogoInput: {
-    // input type
-    abbreviation: string // String!
-    city: string // String!
-    coaches?: NexusGenInputs['CoachUncheckedCreateNestedManyWithoutTeamInput'] | null // CoachUncheckedCreateNestedManyWithoutTeamInput
-    colorSchemeId?: string | null // String
-    conference: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division: string // String!
-    established: string // String!
-    handle: string // String!
-    id: string // String!
-    losses?: number | null // Int
-    name: string // String!
-    players?: NexusGenInputs['PlayerUncheckedCreateNestedManyWithoutTeamInput'] | null // PlayerUncheckedCreateNestedManyWithoutTeamInput
-    slug: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamUncheckedCreateWithoutPlayersInput: {
-    // input type
-    abbreviation: string // String!
-    city: string // String!
-    coaches?: NexusGenInputs['CoachUncheckedCreateNestedManyWithoutTeamInput'] | null // CoachUncheckedCreateNestedManyWithoutTeamInput
-    colorSchemeId?: string | null // String
-    conference: string // String!
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division: string // String!
-    established: string // String!
-    handle: string // String!
-    id: string // String!
-    logoId?: string | null // String
-    losses?: number | null // Int
-    name: string // String!
-    slug: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamUncheckedUpdateInput: {
-    // input type
-    abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    coaches?: NexusGenInputs['CoachUncheckedUpdateManyWithoutTeamInput'] | null // CoachUncheckedUpdateManyWithoutTeamInput
-    colorSchemeId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    established?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    logoId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    losses?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    players?: NexusGenInputs['PlayerUncheckedUpdateManyWithoutTeamInput'] | null // PlayerUncheckedUpdateManyWithoutTeamInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
-    wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-  }
-  TeamUncheckedUpdateManyInput: {
-    // input type
-    abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    colorSchemeId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    established?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    logoId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    losses?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
-    wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-  }
-  TeamUncheckedUpdateOneWithoutColorSchemeInput: {
-    // input type
-    connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutColorSchemeInput'] | null // TeamCreateOrConnectWithoutColorSchemeInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutColorSchemeInput'] | null // TeamUncheckedCreateWithoutColorSchemeInput
-    delete?: boolean | null // Boolean
-    disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['TeamUncheckedUpdateWithoutColorSchemeInput'] | null // TeamUncheckedUpdateWithoutColorSchemeInput
-    upsert?: NexusGenInputs['TeamUpsertWithoutColorSchemeInput'] | null // TeamUpsertWithoutColorSchemeInput
-  }
-  TeamUncheckedUpdateOneWithoutLogoInput: {
-    // input type
-    connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutLogoInput'] | null // TeamCreateOrConnectWithoutLogoInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutLogoInput'] | null // TeamUncheckedCreateWithoutLogoInput
-    delete?: boolean | null // Boolean
-    disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['TeamUncheckedUpdateWithoutLogoInput'] | null // TeamUncheckedUpdateWithoutLogoInput
-    upsert?: NexusGenInputs['TeamUpsertWithoutLogoInput'] | null // TeamUpsertWithoutLogoInput
-  }
-  TeamUncheckedUpdateWithoutCoachesInput: {
-    // input type
-    abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    colorSchemeId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    established?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    logoId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    losses?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    players?: NexusGenInputs['PlayerUncheckedUpdateManyWithoutTeamInput'] | null // PlayerUncheckedUpdateManyWithoutTeamInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
-    wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-  }
-  TeamUncheckedUpdateWithoutColorSchemeInput: {
-    // input type
-    abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    coaches?: NexusGenInputs['CoachUncheckedUpdateManyWithoutTeamInput'] | null // CoachUncheckedUpdateManyWithoutTeamInput
-    conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    established?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    logoId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    losses?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    players?: NexusGenInputs['PlayerUncheckedUpdateManyWithoutTeamInput'] | null // PlayerUncheckedUpdateManyWithoutTeamInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
-    wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-  }
-  TeamUncheckedUpdateWithoutLogoInput: {
-    // input type
-    abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    coaches?: NexusGenInputs['CoachUncheckedUpdateManyWithoutTeamInput'] | null // CoachUncheckedUpdateManyWithoutTeamInput
-    colorSchemeId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    established?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    losses?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    players?: NexusGenInputs['PlayerUncheckedUpdateManyWithoutTeamInput'] | null // PlayerUncheckedUpdateManyWithoutTeamInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
-    wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-  }
-  TeamUncheckedUpdateWithoutPlayersInput: {
-    // input type
-    abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    coaches?: NexusGenInputs['CoachUncheckedUpdateManyWithoutTeamInput'] | null // CoachUncheckedUpdateManyWithoutTeamInput
-    colorSchemeId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    established?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    logoId?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    losses?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
-    wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-  }
   TeamUpdateInput: {
     // input type
     abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
@@ -2876,61 +1171,34 @@ export interface NexusGenInputs {
     winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
     wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
   }
-  TeamUpdateManyMutationInput: {
-    // input type
-    abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    established?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    losses?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
-    wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-  }
   TeamUpdateOneWithoutCoachesInput: {
     // input type
     connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
     connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutCoachesInput'] | null // TeamCreateOrConnectWithoutCoachesInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutCoachesInput'] | null // TeamUncheckedCreateWithoutCoachesInput
+    create?: NexusGenInputs['TeamCreateWithoutCoachesInput'] | null // TeamCreateWithoutCoachesInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['TeamUncheckedUpdateWithoutCoachesInput'] | null // TeamUncheckedUpdateWithoutCoachesInput
+    update?: NexusGenInputs['TeamUpdateWithoutCoachesInput'] | null // TeamUpdateWithoutCoachesInput
     upsert?: NexusGenInputs['TeamUpsertWithoutCoachesInput'] | null // TeamUpsertWithoutCoachesInput
-  }
-  TeamUpdateOneWithoutColorSchemeInput: {
-    // input type
-    connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutColorSchemeInput'] | null // TeamCreateOrConnectWithoutColorSchemeInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutColorSchemeInput'] | null // TeamUncheckedCreateWithoutColorSchemeInput
-    delete?: boolean | null // Boolean
-    disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['TeamUncheckedUpdateWithoutColorSchemeInput'] | null // TeamUncheckedUpdateWithoutColorSchemeInput
-    upsert?: NexusGenInputs['TeamUpsertWithoutColorSchemeInput'] | null // TeamUpsertWithoutColorSchemeInput
   }
   TeamUpdateOneWithoutLogoInput: {
     // input type
     connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
     connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutLogoInput'] | null // TeamCreateOrConnectWithoutLogoInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutLogoInput'] | null // TeamUncheckedCreateWithoutLogoInput
+    create?: NexusGenInputs['TeamCreateWithoutLogoInput'] | null // TeamCreateWithoutLogoInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['TeamUncheckedUpdateWithoutLogoInput'] | null // TeamUncheckedUpdateWithoutLogoInput
+    update?: NexusGenInputs['TeamUpdateWithoutLogoInput'] | null // TeamUpdateWithoutLogoInput
     upsert?: NexusGenInputs['TeamUpsertWithoutLogoInput'] | null // TeamUpsertWithoutLogoInput
   }
   TeamUpdateOneWithoutPlayersInput: {
     // input type
     connect?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
     connectOrCreate?: NexusGenInputs['TeamCreateOrConnectWithoutPlayersInput'] | null // TeamCreateOrConnectWithoutPlayersInput
-    create?: NexusGenInputs['TeamUncheckedCreateWithoutPlayersInput'] | null // TeamUncheckedCreateWithoutPlayersInput
+    create?: NexusGenInputs['TeamCreateWithoutPlayersInput'] | null // TeamCreateWithoutPlayersInput
     delete?: boolean | null // Boolean
     disconnect?: boolean | null // Boolean
-    update?: NexusGenInputs['TeamUncheckedUpdateWithoutPlayersInput'] | null // TeamUncheckedUpdateWithoutPlayersInput
+    update?: NexusGenInputs['TeamUpdateWithoutPlayersInput'] | null // TeamUpdateWithoutPlayersInput
     upsert?: NexusGenInputs['TeamUpsertWithoutPlayersInput'] | null // TeamUpsertWithoutPlayersInput
   }
   TeamUpdateWithoutCoachesInput: {
@@ -2938,26 +1206,6 @@ export interface NexusGenInputs {
     abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
     city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
     colorScheme?: NexusGenInputs['ColorSchemeUpdateOneWithoutTeamInput'] | null // ColorSchemeUpdateOneWithoutTeamInput
-    conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    established?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    handle?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    logo?: NexusGenInputs['ImageUpdateOneWithoutTeamInput'] | null // ImageUpdateOneWithoutTeamInput
-    losses?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    players?: NexusGenInputs['PlayerUpdateManyWithoutTeamInput'] | null // PlayerUpdateManyWithoutTeamInput
-    slug?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    winPercentage?: NexusGenInputs['NullableFloatFieldUpdateOperationsInput'] | null // NullableFloatFieldUpdateOperationsInput
-    wins?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null // NullableIntFieldUpdateOperationsInput
-  }
-  TeamUpdateWithoutColorSchemeInput: {
-    // input type
-    abbreviation?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    city?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    coaches?: NexusGenInputs['CoachUpdateManyWithoutTeamInput'] | null // CoachUpdateManyWithoutTeamInput
     conference?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
     division?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
@@ -3015,29 +1263,24 @@ export interface NexusGenInputs {
   }
   TeamUpsertWithoutCoachesInput: {
     // input type
-    create: NexusGenInputs['TeamUncheckedCreateWithoutCoachesInput'] // TeamUncheckedCreateWithoutCoachesInput!
-    update: NexusGenInputs['TeamUncheckedUpdateWithoutCoachesInput'] // TeamUncheckedUpdateWithoutCoachesInput!
-  }
-  TeamUpsertWithoutColorSchemeInput: {
-    // input type
-    create: NexusGenInputs['TeamUncheckedCreateWithoutColorSchemeInput'] // TeamUncheckedCreateWithoutColorSchemeInput!
-    update: NexusGenInputs['TeamUncheckedUpdateWithoutColorSchemeInput'] // TeamUncheckedUpdateWithoutColorSchemeInput!
+    create: NexusGenInputs['TeamCreateWithoutCoachesInput'] // TeamCreateWithoutCoachesInput!
+    update: NexusGenInputs['TeamUpdateWithoutCoachesInput'] // TeamUpdateWithoutCoachesInput!
   }
   TeamUpsertWithoutLogoInput: {
     // input type
-    create: NexusGenInputs['TeamUncheckedCreateWithoutLogoInput'] // TeamUncheckedCreateWithoutLogoInput!
-    update: NexusGenInputs['TeamUncheckedUpdateWithoutLogoInput'] // TeamUncheckedUpdateWithoutLogoInput!
+    create: NexusGenInputs['TeamCreateWithoutLogoInput'] // TeamCreateWithoutLogoInput!
+    update: NexusGenInputs['TeamUpdateWithoutLogoInput'] // TeamUpdateWithoutLogoInput!
   }
   TeamUpsertWithoutPlayersInput: {
     // input type
-    create: NexusGenInputs['TeamUncheckedCreateWithoutPlayersInput'] // TeamUncheckedCreateWithoutPlayersInput!
-    update: NexusGenInputs['TeamUncheckedUpdateWithoutPlayersInput'] // TeamUncheckedUpdateWithoutPlayersInput!
+    create: NexusGenInputs['TeamCreateWithoutPlayersInput'] // TeamCreateWithoutPlayersInput!
+    update: NexusGenInputs['TeamUpdateWithoutPlayersInput'] // TeamUpdateWithoutPlayersInput!
   }
   TeamWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['TeamWhereInput'] | null> | null // [TeamWhereInput]
-    NOT?: Array<NexusGenInputs['TeamWhereInput'] | null> | null // [TeamWhereInput]
-    OR?: Array<NexusGenInputs['TeamWhereInput'] | null> | null // [TeamWhereInput]
+    AND?: NexusGenInputs['TeamWhereInput'][] | null // [TeamWhereInput!]
+    NOT?: NexusGenInputs['TeamWhereInput'][] | null // [TeamWhereInput!]
+    OR?: NexusGenInputs['TeamWhereInput'][] | null // [TeamWhereInput!]
     abbreviation?: NexusGenInputs['StringFilter'] | null // StringFilter
     city?: NexusGenInputs['StringFilter'] | null // StringFilter
     coaches?: NexusGenInputs['CoachListRelationFilter'] | null // CoachListRelationFilter
@@ -3067,92 +1310,6 @@ export interface NexusGenInputs {
     name?: string | null // String
     slug?: string | null // String
   }
-  UserCreateInput: {
-    // input type
-    accounts?: NexusGenInputs['AccountCreateNestedManyWithoutUserInput'] | null // AccountCreateNestedManyWithoutUserInput
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    sessions?: NexusGenInputs['SessionCreateNestedManyWithoutUserInput'] | null // SessionCreateNestedManyWithoutUserInput
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  UserCreateManyInput: {
-    // input type
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  UserCreateNestedOneWithoutAccountsInput: {
-    // input type
-    connect?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['UserCreateOrConnectWithoutAccountsInput'] | null // UserCreateOrConnectWithoutAccountsInput
-    create?: NexusGenInputs['UserUncheckedCreateWithoutAccountsInput'] | null // UserUncheckedCreateWithoutAccountsInput
-  }
-  UserCreateNestedOneWithoutSessionsInput: {
-    // input type
-    connect?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['UserCreateOrConnectWithoutSessionsInput'] | null // UserCreateOrConnectWithoutSessionsInput
-    create?: NexusGenInputs['UserUncheckedCreateWithoutSessionsInput'] | null // UserUncheckedCreateWithoutSessionsInput
-  }
-  UserCreateOrConnectWithoutAccountsInput: {
-    // input type
-    create: NexusGenInputs['UserUncheckedCreateWithoutAccountsInput'] // UserUncheckedCreateWithoutAccountsInput!
-    where: NexusGenInputs['UserWhereUniqueInput'] // UserWhereUniqueInput!
-  }
-  UserCreateOrConnectWithoutSessionsInput: {
-    // input type
-    create: NexusGenInputs['UserUncheckedCreateWithoutSessionsInput'] // UserUncheckedCreateWithoutSessionsInput!
-    where: NexusGenInputs['UserWhereUniqueInput'] // UserWhereUniqueInput!
-  }
-  UserCreateWithoutAccountsInput: {
-    // input type
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    sessions?: NexusGenInputs['SessionCreateNestedManyWithoutUserInput'] | null // SessionCreateNestedManyWithoutUserInput
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  UserCreateWithoutSessionsInput: {
-    // input type
-    accounts?: NexusGenInputs['AccountCreateNestedManyWithoutUserInput'] | null // AccountCreateNestedManyWithoutUserInput
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
   UserOrderByInput: {
     // input type
     apple?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -3168,237 +1325,11 @@ export interface NexusGenInputs {
     twitter?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
-  UserRelationFilter: {
-    // input type
-    is?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
-    isNot?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
-  }
-  UserScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['UserScalarWhereWithAggregatesInput'] | null> | null // [UserScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['UserScalarWhereWithAggregatesInput'] | null> | null // [UserScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['UserScalarWhereWithAggregatesInput'] | null> | null // [UserScalarWhereWithAggregatesInput]
-    apple?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    email?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    emailVerified?: NexusGenInputs['DateTimeNullableWithAggregatesFilter'] | null // DateTimeNullableWithAggregatesFilter
-    facebook?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    github?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    google?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    image?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    name?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    twitter?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null // StringNullableWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-  }
-  UserUncheckedCreateInput: {
-    // input type
-    accounts?: NexusGenInputs['AccountUncheckedCreateNestedManyWithoutUserInput'] | null // AccountUncheckedCreateNestedManyWithoutUserInput
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    sessions?: NexusGenInputs['SessionUncheckedCreateNestedManyWithoutUserInput'] | null // SessionUncheckedCreateNestedManyWithoutUserInput
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  UserUncheckedCreateWithoutAccountsInput: {
-    // input type
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    sessions?: NexusGenInputs['SessionUncheckedCreateNestedManyWithoutUserInput'] | null // SessionUncheckedCreateNestedManyWithoutUserInput
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  UserUncheckedCreateWithoutSessionsInput: {
-    // input type
-    accounts?: NexusGenInputs['AccountUncheckedCreateNestedManyWithoutUserInput'] | null // AccountUncheckedCreateNestedManyWithoutUserInput
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  UserUncheckedUpdateInput: {
-    // input type
-    accounts?: NexusGenInputs['AccountUncheckedUpdateManyWithoutUserInput'] | null // AccountUncheckedUpdateManyWithoutUserInput
-    apple?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    emailVerified?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    facebook?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    github?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    google?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    sessions?: NexusGenInputs['SessionUncheckedUpdateManyWithoutUserInput'] | null // SessionUncheckedUpdateManyWithoutUserInput
-    twitter?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  UserUncheckedUpdateManyInput: {
-    // input type
-    apple?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    emailVerified?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    facebook?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    github?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    google?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    twitter?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  UserUncheckedUpdateWithoutAccountsInput: {
-    // input type
-    apple?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    emailVerified?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    facebook?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    github?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    google?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    sessions?: NexusGenInputs['SessionUncheckedUpdateManyWithoutUserInput'] | null // SessionUncheckedUpdateManyWithoutUserInput
-    twitter?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  UserUncheckedUpdateWithoutSessionsInput: {
-    // input type
-    accounts?: NexusGenInputs['AccountUncheckedUpdateManyWithoutUserInput'] | null // AccountUncheckedUpdateManyWithoutUserInput
-    apple?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    emailVerified?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    facebook?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    github?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    google?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    twitter?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  UserUpdateInput: {
-    // input type
-    accounts?: NexusGenInputs['AccountUpdateManyWithoutUserInput'] | null // AccountUpdateManyWithoutUserInput
-    apple?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    emailVerified?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    facebook?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    github?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    google?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    sessions?: NexusGenInputs['SessionUpdateManyWithoutUserInput'] | null // SessionUpdateManyWithoutUserInput
-    twitter?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  UserUpdateManyMutationInput: {
-    // input type
-    apple?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    emailVerified?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    facebook?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    github?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    google?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    twitter?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  UserUpdateOneRequiredWithoutAccountsInput: {
-    // input type
-    connect?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['UserCreateOrConnectWithoutAccountsInput'] | null // UserCreateOrConnectWithoutAccountsInput
-    create?: NexusGenInputs['UserUncheckedCreateWithoutAccountsInput'] | null // UserUncheckedCreateWithoutAccountsInput
-    update?: NexusGenInputs['UserUncheckedUpdateWithoutAccountsInput'] | null // UserUncheckedUpdateWithoutAccountsInput
-    upsert?: NexusGenInputs['UserUpsertWithoutAccountsInput'] | null // UserUpsertWithoutAccountsInput
-  }
-  UserUpdateOneRequiredWithoutSessionsInput: {
-    // input type
-    connect?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['UserCreateOrConnectWithoutSessionsInput'] | null // UserCreateOrConnectWithoutSessionsInput
-    create?: NexusGenInputs['UserUncheckedCreateWithoutSessionsInput'] | null // UserUncheckedCreateWithoutSessionsInput
-    update?: NexusGenInputs['UserUncheckedUpdateWithoutSessionsInput'] | null // UserUncheckedUpdateWithoutSessionsInput
-    upsert?: NexusGenInputs['UserUpsertWithoutSessionsInput'] | null // UserUpsertWithoutSessionsInput
-  }
-  UserUpdateWithoutAccountsInput: {
-    // input type
-    apple?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    emailVerified?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    facebook?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    github?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    google?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    sessions?: NexusGenInputs['SessionUpdateManyWithoutUserInput'] | null // SessionUpdateManyWithoutUserInput
-    twitter?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  UserUpdateWithoutSessionsInput: {
-    // input type
-    accounts?: NexusGenInputs['AccountUpdateManyWithoutUserInput'] | null // AccountUpdateManyWithoutUserInput
-    apple?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    emailVerified?: NexusGenInputs['NullableDateTimeFieldUpdateOperationsInput'] | null // NullableDateTimeFieldUpdateOperationsInput
-    facebook?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    github?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    google?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    twitter?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null // NullableStringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  UserUpsertWithoutAccountsInput: {
-    // input type
-    create: NexusGenInputs['UserUncheckedCreateWithoutAccountsInput'] // UserUncheckedCreateWithoutAccountsInput!
-    update: NexusGenInputs['UserUncheckedUpdateWithoutAccountsInput'] // UserUncheckedUpdateWithoutAccountsInput!
-  }
-  UserUpsertWithoutSessionsInput: {
-    // input type
-    create: NexusGenInputs['UserUncheckedCreateWithoutSessionsInput'] // UserUncheckedCreateWithoutSessionsInput!
-    update: NexusGenInputs['UserUncheckedUpdateWithoutSessionsInput'] // UserUncheckedUpdateWithoutSessionsInput!
-  }
   UserWhereInput: {
     // input type
-    AND?: Array<NexusGenInputs['UserWhereInput'] | null> | null // [UserWhereInput]
-    NOT?: Array<NexusGenInputs['UserWhereInput'] | null> | null // [UserWhereInput]
-    OR?: Array<NexusGenInputs['UserWhereInput'] | null> | null // [UserWhereInput]
+    AND?: NexusGenInputs['UserWhereInput'][] | null // [UserWhereInput!]
+    NOT?: NexusGenInputs['UserWhereInput'][] | null // [UserWhereInput!]
+    OR?: NexusGenInputs['UserWhereInput'][] | null // [UserWhereInput!]
     accounts?: NexusGenInputs['AccountListRelationFilter'] | null // AccountListRelationFilter
     apple?: NexusGenInputs['StringNullableFilter'] | null // StringNullableFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
@@ -3419,202 +1350,12 @@ export interface NexusGenInputs {
     email?: string | null // String
     id?: string | null // String
   }
-  VerificationRequestCreateInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    identifier: string // String!
-    token: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  VerificationRequestCreateManyInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    identifier: string // String!
-    token: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  VerificationRequestIdentifierTokenCompoundUniqueInput: {
-    // input type
-    identifier: string // String!
-    token: string // String!
-  }
-  VerificationRequestOrderByInput: {
-    // input type
-    createdAt?: NexusGenEnums['SortOrder'] | null // SortOrder
-    expires?: NexusGenEnums['SortOrder'] | null // SortOrder
-    id?: NexusGenEnums['SortOrder'] | null // SortOrder
-    identifier?: NexusGenEnums['SortOrder'] | null // SortOrder
-    token?: NexusGenEnums['SortOrder'] | null // SortOrder
-    updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
-  }
-  VerificationRequestScalarWhereWithAggregatesInput: {
-    // input type
-    AND?: Array<NexusGenInputs['VerificationRequestScalarWhereWithAggregatesInput'] | null> | null // [VerificationRequestScalarWhereWithAggregatesInput]
-    NOT?: Array<NexusGenInputs['VerificationRequestScalarWhereWithAggregatesInput'] | null> | null // [VerificationRequestScalarWhereWithAggregatesInput]
-    OR?: Array<NexusGenInputs['VerificationRequestScalarWhereWithAggregatesInput'] | null> | null // [VerificationRequestScalarWhereWithAggregatesInput]
-    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    expires?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-    id?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    identifier?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    token?: NexusGenInputs['StringWithAggregatesFilter'] | null // StringWithAggregatesFilter
-    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null // DateTimeWithAggregatesFilter
-  }
-  VerificationRequestUncheckedCreateInput: {
-    // input type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id?: string | null // String
-    identifier: string // String!
-    token: string // String!
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  VerificationRequestUncheckedUpdateInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    identifier?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    token?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  VerificationRequestUncheckedUpdateManyInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    identifier?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    token?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  VerificationRequestUpdateInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    identifier?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    token?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  VerificationRequestUpdateManyMutationInput: {
-    // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    expires?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-    id?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    identifier?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    token?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null // StringFieldUpdateOperationsInput
-    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null // DateTimeFieldUpdateOperationsInput
-  }
-  VerificationRequestWhereInput: {
-    // input type
-    AND?: Array<NexusGenInputs['VerificationRequestWhereInput'] | null> | null // [VerificationRequestWhereInput]
-    NOT?: Array<NexusGenInputs['VerificationRequestWhereInput'] | null> | null // [VerificationRequestWhereInput]
-    OR?: Array<NexusGenInputs['VerificationRequestWhereInput'] | null> | null // [VerificationRequestWhereInput]
-    createdAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-    expires?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-    id?: NexusGenInputs['StringFilter'] | null // StringFilter
-    identifier?: NexusGenInputs['StringFilter'] | null // StringFilter
-    token?: NexusGenInputs['StringFilter'] | null // StringFilter
-    updatedAt?: NexusGenInputs['DateTimeFilter'] | null // DateTimeFilter
-  }
-  VerificationRequestWhereUniqueInput: {
-    // input type
-    id?: string | null // String
-    identifier_token?:
-      | NexusGenInputs['VerificationRequestIdentifierTokenCompoundUniqueInput']
-      | null // VerificationRequestIdentifierTokenCompoundUniqueInput
-    token?: string | null // String
-  }
 }
 
 export interface NexusGenEnums {
-  AccountScalarFieldEnum:
-    | 'accessToken'
-    | 'accessTokenExpires'
-    | 'createdAt'
-    | 'id'
-    | 'providerAccountId'
-    | 'providerId'
-    | 'providerType'
-    | 'refreshToken'
-    | 'updatedAt'
-    | 'userId'
-  CoachScalarFieldEnum:
-    | 'createdAt'
-    | 'handle'
-    | 'id'
-    | 'imageId'
-    | 'isAssistant'
-    | 'name'
-    | 'teamId'
-    | 'type'
-    | 'updatedAt'
-  ColorSchemeScalarFieldEnum: 'createdAt' | 'id' | 'primary' | 'secondary' | 'updatedAt'
-  ImageScalarFieldEnum: 'createdAt' | 'id' | 'type' | 'updatedAt' | 'url'
   ImageType: 'HEADSHOT' | 'LOGO'
-  PlayerScalarFieldEnum:
-    | 'createdAt'
-    | 'handle'
-    | 'height'
-    | 'id'
-    | 'imageId'
-    | 'name'
-    | 'number'
-    | 'position'
-    | 'slug'
-    | 'teamId'
-    | 'updatedAt'
-    | 'weight'
   QueryMode: 'default' | 'insensitive'
-  SessionScalarFieldEnum:
-    | 'accessToken'
-    | 'createdAt'
-    | 'expires'
-    | 'id'
-    | 'sessionToken'
-    | 'updatedAt'
-    | 'userId'
   SortOrder: 'asc' | 'desc'
-  TeamScalarFieldEnum:
-    | 'abbreviation'
-    | 'city'
-    | 'colorSchemeId'
-    | 'conference'
-    | 'createdAt'
-    | 'division'
-    | 'established'
-    | 'handle'
-    | 'id'
-    | 'logoId'
-    | 'losses'
-    | 'name'
-    | 'slug'
-    | 'updatedAt'
-    | 'winPercentage'
-    | 'wins'
-  UserScalarFieldEnum:
-    | 'apple'
-    | 'createdAt'
-    | 'email'
-    | 'emailVerified'
-    | 'facebook'
-    | 'github'
-    | 'google'
-    | 'id'
-    | 'image'
-    | 'name'
-    | 'twitter'
-    | 'updatedAt'
-  VerificationRequestScalarFieldEnum:
-    | 'createdAt'
-    | 'expires'
-    | 'id'
-    | 'identifier'
-    | 'token'
-    | 'updatedAt'
 }
 
 export interface NexusGenScalars {
@@ -3624,6 +1365,7 @@ export interface NexusGenScalars {
   Boolean: boolean
   ID: string
   BigInt: any
+  Bytes: any
   DateTime: any
   Decimal: any
   Json: any
@@ -3635,7 +1377,7 @@ export interface NexusGenObjects {
     accessToken?: string | null // String
     accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
     createdAt: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: string // ID!
     providerAccountId: string // String!
     providerId: string // String!
     providerType: string // String!
@@ -3643,140 +1385,11 @@ export interface NexusGenObjects {
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
     userId: string // String!
   }
-  AccountCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    accessToken: number // Int!
-    accessTokenExpires: number // Int!
-    createdAt: number // Int!
-    id: number // Int!
-    providerAccountId: number // Int!
-    providerId: number // Int!
-    providerType: number // Int!
-    refreshToken: number // Int!
-    updatedAt: number // Int!
-    userId: number // Int!
-  }
-  AccountMaxAggregateOutputType: {
-    // root type
-    accessToken?: string | null // String
-    accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    providerAccountId?: string | null // String
-    providerId?: string | null // String
-    providerType?: string | null // String
-    refreshToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    userId?: string | null // String
-  }
-  AccountMinAggregateOutputType: {
-    // root type
-    accessToken?: string | null // String
-    accessTokenExpires?: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    providerAccountId?: string | null // String
-    providerId?: string | null // String
-    providerType?: string | null // String
-    refreshToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    userId?: string | null // String
-  }
-  AggregateAccount: {
-    // root type
-    _count?: NexusGenRootTypes['AccountCountAggregateOutputType'] | null // AccountCountAggregateOutputType
-    _max?: NexusGenRootTypes['AccountMaxAggregateOutputType'] | null // AccountMaxAggregateOutputType
-    _min?: NexusGenRootTypes['AccountMinAggregateOutputType'] | null // AccountMinAggregateOutputType
-    count?: NexusGenRootTypes['AccountCountAggregateOutputType'] | null // AccountCountAggregateOutputType
-    max?: NexusGenRootTypes['AccountMaxAggregateOutputType'] | null // AccountMaxAggregateOutputType
-    min?: NexusGenRootTypes['AccountMinAggregateOutputType'] | null // AccountMinAggregateOutputType
-  }
-  AggregateCoach: {
-    // root type
-    _count?: NexusGenRootTypes['CoachCountAggregateOutputType'] | null // CoachCountAggregateOutputType
-    _max?: NexusGenRootTypes['CoachMaxAggregateOutputType'] | null // CoachMaxAggregateOutputType
-    _min?: NexusGenRootTypes['CoachMinAggregateOutputType'] | null // CoachMinAggregateOutputType
-    count?: NexusGenRootTypes['CoachCountAggregateOutputType'] | null // CoachCountAggregateOutputType
-    max?: NexusGenRootTypes['CoachMaxAggregateOutputType'] | null // CoachMaxAggregateOutputType
-    min?: NexusGenRootTypes['CoachMinAggregateOutputType'] | null // CoachMinAggregateOutputType
-  }
-  AggregateColorScheme: {
-    // root type
-    _count?: NexusGenRootTypes['ColorSchemeCountAggregateOutputType'] | null // ColorSchemeCountAggregateOutputType
-    _max?: NexusGenRootTypes['ColorSchemeMaxAggregateOutputType'] | null // ColorSchemeMaxAggregateOutputType
-    _min?: NexusGenRootTypes['ColorSchemeMinAggregateOutputType'] | null // ColorSchemeMinAggregateOutputType
-    count?: NexusGenRootTypes['ColorSchemeCountAggregateOutputType'] | null // ColorSchemeCountAggregateOutputType
-    max?: NexusGenRootTypes['ColorSchemeMaxAggregateOutputType'] | null // ColorSchemeMaxAggregateOutputType
-    min?: NexusGenRootTypes['ColorSchemeMinAggregateOutputType'] | null // ColorSchemeMinAggregateOutputType
-  }
-  AggregateImage: {
-    // root type
-    _count?: NexusGenRootTypes['ImageCountAggregateOutputType'] | null // ImageCountAggregateOutputType
-    _max?: NexusGenRootTypes['ImageMaxAggregateOutputType'] | null // ImageMaxAggregateOutputType
-    _min?: NexusGenRootTypes['ImageMinAggregateOutputType'] | null // ImageMinAggregateOutputType
-    count?: NexusGenRootTypes['ImageCountAggregateOutputType'] | null // ImageCountAggregateOutputType
-    max?: NexusGenRootTypes['ImageMaxAggregateOutputType'] | null // ImageMaxAggregateOutputType
-    min?: NexusGenRootTypes['ImageMinAggregateOutputType'] | null // ImageMinAggregateOutputType
-  }
-  AggregatePlayer: {
-    // root type
-    _count?: NexusGenRootTypes['PlayerCountAggregateOutputType'] | null // PlayerCountAggregateOutputType
-    _max?: NexusGenRootTypes['PlayerMaxAggregateOutputType'] | null // PlayerMaxAggregateOutputType
-    _min?: NexusGenRootTypes['PlayerMinAggregateOutputType'] | null // PlayerMinAggregateOutputType
-    count?: NexusGenRootTypes['PlayerCountAggregateOutputType'] | null // PlayerCountAggregateOutputType
-    max?: NexusGenRootTypes['PlayerMaxAggregateOutputType'] | null // PlayerMaxAggregateOutputType
-    min?: NexusGenRootTypes['PlayerMinAggregateOutputType'] | null // PlayerMinAggregateOutputType
-  }
-  AggregateSession: {
-    // root type
-    _count?: NexusGenRootTypes['SessionCountAggregateOutputType'] | null // SessionCountAggregateOutputType
-    _max?: NexusGenRootTypes['SessionMaxAggregateOutputType'] | null // SessionMaxAggregateOutputType
-    _min?: NexusGenRootTypes['SessionMinAggregateOutputType'] | null // SessionMinAggregateOutputType
-    count?: NexusGenRootTypes['SessionCountAggregateOutputType'] | null // SessionCountAggregateOutputType
-    max?: NexusGenRootTypes['SessionMaxAggregateOutputType'] | null // SessionMaxAggregateOutputType
-    min?: NexusGenRootTypes['SessionMinAggregateOutputType'] | null // SessionMinAggregateOutputType
-  }
-  AggregateTeam: {
-    // root type
-    _avg?: NexusGenRootTypes['TeamAvgAggregateOutputType'] | null // TeamAvgAggregateOutputType
-    _count?: NexusGenRootTypes['TeamCountAggregateOutputType'] | null // TeamCountAggregateOutputType
-    _max?: NexusGenRootTypes['TeamMaxAggregateOutputType'] | null // TeamMaxAggregateOutputType
-    _min?: NexusGenRootTypes['TeamMinAggregateOutputType'] | null // TeamMinAggregateOutputType
-    _sum?: NexusGenRootTypes['TeamSumAggregateOutputType'] | null // TeamSumAggregateOutputType
-    avg?: NexusGenRootTypes['TeamAvgAggregateOutputType'] | null // TeamAvgAggregateOutputType
-    count?: NexusGenRootTypes['TeamCountAggregateOutputType'] | null // TeamCountAggregateOutputType
-    max?: NexusGenRootTypes['TeamMaxAggregateOutputType'] | null // TeamMaxAggregateOutputType
-    min?: NexusGenRootTypes['TeamMinAggregateOutputType'] | null // TeamMinAggregateOutputType
-    sum?: NexusGenRootTypes['TeamSumAggregateOutputType'] | null // TeamSumAggregateOutputType
-  }
-  AggregateUser: {
-    // root type
-    _count?: NexusGenRootTypes['UserCountAggregateOutputType'] | null // UserCountAggregateOutputType
-    _max?: NexusGenRootTypes['UserMaxAggregateOutputType'] | null // UserMaxAggregateOutputType
-    _min?: NexusGenRootTypes['UserMinAggregateOutputType'] | null // UserMinAggregateOutputType
-    count?: NexusGenRootTypes['UserCountAggregateOutputType'] | null // UserCountAggregateOutputType
-    max?: NexusGenRootTypes['UserMaxAggregateOutputType'] | null // UserMaxAggregateOutputType
-    min?: NexusGenRootTypes['UserMinAggregateOutputType'] | null // UserMinAggregateOutputType
-  }
-  AggregateVerificationRequest: {
-    // root type
-    _count?: NexusGenRootTypes['VerificationRequestCountAggregateOutputType'] | null // VerificationRequestCountAggregateOutputType
-    _max?: NexusGenRootTypes['VerificationRequestMaxAggregateOutputType'] | null // VerificationRequestMaxAggregateOutputType
-    _min?: NexusGenRootTypes['VerificationRequestMinAggregateOutputType'] | null // VerificationRequestMinAggregateOutputType
-    count?: NexusGenRootTypes['VerificationRequestCountAggregateOutputType'] | null // VerificationRequestCountAggregateOutputType
-    max?: NexusGenRootTypes['VerificationRequestMaxAggregateOutputType'] | null // VerificationRequestMaxAggregateOutputType
-    min?: NexusGenRootTypes['VerificationRequestMinAggregateOutputType'] | null // VerificationRequestMinAggregateOutputType
-  }
-  BatchPayload: {
-    // root type
-    count: number // Int!
-  }
   Coach: {
     // root type
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     handle: string // String!
-    id: string // String!
+    id: string // ID!
     imageId?: string | null // String
     isAssistant?: string | null // String
     name: string // String!
@@ -3784,108 +1397,21 @@ export interface NexusGenObjects {
     type?: string | null // String
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
   }
-  CoachCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    createdAt: number // Int!
-    handle: number // Int!
-    id: number // Int!
-    imageId: number // Int!
-    isAssistant: number // Int!
-    name: number // Int!
-    teamId: number // Int!
-    type: number // Int!
-    updatedAt: number // Int!
-  }
-  CoachMaxAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle?: string | null // String
-    id?: string | null // String
-    imageId?: string | null // String
-    isAssistant?: string | null // String
-    name?: string | null // String
-    teamId?: string | null // String
-    type?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  CoachMinAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle?: string | null // String
-    id?: string | null // String
-    imageId?: string | null // String
-    isAssistant?: string | null // String
-    name?: string | null // String
-    teamId?: string | null // String
-    type?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
   ColorScheme: {
     // root type
     createdAt: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: string // ID!
     primary: string // String!
     secondary: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
   }
-  ColorSchemeCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    createdAt: number // Int!
-    id: number // Int!
-    primary: number // Int!
-    secondary: number // Int!
-    updatedAt: number // Int!
-  }
-  ColorSchemeMaxAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    primary?: string | null // String
-    secondary?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  ColorSchemeMinAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    primary?: string | null // String
-    secondary?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
   Image: {
     // root type
     createdAt: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: string // ID!
     type: NexusGenEnums['ImageType'] // ImageType!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
     url: string // String!
-  }
-  ImageCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    createdAt: number // Int!
-    id: number // Int!
-    type: number // Int!
-    updatedAt: number // Int!
-    url: number // Int!
-  }
-  ImageMaxAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    type?: NexusGenEnums['ImageType'] | null // ImageType
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    url?: string | null // String
-  }
-  ImageMinAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    type?: NexusGenEnums['ImageType'] | null // ImageType
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    url?: string | null // String
   }
   Mutation: {}
   Player: {
@@ -3893,7 +1419,7 @@ export interface NexusGenObjects {
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     handle: string // String!
     height: string // String!
-    id: string // String!
+    id: string // ID!
     imageId?: string | null // String
     name: string // String!
     number?: string | null // String
@@ -3903,180 +1429,31 @@ export interface NexusGenObjects {
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
     weight: string // String!
   }
-  PlayerCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    createdAt: number // Int!
-    handle: number // Int!
-    height: number // Int!
-    id: number // Int!
-    imageId: number // Int!
-    name: number // Int!
-    number: number // Int!
-    position: number // Int!
-    slug: number // Int!
-    teamId: number // Int!
-    updatedAt: number // Int!
-    weight: number // Int!
-  }
-  PlayerMaxAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle?: string | null // String
-    height?: string | null // String
-    id?: string | null // String
-    imageId?: string | null // String
-    name?: string | null // String
-    number?: string | null // String
-    position?: string | null // String
-    slug?: string | null // String
-    teamId?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    weight?: string | null // String
-  }
-  PlayerMinAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    handle?: string | null // String
-    height?: string | null // String
-    id?: string | null // String
-    imageId?: string | null // String
-    name?: string | null // String
-    number?: string | null // String
-    position?: string | null // String
-    slug?: string | null // String
-    teamId?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    weight?: string | null // String
-  }
   Query: {}
   Session: {
     // root type
     accessToken: string // String!
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     expires: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: string // ID!
     sessionToken: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
     userId: string // String!
-  }
-  SessionCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    accessToken: number // Int!
-    createdAt: number // Int!
-    expires: number // Int!
-    id: number // Int!
-    sessionToken: number // Int!
-    updatedAt: number // Int!
-    userId: number // Int!
-  }
-  SessionMaxAggregateOutputType: {
-    // root type
-    accessToken?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    sessionToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    userId?: string | null // String
-  }
-  SessionMinAggregateOutputType: {
-    // root type
-    accessToken?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    sessionToken?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    userId?: string | null // String
   }
   Team: {
     // root type
     abbreviation: string // String!
     city: string // String!
-    colorSchemeId?: string | null // String
     conference: string // String!
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     division: string // String!
     established: string // String!
     handle: string // String!
-    id: string // String!
-    logoId?: string | null // String
+    id: string // ID!
     losses?: number | null // Int
     name: string // String!
     slug: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamAvgAggregateOutputType: {
-    // root type
-    losses?: number | null // Float
-    winPercentage?: number | null // Float
-    wins?: number | null // Float
-  }
-  TeamCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    abbreviation: number // Int!
-    city: number // Int!
-    colorSchemeId: number // Int!
-    conference: number // Int!
-    createdAt: number // Int!
-    division: number // Int!
-    established: number // Int!
-    handle: number // Int!
-    id: number // Int!
-    logoId: number // Int!
-    losses: number // Int!
-    name: number // Int!
-    slug: number // Int!
-    updatedAt: number // Int!
-    winPercentage: number // Int!
-    wins: number // Int!
-  }
-  TeamMaxAggregateOutputType: {
-    // root type
-    abbreviation?: string | null // String
-    city?: string | null // String
-    colorSchemeId?: string | null // String
-    conference?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division?: string | null // String
-    established?: string | null // String
-    handle?: string | null // String
-    id?: string | null // String
-    logoId?: string | null // String
-    losses?: number | null // Int
-    name?: string | null // String
-    slug?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamMinAggregateOutputType: {
-    // root type
-    abbreviation?: string | null // String
-    city?: string | null // String
-    colorSchemeId?: string | null // String
-    conference?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    division?: string | null // String
-    established?: string | null // String
-    handle?: string | null // String
-    id?: string | null // String
-    logoId?: string | null // String
-    losses?: number | null // Int
-    name?: string | null // String
-    slug?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage?: number | null // Float
-    wins?: number | null // Int
-  }
-  TeamSumAggregateOutputType: {
-    // root type
-    losses?: number | null // Int
     winPercentage?: number | null // Float
     wins?: number | null // Int
   }
@@ -4085,98 +1462,14 @@ export interface NexusGenObjects {
     apple?: string | null // String
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
     facebook?: string | null // String
     github?: string | null // String
     google?: string | null // String
-    id: string // String!
+    id: string // ID!
     image?: string | null // String
     name?: string | null // String
     twitter?: string | null // String
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
-  }
-  UserCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    apple: number // Int!
-    createdAt: number // Int!
-    email: number // Int!
-    emailVerified: number // Int!
-    facebook: number // Int!
-    github: number // Int!
-    google: number // Int!
-    id: number // Int!
-    image: number // Int!
-    name: number // Int!
-    twitter: number // Int!
-    updatedAt: number // Int!
-  }
-  UserMaxAggregateOutputType: {
-    // root type
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  UserMinAggregateOutputType: {
-    // root type
-    apple?: string | null // String
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    email?: string | null // String
-    emailVerified?: NexusGenScalars['DateTime'] | null // DateTime
-    facebook?: string | null // String
-    github?: string | null // String
-    google?: string | null // String
-    id?: string | null // String
-    image?: string | null // String
-    name?: string | null // String
-    twitter?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  VerificationRequest: {
-    // root type
-    createdAt: NexusGenScalars['DateTime'] // DateTime!
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
-    identifier: string // String!
-    token: string // String!
-    updatedAt: NexusGenScalars['DateTime'] // DateTime!
-  }
-  VerificationRequestCountAggregateOutputType: {
-    // root type
-    _all: number // Int!
-    createdAt: number // Int!
-    expires: number // Int!
-    id: number // Int!
-    identifier: number // Int!
-    token: number // Int!
-    updatedAt: number // Int!
-  }
-  VerificationRequestMaxAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    identifier?: string | null // String
-    token?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  VerificationRequestMinAggregateOutputType: {
-    // root type
-    createdAt?: NexusGenScalars['DateTime'] | null // DateTime
-    expires?: NexusGenScalars['DateTime'] | null // DateTime
-    id?: string | null // String
-    identifier?: string | null // String
-    token?: string | null // String
-    updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
   }
 }
 
@@ -4194,7 +1487,7 @@ export interface NexusGenFieldTypes {
     accessToken: string | null // String
     accessTokenExpires: NexusGenScalars['DateTime'] | null // DateTime
     createdAt: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: string // ID!
     providerAccountId: string // String!
     providerId: string // String!
     providerType: string // String!
@@ -4203,140 +1496,11 @@ export interface NexusGenFieldTypes {
     user: NexusGenRootTypes['User'] // User!
     userId: string // String!
   }
-  AccountCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    accessToken: number // Int!
-    accessTokenExpires: number // Int!
-    createdAt: number // Int!
-    id: number // Int!
-    providerAccountId: number // Int!
-    providerId: number // Int!
-    providerType: number // Int!
-    refreshToken: number // Int!
-    updatedAt: number // Int!
-    userId: number // Int!
-  }
-  AccountMaxAggregateOutputType: {
-    // field return type
-    accessToken: string | null // String
-    accessTokenExpires: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    providerAccountId: string | null // String
-    providerId: string | null // String
-    providerType: string | null // String
-    refreshToken: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    userId: string | null // String
-  }
-  AccountMinAggregateOutputType: {
-    // field return type
-    accessToken: string | null // String
-    accessTokenExpires: NexusGenScalars['DateTime'] | null // DateTime
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    providerAccountId: string | null // String
-    providerId: string | null // String
-    providerType: string | null // String
-    refreshToken: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    userId: string | null // String
-  }
-  AggregateAccount: {
-    // field return type
-    _count: NexusGenRootTypes['AccountCountAggregateOutputType'] | null // AccountCountAggregateOutputType
-    _max: NexusGenRootTypes['AccountMaxAggregateOutputType'] | null // AccountMaxAggregateOutputType
-    _min: NexusGenRootTypes['AccountMinAggregateOutputType'] | null // AccountMinAggregateOutputType
-    count: NexusGenRootTypes['AccountCountAggregateOutputType'] | null // AccountCountAggregateOutputType
-    max: NexusGenRootTypes['AccountMaxAggregateOutputType'] | null // AccountMaxAggregateOutputType
-    min: NexusGenRootTypes['AccountMinAggregateOutputType'] | null // AccountMinAggregateOutputType
-  }
-  AggregateCoach: {
-    // field return type
-    _count: NexusGenRootTypes['CoachCountAggregateOutputType'] | null // CoachCountAggregateOutputType
-    _max: NexusGenRootTypes['CoachMaxAggregateOutputType'] | null // CoachMaxAggregateOutputType
-    _min: NexusGenRootTypes['CoachMinAggregateOutputType'] | null // CoachMinAggregateOutputType
-    count: NexusGenRootTypes['CoachCountAggregateOutputType'] | null // CoachCountAggregateOutputType
-    max: NexusGenRootTypes['CoachMaxAggregateOutputType'] | null // CoachMaxAggregateOutputType
-    min: NexusGenRootTypes['CoachMinAggregateOutputType'] | null // CoachMinAggregateOutputType
-  }
-  AggregateColorScheme: {
-    // field return type
-    _count: NexusGenRootTypes['ColorSchemeCountAggregateOutputType'] | null // ColorSchemeCountAggregateOutputType
-    _max: NexusGenRootTypes['ColorSchemeMaxAggregateOutputType'] | null // ColorSchemeMaxAggregateOutputType
-    _min: NexusGenRootTypes['ColorSchemeMinAggregateOutputType'] | null // ColorSchemeMinAggregateOutputType
-    count: NexusGenRootTypes['ColorSchemeCountAggregateOutputType'] | null // ColorSchemeCountAggregateOutputType
-    max: NexusGenRootTypes['ColorSchemeMaxAggregateOutputType'] | null // ColorSchemeMaxAggregateOutputType
-    min: NexusGenRootTypes['ColorSchemeMinAggregateOutputType'] | null // ColorSchemeMinAggregateOutputType
-  }
-  AggregateImage: {
-    // field return type
-    _count: NexusGenRootTypes['ImageCountAggregateOutputType'] | null // ImageCountAggregateOutputType
-    _max: NexusGenRootTypes['ImageMaxAggregateOutputType'] | null // ImageMaxAggregateOutputType
-    _min: NexusGenRootTypes['ImageMinAggregateOutputType'] | null // ImageMinAggregateOutputType
-    count: NexusGenRootTypes['ImageCountAggregateOutputType'] | null // ImageCountAggregateOutputType
-    max: NexusGenRootTypes['ImageMaxAggregateOutputType'] | null // ImageMaxAggregateOutputType
-    min: NexusGenRootTypes['ImageMinAggregateOutputType'] | null // ImageMinAggregateOutputType
-  }
-  AggregatePlayer: {
-    // field return type
-    _count: NexusGenRootTypes['PlayerCountAggregateOutputType'] | null // PlayerCountAggregateOutputType
-    _max: NexusGenRootTypes['PlayerMaxAggregateOutputType'] | null // PlayerMaxAggregateOutputType
-    _min: NexusGenRootTypes['PlayerMinAggregateOutputType'] | null // PlayerMinAggregateOutputType
-    count: NexusGenRootTypes['PlayerCountAggregateOutputType'] | null // PlayerCountAggregateOutputType
-    max: NexusGenRootTypes['PlayerMaxAggregateOutputType'] | null // PlayerMaxAggregateOutputType
-    min: NexusGenRootTypes['PlayerMinAggregateOutputType'] | null // PlayerMinAggregateOutputType
-  }
-  AggregateSession: {
-    // field return type
-    _count: NexusGenRootTypes['SessionCountAggregateOutputType'] | null // SessionCountAggregateOutputType
-    _max: NexusGenRootTypes['SessionMaxAggregateOutputType'] | null // SessionMaxAggregateOutputType
-    _min: NexusGenRootTypes['SessionMinAggregateOutputType'] | null // SessionMinAggregateOutputType
-    count: NexusGenRootTypes['SessionCountAggregateOutputType'] | null // SessionCountAggregateOutputType
-    max: NexusGenRootTypes['SessionMaxAggregateOutputType'] | null // SessionMaxAggregateOutputType
-    min: NexusGenRootTypes['SessionMinAggregateOutputType'] | null // SessionMinAggregateOutputType
-  }
-  AggregateTeam: {
-    // field return type
-    _avg: NexusGenRootTypes['TeamAvgAggregateOutputType'] | null // TeamAvgAggregateOutputType
-    _count: NexusGenRootTypes['TeamCountAggregateOutputType'] | null // TeamCountAggregateOutputType
-    _max: NexusGenRootTypes['TeamMaxAggregateOutputType'] | null // TeamMaxAggregateOutputType
-    _min: NexusGenRootTypes['TeamMinAggregateOutputType'] | null // TeamMinAggregateOutputType
-    _sum: NexusGenRootTypes['TeamSumAggregateOutputType'] | null // TeamSumAggregateOutputType
-    avg: NexusGenRootTypes['TeamAvgAggregateOutputType'] | null // TeamAvgAggregateOutputType
-    count: NexusGenRootTypes['TeamCountAggregateOutputType'] | null // TeamCountAggregateOutputType
-    max: NexusGenRootTypes['TeamMaxAggregateOutputType'] | null // TeamMaxAggregateOutputType
-    min: NexusGenRootTypes['TeamMinAggregateOutputType'] | null // TeamMinAggregateOutputType
-    sum: NexusGenRootTypes['TeamSumAggregateOutputType'] | null // TeamSumAggregateOutputType
-  }
-  AggregateUser: {
-    // field return type
-    _count: NexusGenRootTypes['UserCountAggregateOutputType'] | null // UserCountAggregateOutputType
-    _max: NexusGenRootTypes['UserMaxAggregateOutputType'] | null // UserMaxAggregateOutputType
-    _min: NexusGenRootTypes['UserMinAggregateOutputType'] | null // UserMinAggregateOutputType
-    count: NexusGenRootTypes['UserCountAggregateOutputType'] | null // UserCountAggregateOutputType
-    max: NexusGenRootTypes['UserMaxAggregateOutputType'] | null // UserMaxAggregateOutputType
-    min: NexusGenRootTypes['UserMinAggregateOutputType'] | null // UserMinAggregateOutputType
-  }
-  AggregateVerificationRequest: {
-    // field return type
-    _count: NexusGenRootTypes['VerificationRequestCountAggregateOutputType'] | null // VerificationRequestCountAggregateOutputType
-    _max: NexusGenRootTypes['VerificationRequestMaxAggregateOutputType'] | null // VerificationRequestMaxAggregateOutputType
-    _min: NexusGenRootTypes['VerificationRequestMinAggregateOutputType'] | null // VerificationRequestMinAggregateOutputType
-    count: NexusGenRootTypes['VerificationRequestCountAggregateOutputType'] | null // VerificationRequestCountAggregateOutputType
-    max: NexusGenRootTypes['VerificationRequestMaxAggregateOutputType'] | null // VerificationRequestMaxAggregateOutputType
-    min: NexusGenRootTypes['VerificationRequestMinAggregateOutputType'] | null // VerificationRequestMinAggregateOutputType
-  }
-  BatchPayload: {
-    // field return type
-    count: number // Int!
-  }
   Coach: {
     // field return type
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     handle: string // String!
-    id: string // String!
+    id: string // ID!
     image: NexusGenRootTypes['Image'] | null // Image
     imageId: string | null // String
     isAssistant: string | null // String
@@ -4346,176 +1510,37 @@ export interface NexusGenFieldTypes {
     type: string | null // String
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
   }
-  CoachCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    createdAt: number // Int!
-    handle: number // Int!
-    id: number // Int!
-    imageId: number // Int!
-    isAssistant: number // Int!
-    name: number // Int!
-    teamId: number // Int!
-    type: number // Int!
-    updatedAt: number // Int!
-  }
-  CoachMaxAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string | null // String
-    id: string | null // String
-    imageId: string | null // String
-    isAssistant: string | null // String
-    name: string | null // String
-    teamId: string | null // String
-    type: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  CoachMinAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string | null // String
-    id: string | null // String
-    imageId: string | null // String
-    isAssistant: string | null // String
-    name: string | null // String
-    teamId: string | null // String
-    type: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-  }
   ColorScheme: {
     // field return type
     createdAt: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: string // ID!
     primary: string // String!
     secondary: string // String!
     team: NexusGenRootTypes['Team'] | null // Team
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
   }
-  ColorSchemeCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    createdAt: number // Int!
-    id: number // Int!
-    primary: number // Int!
-    secondary: number // Int!
-    updatedAt: number // Int!
-  }
-  ColorSchemeMaxAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    primary: string | null // String
-    secondary: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  ColorSchemeMinAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    primary: string | null // String
-    secondary: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-  }
   Image: {
     // field return type
     coach: NexusGenRootTypes['Coach'] | null // Coach
     createdAt: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: string // ID!
     player: NexusGenRootTypes['Player'] | null // Player
     team: NexusGenRootTypes['Team'] | null // Team
     type: NexusGenEnums['ImageType'] // ImageType!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
     url: string // String!
   }
-  ImageCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    createdAt: number // Int!
-    id: number // Int!
-    type: number // Int!
-    updatedAt: number // Int!
-    url: number // Int!
-  }
-  ImageMaxAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    type: NexusGenEnums['ImageType'] | null // ImageType
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    url: string | null // String
-  }
-  ImageMinAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    type: NexusGenEnums['ImageType'] | null // ImageType
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    url: string | null // String
-  }
   Mutation: {
     // field return type
-    createOneAccount: NexusGenRootTypes['Account'] // Account!
-    createOneCoach: NexusGenRootTypes['Coach'] // Coach!
-    createOneColorScheme: NexusGenRootTypes['ColorScheme'] // ColorScheme!
-    createOneImage: NexusGenRootTypes['Image'] // Image!
-    createOnePlayer: NexusGenRootTypes['Player'] // Player!
-    createOneSession: NexusGenRootTypes['Session'] // Session!
     createOneTeam: NexusGenRootTypes['Team'] // Team!
-    createOneUser: NexusGenRootTypes['User'] // User!
-    createOneVerificationRequest: NexusGenRootTypes['VerificationRequest'] // VerificationRequest!
-    deleteManyAccount: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteManyCoach: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteManyColorScheme: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteManyImage: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteManyPlayer: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteManySession: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteManyTeam: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteManyUser: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteManyVerificationRequest: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    deleteOneAccount: NexusGenRootTypes['Account'] | null // Account
-    deleteOneCoach: NexusGenRootTypes['Coach'] | null // Coach
-    deleteOneColorScheme: NexusGenRootTypes['ColorScheme'] | null // ColorScheme
-    deleteOneImage: NexusGenRootTypes['Image'] | null // Image
-    deleteOnePlayer: NexusGenRootTypes['Player'] | null // Player
-    deleteOneSession: NexusGenRootTypes['Session'] | null // Session
-    deleteOneTeam: NexusGenRootTypes['Team'] | null // Team
-    deleteOneUser: NexusGenRootTypes['User'] | null // User
-    deleteOneVerificationRequest: NexusGenRootTypes['VerificationRequest'] | null // VerificationRequest
-    updateManyAccount: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateManyCoach: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateManyColorScheme: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateManyImage: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateManyPlayer: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateManySession: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateManyTeam: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateManyUser: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateManyVerificationRequest: NexusGenRootTypes['BatchPayload'] // BatchPayload!
-    updateOneAccount: NexusGenRootTypes['Account'] // Account!
-    updateOneCoach: NexusGenRootTypes['Coach'] // Coach!
-    updateOneColorScheme: NexusGenRootTypes['ColorScheme'] // ColorScheme!
-    updateOneImage: NexusGenRootTypes['Image'] // Image!
-    updateOnePlayer: NexusGenRootTypes['Player'] // Player!
-    updateOneSession: NexusGenRootTypes['Session'] // Session!
-    updateOneTeam: NexusGenRootTypes['Team'] // Team!
-    updateOneUser: NexusGenRootTypes['User'] // User!
-    updateOneVerificationRequest: NexusGenRootTypes['VerificationRequest'] // VerificationRequest!
-    upsertOneAccount: NexusGenRootTypes['Account'] // Account!
-    upsertOneCoach: NexusGenRootTypes['Coach'] // Coach!
-    upsertOneColorScheme: NexusGenRootTypes['ColorScheme'] // ColorScheme!
-    upsertOneImage: NexusGenRootTypes['Image'] // Image!
-    upsertOnePlayer: NexusGenRootTypes['Player'] // Player!
-    upsertOneSession: NexusGenRootTypes['Session'] // Session!
-    upsertOneTeam: NexusGenRootTypes['Team'] // Team!
-    upsertOneUser: NexusGenRootTypes['User'] // User!
-    upsertOneVerificationRequest: NexusGenRootTypes['VerificationRequest'] // VerificationRequest!
+    updateOneTeam: NexusGenRootTypes['Team'] | null // Team
   }
   Player: {
     // field return type
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     handle: string // String!
     height: string // String!
-    id: string // String!
+    id: string // ID!
     image: NexusGenRootTypes['Image'] | null // Image
     imageId: string | null // String
     name: string // String!
@@ -4527,141 +1552,35 @@ export interface NexusGenFieldTypes {
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
     weight: string // String!
   }
-  PlayerCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    createdAt: number // Int!
-    handle: number // Int!
-    height: number // Int!
-    id: number // Int!
-    imageId: number // Int!
-    name: number // Int!
-    number: number // Int!
-    position: number // Int!
-    slug: number // Int!
-    teamId: number // Int!
-    updatedAt: number // Int!
-    weight: number // Int!
-  }
-  PlayerMaxAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string | null // String
-    height: string | null // String
-    id: string | null // String
-    imageId: string | null // String
-    name: string | null // String
-    number: string | null // String
-    position: string | null // String
-    slug: string | null // String
-    teamId: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    weight: string | null // String
-  }
-  PlayerMinAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    handle: string | null // String
-    height: string | null // String
-    id: string | null // String
-    imageId: string | null // String
-    name: string | null // String
-    number: string | null // String
-    position: string | null // String
-    slug: string | null // String
-    teamId: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    weight: string | null // String
-  }
   Query: {
     // field return type
-    aggregateAccount: NexusGenRootTypes['AggregateAccount'] | null // AggregateAccount
-    aggregateCoach: NexusGenRootTypes['AggregateCoach'] | null // AggregateCoach
-    aggregateColorScheme: NexusGenRootTypes['AggregateColorScheme'] | null // AggregateColorScheme
-    aggregateImage: NexusGenRootTypes['AggregateImage'] | null // AggregateImage
-    aggregatePlayer: NexusGenRootTypes['AggregatePlayer'] | null // AggregatePlayer
-    aggregateSession: NexusGenRootTypes['AggregateSession'] | null // AggregateSession
-    aggregateTeam: NexusGenRootTypes['AggregateTeam'] | null // AggregateTeam
-    aggregateUser: NexusGenRootTypes['AggregateUser'] | null // AggregateUser
-    aggregateVerificationRequest: NexusGenRootTypes['AggregateVerificationRequest'] | null // AggregateVerificationRequest
-    findFirstAccount: NexusGenRootTypes['Account'] | null // Account
-    findFirstCoach: NexusGenRootTypes['Coach'] | null // Coach
-    findFirstColorScheme: NexusGenRootTypes['ColorScheme'] | null // ColorScheme
-    findFirstImage: NexusGenRootTypes['Image'] | null // Image
-    findFirstPlayer: NexusGenRootTypes['Player'] | null // Player
-    findFirstSession: NexusGenRootTypes['Session'] | null // Session
-    findFirstTeam: NexusGenRootTypes['Team'] | null // Team
-    findFirstUser: NexusGenRootTypes['User'] | null // User
-    findFirstVerificationRequest: NexusGenRootTypes['VerificationRequest'] | null // VerificationRequest
-    findManyAccount: NexusGenRootTypes['Account'][] // [Account!]!
-    findManyAccountCount: number // Int!
-    findManyCoach: NexusGenRootTypes['Coach'][] // [Coach!]!
-    findManyCoachCount: number // Int!
-    findManyColorScheme: NexusGenRootTypes['ColorScheme'][] // [ColorScheme!]!
-    findManyColorSchemeCount: number // Int!
-    findManyImage: NexusGenRootTypes['Image'][] // [Image!]!
-    findManyImageCount: number // Int!
-    findManyPlayer: NexusGenRootTypes['Player'][] // [Player!]!
-    findManyPlayerCount: number // Int!
-    findManySession: NexusGenRootTypes['Session'][] // [Session!]!
-    findManySessionCount: number // Int!
-    findManyTeam: NexusGenRootTypes['Team'][] // [Team!]!
-    findManyTeamCount: number // Int!
-    findManyUser: NexusGenRootTypes['User'][] // [User!]!
-    findManyUserCount: number // Int!
-    findManyVerificationRequest: NexusGenRootTypes['VerificationRequest'][] // [VerificationRequest!]!
-    findManyVerificationRequestCount: number // Int!
-    findUniqueAccount: NexusGenRootTypes['Account'] | null // Account
-    findUniqueCoach: NexusGenRootTypes['Coach'] | null // Coach
-    findUniqueColorScheme: NexusGenRootTypes['ColorScheme'] | null // ColorScheme
-    findUniqueImage: NexusGenRootTypes['Image'] | null // Image
-    findUniquePlayer: NexusGenRootTypes['Player'] | null // Player
-    findUniqueSession: NexusGenRootTypes['Session'] | null // Session
-    findUniqueTeam: NexusGenRootTypes['Team'] | null // Team
-    findUniqueUser: NexusGenRootTypes['User'] | null // User
-    findUniqueVerificationRequest: NexusGenRootTypes['VerificationRequest'] | null // VerificationRequest
+    account: NexusGenRootTypes['Account'] | null // Account
+    accounts: NexusGenRootTypes['Account'][] // [Account!]!
+    coach: NexusGenRootTypes['Coach'] | null // Coach
+    coaches: NexusGenRootTypes['Coach'][] // [Coach!]!
+    colorScheme: NexusGenRootTypes['ColorScheme'] | null // ColorScheme
+    colorSchemes: NexusGenRootTypes['ColorScheme'][] // [ColorScheme!]!
+    image: NexusGenRootTypes['Image'] | null // Image
+    images: NexusGenRootTypes['Image'][] // [Image!]!
+    player: NexusGenRootTypes['Player'] | null // Player
+    players: NexusGenRootTypes['Player'][] // [Player!]!
+    session: NexusGenRootTypes['Session'] | null // Session
+    sessions: NexusGenRootTypes['Session'][] // [Session!]!
+    team: NexusGenRootTypes['Team'] | null // Team
+    teams: NexusGenRootTypes['Team'][] // [Team!]!
+    user: NexusGenRootTypes['User'] | null // User
+    users: NexusGenRootTypes['User'][] // [User!]!
   }
   Session: {
     // field return type
     accessToken: string // String!
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     expires: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
+    id: string // ID!
     sessionToken: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
     user: NexusGenRootTypes['User'] // User!
     userId: string // String!
-  }
-  SessionCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    accessToken: number // Int!
-    createdAt: number // Int!
-    expires: number // Int!
-    id: number // Int!
-    sessionToken: number // Int!
-    updatedAt: number // Int!
-    userId: number // Int!
-  }
-  SessionMaxAggregateOutputType: {
-    // field return type
-    accessToken: string | null // String
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    sessionToken: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    userId: string | null // String
-  }
-  SessionMinAggregateOutputType: {
-    // field return type
-    accessToken: string | null // String
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    sessionToken: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    userId: string | null // String
   }
   Team: {
     // field return type
@@ -4669,90 +1588,18 @@ export interface NexusGenFieldTypes {
     city: string // String!
     coaches: NexusGenRootTypes['Coach'][] // [Coach!]!
     colorScheme: NexusGenRootTypes['ColorScheme'] | null // ColorScheme
-    colorSchemeId: string | null // String
     conference: string // String!
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     division: string // String!
     established: string // String!
     handle: string // String!
-    id: string // String!
+    id: string // ID!
     logo: NexusGenRootTypes['Image'] | null // Image
-    logoId: string | null // String
     losses: number | null // Int
     name: string // String!
     players: NexusGenRootTypes['Player'][] // [Player!]!
     slug: string // String!
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
-    winPercentage: number | null // Float
-    wins: number | null // Int
-  }
-  TeamAvgAggregateOutputType: {
-    // field return type
-    losses: number | null // Float
-    winPercentage: number | null // Float
-    wins: number | null // Float
-  }
-  TeamCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    abbreviation: number // Int!
-    city: number // Int!
-    colorSchemeId: number // Int!
-    conference: number // Int!
-    createdAt: number // Int!
-    division: number // Int!
-    established: number // Int!
-    handle: number // Int!
-    id: number // Int!
-    logoId: number // Int!
-    losses: number // Int!
-    name: number // Int!
-    slug: number // Int!
-    updatedAt: number // Int!
-    winPercentage: number // Int!
-    wins: number // Int!
-  }
-  TeamMaxAggregateOutputType: {
-    // field return type
-    abbreviation: string | null // String
-    city: string | null // String
-    colorSchemeId: string | null // String
-    conference: string | null // String
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    division: string | null // String
-    established: string | null // String
-    handle: string | null // String
-    id: string | null // String
-    logoId: string | null // String
-    losses: number | null // Int
-    name: string | null // String
-    slug: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage: number | null // Float
-    wins: number | null // Int
-  }
-  TeamMinAggregateOutputType: {
-    // field return type
-    abbreviation: string | null // String
-    city: string | null // String
-    colorSchemeId: string | null // String
-    conference: string | null // String
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    division: string | null // String
-    established: string | null // String
-    handle: string | null // String
-    id: string | null // String
-    logoId: string | null // String
-    losses: number | null // Int
-    name: string | null // String
-    slug: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-    winPercentage: number | null // Float
-    wins: number | null // Int
-  }
-  TeamSumAggregateOutputType: {
-    // field return type
-    losses: number | null // Int
     winPercentage: number | null // Float
     wins: number | null // Int
   }
@@ -4762,99 +1609,15 @@ export interface NexusGenFieldTypes {
     apple: string | null // String
     createdAt: NexusGenScalars['DateTime'] // DateTime!
     email: string | null // String
-    emailVerified: NexusGenScalars['DateTime'] | null // DateTime
     facebook: string | null // String
     github: string | null // String
     google: string | null // String
-    id: string // String!
+    id: string // ID!
     image: string | null // String
     name: string | null // String
     sessions: NexusGenRootTypes['Session'][] // [Session!]!
     twitter: string | null // String
     updatedAt: NexusGenScalars['DateTime'] // DateTime!
-  }
-  UserCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    apple: number // Int!
-    createdAt: number // Int!
-    email: number // Int!
-    emailVerified: number // Int!
-    facebook: number // Int!
-    github: number // Int!
-    google: number // Int!
-    id: number // Int!
-    image: number // Int!
-    name: number // Int!
-    twitter: number // Int!
-    updatedAt: number // Int!
-  }
-  UserMaxAggregateOutputType: {
-    // field return type
-    apple: string | null // String
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    email: string | null // String
-    emailVerified: NexusGenScalars['DateTime'] | null // DateTime
-    facebook: string | null // String
-    github: string | null // String
-    google: string | null // String
-    id: string | null // String
-    image: string | null // String
-    name: string | null // String
-    twitter: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  UserMinAggregateOutputType: {
-    // field return type
-    apple: string | null // String
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    email: string | null // String
-    emailVerified: NexusGenScalars['DateTime'] | null // DateTime
-    facebook: string | null // String
-    github: string | null // String
-    google: string | null // String
-    id: string | null // String
-    image: string | null // String
-    name: string | null // String
-    twitter: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  VerificationRequest: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] // DateTime!
-    expires: NexusGenScalars['DateTime'] // DateTime!
-    id: string // String!
-    identifier: string // String!
-    token: string // String!
-    updatedAt: NexusGenScalars['DateTime'] // DateTime!
-  }
-  VerificationRequestCountAggregateOutputType: {
-    // field return type
-    _all: number // Int!
-    createdAt: number // Int!
-    expires: number // Int!
-    id: number // Int!
-    identifier: number // Int!
-    token: number // Int!
-    updatedAt: number // Int!
-  }
-  VerificationRequestMaxAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    identifier: string | null // String
-    token: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
-  }
-  VerificationRequestMinAggregateOutputType: {
-    // field return type
-    createdAt: NexusGenScalars['DateTime'] | null // DateTime
-    expires: NexusGenScalars['DateTime'] | null // DateTime
-    id: string | null // String
-    identifier: string | null // String
-    token: string | null // String
-    updatedAt: NexusGenScalars['DateTime'] | null // DateTime
   }
 }
 
@@ -4864,7 +1627,7 @@ export interface NexusGenFieldTypeNames {
     accessToken: 'String'
     accessTokenExpires: 'DateTime'
     createdAt: 'DateTime'
-    id: 'String'
+    id: 'ID'
     providerAccountId: 'String'
     providerId: 'String'
     providerType: 'String'
@@ -4873,182 +1636,16 @@ export interface NexusGenFieldTypeNames {
     user: 'User'
     userId: 'String'
   }
-  AccountCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    accessToken: 'Int'
-    accessTokenExpires: 'Int'
-    createdAt: 'Int'
-    id: 'Int'
-    providerAccountId: 'Int'
-    providerId: 'Int'
-    providerType: 'Int'
-    refreshToken: 'Int'
-    updatedAt: 'Int'
-    userId: 'Int'
-  }
-  AccountMaxAggregateOutputType: {
-    // field return type name
-    accessToken: 'String'
-    accessTokenExpires: 'DateTime'
-    createdAt: 'DateTime'
-    id: 'String'
-    providerAccountId: 'String'
-    providerId: 'String'
-    providerType: 'String'
-    refreshToken: 'String'
-    updatedAt: 'DateTime'
-    userId: 'String'
-  }
-  AccountMinAggregateOutputType: {
-    // field return type name
-    accessToken: 'String'
-    accessTokenExpires: 'DateTime'
-    createdAt: 'DateTime'
-    id: 'String'
-    providerAccountId: 'String'
-    providerId: 'String'
-    providerType: 'String'
-    refreshToken: 'String'
-    updatedAt: 'DateTime'
-    userId: 'String'
-  }
-  AggregateAccount: {
-    // field return type name
-    _count: 'AccountCountAggregateOutputType'
-    _max: 'AccountMaxAggregateOutputType'
-    _min: 'AccountMinAggregateOutputType'
-    count: 'AccountCountAggregateOutputType'
-    max: 'AccountMaxAggregateOutputType'
-    min: 'AccountMinAggregateOutputType'
-  }
-  AggregateCoach: {
-    // field return type name
-    _count: 'CoachCountAggregateOutputType'
-    _max: 'CoachMaxAggregateOutputType'
-    _min: 'CoachMinAggregateOutputType'
-    count: 'CoachCountAggregateOutputType'
-    max: 'CoachMaxAggregateOutputType'
-    min: 'CoachMinAggregateOutputType'
-  }
-  AggregateColorScheme: {
-    // field return type name
-    _count: 'ColorSchemeCountAggregateOutputType'
-    _max: 'ColorSchemeMaxAggregateOutputType'
-    _min: 'ColorSchemeMinAggregateOutputType'
-    count: 'ColorSchemeCountAggregateOutputType'
-    max: 'ColorSchemeMaxAggregateOutputType'
-    min: 'ColorSchemeMinAggregateOutputType'
-  }
-  AggregateImage: {
-    // field return type name
-    _count: 'ImageCountAggregateOutputType'
-    _max: 'ImageMaxAggregateOutputType'
-    _min: 'ImageMinAggregateOutputType'
-    count: 'ImageCountAggregateOutputType'
-    max: 'ImageMaxAggregateOutputType'
-    min: 'ImageMinAggregateOutputType'
-  }
-  AggregatePlayer: {
-    // field return type name
-    _count: 'PlayerCountAggregateOutputType'
-    _max: 'PlayerMaxAggregateOutputType'
-    _min: 'PlayerMinAggregateOutputType'
-    count: 'PlayerCountAggregateOutputType'
-    max: 'PlayerMaxAggregateOutputType'
-    min: 'PlayerMinAggregateOutputType'
-  }
-  AggregateSession: {
-    // field return type name
-    _count: 'SessionCountAggregateOutputType'
-    _max: 'SessionMaxAggregateOutputType'
-    _min: 'SessionMinAggregateOutputType'
-    count: 'SessionCountAggregateOutputType'
-    max: 'SessionMaxAggregateOutputType'
-    min: 'SessionMinAggregateOutputType'
-  }
-  AggregateTeam: {
-    // field return type name
-    _avg: 'TeamAvgAggregateOutputType'
-    _count: 'TeamCountAggregateOutputType'
-    _max: 'TeamMaxAggregateOutputType'
-    _min: 'TeamMinAggregateOutputType'
-    _sum: 'TeamSumAggregateOutputType'
-    avg: 'TeamAvgAggregateOutputType'
-    count: 'TeamCountAggregateOutputType'
-    max: 'TeamMaxAggregateOutputType'
-    min: 'TeamMinAggregateOutputType'
-    sum: 'TeamSumAggregateOutputType'
-  }
-  AggregateUser: {
-    // field return type name
-    _count: 'UserCountAggregateOutputType'
-    _max: 'UserMaxAggregateOutputType'
-    _min: 'UserMinAggregateOutputType'
-    count: 'UserCountAggregateOutputType'
-    max: 'UserMaxAggregateOutputType'
-    min: 'UserMinAggregateOutputType'
-  }
-  AggregateVerificationRequest: {
-    // field return type name
-    _count: 'VerificationRequestCountAggregateOutputType'
-    _max: 'VerificationRequestMaxAggregateOutputType'
-    _min: 'VerificationRequestMinAggregateOutputType'
-    count: 'VerificationRequestCountAggregateOutputType'
-    max: 'VerificationRequestMaxAggregateOutputType'
-    min: 'VerificationRequestMinAggregateOutputType'
-  }
-  BatchPayload: {
-    // field return type name
-    count: 'Int'
-  }
   Coach: {
     // field return type name
     createdAt: 'DateTime'
     handle: 'String'
-    id: 'String'
+    id: 'ID'
     image: 'Image'
     imageId: 'String'
     isAssistant: 'String'
     name: 'String'
     team: 'Team'
-    teamId: 'String'
-    type: 'String'
-    updatedAt: 'DateTime'
-  }
-  CoachCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    createdAt: 'Int'
-    handle: 'Int'
-    id: 'Int'
-    imageId: 'Int'
-    isAssistant: 'Int'
-    name: 'Int'
-    teamId: 'Int'
-    type: 'Int'
-    updatedAt: 'Int'
-  }
-  CoachMaxAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    handle: 'String'
-    id: 'String'
-    imageId: 'String'
-    isAssistant: 'String'
-    name: 'String'
-    teamId: 'String'
-    type: 'String'
-    updatedAt: 'DateTime'
-  }
-  CoachMinAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    handle: 'String'
-    id: 'String'
-    imageId: 'String'
-    isAssistant: 'String'
-    name: 'String'
     teamId: 'String'
     type: 'String'
     updatedAt: 'DateTime'
@@ -5056,136 +1653,34 @@ export interface NexusGenFieldTypeNames {
   ColorScheme: {
     // field return type name
     createdAt: 'DateTime'
-    id: 'String'
+    id: 'ID'
     primary: 'String'
     secondary: 'String'
     team: 'Team'
-    updatedAt: 'DateTime'
-  }
-  ColorSchemeCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    createdAt: 'Int'
-    id: 'Int'
-    primary: 'Int'
-    secondary: 'Int'
-    updatedAt: 'Int'
-  }
-  ColorSchemeMaxAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    id: 'String'
-    primary: 'String'
-    secondary: 'String'
-    updatedAt: 'DateTime'
-  }
-  ColorSchemeMinAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    id: 'String'
-    primary: 'String'
-    secondary: 'String'
     updatedAt: 'DateTime'
   }
   Image: {
     // field return type name
     coach: 'Coach'
     createdAt: 'DateTime'
-    id: 'String'
+    id: 'ID'
     player: 'Player'
     team: 'Team'
     type: 'ImageType'
     updatedAt: 'DateTime'
     url: 'String'
   }
-  ImageCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    createdAt: 'Int'
-    id: 'Int'
-    type: 'Int'
-    updatedAt: 'Int'
-    url: 'Int'
-  }
-  ImageMaxAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    id: 'String'
-    type: 'ImageType'
-    updatedAt: 'DateTime'
-    url: 'String'
-  }
-  ImageMinAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    id: 'String'
-    type: 'ImageType'
-    updatedAt: 'DateTime'
-    url: 'String'
-  }
   Mutation: {
     // field return type name
-    createOneAccount: 'Account'
-    createOneCoach: 'Coach'
-    createOneColorScheme: 'ColorScheme'
-    createOneImage: 'Image'
-    createOnePlayer: 'Player'
-    createOneSession: 'Session'
     createOneTeam: 'Team'
-    createOneUser: 'User'
-    createOneVerificationRequest: 'VerificationRequest'
-    deleteManyAccount: 'BatchPayload'
-    deleteManyCoach: 'BatchPayload'
-    deleteManyColorScheme: 'BatchPayload'
-    deleteManyImage: 'BatchPayload'
-    deleteManyPlayer: 'BatchPayload'
-    deleteManySession: 'BatchPayload'
-    deleteManyTeam: 'BatchPayload'
-    deleteManyUser: 'BatchPayload'
-    deleteManyVerificationRequest: 'BatchPayload'
-    deleteOneAccount: 'Account'
-    deleteOneCoach: 'Coach'
-    deleteOneColorScheme: 'ColorScheme'
-    deleteOneImage: 'Image'
-    deleteOnePlayer: 'Player'
-    deleteOneSession: 'Session'
-    deleteOneTeam: 'Team'
-    deleteOneUser: 'User'
-    deleteOneVerificationRequest: 'VerificationRequest'
-    updateManyAccount: 'BatchPayload'
-    updateManyCoach: 'BatchPayload'
-    updateManyColorScheme: 'BatchPayload'
-    updateManyImage: 'BatchPayload'
-    updateManyPlayer: 'BatchPayload'
-    updateManySession: 'BatchPayload'
-    updateManyTeam: 'BatchPayload'
-    updateManyUser: 'BatchPayload'
-    updateManyVerificationRequest: 'BatchPayload'
-    updateOneAccount: 'Account'
-    updateOneCoach: 'Coach'
-    updateOneColorScheme: 'ColorScheme'
-    updateOneImage: 'Image'
-    updateOnePlayer: 'Player'
-    updateOneSession: 'Session'
     updateOneTeam: 'Team'
-    updateOneUser: 'User'
-    updateOneVerificationRequest: 'VerificationRequest'
-    upsertOneAccount: 'Account'
-    upsertOneCoach: 'Coach'
-    upsertOneColorScheme: 'ColorScheme'
-    upsertOneImage: 'Image'
-    upsertOnePlayer: 'Player'
-    upsertOneSession: 'Session'
-    upsertOneTeam: 'Team'
-    upsertOneUser: 'User'
-    upsertOneVerificationRequest: 'VerificationRequest'
   }
   Player: {
     // field return type name
     createdAt: 'DateTime'
     handle: 'String'
     height: 'String'
-    id: 'String'
+    id: 'ID'
     image: 'Image'
     imageId: 'String'
     name: 'String'
@@ -5197,140 +1692,34 @@ export interface NexusGenFieldTypeNames {
     updatedAt: 'DateTime'
     weight: 'String'
   }
-  PlayerCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    createdAt: 'Int'
-    handle: 'Int'
-    height: 'Int'
-    id: 'Int'
-    imageId: 'Int'
-    name: 'Int'
-    number: 'Int'
-    position: 'Int'
-    slug: 'Int'
-    teamId: 'Int'
-    updatedAt: 'Int'
-    weight: 'Int'
-  }
-  PlayerMaxAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    handle: 'String'
-    height: 'String'
-    id: 'String'
-    imageId: 'String'
-    name: 'String'
-    number: 'String'
-    position: 'String'
-    slug: 'String'
-    teamId: 'String'
-    updatedAt: 'DateTime'
-    weight: 'String'
-  }
-  PlayerMinAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    handle: 'String'
-    height: 'String'
-    id: 'String'
-    imageId: 'String'
-    name: 'String'
-    number: 'String'
-    position: 'String'
-    slug: 'String'
-    teamId: 'String'
-    updatedAt: 'DateTime'
-    weight: 'String'
-  }
   Query: {
     // field return type name
-    aggregateAccount: 'AggregateAccount'
-    aggregateCoach: 'AggregateCoach'
-    aggregateColorScheme: 'AggregateColorScheme'
-    aggregateImage: 'AggregateImage'
-    aggregatePlayer: 'AggregatePlayer'
-    aggregateSession: 'AggregateSession'
-    aggregateTeam: 'AggregateTeam'
-    aggregateUser: 'AggregateUser'
-    aggregateVerificationRequest: 'AggregateVerificationRequest'
-    findFirstAccount: 'Account'
-    findFirstCoach: 'Coach'
-    findFirstColorScheme: 'ColorScheme'
-    findFirstImage: 'Image'
-    findFirstPlayer: 'Player'
-    findFirstSession: 'Session'
-    findFirstTeam: 'Team'
-    findFirstUser: 'User'
-    findFirstVerificationRequest: 'VerificationRequest'
-    findManyAccount: 'Account'
-    findManyAccountCount: 'Int'
-    findManyCoach: 'Coach'
-    findManyCoachCount: 'Int'
-    findManyColorScheme: 'ColorScheme'
-    findManyColorSchemeCount: 'Int'
-    findManyImage: 'Image'
-    findManyImageCount: 'Int'
-    findManyPlayer: 'Player'
-    findManyPlayerCount: 'Int'
-    findManySession: 'Session'
-    findManySessionCount: 'Int'
-    findManyTeam: 'Team'
-    findManyTeamCount: 'Int'
-    findManyUser: 'User'
-    findManyUserCount: 'Int'
-    findManyVerificationRequest: 'VerificationRequest'
-    findManyVerificationRequestCount: 'Int'
-    findUniqueAccount: 'Account'
-    findUniqueCoach: 'Coach'
-    findUniqueColorScheme: 'ColorScheme'
-    findUniqueImage: 'Image'
-    findUniquePlayer: 'Player'
-    findUniqueSession: 'Session'
-    findUniqueTeam: 'Team'
-    findUniqueUser: 'User'
-    findUniqueVerificationRequest: 'VerificationRequest'
+    account: 'Account'
+    accounts: 'Account'
+    coach: 'Coach'
+    coaches: 'Coach'
+    colorScheme: 'ColorScheme'
+    colorSchemes: 'ColorScheme'
+    image: 'Image'
+    images: 'Image'
+    player: 'Player'
+    players: 'Player'
+    session: 'Session'
+    sessions: 'Session'
+    team: 'Team'
+    teams: 'Team'
+    user: 'User'
+    users: 'User'
   }
   Session: {
     // field return type name
     accessToken: 'String'
     createdAt: 'DateTime'
     expires: 'DateTime'
-    id: 'String'
+    id: 'ID'
     sessionToken: 'String'
     updatedAt: 'DateTime'
     user: 'User'
-    userId: 'String'
-  }
-  SessionCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    accessToken: 'Int'
-    createdAt: 'Int'
-    expires: 'Int'
-    id: 'Int'
-    sessionToken: 'Int'
-    updatedAt: 'Int'
-    userId: 'Int'
-  }
-  SessionMaxAggregateOutputType: {
-    // field return type name
-    accessToken: 'String'
-    createdAt: 'DateTime'
-    expires: 'DateTime'
-    id: 'String'
-    sessionToken: 'String'
-    updatedAt: 'DateTime'
-    userId: 'String'
-  }
-  SessionMinAggregateOutputType: {
-    // field return type name
-    accessToken: 'String'
-    createdAt: 'DateTime'
-    expires: 'DateTime'
-    id: 'String'
-    sessionToken: 'String'
-    updatedAt: 'DateTime'
     userId: 'String'
   }
   Team: {
@@ -5339,90 +1728,18 @@ export interface NexusGenFieldTypeNames {
     city: 'String'
     coaches: 'Coach'
     colorScheme: 'ColorScheme'
-    colorSchemeId: 'String'
     conference: 'String'
     createdAt: 'DateTime'
     division: 'String'
     established: 'String'
     handle: 'String'
-    id: 'String'
+    id: 'ID'
     logo: 'Image'
-    logoId: 'String'
     losses: 'Int'
     name: 'String'
     players: 'Player'
     slug: 'String'
     updatedAt: 'DateTime'
-    winPercentage: 'Float'
-    wins: 'Int'
-  }
-  TeamAvgAggregateOutputType: {
-    // field return type name
-    losses: 'Float'
-    winPercentage: 'Float'
-    wins: 'Float'
-  }
-  TeamCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    abbreviation: 'Int'
-    city: 'Int'
-    colorSchemeId: 'Int'
-    conference: 'Int'
-    createdAt: 'Int'
-    division: 'Int'
-    established: 'Int'
-    handle: 'Int'
-    id: 'Int'
-    logoId: 'Int'
-    losses: 'Int'
-    name: 'Int'
-    slug: 'Int'
-    updatedAt: 'Int'
-    winPercentage: 'Int'
-    wins: 'Int'
-  }
-  TeamMaxAggregateOutputType: {
-    // field return type name
-    abbreviation: 'String'
-    city: 'String'
-    colorSchemeId: 'String'
-    conference: 'String'
-    createdAt: 'DateTime'
-    division: 'String'
-    established: 'String'
-    handle: 'String'
-    id: 'String'
-    logoId: 'String'
-    losses: 'Int'
-    name: 'String'
-    slug: 'String'
-    updatedAt: 'DateTime'
-    winPercentage: 'Float'
-    wins: 'Int'
-  }
-  TeamMinAggregateOutputType: {
-    // field return type name
-    abbreviation: 'String'
-    city: 'String'
-    colorSchemeId: 'String'
-    conference: 'String'
-    createdAt: 'DateTime'
-    division: 'String'
-    established: 'String'
-    handle: 'String'
-    id: 'String'
-    logoId: 'String'
-    losses: 'Int'
-    name: 'String'
-    slug: 'String'
-    updatedAt: 'DateTime'
-    winPercentage: 'Float'
-    wins: 'Int'
-  }
-  TeamSumAggregateOutputType: {
-    // field return type name
-    losses: 'Int'
     winPercentage: 'Float'
     wins: 'Int'
   }
@@ -5432,757 +1749,134 @@ export interface NexusGenFieldTypeNames {
     apple: 'String'
     createdAt: 'DateTime'
     email: 'String'
-    emailVerified: 'DateTime'
     facebook: 'String'
     github: 'String'
     google: 'String'
-    id: 'String'
+    id: 'ID'
     image: 'String'
     name: 'String'
     sessions: 'Session'
     twitter: 'String'
     updatedAt: 'DateTime'
   }
-  UserCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    apple: 'Int'
-    createdAt: 'Int'
-    email: 'Int'
-    emailVerified: 'Int'
-    facebook: 'Int'
-    github: 'Int'
-    google: 'Int'
-    id: 'Int'
-    image: 'Int'
-    name: 'Int'
-    twitter: 'Int'
-    updatedAt: 'Int'
-  }
-  UserMaxAggregateOutputType: {
-    // field return type name
-    apple: 'String'
-    createdAt: 'DateTime'
-    email: 'String'
-    emailVerified: 'DateTime'
-    facebook: 'String'
-    github: 'String'
-    google: 'String'
-    id: 'String'
-    image: 'String'
-    name: 'String'
-    twitter: 'String'
-    updatedAt: 'DateTime'
-  }
-  UserMinAggregateOutputType: {
-    // field return type name
-    apple: 'String'
-    createdAt: 'DateTime'
-    email: 'String'
-    emailVerified: 'DateTime'
-    facebook: 'String'
-    github: 'String'
-    google: 'String'
-    id: 'String'
-    image: 'String'
-    name: 'String'
-    twitter: 'String'
-    updatedAt: 'DateTime'
-  }
-  VerificationRequest: {
-    // field return type name
-    createdAt: 'DateTime'
-    expires: 'DateTime'
-    id: 'String'
-    identifier: 'String'
-    token: 'String'
-    updatedAt: 'DateTime'
-  }
-  VerificationRequestCountAggregateOutputType: {
-    // field return type name
-    _all: 'Int'
-    createdAt: 'Int'
-    expires: 'Int'
-    id: 'Int'
-    identifier: 'Int'
-    token: 'Int'
-    updatedAt: 'Int'
-  }
-  VerificationRequestMaxAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    expires: 'DateTime'
-    id: 'String'
-    identifier: 'String'
-    token: 'String'
-    updatedAt: 'DateTime'
-  }
-  VerificationRequestMinAggregateOutputType: {
-    // field return type name
-    createdAt: 'DateTime'
-    expires: 'DateTime'
-    id: 'String'
-    identifier: 'String'
-    token: 'String'
-    updatedAt: 'DateTime'
-  }
 }
 
 export interface NexusGenArgTypes {
   Mutation: {
-    createOneAccount: {
-      // args
-      data: NexusGenInputs['AccountCreateInput'] // AccountCreateInput!
-    }
-    createOneCoach: {
-      // args
-      data: NexusGenInputs['CoachCreateInput'] // CoachCreateInput!
-    }
-    createOneColorScheme: {
-      // args
-      data: NexusGenInputs['ColorSchemeCreateInput'] // ColorSchemeCreateInput!
-    }
-    createOneImage: {
-      // args
-      data: NexusGenInputs['ImageCreateInput'] // ImageCreateInput!
-    }
-    createOnePlayer: {
-      // args
-      data: NexusGenInputs['PlayerCreateInput'] // PlayerCreateInput!
-    }
-    createOneSession: {
-      // args
-      data: NexusGenInputs['SessionCreateInput'] // SessionCreateInput!
-    }
     createOneTeam: {
       // args
       data: NexusGenInputs['TeamCreateInput'] // TeamCreateInput!
-    }
-    createOneUser: {
-      // args
-      data: NexusGenInputs['UserCreateInput'] // UserCreateInput!
-    }
-    createOneVerificationRequest: {
-      // args
-      data: NexusGenInputs['VerificationRequestCreateInput'] // VerificationRequestCreateInput!
-    }
-    deleteManyAccount: {
-      // args
-      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
-    }
-    deleteManyCoach: {
-      // args
-      where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
-    }
-    deleteManyColorScheme: {
-      // args
-      where?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
-    }
-    deleteManyImage: {
-      // args
-      where?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
-    }
-    deleteManyPlayer: {
-      // args
-      where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-    }
-    deleteManySession: {
-      // args
-      where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
-    }
-    deleteManyTeam: {
-      // args
-      where?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
-    }
-    deleteManyUser: {
-      // args
-      where?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
-    }
-    deleteManyVerificationRequest: {
-      // args
-      where?: NexusGenInputs['VerificationRequestWhereInput'] | null // VerificationRequestWhereInput
-    }
-    deleteOneAccount: {
-      // args
-      where: NexusGenInputs['AccountWhereUniqueInput'] // AccountWhereUniqueInput!
-    }
-    deleteOneCoach: {
-      // args
-      where: NexusGenInputs['CoachWhereUniqueInput'] // CoachWhereUniqueInput!
-    }
-    deleteOneColorScheme: {
-      // args
-      where: NexusGenInputs['ColorSchemeWhereUniqueInput'] // ColorSchemeWhereUniqueInput!
-    }
-    deleteOneImage: {
-      // args
-      where: NexusGenInputs['ImageWhereUniqueInput'] // ImageWhereUniqueInput!
-    }
-    deleteOnePlayer: {
-      // args
-      where: NexusGenInputs['PlayerWhereUniqueInput'] // PlayerWhereUniqueInput!
-    }
-    deleteOneSession: {
-      // args
-      where: NexusGenInputs['SessionWhereUniqueInput'] // SessionWhereUniqueInput!
-    }
-    deleteOneTeam: {
-      // args
-      where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
-    }
-    deleteOneUser: {
-      // args
-      where: NexusGenInputs['UserWhereUniqueInput'] // UserWhereUniqueInput!
-    }
-    deleteOneVerificationRequest: {
-      // args
-      where: NexusGenInputs['VerificationRequestWhereUniqueInput'] // VerificationRequestWhereUniqueInput!
-    }
-    updateManyAccount: {
-      // args
-      data: NexusGenInputs['AccountUpdateManyMutationInput'] // AccountUpdateManyMutationInput!
-      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
-    }
-    updateManyCoach: {
-      // args
-      data: NexusGenInputs['CoachUpdateManyMutationInput'] // CoachUpdateManyMutationInput!
-      where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
-    }
-    updateManyColorScheme: {
-      // args
-      data: NexusGenInputs['ColorSchemeUpdateManyMutationInput'] // ColorSchemeUpdateManyMutationInput!
-      where?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
-    }
-    updateManyImage: {
-      // args
-      data: NexusGenInputs['ImageUpdateManyMutationInput'] // ImageUpdateManyMutationInput!
-      where?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
-    }
-    updateManyPlayer: {
-      // args
-      data: NexusGenInputs['PlayerUpdateManyMutationInput'] // PlayerUpdateManyMutationInput!
-      where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-    }
-    updateManySession: {
-      // args
-      data: NexusGenInputs['SessionUpdateManyMutationInput'] // SessionUpdateManyMutationInput!
-      where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
-    }
-    updateManyTeam: {
-      // args
-      data: NexusGenInputs['TeamUpdateManyMutationInput'] // TeamUpdateManyMutationInput!
-      where?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
-    }
-    updateManyUser: {
-      // args
-      data: NexusGenInputs['UserUpdateManyMutationInput'] // UserUpdateManyMutationInput!
-      where?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
-    }
-    updateManyVerificationRequest: {
-      // args
-      data: NexusGenInputs['VerificationRequestUpdateManyMutationInput'] // VerificationRequestUpdateManyMutationInput!
-      where?: NexusGenInputs['VerificationRequestWhereInput'] | null // VerificationRequestWhereInput
-    }
-    updateOneAccount: {
-      // args
-      data: NexusGenInputs['AccountUpdateInput'] // AccountUpdateInput!
-      where: NexusGenInputs['AccountWhereUniqueInput'] // AccountWhereUniqueInput!
-    }
-    updateOneCoach: {
-      // args
-      data: NexusGenInputs['CoachUpdateInput'] // CoachUpdateInput!
-      where: NexusGenInputs['CoachWhereUniqueInput'] // CoachWhereUniqueInput!
-    }
-    updateOneColorScheme: {
-      // args
-      data: NexusGenInputs['ColorSchemeUpdateInput'] // ColorSchemeUpdateInput!
-      where: NexusGenInputs['ColorSchemeWhereUniqueInput'] // ColorSchemeWhereUniqueInput!
-    }
-    updateOneImage: {
-      // args
-      data: NexusGenInputs['ImageUpdateInput'] // ImageUpdateInput!
-      where: NexusGenInputs['ImageWhereUniqueInput'] // ImageWhereUniqueInput!
-    }
-    updateOnePlayer: {
-      // args
-      data: NexusGenInputs['PlayerUpdateInput'] // PlayerUpdateInput!
-      where: NexusGenInputs['PlayerWhereUniqueInput'] // PlayerWhereUniqueInput!
-    }
-    updateOneSession: {
-      // args
-      data: NexusGenInputs['SessionUpdateInput'] // SessionUpdateInput!
-      where: NexusGenInputs['SessionWhereUniqueInput'] // SessionWhereUniqueInput!
     }
     updateOneTeam: {
       // args
       data: NexusGenInputs['TeamUpdateInput'] // TeamUpdateInput!
       where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
     }
-    updateOneUser: {
-      // args
-      data: NexusGenInputs['UserUpdateInput'] // UserUpdateInput!
-      where: NexusGenInputs['UserWhereUniqueInput'] // UserWhereUniqueInput!
-    }
-    updateOneVerificationRequest: {
-      // args
-      data: NexusGenInputs['VerificationRequestUpdateInput'] // VerificationRequestUpdateInput!
-      where: NexusGenInputs['VerificationRequestWhereUniqueInput'] // VerificationRequestWhereUniqueInput!
-    }
-    upsertOneAccount: {
-      // args
-      create: NexusGenInputs['AccountCreateInput'] // AccountCreateInput!
-      update: NexusGenInputs['AccountUpdateInput'] // AccountUpdateInput!
-      where: NexusGenInputs['AccountWhereUniqueInput'] // AccountWhereUniqueInput!
-    }
-    upsertOneCoach: {
-      // args
-      create: NexusGenInputs['CoachCreateInput'] // CoachCreateInput!
-      update: NexusGenInputs['CoachUpdateInput'] // CoachUpdateInput!
-      where: NexusGenInputs['CoachWhereUniqueInput'] // CoachWhereUniqueInput!
-    }
-    upsertOneColorScheme: {
-      // args
-      create: NexusGenInputs['ColorSchemeCreateInput'] // ColorSchemeCreateInput!
-      update: NexusGenInputs['ColorSchemeUpdateInput'] // ColorSchemeUpdateInput!
-      where: NexusGenInputs['ColorSchemeWhereUniqueInput'] // ColorSchemeWhereUniqueInput!
-    }
-    upsertOneImage: {
-      // args
-      create: NexusGenInputs['ImageCreateInput'] // ImageCreateInput!
-      update: NexusGenInputs['ImageUpdateInput'] // ImageUpdateInput!
-      where: NexusGenInputs['ImageWhereUniqueInput'] // ImageWhereUniqueInput!
-    }
-    upsertOnePlayer: {
-      // args
-      create: NexusGenInputs['PlayerCreateInput'] // PlayerCreateInput!
-      update: NexusGenInputs['PlayerUpdateInput'] // PlayerUpdateInput!
-      where: NexusGenInputs['PlayerWhereUniqueInput'] // PlayerWhereUniqueInput!
-    }
-    upsertOneSession: {
-      // args
-      create: NexusGenInputs['SessionCreateInput'] // SessionCreateInput!
-      update: NexusGenInputs['SessionUpdateInput'] // SessionUpdateInput!
-      where: NexusGenInputs['SessionWhereUniqueInput'] // SessionWhereUniqueInput!
-    }
-    upsertOneTeam: {
-      // args
-      create: NexusGenInputs['TeamCreateInput'] // TeamCreateInput!
-      update: NexusGenInputs['TeamUpdateInput'] // TeamUpdateInput!
-      where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
-    }
-    upsertOneUser: {
-      // args
-      create: NexusGenInputs['UserCreateInput'] // UserCreateInput!
-      update: NexusGenInputs['UserUpdateInput'] // UserUpdateInput!
-      where: NexusGenInputs['UserWhereUniqueInput'] // UserWhereUniqueInput!
-    }
-    upsertOneVerificationRequest: {
-      // args
-      create: NexusGenInputs['VerificationRequestCreateInput'] // VerificationRequestCreateInput!
-      update: NexusGenInputs['VerificationRequestUpdateInput'] // VerificationRequestUpdateInput!
-      where: NexusGenInputs['VerificationRequestWhereUniqueInput'] // VerificationRequestWhereUniqueInput!
-    }
   }
   Query: {
-    aggregateAccount: {
-      // args
-      cursor?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
-      distinct?: NexusGenEnums['AccountScalarFieldEnum'] | null // AccountScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['AccountOrderByInput'] | null> | null // [AccountOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
-    }
-    aggregateCoach: {
-      // args
-      cursor?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
-      distinct?: NexusGenEnums['CoachScalarFieldEnum'] | null // CoachScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['CoachOrderByInput'] | null> | null // [CoachOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
-    }
-    aggregateColorScheme: {
-      // args
-      cursor?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
-      distinct?: NexusGenEnums['ColorSchemeScalarFieldEnum'] | null // ColorSchemeScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['ColorSchemeOrderByInput'] | null> | null // [ColorSchemeOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
-    }
-    aggregateImage: {
-      // args
-      cursor?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
-      distinct?: NexusGenEnums['ImageScalarFieldEnum'] | null // ImageScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['ImageOrderByInput'] | null> | null // [ImageOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
-    }
-    aggregatePlayer: {
-      // args
-      cursor?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
-      distinct?: NexusGenEnums['PlayerScalarFieldEnum'] | null // PlayerScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['PlayerOrderByInput'] | null> | null // [PlayerOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-    }
-    aggregateSession: {
-      // args
-      cursor?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
-      distinct?: NexusGenEnums['SessionScalarFieldEnum'] | null // SessionScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['SessionOrderByInput'] | null> | null // [SessionOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
-    }
-    aggregateTeam: {
-      // args
-      cursor?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-      distinct?: NexusGenEnums['TeamScalarFieldEnum'] | null // TeamScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['TeamOrderByInput'] | null> | null // [TeamOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
-    }
-    aggregateUser: {
-      // args
-      cursor?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
-      distinct?: NexusGenEnums['UserScalarFieldEnum'] | null // UserScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['UserOrderByInput'] | null> | null // [UserOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
-    }
-    aggregateVerificationRequest: {
-      // args
-      cursor?: NexusGenInputs['VerificationRequestWhereUniqueInput'] | null // VerificationRequestWhereUniqueInput
-      distinct?: NexusGenEnums['VerificationRequestScalarFieldEnum'] | null // VerificationRequestScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['VerificationRequestOrderByInput'] | null> | null // [VerificationRequestOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['VerificationRequestWhereInput'] | null // VerificationRequestWhereInput
-    }
-    findFirstAccount: {
-      // args
-      cursor?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
-      distinct?: NexusGenEnums['AccountScalarFieldEnum'] | null // AccountScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['AccountOrderByInput'] | null> | null // [AccountOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
-    }
-    findFirstCoach: {
-      // args
-      cursor?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
-      distinct?: NexusGenEnums['CoachScalarFieldEnum'] | null // CoachScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['CoachOrderByInput'] | null> | null // [CoachOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
-    }
-    findFirstColorScheme: {
-      // args
-      cursor?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
-      distinct?: NexusGenEnums['ColorSchemeScalarFieldEnum'] | null // ColorSchemeScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['ColorSchemeOrderByInput'] | null> | null // [ColorSchemeOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
-    }
-    findFirstImage: {
-      // args
-      cursor?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
-      distinct?: NexusGenEnums['ImageScalarFieldEnum'] | null // ImageScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['ImageOrderByInput'] | null> | null // [ImageOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
-    }
-    findFirstPlayer: {
-      // args
-      cursor?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
-      distinct?: NexusGenEnums['PlayerScalarFieldEnum'] | null // PlayerScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['PlayerOrderByInput'] | null> | null // [PlayerOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-    }
-    findFirstSession: {
-      // args
-      cursor?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
-      distinct?: NexusGenEnums['SessionScalarFieldEnum'] | null // SessionScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['SessionOrderByInput'] | null> | null // [SessionOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
-    }
-    findFirstTeam: {
-      // args
-      cursor?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-      distinct?: NexusGenEnums['TeamScalarFieldEnum'] | null // TeamScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['TeamOrderByInput'] | null> | null // [TeamOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
-    }
-    findFirstUser: {
-      // args
-      cursor?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
-      distinct?: NexusGenEnums['UserScalarFieldEnum'] | null // UserScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['UserOrderByInput'] | null> | null // [UserOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
-    }
-    findFirstVerificationRequest: {
-      // args
-      cursor?: NexusGenInputs['VerificationRequestWhereUniqueInput'] | null // VerificationRequestWhereUniqueInput
-      distinct?: NexusGenEnums['VerificationRequestScalarFieldEnum'] | null // VerificationRequestScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['VerificationRequestOrderByInput'] | null> | null // [VerificationRequestOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['VerificationRequestWhereInput'] | null // VerificationRequestWhereInput
-    }
-    findManyAccount: {
-      // args
-      cursor?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
-      distinct?: NexusGenEnums['AccountScalarFieldEnum'] | null // AccountScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['AccountOrderByInput'] | null> | null // [AccountOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
-    }
-    findManyAccountCount: {
-      // args
-      cursor?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
-      distinct?: NexusGenEnums['AccountScalarFieldEnum'] | null // AccountScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['AccountOrderByInput'] | null> | null // [AccountOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
-    }
-    findManyCoach: {
-      // args
-      cursor?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
-      distinct?: NexusGenEnums['CoachScalarFieldEnum'] | null // CoachScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['CoachOrderByInput'] | null> | null // [CoachOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
-    }
-    findManyCoachCount: {
-      // args
-      cursor?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
-      distinct?: NexusGenEnums['CoachScalarFieldEnum'] | null // CoachScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['CoachOrderByInput'] | null> | null // [CoachOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
-    }
-    findManyColorScheme: {
-      // args
-      cursor?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
-      distinct?: NexusGenEnums['ColorSchemeScalarFieldEnum'] | null // ColorSchemeScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['ColorSchemeOrderByInput'] | null> | null // [ColorSchemeOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
-    }
-    findManyColorSchemeCount: {
-      // args
-      cursor?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
-      distinct?: NexusGenEnums['ColorSchemeScalarFieldEnum'] | null // ColorSchemeScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['ColorSchemeOrderByInput'] | null> | null // [ColorSchemeOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
-    }
-    findManyImage: {
-      // args
-      cursor?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
-      distinct?: NexusGenEnums['ImageScalarFieldEnum'] | null // ImageScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['ImageOrderByInput'] | null> | null // [ImageOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
-    }
-    findManyImageCount: {
-      // args
-      cursor?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
-      distinct?: NexusGenEnums['ImageScalarFieldEnum'] | null // ImageScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['ImageOrderByInput'] | null> | null // [ImageOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
-    }
-    findManyPlayer: {
-      // args
-      cursor?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
-      distinct?: NexusGenEnums['PlayerScalarFieldEnum'] | null // PlayerScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['PlayerOrderByInput'] | null> | null // [PlayerOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-    }
-    findManyPlayerCount: {
-      // args
-      cursor?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
-      distinct?: NexusGenEnums['PlayerScalarFieldEnum'] | null // PlayerScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['PlayerOrderByInput'] | null> | null // [PlayerOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
-    }
-    findManySession: {
-      // args
-      cursor?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
-      distinct?: NexusGenEnums['SessionScalarFieldEnum'] | null // SessionScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['SessionOrderByInput'] | null> | null // [SessionOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
-    }
-    findManySessionCount: {
-      // args
-      cursor?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
-      distinct?: NexusGenEnums['SessionScalarFieldEnum'] | null // SessionScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['SessionOrderByInput'] | null> | null // [SessionOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
-    }
-    findManyTeam: {
-      // args
-      cursor?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-      distinct?: NexusGenEnums['TeamScalarFieldEnum'] | null // TeamScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['TeamOrderByInput'] | null> | null // [TeamOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
-    }
-    findManyTeamCount: {
-      // args
-      cursor?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
-      distinct?: NexusGenEnums['TeamScalarFieldEnum'] | null // TeamScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['TeamOrderByInput'] | null> | null // [TeamOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
-    }
-    findManyUser: {
-      // args
-      cursor?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
-      distinct?: NexusGenEnums['UserScalarFieldEnum'] | null // UserScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['UserOrderByInput'] | null> | null // [UserOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
-    }
-    findManyUserCount: {
-      // args
-      cursor?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
-      distinct?: NexusGenEnums['UserScalarFieldEnum'] | null // UserScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['UserOrderByInput'] | null> | null // [UserOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
-    }
-    findManyVerificationRequest: {
-      // args
-      cursor?: NexusGenInputs['VerificationRequestWhereUniqueInput'] | null // VerificationRequestWhereUniqueInput
-      distinct?: NexusGenEnums['VerificationRequestScalarFieldEnum'] | null // VerificationRequestScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['VerificationRequestOrderByInput'] | null> | null // [VerificationRequestOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['VerificationRequestWhereInput'] | null // VerificationRequestWhereInput
-    }
-    findManyVerificationRequestCount: {
-      // args
-      cursor?: NexusGenInputs['VerificationRequestWhereUniqueInput'] | null // VerificationRequestWhereUniqueInput
-      distinct?: NexusGenEnums['VerificationRequestScalarFieldEnum'] | null // VerificationRequestScalarFieldEnum
-      orderBy?: Array<NexusGenInputs['VerificationRequestOrderByInput'] | null> | null // [VerificationRequestOrderByInput]
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['VerificationRequestWhereInput'] | null // VerificationRequestWhereInput
-    }
-    findUniqueAccount: {
+    account: {
       // args
       where: NexusGenInputs['AccountWhereUniqueInput'] // AccountWhereUniqueInput!
     }
-    findUniqueCoach: {
+    accounts: {
+      // args
+      after?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
+      before?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
+      first?: number | null // Int
+      last?: number | null // Int
+      orderBy?: NexusGenInputs['AccountOrderByInput'][] | null // [AccountOrderByInput!]
+      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
+    }
+    coach: {
       // args
       where: NexusGenInputs['CoachWhereUniqueInput'] // CoachWhereUniqueInput!
     }
-    findUniqueColorScheme: {
+    coaches: {
+      // args
+      after?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
+      before?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
+      first?: number | null // Int
+      last?: number | null // Int
+      orderBy?: NexusGenInputs['CoachOrderByInput'][] | null // [CoachOrderByInput!]
+      where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
+    }
+    colorScheme: {
       // args
       where: NexusGenInputs['ColorSchemeWhereUniqueInput'] // ColorSchemeWhereUniqueInput!
     }
-    findUniqueImage: {
+    colorSchemes: {
+      // args
+      after?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
+      before?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
+      first?: number | null // Int
+      last?: number | null // Int
+      orderBy?: NexusGenInputs['ColorSchemeOrderByInput'][] | null // [ColorSchemeOrderByInput!]
+      where?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
+    }
+    image: {
       // args
       where: NexusGenInputs['ImageWhereUniqueInput'] // ImageWhereUniqueInput!
     }
-    findUniquePlayer: {
+    images: {
+      // args
+      after?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
+      before?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
+      first?: number | null // Int
+      last?: number | null // Int
+      orderBy?: NexusGenInputs['ImageOrderByInput'][] | null // [ImageOrderByInput!]
+      where?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
+    }
+    player: {
       // args
       where: NexusGenInputs['PlayerWhereUniqueInput'] // PlayerWhereUniqueInput!
-    }
-    findUniqueSession: {
-      // args
-      where: NexusGenInputs['SessionWhereUniqueInput'] // SessionWhereUniqueInput!
-    }
-    findUniqueTeam: {
-      // args
-      where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
-    }
-    findUniqueUser: {
-      // args
-      where: NexusGenInputs['UserWhereUniqueInput'] // UserWhereUniqueInput!
-    }
-    findUniqueVerificationRequest: {
-      // args
-      where: NexusGenInputs['VerificationRequestWhereUniqueInput'] // VerificationRequestWhereUniqueInput!
-    }
-  }
-  Team: {
-    coaches: {
-      // args
-      cursor?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
-      distinct?: NexusGenEnums['CoachScalarFieldEnum'] | null // CoachScalarFieldEnum
-      orderBy?: NexusGenInputs['CoachOrderByInput'] | null // CoachOrderByInput
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
     }
     players: {
       // args
-      cursor?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
-      distinct?: NexusGenEnums['PlayerScalarFieldEnum'] | null // PlayerScalarFieldEnum
-      orderBy?: NexusGenInputs['PlayerOrderByInput'] | null // PlayerOrderByInput
-      skip?: number | null // Int
-      take?: number | null // Int
+      after?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
+      before?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
+      first?: number | null // Int
+      last?: number | null // Int
+      orderBy?: NexusGenInputs['PlayerOrderByInput'][] | null // [PlayerOrderByInput!]
       where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
     }
-  }
-  User: {
-    accounts: {
+    session: {
       // args
-      cursor?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
-      distinct?: NexusGenEnums['AccountScalarFieldEnum'] | null // AccountScalarFieldEnum
-      orderBy?: NexusGenInputs['AccountOrderByInput'] | null // AccountOrderByInput
-      skip?: number | null // Int
-      take?: number | null // Int
-      where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
+      where: NexusGenInputs['SessionWhereUniqueInput'] // SessionWhereUniqueInput!
     }
     sessions: {
       // args
-      cursor?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
-      distinct?: NexusGenEnums['SessionScalarFieldEnum'] | null // SessionScalarFieldEnum
-      orderBy?: NexusGenInputs['SessionOrderByInput'] | null // SessionOrderByInput
-      skip?: number | null // Int
-      take?: number | null // Int
+      after?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
+      before?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
+      first?: number | null // Int
+      last?: number | null // Int
+      orderBy?: NexusGenInputs['SessionOrderByInput'][] | null // [SessionOrderByInput!]
       where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
+    }
+    team: {
+      // args
+      where: NexusGenInputs['TeamWhereUniqueInput'] // TeamWhereUniqueInput!
+    }
+    teams: {
+      // args
+      after?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
+      before?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
+      first?: number | null // Int
+      last?: number | null // Int
+      orderBy?: NexusGenInputs['TeamOrderByInput'][] | null // [TeamOrderByInput!]
+      where?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
+    }
+    user: {
+      // args
+      where: NexusGenInputs['UserWhereUniqueInput'] // UserWhereUniqueInput!
+    }
+    users: {
+      // args
+      after?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
+      before?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
+      first?: number | null // Int
+      last?: number | null // Int
+      orderBy?: NexusGenInputs['UserOrderByInput'][] | null // [UserOrderByInput!]
+      where?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
     }
   }
 }

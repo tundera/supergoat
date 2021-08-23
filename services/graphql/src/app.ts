@@ -14,6 +14,8 @@ import { ezSchema } from '@graphql-ez/plugin-schema'
 import { ezUpload } from '@graphql-ez/plugin-upload'
 import { ezWebSockets } from '@graphql-ez/plugin-websockets'
 
+import { schema } from 'src/schema'
+
 function buildContext({ req }: BuildContextArgs) {
   return {
     req,
@@ -36,7 +38,7 @@ export const { registerModule, buildApp } = CreateApp({
             DateTime: 'string',
           },
         },
-        outputSchema: './schema.gql',
+        outputSchema: './schema.graphql',
       }),
       ezUpload(),
       ezGraphQLModules(),
@@ -47,41 +49,7 @@ export const { registerModule, buildApp } = CreateApp({
       ezGraphiQLIDE(),
       ezWebSockets('adaptive'),
       ezSchema({
-        schema: {
-          typeDefs: gql`
-            type Mutation {
-              uploadFileToBase64(file: Upload!): String!
-            }
-            type Subscription {
-              hello: String!
-            }
-          `,
-          resolvers: {
-            Mutation: {
-              async uploadFileToBase64(_root, { file }, _ctx) {
-                const fileBuffer = await readStreamToBuffer(file)
-
-                return fileBuffer.toString('base64')
-              },
-            },
-            Subscription: {
-              hello: {
-                async *subscribe(_root, _args, _ctx) {
-                  for (let i = 1; i <= 5; ++i) {
-                    await sleep(500)
-
-                    yield {
-                      hello: 'Hello World ' + i,
-                    }
-                  }
-                  yield {
-                    hello: 'Done!',
-                  }
-                },
-              },
-            },
-          },
-        },
+        schema: schema,
       }),
     ],
   },

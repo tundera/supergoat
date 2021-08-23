@@ -2,7 +2,7 @@ import gql from 'graphql-tag'
 
 export const AllTeamsQuery = gql`
   query AllTeams {
-    findManyTeam {
+    teams {
       id
       city
       name

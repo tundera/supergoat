@@ -9,6 +9,10 @@ generator client {
   previewFeatures = ["nApi", "referentialActions"]
 }
 
+generator nexusPrisma {
+  provider = "nexus-prisma"
+}
+
 // --------------------------------------
 
 model Account {

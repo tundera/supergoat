@@ -8,7 +8,7 @@ import Twitter from 'next-auth/providers/twitter'
 
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 
-import db from 'db'
+import { db } from 'db'
 
 export default NextAuth({
   providers: [

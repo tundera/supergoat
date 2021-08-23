@@ -7,7 +7,7 @@ declare global {
   var db: PrismaClient
 }
 
-const db = global.db || new PrismaClient()
+export const db = global.db || new PrismaClient()
 
 if (process.env.NODE_ENV === 'development') global.db = db
 
@@ -22,7 +22,5 @@ export async function connect(): Promise<boolean> {
 
   return true
 }
-
-export default db
 
 export * from '@prisma/client'

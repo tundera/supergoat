@@ -1,4 +1,4 @@
-schema: 'src/services/graphql/generated/schema.graphql'
+schema: schema.graphql
 documents: 'src/lib/graphql/operations/**/*.ts'
 generates:
   src/services/graphql/generated/codegen.ts:

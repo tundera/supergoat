@@ -5,7 +5,7 @@
 import { join } from 'path'
 // import { v2 as cloudinary } from 'cloudinary'
 
-import db from 'db'
+import { db } from 'db'
 
 require('dotenv-expand')(require('dotenv-flow').config({ silent: false }))
 

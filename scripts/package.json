@@ -20,7 +20,7 @@
   "devDependencies": {
     "@swc/core": "^1.2.77",
     "@swc/helpers": "^0.2.13",
-    "@types/node": "^16.6.1",
+    "@types/node": "16.7.1",
     "chalk": "^4.1.2",
     "change-case": "^4.1.2",
     "dotenv": "^10.0.0",

@@ -30,8 +30,8 @@
     "nohoist": [
       "**/@prisma",
       "**/@prisma/**",
-      "**/@paljs",
-      "**/@paljs/**"
+      "**/nexus-prisma",
+      "**/nexus-prisma/**"
     ]
   },
   "preconstruct": {

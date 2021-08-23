@@ -1,4 +1,4 @@
-import db from 'db'
+import { db } from 'db'
 
 const removeUsers = async () => {
   const users = await db.user.findMany()

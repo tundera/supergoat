@@ -9,10 +9,6 @@ const build = async () => {
     await execa('yarn', ['prisma', 'generate'])
   }
 
-  const generateNexusResolvers = async () => {
-    await execa('yarn', ['ts-node', 'scripts/generate-graphql-types'])
-  }
-
   const generateNexusTypes = async () => {
     await execa('yarn', ['ts-node', 'src/services/graphql/schema'])
   }

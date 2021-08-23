@@ -5,7 +5,7 @@ import download from 'download'
 import ora from 'ora'
 import chalk from 'chalk'
 
-import db from 'db'
+import { db } from 'db'
 
 require('dotenv-expand')(require('dotenv-flow').config({ silent: true }))
 

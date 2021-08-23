@@ -7,7 +7,7 @@ import { Flex } from '@chakra-ui/react'
 import { QueryClient } from 'react-query'
 import { dehydrate } from 'react-query/hydration'
 
-import db from 'db'
+import { db } from 'db'
 import TeamInfo from 'src/components/TeamInfo'
 import { FullPageSpinner } from 'src/components/FullPageSpinner'
 import { getLayout as getPublicLayout } from 'src/layouts/PublicLayout'
