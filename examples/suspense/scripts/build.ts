@@ -13,9 +13,9 @@ const build = async () => {
     await execa('yarn', ['ts-node', 'src/services/graphql/schema'])
   }
 
-  const pushGraphQLSchema = async () => {
-    await execa('yarn', ['graphcdn', 'push', 'schema'])
-  }
+  // const pushGraphQLSchema = async () => {
+  //   await execa('yarn', ['graphcdn', 'push', 'schema'])
+  // }
 
   const generateThemeTypes = async () => {
     await execa('yarn', ['chakra-cli', 'tokens', 'src/styles/theme'])
@@ -47,10 +47,10 @@ const build = async () => {
         title: 'Generating Nexus Types',
         task: async () => await generateNexusTypes(),
       },
-      {
-        title: 'Pushing generated schema to GraphCDN',
-        task: async () => await pushGraphQLSchema(),
-      },
+      // {
+      //   title: 'Pushing generated schema to GraphCDN',
+      //   task: async () => await pushGraphQLSchema(),
+      // },
       {
         title: 'Running GraphQL Codegen',
         task: async () => await runGraphQLCodegen(),
