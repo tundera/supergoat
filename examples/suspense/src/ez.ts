@@ -18,7 +18,7 @@ export const ezApp = CreateApp({
   // You can use any valid GraphQL Schema
   schema,
   introspection: {
-    disable: process.env.NODE_ENV === 'production',
+    disable: false,
   },
   ez: {
     plugins: [
