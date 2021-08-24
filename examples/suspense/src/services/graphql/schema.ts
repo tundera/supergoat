@@ -1,13 +1,12 @@
 import { join } from 'path'
 import { makeSchema } from 'nexus'
-import { applyMiddleware } from 'graphql-middleware'
 import { nexusPrisma } from 'nexus-plugin-prisma'
+import { applyMiddleware } from 'graphql-middleware'
 import { permissions } from 'src/services/graphql/permissions'
 
 import * as inputTypes from 'src/services/graphql/inputs'
 import * as moduleTypes from 'src/services/graphql/modules'
 import * as scalarTypes from 'src/services/graphql/scalars'
-// import * as generatedTypes from 'src/services/graphql/generated/types'
 
 import { db } from 'db'
 
