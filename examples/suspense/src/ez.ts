@@ -8,8 +8,13 @@ import { schema } from 'src/services/graphql/schema'
 import { createContext, Context } from 'src/services/graphql/context'
 
 function buildContext({ req, next }: BuildContextArgs) {
+  // IncomingMessage
+  req
+
+  // NextApiRequest | undefined
+  next?.req
+
   return {
-    req,
     foo: 'bar',
   }
 }
@@ -36,7 +41,6 @@ export const ezApp = CreateApp({
       ezScalars({
         DateTime: 1,
       }),
-      ezAltairIDE(),
       ezSchema({
         schema,
       }),
