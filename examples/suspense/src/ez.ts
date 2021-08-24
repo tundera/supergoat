@@ -17,6 +17,7 @@ function buildContext({ req, next }: BuildContextArgs) {
 export const ezApp = CreateApp({
   // You can use any valid GraphQL Schema
   schema,
+  introspection: { disable: false },
   ez: {
     plugins: [
       ezCodegen({
