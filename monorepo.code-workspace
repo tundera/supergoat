@@ -1,10 +1,6 @@
 {
   "folders": [
     {
-      "name": "📦 @monorepo/core",
-      "path": "packages/core"
-    },
-    {
       "name": "✨ root",
       "path": "."
     },
