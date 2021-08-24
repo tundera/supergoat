@@ -1,244 +1,244 @@
 id,createdAt,updatedAt,handle,name,type,isAssistant,teamId,imageId
-1627590,Mon Aug 09 2021 04:49:03 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:05 GMT-0600 (Mountain Daylight Time),1627590,Jerome Allen,Assistant Coach,2,1610612738,nba/coaches/1627590
-203785,Mon Aug 09 2021 04:49:25 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:28 GMT-0600 (Mountain Daylight Time),203785,Greg Foster,Assistant Coach,2,1610612754,nba/coaches/203785
-2871,Mon Aug 09 2021 04:49:05 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:06 GMT-0600 (Mountain Daylight Time),2871,Dionne Calhoun,Assistant Trainer,4,1610612742,nba/coaches/2871
-1628210,Mon Aug 09 2021 04:49:06 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:07 GMT-0600 (Mountain Daylight Time),1628210,Joe Mazzulla,Assistant Coach,2,1610612738,nba/coaches/1628210
-1353,Mon Aug 09 2021 04:49:50 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:51 GMT-0600 (Mountain Daylight Time),1353,Lionel Hollins,Assistant Coach,2,1610612747,nba/coaches/1353
-1628765,Mon Aug 09 2021 04:49:07 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:08 GMT-0600 (Mountain Daylight Time),1628765,Art Horne,Trainer,3,1610612738,nba/coaches/1628765
-2394,Mon Aug 09 2021 04:49:28 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:31 GMT-0600 (Mountain Daylight Time),2394,Pete Myers,Assistant Coach,2,1610612741,nba/coaches/2394
-1630018,Mon Aug 09 2021 04:49:08 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:08 GMT-0600 (Mountain Daylight Time),1630018,Eric Oetter,Trainer,3,1610612763,nba/coaches/1630018
-1783,Mon Aug 09 2021 04:49:09 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:09 GMT-0600 (Mountain Daylight Time),1783,Mike D'Antoni,Assistant Coach,2,1610612751,nba/coaches/1783
-1787,Mon Aug 09 2021 04:49:43 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:44 GMT-0600 (Mountain Daylight Time),1787,Erik Spoelstra,Head Coach,1,1610612748,nba/coaches/1787
-2610,Mon Aug 09 2021 04:49:09 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:10 GMT-0600 (Mountain Daylight Time),2610,Michael Malone,Head Coach,1,1610612743,nba/coaches/2610
-204230,Mon Aug 09 2021 04:49:32 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:32 GMT-0600 (Mountain Daylight Time),204230,Tim Hardaway,Assistant Coach,2,1610612765,nba/coaches/204230
-1627876,Mon Aug 09 2021 04:49:10 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:11 GMT-0600 (Mountain Daylight Time),1627876,Adam Harrington,Assistant Coach,2,1610612751,nba/coaches/1627876
-1627877,Mon Aug 09 2021 04:49:11 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:12 GMT-0600 (Mountain Daylight Time),1627877,Jordan Ott,Assistant Coach,2,1610612751,nba/coaches/1627877
+1628770,Mon Aug 09 2021 04:50:00 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:53:42 GMT-0600 (Mountain Daylight Time),1628770,Matt Hill,Assistant Coach,2,1610612737,nba/coaches/1628770
+2384,Mon Aug 09 2021 04:49:56 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:53:43 GMT-0600 (Mountain Daylight Time),2384,Melvin Hunt,Assistant Coach,2,1610612737,nba/coaches/2384
+1628764,Mon Aug 09 2021 04:50:02 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:53:46 GMT-0600 (Mountain Daylight Time),1628764,Scottie Parker,Trainer,3,1610612737,nba/coaches/1628764
+1630017,Mon Aug 09 2021 04:49:52 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:53:47 GMT-0600 (Mountain Daylight Time),1630017,John Dusel,Assistant Trainer,4,1610612737,nba/coaches/1630017
+1628210,Mon Aug 09 2021 04:49:06 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:14 GMT-0600 (Mountain Daylight Time),1628210,Joe Mazzulla,Assistant Coach,2,1610612738,nba/coaches/1628210
+1627590,Mon Aug 09 2021 04:49:03 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:16 GMT-0600 (Mountain Daylight Time),1627590,Jerome Allen,Assistant Coach,2,1610612738,nba/coaches/1627590
+1628765,Mon Aug 09 2021 04:49:07 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:17 GMT-0600 (Mountain Daylight Time),1628765,Art Horne,Trainer,3,1610612738,nba/coaches/1628765
+1627877,Mon Aug 09 2021 04:49:11 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:40 GMT-0600 (Mountain Daylight Time),1627877,Jordan Ott,Assistant Coach,2,1610612751,nba/coaches/1627877
+1783,Mon Aug 09 2021 04:49:09 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:42 GMT-0600 (Mountain Daylight Time),1783,Mike D'Antoni,Assistant Coach,2,1610612751,nba/coaches/1783
+1627876,Mon Aug 09 2021 04:49:10 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:44 GMT-0600 (Mountain Daylight Time),1627876,Adam Harrington,Assistant Coach,2,1610612751,nba/coaches/1627876
+201168,Mon Aug 09 2021 04:49:13 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:45 GMT-0600 (Mountain Daylight Time),201168,Tiago Splitter,Assistant Coach for Player Development,12,1610612751,nba/coaches/201168
+203550,Mon Aug 09 2021 04:49:15 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:46 GMT-0600 (Mountain Daylight Time),203550,Sebastien Poirier,Trainer,3,1610612751,nba/coaches/203550
+202435,Mon Aug 09 2021 04:49:16 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:08 GMT-0600 (Mountain Daylight Time),202435,James Borrego,Head Coach,1,1610612766,nba/coaches/202435
 201765,Mon Aug 09 2021 04:49:12 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:13 GMT-0600 (Mountain Daylight Time),201765,Nate Bjorkgren,Head Coach,1,1610612754,nba/coaches/201765
-2794,Mon Aug 09 2021 04:49:32 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:33 GMT-0600 (Mountain Daylight Time),2794,JB Bickerstaff,Head Coach,1,1610612739,nba/coaches/2794
-201168,Mon Aug 09 2021 04:49:13 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:14 GMT-0600 (Mountain Daylight Time),201168,Tiago Splitter,Assistant Coach for Player Development,12,1610612751,nba/coaches/201168
-203391,Mon Aug 09 2021 04:49:14 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:15 GMT-0600 (Mountain Daylight Time),203391,Ryan Bowen,Assistant Coach,2,1610612743,nba/coaches/203391
-203550,Mon Aug 09 2021 04:49:15 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:16 GMT-0600 (Mountain Daylight Time),203550,Sebastien Poirier,Trainer,3,1610612751,nba/coaches/203550
-203811,Mon Aug 09 2021 04:49:33 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:34 GMT-0600 (Mountain Daylight Time),203811,Greg Buckner,Assistant Coach,2,1610612739,nba/coaches/203811
-202435,Mon Aug 09 2021 04:49:16 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:16 GMT-0600 (Mountain Daylight Time),202435,James Borrego,Head Coach,1,1610612766,nba/coaches/202435
-2472,Mon Aug 09 2021 04:49:17 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:18 GMT-0600 (Mountain Daylight Time),2472,Jay Triano,Assistant Coach,2,1610612766,nba/coaches/2472
-1796,Mon Aug 09 2021 04:49:44 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:45 GMT-0600 (Mountain Daylight Time),1796,Ron Adams,Assistant Coach,2,1610612744,nba/coaches/1796
-203759,Mon Aug 09 2021 04:49:18 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:18 GMT-0600 (Mountain Daylight Time),203759,Jordi Fernandez,Assistant Coach,2,1610612743,nba/coaches/203759
-204238,Mon Aug 09 2021 04:49:35 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:35 GMT-0600 (Mountain Daylight Time),204238,Antonio Lang,Assistant Coach,2,1610612739,nba/coaches/204238
-101278,Mon Aug 09 2021 04:49:19 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:19 GMT-0600 (Mountain Daylight Time),101278,Joe Sharpe,Trainer,3,1610612766,nba/coaches/101278
-1627310,Mon Aug 09 2021 04:49:20 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:20 GMT-0600 (Mountain Daylight Time),1627310,Billy Donovan,Head Coach,1,1610612741,nba/coaches/1627310
-1627604,Mon Aug 09 2021 04:49:20 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:21 GMT-0600 (Mountain Daylight Time),1627604,Chris Fleming,Assistant Coach,2,1610612741,nba/coaches/1627604
-1336,Mon Aug 09 2021 04:49:35 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:36 GMT-0600 (Mountain Daylight Time),1336,Tim Grgurich,Assistant Coach,2,1610612765,nba/coaches/1336
-1018,Mon Aug 09 2021 04:49:21 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:22 GMT-0600 (Mountain Daylight Time),1018,Wes Unseld,Head Coach,1,1610612764,nba/coaches/1018
-2511,Mon Aug 09 2021 04:49:22 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:23 GMT-0600 (Mountain Daylight Time),2511,Mike Wilhelm,Assistant Coach,2,1610612741,nba/coaches/2511
-1629758,Mon Aug 09 2021 04:49:55 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:55 GMT-0600 (Mountain Daylight Time),1629758,Dave Bliss,Assistant Coach,2,1610612760,nba/coaches/1629758
-202743,Mon Aug 09 2021 04:49:23 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:25 GMT-0600 (Mountain Daylight Time),202743,John Bryant,Assistant Coach,2,1610612741,nba/coaches/202743
-1628782,Mon Aug 09 2021 04:49:36 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:37 GMT-0600 (Mountain Daylight Time),1628782,Mike Weinar,Assistant Coach,2,1610612754,nba/coaches/1628782
-101200,Mon Aug 09 2021 04:49:45 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:46 GMT-0600 (Mountain Daylight Time),101200,Josh Corbeil,Trainer,3,1610612754,nba/coaches/101200
-1628785,Mon Aug 09 2021 04:49:37 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:38 GMT-0600 (Mountain Daylight Time),1628785,Zach Guthrie,Assistant Coach,2,1610612742,nba/coaches/1628785
-2868,Mon Aug 09 2021 04:49:38 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:39 GMT-0600 (Mountain Daylight Time),2868,Casey Smith,Trainer,3,1610612742,nba/coaches/2868
-203624,Mon Aug 09 2021 04:49:51 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:52 GMT-0600 (Mountain Daylight Time),203624,Taylor Jenkins,Head Coach,1,1610612763,nba/coaches/203624
-201678,Mon Aug 09 2021 04:49:39 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:40 GMT-0600 (Mountain Daylight Time),201678,Jim Scholler,Trainer,3,1610612765,nba/coaches/201678
-1630277,Mon Aug 09 2021 04:49:46 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:46 GMT-0600 (Mountain Daylight Time),1630277,Rick Higgins,Assistant Coach,2,1610612745,nba/coaches/1630277
-203764,Mon Aug 09 2021 04:49:40 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:41 GMT-0600 (Mountain Daylight Time),203764,Tyler Marsh,Assistant Coach,2,1610612754,nba/coaches/203764
+2472,Mon Aug 09 2021 04:49:17 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:09 GMT-0600 (Mountain Daylight Time),2472,Jay Triano,Assistant Coach,2,1610612766,nba/coaches/2472
+101278,Mon Aug 09 2021 04:49:19 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:11 GMT-0600 (Mountain Daylight Time),101278,Joe Sharpe,Trainer,3,1610612766,nba/coaches/101278
+1627310,Mon Aug 09 2021 04:49:20 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:32 GMT-0600 (Mountain Daylight Time),1627310,Billy Donovan,Head Coach,1,1610612741,nba/coaches/1627310
+2511,Mon Aug 09 2021 04:49:22 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:34 GMT-0600 (Mountain Daylight Time),2511,Mike Wilhelm,Assistant Coach,2,1610612741,nba/coaches/2511
+202743,Mon Aug 09 2021 04:49:23 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:35 GMT-0600 (Mountain Daylight Time),202743,John Bryant,Assistant Coach,2,1610612741,nba/coaches/202743
+1627604,Mon Aug 09 2021 04:49:20 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:37 GMT-0600 (Mountain Daylight Time),1627604,Chris Fleming,Assistant Coach,2,1610612741,nba/coaches/1627604
+2394,Mon Aug 09 2021 04:49:28 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:38 GMT-0600 (Mountain Daylight Time),2394,Pete Myers,Assistant Coach,2,1610612741,nba/coaches/2394
+2794,Mon Aug 09 2021 04:49:32 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:59 GMT-0600 (Mountain Daylight Time),2794,JB Bickerstaff,Head Coach,1,1610612739,nba/coaches/2794
+1629710,Mon Aug 09 2021 04:50:02 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:00 GMT-0600 (Mountain Daylight Time),1629710,Lindsay Gottlieb,Assistant Coach,2,1610612739,nba/coaches/1629710
+204238,Mon Aug 09 2021 04:49:35 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:01 GMT-0600 (Mountain Daylight Time),204238,Antonio Lang,Assistant Coach,2,1610612739,nba/coaches/204238
+202565,Mon Aug 09 2021 04:50:03 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:03 GMT-0600 (Mountain Daylight Time),202565,Mike Gerrity,Assistant Coach,2,1610612739,nba/coaches/202565
+203811,Mon Aug 09 2021 04:49:33 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:04 GMT-0600 (Mountain Daylight Time),203811,Greg Buckner,Assistant Coach,2,1610612739,nba/coaches/203811
+1628785,Mon Aug 09 2021 04:49:37 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:28 GMT-0600 (Mountain Daylight Time),1628785,Zach Guthrie,Assistant Coach,2,1610612742,nba/coaches/1628785
+2868,Mon Aug 09 2021 04:49:38 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:29 GMT-0600 (Mountain Daylight Time),2868,Casey Smith,Trainer,3,1610612742,nba/coaches/2868
+2871,Mon Aug 09 2021 04:49:05 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:30 GMT-0600 (Mountain Daylight Time),2871,Dionne Calhoun,Assistant Trainer,4,1610612742,nba/coaches/2871
+2610,Mon Aug 09 2021 04:49:09 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:49 GMT-0600 (Mountain Daylight Time),2610,Michael Malone,Head Coach,1,1610612743,nba/coaches/2610
+203600,Mon Aug 09 2021 04:50:06 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:50 GMT-0600 (Mountain Daylight Time),203600,David Adelman,Assistant Coach,2,1610612743,nba/coaches/203600
+203391,Mon Aug 09 2021 04:49:14 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:51 GMT-0600 (Mountain Daylight Time),203391,Ryan Bowen,Assistant Coach,2,1610612743,nba/coaches/203391
+203759,Mon Aug 09 2021 04:49:18 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:52 GMT-0600 (Mountain Daylight Time),203759,Jordi Fernandez,Assistant Coach,2,1610612743,nba/coaches/203759
+203165,Mon Aug 09 2021 04:50:05 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:55 GMT-0600 (Mountain Daylight Time),203165,Bob Weiss,Assistant Coach,2,1610612743,nba/coaches/203165
+1335,Mon Aug 09 2021 04:50:07 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:16 GMT-0600 (Mountain Daylight Time),1335,Dwane Casey,Head Coach,1,1610612765,nba/coaches/1335
+204230,Mon Aug 09 2021 04:49:32 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:19 GMT-0600 (Mountain Daylight Time),204230,Tim Hardaway,Assistant Coach,2,1610612765,nba/coaches/204230
+1336,Mon Aug 09 2021 04:49:35 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:21 GMT-0600 (Mountain Daylight Time),1336,Tim Grgurich,Assistant Coach,2,1610612765,nba/coaches/1336
+201678,Mon Aug 09 2021 04:49:39 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:21 GMT-0600 (Mountain Daylight Time),201678,Jim Scholler,Trainer,3,1610612765,nba/coaches/201678
+204260,Mon Aug 09 2021 04:49:42 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:42 GMT-0600 (Mountain Daylight Time),204260,Bruce Fraser,Assistant Coach,2,1610612744,nba/coaches/204260
+1796,Mon Aug 09 2021 04:49:44 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:45 GMT-0600 (Mountain Daylight Time),1796,Ron Adams,Assistant Coach,2,1610612744,nba/coaches/1796
 204239,Mon Aug 09 2021 04:49:41 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:42 GMT-0600 (Mountain Daylight Time),204239,Jarron Collins,Assistant Coach,2,1610612744,nba/coaches/204239
-204260,Mon Aug 09 2021 04:49:42 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:43 GMT-0600 (Mountain Daylight Time),204260,Bruce Fraser,Assistant Coach,2,1610612744,nba/coaches/204260
-1786,Mon Aug 09 2021 04:49:47 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:47 GMT-0600 (Mountain Daylight Time),1786,John Lucas,Assistant Coach,2,1610612745,nba/coaches/1786
-1630017,Mon Aug 09 2021 04:49:52 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:53 GMT-0600 (Mountain Daylight Time),1630017,John Dusel,Assistant Trainer,4,1610612737,nba/coaches/1630017
-1257,Mon Aug 09 2021 04:49:48 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:48 GMT-0600 (Mountain Daylight Time),1257,Keith Jones,Trainer,3,1610612745,nba/coaches/1257
-2345,Mon Aug 09 2021 04:49:49 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:49 GMT-0600 (Mountain Daylight Time),2345,Frank Vogel,Head Coach,1,1610612747,nba/coaches/2345
-2630,Mon Aug 09 2021 04:49:50 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:50 GMT-0600 (Mountain Daylight Time),2630,Bob Beyer,Assistant Coach,2,1610612740,nba/coaches/2630
-2384,Mon Aug 09 2021 04:49:56 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:56 GMT-0600 (Mountain Daylight Time),2384,Melvin Hunt,Assistant Coach,2,1610612737,nba/coaches/2384
-1628234,Mon Aug 09 2021 04:49:53 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:54 GMT-0600 (Mountain Daylight Time),1628234,David McClure,Assistant Coach,2,1610612763,nba/coaches/1628234
-1370,Mon Aug 09 2021 04:49:54 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:55 GMT-0600 (Mountain Daylight Time),1370,Roger Hinds,Trainer,3,1610612752,nba/coaches/1370
-201046,Mon Aug 09 2021 04:49:59 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:59 GMT-0600 (Mountain Daylight Time),201046,Lindsey Harding,Assistant Coach,2,1610612758,nba/coaches/201046
-202859,Mon Aug 09 2021 04:49:57 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:57 GMT-0600 (Mountain Daylight Time),202859,David Akinyooye,Assistant Coach,2,1610612760,nba/coaches/202859
-1865,Mon Aug 09 2021 04:49:58 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:49:58 GMT-0600 (Mountain Daylight Time),1865,Randy Ayers,Assistant Coach,2,1610612756,nba/coaches/1865
-1628764,Mon Aug 09 2021 04:50:02 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:02 GMT-0600 (Mountain Daylight Time),1628764,Scottie Parker,Trainer,3,1610612737,nba/coaches/1628764
+1630277,Mon Aug 09 2021 04:49:46 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:07 GMT-0600 (Mountain Daylight Time),1630277,Rick Higgins,Assistant Coach,2,1610612745,nba/coaches/1630277
+1786,Mon Aug 09 2021 04:49:47 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:13 GMT-0600 (Mountain Daylight Time),1786,John Lucas,Assistant Coach,2,1610612745,nba/coaches/1786
+1257,Mon Aug 09 2021 04:49:48 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:16 GMT-0600 (Mountain Daylight Time),1257,Keith Jones,Trainer,3,1610612745,nba/coaches/1257
+203764,Mon Aug 09 2021 04:49:40 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:39 GMT-0600 (Mountain Daylight Time),203764,Tyler Marsh,Assistant Coach,2,1610612754,nba/coaches/203764
+203785,Mon Aug 09 2021 04:49:25 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:40 GMT-0600 (Mountain Daylight Time),203785,Greg Foster,Assistant Coach,2,1610612754,nba/coaches/203785
+1628782,Mon Aug 09 2021 04:49:36 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:41 GMT-0600 (Mountain Daylight Time),1628782,Mike Weinar,Assistant Coach,2,1610612754,nba/coaches/1628782
+101200,Mon Aug 09 2021 04:49:45 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:43 GMT-0600 (Mountain Daylight Time),101200,Josh Corbeil,Trainer,3,1610612754,nba/coaches/101200
+2345,Mon Aug 09 2021 04:49:49 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:33 GMT-0600 (Mountain Daylight Time),2345,Frank Vogel,Head Coach,1,1610612747,nba/coaches/2345
+1353,Mon Aug 09 2021 04:49:50 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:37 GMT-0600 (Mountain Daylight Time),1353,Lionel Hollins,Assistant Coach,2,1610612747,nba/coaches/1353
+203624,Mon Aug 09 2021 04:49:51 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:59 GMT-0600 (Mountain Daylight Time),203624,Taylor Jenkins,Head Coach,1,1610612763,nba/coaches/203624
+1628234,Mon Aug 09 2021 04:49:53 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:03 GMT-0600 (Mountain Daylight Time),1628234,David McClure,Assistant Coach,2,1610612763,nba/coaches/1628234
+1630018,Mon Aug 09 2021 04:49:08 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:06 GMT-0600 (Mountain Daylight Time),1630018,Eric Oetter,Trainer,3,1610612763,nba/coaches/1630018
+1787,Mon Aug 09 2021 04:49:43 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:27 GMT-0600 (Mountain Daylight Time),1787,Erik Spoelstra,Head Coach,1,1610612748,nba/coaches/1787
+2630,Mon Aug 09 2021 04:49:50 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:47 GMT-0600 (Mountain Daylight Time),2630,Bob Beyer,Assistant Coach,2,1610612740,nba/coaches/2630
+1370,Mon Aug 09 2021 04:49:54 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:16 GMT-0600 (Mountain Daylight Time),1370,Roger Hinds,Trainer,3,1610612752,nba/coaches/1370
+1629758,Mon Aug 09 2021 04:49:55 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:37 GMT-0600 (Mountain Daylight Time),1629758,Dave Bliss,Assistant Coach,2,1610612760,nba/coaches/1629758
 203535,Mon Aug 09 2021 04:49:59 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:00 GMT-0600 (Mountain Daylight Time),203535,Brad Stevens,Head Coach,1,1610612738,nba/coaches/203535
-1628770,Mon Aug 09 2021 04:50:00 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:01 GMT-0600 (Mountain Daylight Time),1628770,Matt Hill,Assistant Coach,2,1610612737,nba/coaches/1628770
-1629710,Mon Aug 09 2021 04:50:02 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:03 GMT-0600 (Mountain Daylight Time),1629710,Lindsay Gottlieb,Assistant Coach,2,1610612739,nba/coaches/1629710
-202565,Mon Aug 09 2021 04:50:03 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:04 GMT-0600 (Mountain Daylight Time),202565,Mike Gerrity,Assistant Coach,2,1610612739,nba/coaches/202565
-202427,Mon Aug 09 2021 04:50:04 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:05 GMT-0600 (Mountain Daylight Time),202427,Jamahl Mosley,Head Coach,1,1610612753,nba/coaches/202427
-203165,Mon Aug 09 2021 04:50:05 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:06 GMT-0600 (Mountain Daylight Time),203165,Bob Weiss,Assistant Coach,2,1610612743,nba/coaches/203165
-203600,Mon Aug 09 2021 04:50:06 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:07 GMT-0600 (Mountain Daylight Time),203600,David Adelman,Assistant Coach,2,1610612743,nba/coaches/203600
-1335,Mon Aug 09 2021 04:50:07 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:08 GMT-0600 (Mountain Daylight Time),1335,Dwane Casey,Head Coach,1,1610612765,nba/coaches/1335
+202859,Mon Aug 09 2021 04:49:57 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:38 GMT-0600 (Mountain Daylight Time),202859,David Akinyooye,Assistant Coach,2,1610612760,nba/coaches/202859
+202427,Mon Aug 09 2021 04:50:04 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:05 GMT-0600 (Mountain Daylight Time),202427,Jamahl Mosley,Head Coach,1,1610612753,nba/coaches/202427
+1865,Mon Aug 09 2021 04:49:58 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:04 GMT-0600 (Mountain Daylight Time),1865,Randy Ayers,Assistant Coach,2,1610612756,nba/coaches/1865
+201046,Mon Aug 09 2021 04:49:59 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:08 GMT-0600 (Mountain Daylight Time),201046,Lindsey Harding,Assistant Coach,2,1610612758,nba/coaches/201046
+1018,Mon Aug 09 2021 04:49:21 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:55 GMT-0600 (Mountain Daylight Time),1018,Wes Unseld,Head Coach,1,1610612764,nba/coaches/1018
 202979,Mon Aug 09 2021 04:50:08 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:09 GMT-0600 (Mountain Daylight Time),202979,Jamie Young,Assistant Coach,2,1610612738,nba/coaches/202979
-1629169,Mon Aug 09 2021 04:51:23 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:24 GMT-0600 (Mountain Daylight Time),1629169,Brian Adams,Assistant Coach,2,1610612755,nba/coaches/1629169
-204005,Mon Aug 09 2021 04:50:09 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:10 GMT-0600 (Mountain Daylight Time),204005,Steve Kerr,Head Coach,1,1610612744,nba/coaches/204005
-974,Mon Aug 09 2021 04:50:10 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:11 GMT-0600 (Mountain Daylight Time),974,Joseph Blair,Assistant Coach,2,1610612750,nba/coaches/974
-201336,Mon Aug 09 2021 04:51:25 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:25 GMT-0600 (Mountain Daylight Time),201336,Blake Ahearn,Assistant Coach,2,1610612763,nba/coaches/201336
-1628227,Mon Aug 09 2021 04:50:11 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:12 GMT-0600 (Mountain Daylight Time),1628227,Drew Yoder,Trainer,3,1610612744,nba/coaches/1628227
-1629427,Mon Aug 09 2021 04:51:25 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:26 GMT-0600 (Mountain Daylight Time),1629427,Brian Randle,Assistant Coach,2,1610612756,nba/coaches/1629427
-2205,Mon Aug 09 2021 04:50:12 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:13 GMT-0600 (Mountain Daylight Time),2205,DeSagana Diop,Assistant Coach,2,1610612745,nba/coaches/2205
-1997,Mon Aug 09 2021 04:51:43 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:44 GMT-0600 (Mountain Daylight Time),1997,Mike Wells,Assistant Coach,2,1610612762,nba/coaches/1997
-201878,Mon Aug 09 2021 04:51:26 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:27 GMT-0600 (Mountain Daylight Time),201878,Adrian Griffin,Assistant Coach,2,1610612761,nba/coaches/201878
-1629410,Mon Aug 09 2021 04:51:27 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:28 GMT-0600 (Mountain Daylight Time),1629410,David Crewe,Trainer,3,1610612756,nba/coaches/1629410
-204019,Mon Aug 09 2021 04:51:44 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:44 GMT-0600 (Mountain Daylight Time),204019,Becky Hammon,Assistant Coach,2,1610612759,nba/coaches/204019
-202898,Mon Aug 09 2021 04:51:28 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:29 GMT-0600 (Mountain Daylight Time),202898,Jeff Hornacek,Assistant Coach,2,1610612745,nba/coaches/202898
-1630282,Mon Aug 09 2021 04:51:29 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:30 GMT-0600 (Mountain Daylight Time),1630282,Sergi Oliva,Assistant Coach,2,1610612762,nba/coaches/1630282
-202891,Mon Aug 09 2021 04:51:30 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:31 GMT-0600 (Mountain Daylight Time),202891,Nate Tibbetts,Associate Head Coach,9,1610612757,nba/coaches/202891
-203243,Mon Aug 09 2021 04:51:45 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:46 GMT-0600 (Mountain Daylight Time),203243,Casey Hill,Assistant Coach,2,1610612740,nba/coaches/203243
-1628240,Mon Aug 09 2021 04:51:31 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:31 GMT-0600 (Mountain Daylight Time),1628240,John McCullough,Assistant Coach,2,1610612757,nba/coaches/1628240
-2039,Mon Aug 09 2021 04:51:32 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:33 GMT-0600 (Mountain Daylight Time),2039,Keyon Dooling,Assistant Coach,2,1610612762,nba/coaches/2039
-202434,Mon Aug 09 2021 04:51:55 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:56 GMT-0600 (Mountain Daylight Time),202434,Popeye Jones,Assistant Coach,2,1610612755,nba/coaches/202434
-1627471,Mon Aug 09 2021 04:51:33 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:33 GMT-0600 (Mountain Daylight Time),1627471,Jim Moran,Assistant Coach,2,1610612757,nba/coaches/1627471
-101277,Mon Aug 09 2021 04:51:46 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:46 GMT-0600 (Mountain Daylight Time),101277,Brian Zettler,Trainer,3,1610612762,nba/coaches/101277
-725,Mon Aug 09 2021 04:51:34 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:34 GMT-0600 (Mountain Daylight Time),725,Dell Demps,Assistant Coach,2,1610612762,nba/coaches/725
-101272,Mon Aug 09 2021 04:51:35 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:35 GMT-0600 (Mountain Daylight Time),101272,Geoff Clark,Trainer,3,1610612757,nba/coaches/101272
-202978,Mon Aug 09 2021 04:51:36 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:36 GMT-0600 (Mountain Daylight Time),202978,Tyronn Lue,Head Coach,1,1610612746,nba/coaches/202978
-2623,Mon Aug 09 2021 04:51:47 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:47 GMT-0600 (Mountain Daylight Time),2623,Scott Brooks,Head Coach,1,1610612764,nba/coaches/2623
-204012,Mon Aug 09 2021 04:51:36 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:37 GMT-0600 (Mountain Daylight Time),204012,Luke Walton,Head Coach,1,1610612758,nba/coaches/204012
-204007,Mon Aug 09 2021 04:51:37 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:38 GMT-0600 (Mountain Daylight Time),204007,Alex Jensen,Assistant Coach,2,1610612762,nba/coaches/204007
-1628803,Mon Aug 09 2021 04:52:01 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:02 GMT-0600 (Mountain Daylight Time),1628803,Ryan Forehan-Kelly,Assistant Coach,2,1610612751,nba/coaches/1628803
-1672,Mon Aug 09 2021 04:51:38 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:39 GMT-0600 (Mountain Daylight Time),1672,Rex Kalamian,Assistant Coach,2,1610612758,nba/coaches/1672
-2406,Mon Aug 09 2021 04:51:47 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:48 GMT-0600 (Mountain Daylight Time),2406,Caron Butler,Assistant Coach,2,1610612748,nba/coaches/2406
-1630280,Mon Aug 09 2021 04:51:39 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:40 GMT-0600 (Mountain Daylight Time),1630280,Vince Legarza,Assistant Coach,2,1610612762,nba/coaches/1630280
-278,Mon Aug 09 2021 04:51:40 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:41 GMT-0600 (Mountain Daylight Time),278,Stacey Augmon,Assistant Coach for Player Development,12,1610612758,nba/coaches/278
-1941,Mon Aug 09 2021 04:51:56 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:56 GMT-0600 (Mountain Daylight Time),1941,Doc Rivers,Head Coach,1,1610612755,nba/coaches/1941
-1627329,Mon Aug 09 2021 04:51:41 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:42 GMT-0600 (Mountain Daylight Time),1627329,Scott Morrison,Assistant Coach,2,1610612738,nba/coaches/1627329
-1628188,Mon Aug 09 2021 04:51:42 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:43 GMT-0600 (Mountain Daylight Time),1628188,Mitch Johnson,Assistant Coach,2,1610612759,nba/coaches/1628188
-201665,Mon Aug 09 2021 04:51:48 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:49 GMT-0600 (Mountain Daylight Time),201665,Mike Longabardi,Assistant Coach,2,1610612764,nba/coaches/201665
-2366,Mon Aug 09 2021 04:51:49 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:50 GMT-0600 (Mountain Daylight Time),2366,Mike Wilks,Assistant Coach,2,1610612760,nba/coaches/2366
-1831,Mon Aug 09 2021 04:51:57 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:57 GMT-0600 (Mountain Daylight Time),1831,Marlon Garnett,Assistant Coach,2,1610612737,nba/coaches/1831
-202105,Mon Aug 09 2021 04:51:50 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:51 GMT-0600 (Mountain Daylight Time),202105,Robert Pack,Assistant Coach,2,1610612764,nba/coaches/202105
-1629711,Mon Aug 09 2021 04:51:51 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:52 GMT-0600 (Mountain Daylight Time),1629711,Roy Rana,Assistant Coach,2,1610612758,nba/coaches/1629711
-1630496,Mon Aug 09 2021 04:51:52 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:52 GMT-0600 (Mountain Daylight Time),1630496,Jenny Coucek,Assistant Coach,2,1610612742,nba/coaches/1630496
-1629748,Mon Aug 09 2021 04:51:57 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:58 GMT-0600 (Mountain Daylight Time),1629748,Quinton Crawford,Assistant Coach,2,1610612747,nba/coaches/1629748
-1629423,Mon Aug 09 2021 04:51:53 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:53 GMT-0600 (Mountain Daylight Time),1629423,Donnie Strack,Trainer,3,1610612760,nba/coaches/1629423
-1655,Mon Aug 09 2021 04:52:02 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:03 GMT-0600 (Mountain Daylight Time),1655,Tony Brown,Associate Head Coach,9,1610612764,nba/coaches/1655
-1627167,Mon Aug 09 2021 04:51:54 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:54 GMT-0600 (Mountain Daylight Time),1627167,Dan Shimensky,Trainer,3,1610612743,nba/coaches/1627167
-202603,Mon Aug 09 2021 04:51:58 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:59 GMT-0600 (Mountain Daylight Time),202603,Lloyd Pierce,Lead Assistant Coach,13,1610612754,nba/coaches/202603
-202431,Mon Aug 09 2021 04:52:06 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:07 GMT-0600 (Mountain Daylight Time),202431,Jason Biles,Trainer,3,1610612745,nba/coaches/202431
-1628216,Mon Aug 09 2021 04:51:59 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:00 GMT-0600 (Mountain Daylight Time),1628216,Bryan Bailey,Assistant Coach,2,1610612762,nba/coaches/1628216
-200744,Mon Aug 09 2021 04:52:03 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:04 GMT-0600 (Mountain Daylight Time),200744,Corey Gaines,Assistant Coach,2,1610612764,nba/coaches/200744
-100616,Mon Aug 09 2021 04:52:00 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:01 GMT-0600 (Mountain Daylight Time),100616,Jenny Boucek,Assistant Coach,2,1610612754,nba/coaches/100616
-202894,Mon Aug 09 2021 04:52:04 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:05 GMT-0600 (Mountain Daylight Time),202894,Charles Klask,Assistant Coach,2,1610612743,nba/coaches/202894
-100101,Mon Aug 09 2021 04:52:09 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:10 GMT-0600 (Mountain Daylight Time),100101,Teresa Weatherspoon,Assistant Coach,2,1610612740,nba/coaches/100101
-203152,Mon Aug 09 2021 04:52:05 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:06 GMT-0600 (Mountain Daylight Time),203152,Ime Udoka,Assistant Coach,2,1610612751,nba/coaches/203152
-201690,Mon Aug 09 2021 04:52:09 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:09 GMT-0600 (Mountain Daylight Time),201690,Kenny Atkinson,Assistant Coach,2,1610612746,nba/coaches/201690
-1628784,Mon Aug 09 2021 04:52:07 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:07 GMT-0600 (Mountain Daylight Time),1628784,Pat St. Andrews,Assistant Coach,2,1610612749,nba/coaches/1628784
-204085,Mon Aug 09 2021 04:52:08 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:08 GMT-0600 (Mountain Daylight Time),204085,Sean Sweeney,Assistant Coach,2,1610612765,nba/coaches/204085
-1627328,Mon Aug 09 2021 04:52:10 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:11 GMT-0600 (Mountain Daylight Time),1627328,Jarell Christian,Assistant Coach,2,1610612764,nba/coaches/1627328
-201682,Mon Aug 09 2021 04:52:11 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:12 GMT-0600 (Mountain Daylight Time),201682,Octavio De La Grana,Assistant Coach for Player Development,12,1610612748,nba/coaches/201682
-201220,Mon Aug 09 2021 04:52:12 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:13 GMT-0600 (Mountain Daylight Time),201220,David Joerger,Assistant Coach,2,1610612755,nba/coaches/201220
-202985,Mon Aug 09 2021 04:52:13 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:14 GMT-0600 (Mountain Daylight Time),202985,Bobby Jackson,Assistant Coach for Player Development,12,1610612758,nba/coaches/202985
-204286,Mon Aug 09 2021 04:52:14 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:14 GMT-0600 (Mountain Daylight Time),204286,Stephen Spiro,Trainer,3,1610612739,nba/coaches/204286
-1320,Mon Aug 09 2021 04:52:15 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:15 GMT-0600 (Mountain Daylight Time),1320,Rick Carlisle,Head Coach,1,1610612754,nba/coaches/1320
-1497,Mon Aug 09 2021 04:52:16 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:16 GMT-0600 (Mountain Daylight Time),1497,Chauncey Billups,Head Coach,1,1610612757,nba/coaches/1497
-1628472,Mon Aug 09 2021 04:52:17 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:17 GMT-0600 (Mountain Daylight Time),1628472,Miles Simon,Assistant Coach,2,1610612747,nba/coaches/1628472
-1630281,Mon Aug 09 2021 04:52:33 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:34 GMT-0600 (Mountain Daylight Time),1630281,Lamar Skeeter,Assistant Coach,2,1610612762,nba/coaches/1630281
-384,Mon Aug 09 2021 04:50:13 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:14 GMT-0600 (Mountain Daylight Time),384,Calbert Cheaney,Assistant Coach,2,1610612754,nba/coaches/384
-204224,Mon Aug 09 2021 04:50:42 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:43 GMT-0600 (Mountain Daylight Time),204224,Ben Sullivan,Assistant Coach,2,1610612749,nba/coaches/204224
-2146,Mon Aug 09 2021 04:50:14 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:15 GMT-0600 (Mountain Daylight Time),2146,Gregg Farnam,Trainer,3,1610612750,nba/coaches/2146
-201675,Mon Aug 09 2021 04:50:15 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:15 GMT-0600 (Mountain Daylight Time),201675,Carl Eaton,Assistant Trainer,4,1610612754,nba/coaches/201675
-1630361,Mon Aug 09 2021 04:50:16 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:16 GMT-0600 (Mountain Daylight Time),1630361,Jeremy Castleberry,Assistant Coach,2,1610612746,nba/coaches/1630361
-2519,Mon Aug 09 2021 04:50:43 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:44 GMT-0600 (Mountain Daylight Time),2519,Andy Greer,Assistant Coach,2,1610612752,nba/coaches/2519
-202111,Mon Aug 09 2021 04:50:17 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:18 GMT-0600 (Mountain Daylight Time),202111,Kevin Young,Assistant Coach,2,1610612756,nba/coaches/202111
-201689,Mon Aug 09 2021 04:50:18 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:18 GMT-0600 (Mountain Daylight Time),201689,Roy Rogers,Assistant Coach,2,1610612746,nba/coaches/201689
-2720,Mon Aug 09 2021 04:50:55 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:55 GMT-0600 (Mountain Daylight Time),2720,Ernest Eugene,Trainer,3,1610612753,nba/coaches/2720
+1831,Mon Aug 09 2021 04:51:57 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:53:44 GMT-0600 (Mountain Daylight Time),1831,Marlon Garnett,Assistant Coach,2,1610612737,nba/coaches/1831
+203152,Mon Aug 09 2021 04:52:05 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:11 GMT-0600 (Mountain Daylight Time),203152,Ime Udoka,Head Coach,1,1610612738,nba/coaches/203152
+1627329,Mon Aug 09 2021 04:51:41 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:15 GMT-0600 (Mountain Daylight Time),1627329,Scott Morrison,Assistant Coach,2,1610612738,nba/coaches/1627329
+1628803,Mon Aug 09 2021 04:52:01 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:41 GMT-0600 (Mountain Daylight Time),1628803,Ryan Forehan-Kelly,Assistant Coach,2,1610612751,nba/coaches/1628803
+204286,Mon Aug 09 2021 04:52:14 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:05 GMT-0600 (Mountain Daylight Time),204286,Stephen Spiro,Trainer,3,1610612739,nba/coaches/204286
+1630496,Mon Aug 09 2021 04:51:52 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:27 GMT-0600 (Mountain Daylight Time),1630496,Jenny Coucek,Assistant Coach,2,1610612742,nba/coaches/1630496
+202894,Mon Aug 09 2021 04:52:04 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:54 GMT-0600 (Mountain Daylight Time),202894,Charles Klask,Assistant Coach,2,1610612743,nba/coaches/202894
+1627167,Mon Aug 09 2021 04:51:54 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:56 GMT-0600 (Mountain Daylight Time),1627167,Dan Shimensky,Trainer,3,1610612743,nba/coaches/1627167
+204085,Mon Aug 09 2021 04:52:08 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:17 GMT-0600 (Mountain Daylight Time),204085,Sean Sweeney,Assistant Coach,2,1610612765,nba/coaches/204085
+204005,Mon Aug 09 2021 04:50:09 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:41 GMT-0600 (Mountain Daylight Time),204005,Steve Kerr,Head Coach,1,1610612744,nba/coaches/204005
+201690,Mon Aug 09 2021 04:52:09 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:43 GMT-0600 (Mountain Daylight Time),201690,Kenny Atkinson,Assistant Coach,2,1610612744,nba/coaches/201690
+1628227,Mon Aug 09 2021 04:50:11 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:47 GMT-0600 (Mountain Daylight Time),1628227,Drew Yoder,Trainer,3,1610612744,nba/coaches/1628227
+202898,Mon Aug 09 2021 04:51:28 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:08 GMT-0600 (Mountain Daylight Time),202898,Jeff Hornacek,Assistant Coach,2,1610612745,nba/coaches/202898
+2205,Mon Aug 09 2021 04:50:12 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:14 GMT-0600 (Mountain Daylight Time),2205,DeSagana Diop,Assistant Coach,2,1610612745,nba/coaches/2205
+202431,Mon Aug 09 2021 04:52:06 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:15 GMT-0600 (Mountain Daylight Time),202431,Jason Biles,Trainer,3,1610612745,nba/coaches/202431
+1320,Mon Aug 09 2021 04:52:15 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:35 GMT-0600 (Mountain Daylight Time),1320,Rick Carlisle,Head Coach,1,1610612754,nba/coaches/1320
+202603,Mon Aug 09 2021 04:51:58 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:36 GMT-0600 (Mountain Daylight Time),202603,Lloyd Pierce,Lead Assistant Coach,13,1610612754,nba/coaches/202603
+100616,Mon Aug 09 2021 04:52:00 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:42 GMT-0600 (Mountain Daylight Time),100616,Jenny Boucek,Assistant Coach,2,1610612754,nba/coaches/100616
+202978,Mon Aug 09 2021 04:51:36 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:07 GMT-0600 (Mountain Daylight Time),202978,Tyronn Lue,Head Coach,1,1610612746,nba/coaches/202978
+1628472,Mon Aug 09 2021 04:52:17 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:34 GMT-0600 (Mountain Daylight Time),1628472,Miles Simon,Assistant Coach,2,1610612747,nba/coaches/1628472
+1629748,Mon Aug 09 2021 04:51:57 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:36 GMT-0600 (Mountain Daylight Time),1629748,Quinton Crawford,Assistant Coach,2,1610612747,nba/coaches/1629748
+201336,Mon Aug 09 2021 04:51:25 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:05 GMT-0600 (Mountain Daylight Time),201336,Blake Ahearn,Assistant Coach,2,1610612763,nba/coaches/201336
+2406,Mon Aug 09 2021 04:51:47 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:28 GMT-0600 (Mountain Daylight Time),2406,Caron Butler,Assistant Coach,2,1610612748,nba/coaches/2406
+201682,Mon Aug 09 2021 04:52:11 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:30 GMT-0600 (Mountain Daylight Time),201682,Octavio De La Grana,Assistant Coach for Player Development,12,1610612748,nba/coaches/201682
+1628784,Mon Aug 09 2021 04:52:07 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:54 GMT-0600 (Mountain Daylight Time),1628784,Pat St. Andrews,Assistant Coach,2,1610612749,nba/coaches/1628784
+974,Mon Aug 09 2021 04:50:10 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:18 GMT-0600 (Mountain Daylight Time),974,Joseph Blair,Assistant Coach,2,1610612750,nba/coaches/974
+203243,Mon Aug 09 2021 04:51:45 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:43 GMT-0600 (Mountain Daylight Time),203243,Casey Hill,Assistant Coach,2,1610612740,nba/coaches/203243
+100101,Mon Aug 09 2021 04:52:09 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:44 GMT-0600 (Mountain Daylight Time),100101,Teresa Weatherspoon,Assistant Coach,2,1610612740,nba/coaches/100101
+2366,Mon Aug 09 2021 04:51:49 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:40 GMT-0600 (Mountain Daylight Time),2366,Mike Wilks,Assistant Coach,2,1610612760,nba/coaches/2366
+1629423,Mon Aug 09 2021 04:51:53 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:44 GMT-0600 (Mountain Daylight Time),1629423,Donnie Strack,Trainer,3,1610612760,nba/coaches/1629423
+202891,Mon Aug 09 2021 04:51:30 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:06 GMT-0600 (Mountain Daylight Time),202891,Nate Tibbetts,Assistant Coach,2,1610612753,nba/coaches/202891
+1941,Mon Aug 09 2021 04:51:56 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:35 GMT-0600 (Mountain Daylight Time),1941,Doc Rivers,Head Coach,1,1610612755,nba/coaches/1941
+202434,Mon Aug 09 2021 04:51:55 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:38 GMT-0600 (Mountain Daylight Time),202434,Popeye Jones,Assistant Coach,2,1610612755,nba/coaches/202434
+1629169,Mon Aug 09 2021 04:51:23 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:39 GMT-0600 (Mountain Daylight Time),1629169,Brian Adams,Assistant Coach,2,1610612755,nba/coaches/1629169
+201220,Mon Aug 09 2021 04:52:12 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:40 GMT-0600 (Mountain Daylight Time),201220,David Joerger,Assistant Coach,2,1610612755,nba/coaches/201220
+1629427,Mon Aug 09 2021 04:51:25 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:02 GMT-0600 (Mountain Daylight Time),1629427,Brian Randle,Assistant Coach,2,1610612756,nba/coaches/1629427
+1629410,Mon Aug 09 2021 04:51:27 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:06 GMT-0600 (Mountain Daylight Time),1629410,David Crewe,Trainer,3,1610612756,nba/coaches/1629410
+1497,Mon Aug 09 2021 04:52:16 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:26 GMT-0600 (Mountain Daylight Time),1497,Chauncey Billups,Head Coach,1,1610612757,nba/coaches/1497
+1627471,Mon Aug 09 2021 04:51:33 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:27 GMT-0600 (Mountain Daylight Time),1627471,Jim Moran,Assistant Coach,2,1610612757,nba/coaches/1627471
+1628240,Mon Aug 09 2021 04:51:31 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:29 GMT-0600 (Mountain Daylight Time),1628240,John McCullough,Assistant Coach,2,1610612757,nba/coaches/1628240
+2623,Mon Aug 09 2021 04:51:47 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:31 GMT-0600 (Mountain Daylight Time),2623,Scott Brooks,Assistant Coach,2,1610612757,nba/coaches/2623
+101272,Mon Aug 09 2021 04:51:35 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:32 GMT-0600 (Mountain Daylight Time),101272,Geoff Clark,Trainer,3,1610612757,nba/coaches/101272
+204012,Mon Aug 09 2021 04:51:36 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:58 GMT-0600 (Mountain Daylight Time),204012,Luke Walton,Head Coach,1,1610612758,nba/coaches/204012
+278,Mon Aug 09 2021 04:51:40 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:00 GMT-0600 (Mountain Daylight Time),278,Stacey Augmon,Assistant Coach,2,1610612758,nba/coaches/278
+202985,Mon Aug 09 2021 04:52:13 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:03 GMT-0600 (Mountain Daylight Time),202985,Bobby Jackson,Assistant Coach,2,1610612758,nba/coaches/202985
+1629711,Mon Aug 09 2021 04:51:51 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:06 GMT-0600 (Mountain Daylight Time),1629711,Roy Rana,Assistant Coach,2,1610612758,nba/coaches/1629711
+1672,Mon Aug 09 2021 04:51:38 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:07 GMT-0600 (Mountain Daylight Time),1672,Rex Kalamian,Assistant Coach,2,1610612758,nba/coaches/1672
+1628188,Mon Aug 09 2021 04:51:42 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:30 GMT-0600 (Mountain Daylight Time),1628188,Mitch Johnson,Assistant Coach,2,1610612759,nba/coaches/1628188
+204019,Mon Aug 09 2021 04:51:44 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:31 GMT-0600 (Mountain Daylight Time),204019,Becky Hammon,Assistant Coach,2,1610612759,nba/coaches/204019
+201878,Mon Aug 09 2021 04:51:26 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:54 GMT-0600 (Mountain Daylight Time),201878,Adrian Griffin,Assistant Coach,2,1610612761,nba/coaches/201878
+725,Mon Aug 09 2021 04:51:34 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:23 GMT-0600 (Mountain Daylight Time),725,Dell Demps,Assistant Coach,2,1610612762,nba/coaches/725
+1997,Mon Aug 09 2021 04:51:43 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:24 GMT-0600 (Mountain Daylight Time),1997,Mike Wells,Assistant Coach,2,1610612762,nba/coaches/1997
+204007,Mon Aug 09 2021 04:51:37 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:25 GMT-0600 (Mountain Daylight Time),204007,Alex Jensen,Assistant Coach,2,1610612762,nba/coaches/204007
+1628216,Mon Aug 09 2021 04:51:59 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:27 GMT-0600 (Mountain Daylight Time),1628216,Bryan Bailey,Assistant Coach,2,1610612762,nba/coaches/1628216
+1630280,Mon Aug 09 2021 04:51:39 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:28 GMT-0600 (Mountain Daylight Time),1630280,Vince Legarza,Assistant Coach,2,1610612762,nba/coaches/1630280
+1630282,Mon Aug 09 2021 04:51:29 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:30 GMT-0600 (Mountain Daylight Time),1630282,Sergi Oliva,Assistant Coach,2,1610612762,nba/coaches/1630282
+2039,Mon Aug 09 2021 04:51:32 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:31 GMT-0600 (Mountain Daylight Time),2039,Keyon Dooling,Assistant Coach,2,1610612762,nba/coaches/2039
+101277,Mon Aug 09 2021 04:51:46 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:33 GMT-0600 (Mountain Daylight Time),101277,Brian Zettler,Trainer,3,1610612762,nba/coaches/101277
+1655,Mon Aug 09 2021 04:52:02 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:56 GMT-0600 (Mountain Daylight Time),1655,Tony Brown,Associate Head Coach,9,1610612764,nba/coaches/1655
+200744,Mon Aug 09 2021 04:52:03 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:57 GMT-0600 (Mountain Daylight Time),200744,Corey Gaines,Assistant Coach,2,1610612764,nba/coaches/200744
+1627328,Mon Aug 09 2021 04:52:10 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:07:01 GMT-0600 (Mountain Daylight Time),1627328,Jarell Christian,Assistant Coach,2,1610612764,nba/coaches/1627328
+201665,Mon Aug 09 2021 04:51:48 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:07:01 GMT-0600 (Mountain Daylight Time),201665,Mike Longabardi,Assistant Coach,2,1610612764,nba/coaches/201665
+202105,Mon Aug 09 2021 04:51:50 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:07:02 GMT-0600 (Mountain Daylight Time),202105,Robert Pack,Assistant Coach,2,1610612764,nba/coaches/202105
+2607,Mon Aug 09 2021 04:51:03 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:53:45 GMT-0600 (Mountain Daylight Time),2607,Chris Jent,Assistant Coach,2,1610612737,nba/coaches/2607
+202588,Mon Aug 09 2021 04:51:05 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:38 GMT-0600 (Mountain Daylight Time),202588,Jacque Vaughn,Lead Assistant Coach,13,1610612751,nba/coaches/202588
+1628179,Mon Aug 09 2021 04:51:07 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:39 GMT-0600 (Mountain Daylight Time),1628179,Royal Ivey,Assistant Coach,2,1610612751,nba/coaches/1628179
+201666,Mon Aug 09 2021 04:51:06 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:12 GMT-0600 (Mountain Daylight Time),201666,Dennis Williams,Assistant Trainer,4,1610612766,nba/coaches/201666
+204031,Mon Aug 09 2021 04:51:00 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:36 GMT-0600 (Mountain Daylight Time),204031,Joshua Longstaff,Assistant Coach,2,1610612741,nba/coaches/204031
+202101,Mon Aug 09 2021 04:51:15 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:18 GMT-0600 (Mountain Daylight Time),202101,Micah Nori,Assistant Coach,2,1610612765,nba/coaches/202101
+1658,Mon Aug 09 2021 04:51:17 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:44 GMT-0600 (Mountain Daylight Time),1658,Mike Brown,Assistant Coach,2,1610612744,nba/coaches/1658
+384,Mon Aug 09 2021 04:50:13 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:37 GMT-0600 (Mountain Daylight Time),384,Calbert Cheaney,Assistant Coach,2,1610612754,nba/coaches/384
 1277,Mon Aug 09 2021 04:50:19 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:19 GMT-0600 (Mountain Daylight Time),1277,Stan Van Gundy,Head Coach,1,1610612740,nba/coaches/1277
-204225,Mon Aug 09 2021 04:50:44 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:45 GMT-0600 (Mountain Daylight Time),204225,Charles Lee,Assistant Coach,2,1610612749,nba/coaches/204225
-1271,Mon Aug 09 2021 04:50:19 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:20 GMT-0600 (Mountain Daylight Time),1271,Larry Drew,Assistant Coach,2,1610612746,nba/coaches/1271
-2814,Mon Aug 09 2021 04:50:20 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:21 GMT-0600 (Mountain Daylight Time),2814,Brendan O'Connor,Assistant Coach,2,1610612746,nba/coaches/2814
-2010,Mon Aug 09 2021 04:50:21 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:22 GMT-0600 (Mountain Daylight Time),2010,Jasen Powell,Trainer,3,1610612746,nba/coaches/2010
-452,Mon Aug 09 2021 04:50:45 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:45 GMT-0600 (Mountain Daylight Time),452,Vin Baker,Assistant Coach,2,1610612749,nba/coaches/452
-1630382,Mon Aug 09 2021 04:50:22 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:24 GMT-0600 (Mountain Daylight Time),1630382,Tom Maystadt,Trainer,3,1610612740,nba/coaches/1630382
-203597,Mon Aug 09 2021 04:50:25 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:27 GMT-0600 (Mountain Daylight Time),203597,Phil Handy,Assistant Coach,2,1610612747,nba/coaches/203597
-2130,Mon Aug 09 2021 04:50:27 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:28 GMT-0600 (Mountain Daylight Time),2130,Mike Penberthy,Assistant Coach,2,1610612747,nba/coaches/2130
-1356,Mon Aug 09 2021 04:50:46 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:46 GMT-0600 (Mountain Daylight Time),1356,Scott McCullough,Trainer,3,1610612761,nba/coaches/1356
-201766,Mon Aug 09 2021 04:50:28 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:29 GMT-0600 (Mountain Daylight Time),201766,Nina Hsieh,Trainer,3,1610612747,nba/coaches/201766
-1630161,Mon Aug 09 2021 04:50:30 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:33 GMT-0600 (Mountain Daylight Time),1630161,Kenny Payne,Lead Assistant Coach,13,1610612752,nba/coaches/1630161
-204013,Mon Aug 09 2021 04:50:56 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:57 GMT-0600 (Mountain Daylight Time),204013,Pat Delany,Assistant Coach,2,1610612753,nba/coaches/204013
-202433,Mon Aug 09 2021 04:50:34 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:36 GMT-0600 (Mountain Daylight Time),202433,Vitaly Potapenko,Assistant Coach,2,1610612763,nba/coaches/202433
-1628772,Mon Aug 09 2021 04:50:47 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:47 GMT-0600 (Mountain Daylight Time),1628772,Kevin Burleson,Assistant Coach,2,1610612750,nba/coaches/1628772
-204011,Mon Aug 09 2021 04:50:36 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:37 GMT-0600 (Mountain Daylight Time),204011,Darko Rajakovic,Assistant Coach,2,1610612763,nba/coaches/204011
+201675,Mon Aug 09 2021 04:50:15 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:44 GMT-0600 (Mountain Daylight Time),201675,Carl Eaton,Assistant Trainer,4,1610612754,nba/coaches/201675
+1271,Mon Aug 09 2021 04:50:19 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:09 GMT-0600 (Mountain Daylight Time),1271,Larry Drew,Assistant Coach,2,1610612746,nba/coaches/1271
+1630361,Mon Aug 09 2021 04:50:16 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:10 GMT-0600 (Mountain Daylight Time),1630361,Jeremy Castleberry,Assistant Coach,2,1610612746,nba/coaches/1630361
+2814,Mon Aug 09 2021 04:50:20 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:11 GMT-0600 (Mountain Daylight Time),2814,Brendan O'Connor,Assistant Coach,2,1610612746,nba/coaches/2814
+201689,Mon Aug 09 2021 04:50:18 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:12 GMT-0600 (Mountain Daylight Time),201689,Roy Rogers,Assistant Coach,2,1610612746,nba/coaches/201689
+2010,Mon Aug 09 2021 04:50:21 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:13 GMT-0600 (Mountain Daylight Time),2010,Jasen Powell,Trainer,3,1610612746,nba/coaches/2010
+203597,Mon Aug 09 2021 04:50:25 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:35 GMT-0600 (Mountain Daylight Time),203597,Phil Handy,Assistant Coach,2,1610612747,nba/coaches/203597
+2130,Mon Aug 09 2021 04:50:27 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:38 GMT-0600 (Mountain Daylight Time),2130,Mike Penberthy,Assistant Coach,2,1610612747,nba/coaches/2130
+201766,Mon Aug 09 2021 04:50:28 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:39 GMT-0600 (Mountain Daylight Time),201766,Nina Hsieh,Trainer,3,1610612747,nba/coaches/201766
+202433,Mon Aug 09 2021 04:50:34 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:00 GMT-0600 (Mountain Daylight Time),202433,Vitaly Potapenko,Assistant Coach,2,1610612763,nba/coaches/202433
+204011,Mon Aug 09 2021 04:50:36 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:02 GMT-0600 (Mountain Daylight Time),204011,Darko Rajakovic,Assistant Coach,2,1610612763,nba/coaches/204011
+2086,Mon Aug 09 2021 04:51:08 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:05 GMT-0600 (Mountain Daylight Time),2086,Scoonie Penn,Assistant Coach,2,1610612763,nba/coaches/2086
+204229,Mon Aug 09 2021 04:50:38 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:30 GMT-0600 (Mountain Daylight Time),204229,Malik Allen,Assistant Coach,2,1610612748,nba/coaches/204229
+1281,Mon Aug 09 2021 04:50:40 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:31 GMT-0600 (Mountain Daylight Time),1281,Jay Sabol,Trainer,3,1610612748,nba/coaches/1281
+1371,Mon Aug 09 2021 04:51:04 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:53 GMT-0600 (Mountain Daylight Time),1371,Mike Budenholzer,Head Coach,1,1610612749,nba/coaches/1371
+203005,Mon Aug 09 2021 04:51:09 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:54 GMT-0600 (Mountain Daylight Time),203005,Darvin Ham,Assistant Coach,2,1610612749,nba/coaches/203005
+204224,Mon Aug 09 2021 04:50:42 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:55 GMT-0600 (Mountain Daylight Time),204224,Ben Sullivan,Assistant Coach,2,1610612749,nba/coaches/204224
 1337,Mon Aug 09 2021 04:50:37 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:38 GMT-0600 (Mountain Daylight Time),1337,Terry Stotts,Head Coach,1,1610612757,nba/coaches/1337
-204229,Mon Aug 09 2021 04:50:38 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:39 GMT-0600 (Mountain Daylight Time),204229,Malik Allen,Assistant Coach,2,1610612748,nba/coaches/204229
-203170,Mon Aug 09 2021 04:50:47 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:48 GMT-0600 (Mountain Daylight Time),203170,Dale Osbourne,Assistant Coach,2,1610612757,nba/coaches/203170
-1285,Mon Aug 09 2021 04:50:39 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:40 GMT-0600 (Mountain Daylight Time),1285,Mike Woodson,Assistant Coach,2,1610612752,nba/coaches/1285
-1281,Mon Aug 09 2021 04:50:40 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:41 GMT-0600 (Mountain Daylight Time),1281,Jay Sabol,Trainer,3,1610612748,nba/coaches/1281
-2607,Mon Aug 09 2021 04:51:03 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:04 GMT-0600 (Mountain Daylight Time),2607,Chris Jent,Assistant Coach,2,1610612737,nba/coaches/2607
-2649,Mon Aug 09 2021 04:50:41 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:42 GMT-0600 (Mountain Daylight Time),2649,Chad Forcier,Assistant Coach,2,1610612749,nba/coaches/2649
-101273,Mon Aug 09 2021 04:50:57 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:58 GMT-0600 (Mountain Daylight Time),101273,Monty Williams,Head Coach,1,1610612756,nba/coaches/101273
-101269,Mon Aug 09 2021 04:50:48 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:49 GMT-0600 (Mountain Daylight Time),101269,Anthony Goenaga,Trainer,3,1610612752,nba/coaches/101269
-1627327,Mon Aug 09 2021 04:50:49 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:50 GMT-0600 (Mountain Daylight Time),1627327,Mark Daigneault,Head Coach,1,1610612760,nba/coaches/1627327
+204225,Mon Aug 09 2021 04:50:44 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:56 GMT-0600 (Mountain Daylight Time),204225,Charles Lee,Assistant Coach,2,1610612749,nba/coaches/204225
+452,Mon Aug 09 2021 04:50:45 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:57 GMT-0600 (Mountain Daylight Time),452,Vin Baker,Assistant Coach,2,1610612749,nba/coaches/452
+2649,Mon Aug 09 2021 04:50:41 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:58 GMT-0600 (Mountain Daylight Time),2649,Chad Forcier,Assistant Coach,2,1610612749,nba/coaches/2649
+201692,Mon Aug 09 2021 04:50:54 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:59 GMT-0600 (Mountain Daylight Time),201692,Scott Faust,Trainer,3,1610612749,nba/coaches/201692
+203143,Mon Aug 09 2021 04:51:10 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:19 GMT-0600 (Mountain Daylight Time),203143,Pablo Prigioni,Assistant Coach,2,1610612750,nba/coaches/203143
+1628772,Mon Aug 09 2021 04:50:47 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:20 GMT-0600 (Mountain Daylight Time),1628772,Kevin Burleson,Assistant Coach,2,1610612750,nba/coaches/1628772
+2146,Mon Aug 09 2021 04:50:14 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:22 GMT-0600 (Mountain Daylight Time),2146,Gregg Farnam,Trainer,3,1610612750,nba/coaches/2146
+1630382,Mon Aug 09 2021 04:50:22 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:48 GMT-0600 (Mountain Daylight Time),1630382,Tom Maystadt,Trainer,3,1610612740,nba/coaches/1630382
+1629432,Mon Aug 09 2021 04:51:10 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:49 GMT-0600 (Mountain Daylight Time),1629432,Todd Campbell,Assistant Trainer,4,1610612740,nba/coaches/1629432
+1301,Mon Aug 09 2021 04:51:11 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:09 GMT-0600 (Mountain Daylight Time),1301,Tom Thibodeau,Head Coach,1,1610612752,nba/coaches/1301
+204008,Mon Aug 09 2021 04:51:13 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:10 GMT-0600 (Mountain Daylight Time),204008,Johnnie Bryant,Associate Head Coach,9,1610612752,nba/coaches/204008
 2168,Mon Aug 09 2021 04:50:50 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:51 GMT-0600 (Mountain Daylight Time),2168,Steve Clifford,Head Coach,1,1610612753,nba/coaches/2168
-1778,Mon Aug 09 2021 04:50:58 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:58 GMT-0600 (Mountain Daylight Time),1778,Nate McMillan,Head Coach,1,1610612737,nba/coaches/1778
-2457,Mon Aug 09 2021 04:50:51 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:52 GMT-0600 (Mountain Daylight Time),2457,Jannero Pargo,Assistant Coach,2,1610612757,nba/coaches/2457
-2821,Mon Aug 09 2021 04:50:52 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:53 GMT-0600 (Mountain Daylight Time),2821,Ty Corbin,Assistant Coach,2,1610612753,nba/coaches/2821
-203375,Mon Aug 09 2021 04:51:13 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:14 GMT-0600 (Mountain Daylight Time),203375,Darren Erman,Assistant Coach,2,1610612752,nba/coaches/203375
-204004,Mon Aug 09 2021 04:50:53 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:54 GMT-0600 (Mountain Daylight Time),204004,Steve Hetzel,Assistant Coach,2,1610612753,nba/coaches/204004
-203167,Mon Aug 09 2021 04:50:59 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:59 GMT-0600 (Mountain Daylight Time),203167,Joe Resendez,Trainer,3,1610612758,nba/coaches/203167
-201692,Mon Aug 09 2021 04:50:54 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:50:55 GMT-0600 (Mountain Daylight Time),201692,Scott Faust,Trainer,3,1610612749,nba/coaches/201692
-1371,Mon Aug 09 2021 04:51:04 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:05 GMT-0600 (Mountain Daylight Time),1371,Mike Budenholzer,Head Coach,1,1610612749,nba/coaches/1371
-873,Mon Aug 09 2021 04:51:00 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:00 GMT-0600 (Mountain Daylight Time),873,Gregg Popovich,Head Coach,1,1610612759,nba/coaches/873
-204031,Mon Aug 09 2021 04:51:00 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:01 GMT-0600 (Mountain Daylight Time),204031,Joshua Longstaff,Assistant Coach,2,1610612741,nba/coaches/204031
-2086,Mon Aug 09 2021 04:51:08 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:09 GMT-0600 (Mountain Daylight Time),2086,Scoonie Penn,Assistant Coach,2,1610612763,nba/coaches/2086
-203606,Mon Aug 09 2021 04:51:01 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:02 GMT-0600 (Mountain Daylight Time),203606,Nick Nurse,Head Coach,1,1610612761,nba/coaches/203606
-203604,Mon Aug 09 2021 04:51:02 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:03 GMT-0600 (Mountain Daylight Time),203604,Jama Mahlalela,Assistant Coach,2,1610612761,nba/coaches/203604
-202588,Mon Aug 09 2021 04:51:05 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:06 GMT-0600 (Mountain Daylight Time),202588,Jacque Vaughn,Lead Assistant Coach,13,1610612751,nba/coaches/202588
-1629432,Mon Aug 09 2021 04:51:10 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:11 GMT-0600 (Mountain Daylight Time),1629432,Todd Campbell,Assistant Trainer,4,1610612740,nba/coaches/1629432
-201666,Mon Aug 09 2021 04:51:06 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:06 GMT-0600 (Mountain Daylight Time),201666,Dennis Williams,Assistant Trainer,4,1610612766,nba/coaches/201666
-1628179,Mon Aug 09 2021 04:51:07 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:07 GMT-0600 (Mountain Daylight Time),1628179,Royal Ivey,Assistant Coach,2,1610612751,nba/coaches/1628179
-203005,Mon Aug 09 2021 04:51:09 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:09 GMT-0600 (Mountain Daylight Time),203005,Darvin Ham,Assistant Coach,2,1610612749,nba/coaches/203005
-204008,Mon Aug 09 2021 04:51:13 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:13 GMT-0600 (Mountain Daylight Time),204008,Johnnie Bryant,Associate Head Coach,9,1610612752,nba/coaches/204008
-203143,Mon Aug 09 2021 04:51:10 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:10 GMT-0600 (Mountain Daylight Time),203143,Pablo Prigioni,Assistant Coach,2,1610612750,nba/coaches/203143
-1301,Mon Aug 09 2021 04:51:11 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:12 GMT-0600 (Mountain Daylight Time),1301,Tom Thibodeau,Head Coach,1,1610612752,nba/coaches/1301
-1629450,Mon Aug 09 2021 04:51:14 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:15 GMT-0600 (Mountain Daylight Time),1629450,Larry Greer,Assistant Coach,2,1610612752,nba/coaches/1629450
-202101,Mon Aug 09 2021 04:51:15 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:16 GMT-0600 (Mountain Daylight Time),202101,Micah Nori,Assistant Coach,2,1610612765,nba/coaches/202101
-1627341,Mon Aug 09 2021 04:51:16 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:17 GMT-0600 (Mountain Daylight Time),1627341,Mike Batiste,Assistant Coach,2,1610612753,nba/coaches/1627341
-1658,Mon Aug 09 2021 04:51:17 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:18 GMT-0600 (Mountain Daylight Time),1658,Mike Brown,Assistant Coach,2,1610612744,nba/coaches/1658
-1264,Mon Aug 09 2021 04:51:18 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:19 GMT-0600 (Mountain Daylight Time),1264,Will Sevening,Trainer,3,1610612759,nba/coaches/1264
-1627164,Mon Aug 09 2021 04:51:19 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:20 GMT-0600 (Mountain Daylight Time),1627164,Bruce Kreutzer,Assistant Coach,2,1610612753,nba/coaches/1627164
-1629144,Mon Aug 09 2021 04:51:20 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:20 GMT-0600 (Mountain Daylight Time),1629144,Sergio Scariolo,Assistant Coach,2,1610612761,nba/coaches/1629144
-101173,Mon Aug 09 2021 04:51:21 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:21 GMT-0600 (Mountain Daylight Time),101173,Mark Bryant,Assistant Coach,2,1610612756,nba/coaches/101173
-1243,Mon Aug 09 2021 04:52:34 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:35 GMT-0600 (Mountain Daylight Time),1243,Alvin Gentry,Associate Head Coach,9,1610612758,nba/coaches/1243
-1627336,Mon Aug 09 2021 04:51:21 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:22 GMT-0600 (Mountain Daylight Time),1627336,Dylan Murphy,Assistant Coach,2,1610612753,nba/coaches/1627336
-203605,Mon Aug 09 2021 04:52:35 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:35 GMT-0600 (Mountain Daylight Time),203605,Jesse Mermuys,Assistant Coach,2,1610612758,nba/coaches/203605
-1629761,Mon Aug 09 2021 04:51:22 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:51:23 GMT-0600 (Mountain Daylight Time),1629761,Fab Flournoy,Assistant Coach,2,1610612761,nba/coaches/1629761
-2443,Mon Aug 09 2021 04:52:36 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:37 GMT-0600 (Mountain Daylight Time),2443,Darius Songaila,Assistant Coach,2,1610612759,nba/coaches/2443
-1628178,Mon Aug 09 2021 04:52:37 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:37 GMT-0600 (Mountain Daylight Time),1628178,Vin Bhavnani,Assistant Coach,2,1610612760,nba/coaches/1628178
-1629821,Mon Aug 09 2021 04:52:38 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:39 GMT-0600 (Mountain Daylight Time),1629821,Jon Goodwillie,Assistant Coach,2,1610612761,nba/coaches/1629821
-202439,Mon Aug 09 2021 04:52:39 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:39 GMT-0600 (Mountain Daylight Time),202439,Quin Snyder,Head Coach,1,1610612762,nba/coaches/202439
-1312,Mon Aug 09 2021 04:52:40 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:40 GMT-0600 (Mountain Daylight Time),1312,Maurice Cheeks,Assistant Coach,2,1610612741,nba/coaches/1312
-1627666,Mon Aug 09 2021 04:52:40 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:41 GMT-0600 (Mountain Daylight Time),1627666,Chris DeMarco,Assistant Coach for Player Development,12,1610612744,nba/coaches/1627666
-959,Mon Aug 09 2021 04:52:41 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:42 GMT-0600 (Mountain Daylight Time),959,Steve Nash,Head Coach,1,1610612751,nba/coaches/959
-203753,Mon Aug 09 2021 04:52:42 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:43 GMT-0600 (Mountain Daylight Time),203753,Ronald Nored,Assistant Coach,2,1610612754,nba/coaches/203753
+1630161,Mon Aug 09 2021 04:50:30 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:11 GMT-0600 (Mountain Daylight Time),1630161,Kenny Payne,Lead Assistant Coach,13,1610612752,nba/coaches/1630161
+1285,Mon Aug 09 2021 04:50:39 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:12 GMT-0600 (Mountain Daylight Time),1285,Mike Woodson,Assistant Coach,2,1610612752,nba/coaches/1285
+2519,Mon Aug 09 2021 04:50:43 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:13 GMT-0600 (Mountain Daylight Time),2519,Andy Greer,Assistant Coach,2,1610612752,nba/coaches/2519
+203375,Mon Aug 09 2021 04:51:13 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:14 GMT-0600 (Mountain Daylight Time),203375,Darren Erman,Assistant Coach,2,1610612752,nba/coaches/203375
+1629450,Mon Aug 09 2021 04:51:14 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:15 GMT-0600 (Mountain Daylight Time),1629450,Larry Greer,Assistant Coach,2,1610612752,nba/coaches/1629450
+101269,Mon Aug 09 2021 04:50:48 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:17 GMT-0600 (Mountain Daylight Time),101269,Anthony Goenaga,Trainer,3,1610612752,nba/coaches/101269
+1627327,Mon Aug 09 2021 04:50:49 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:36 GMT-0600 (Mountain Daylight Time),1627327,Mark Daigneault,Head Coach,1,1610612760,nba/coaches/1627327
+2821,Mon Aug 09 2021 04:50:52 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:05 GMT-0600 (Mountain Daylight Time),2821,Ty Corbin,Assistant Coach,2,1610612753,nba/coaches/2821
+204004,Mon Aug 09 2021 04:50:53 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:07 GMT-0600 (Mountain Daylight Time),204004,Steve Hetzel,Assistant Coach,2,1610612753,nba/coaches/204004
+204013,Mon Aug 09 2021 04:50:56 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:08 GMT-0600 (Mountain Daylight Time),204013,Pat Delany,Assistant Coach,2,1610612753,nba/coaches/204013
+1627164,Mon Aug 09 2021 04:51:19 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:10 GMT-0600 (Mountain Daylight Time),1627164,Bruce Kreutzer,Assistant Coach,2,1610612753,nba/coaches/1627164
+1627341,Mon Aug 09 2021 04:51:16 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:12 GMT-0600 (Mountain Daylight Time),1627341,Mike Batiste,Assistant Coach,2,1610612753,nba/coaches/1627341
+2720,Mon Aug 09 2021 04:50:55 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:15 GMT-0600 (Mountain Daylight Time),2720,Ernest Eugene,Trainer,3,1610612753,nba/coaches/2720
+101273,Mon Aug 09 2021 04:50:57 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:01 GMT-0600 (Mountain Daylight Time),101273,Monty Williams,Head Coach,1,1610612756,nba/coaches/101273
+202111,Mon Aug 09 2021 04:50:17 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:03 GMT-0600 (Mountain Daylight Time),202111,Kevin Young,Assistant Coach,2,1610612756,nba/coaches/202111
+203170,Mon Aug 09 2021 04:50:47 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:28 GMT-0600 (Mountain Daylight Time),203170,Dale Osbourne,Assistant Coach,2,1610612757,nba/coaches/203170
+2457,Mon Aug 09 2021 04:50:51 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:30 GMT-0600 (Mountain Daylight Time),2457,Jannero Pargo,Assistant Coach,2,1610612757,nba/coaches/2457
+203167,Mon Aug 09 2021 04:50:59 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:09 GMT-0600 (Mountain Daylight Time),203167,Joe Resendez,Trainer,3,1610612758,nba/coaches/203167
+873,Mon Aug 09 2021 04:51:00 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:29 GMT-0600 (Mountain Daylight Time),873,Gregg Popovich,Head Coach,1,1610612759,nba/coaches/873
+1264,Mon Aug 09 2021 04:51:18 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:34 GMT-0600 (Mountain Daylight Time),1264,Will Sevening,Trainer,3,1610612759,nba/coaches/1264
+203606,Mon Aug 09 2021 04:51:01 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:53 GMT-0600 (Mountain Daylight Time),203606,Nick Nurse,Head Coach,1,1610612761,nba/coaches/203606
+203604,Mon Aug 09 2021 04:51:02 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:55 GMT-0600 (Mountain Daylight Time),203604,Jama Mahlalela,Assistant Coach,2,1610612761,nba/coaches/203604
+1629144,Mon Aug 09 2021 04:51:20 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:56 GMT-0600 (Mountain Daylight Time),1629144,Sergio Scariolo,Assistant Coach,2,1610612761,nba/coaches/1629144
+1356,Mon Aug 09 2021 04:50:46 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:59 GMT-0600 (Mountain Daylight Time),1356,Scott McCullough,Trainer,3,1610612761,nba/coaches/1356
+1630281,Mon Aug 09 2021 04:52:33 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:29 GMT-0600 (Mountain Daylight Time),1630281,Lamar Skeeter,Assistant Coach,2,1610612762,nba/coaches/1630281
+1778,Mon Aug 09 2021 04:50:58 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:53:41 GMT-0600 (Mountain Daylight Time),1778,Nate McMillan,Head Coach,1,1610612737,nba/coaches/1778
+959,Mon Aug 09 2021 04:52:41 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:37 GMT-0600 (Mountain Daylight Time),959,Steve Nash,Head Coach,1,1610612751,nba/coaches/959
+1312,Mon Aug 09 2021 04:52:40 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:33 GMT-0600 (Mountain Daylight Time),1312,Maurice Cheeks,Assistant Coach,2,1610612741,nba/coaches/1312
+1627666,Mon Aug 09 2021 04:52:40 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:46 GMT-0600 (Mountain Daylight Time),1627666,Chris DeMarco,Assistant Coach for Player Development,12,1610612744,nba/coaches/1627666
+203753,Mon Aug 09 2021 04:52:42 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:38 GMT-0600 (Mountain Daylight Time),203753,Ronald Nored,Assistant Coach,2,1610612754,nba/coaches/203753
+1628178,Mon Aug 09 2021 04:52:37 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:39 GMT-0600 (Mountain Daylight Time),1628178,Vin Bhavnani,Assistant Coach,2,1610612760,nba/coaches/1628178
+1627336,Mon Aug 09 2021 04:51:21 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:14 GMT-0600 (Mountain Daylight Time),1627336,Dylan Murphy,Assistant Coach,2,1610612753,nba/coaches/1627336
+101173,Mon Aug 09 2021 04:51:21 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:05 GMT-0600 (Mountain Daylight Time),101173,Mark Bryant,Assistant Coach,2,1610612756,nba/coaches/101173
+1243,Mon Aug 09 2021 04:52:34 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:04:59 GMT-0600 (Mountain Daylight Time),1243,Alvin Gentry,Associate Head Coach,9,1610612758,nba/coaches/1243
+203605,Mon Aug 09 2021 04:52:35 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:01 GMT-0600 (Mountain Daylight Time),203605,Jesse Mermuys,Assistant Coach,2,1610612758,nba/coaches/203605
+2443,Mon Aug 09 2021 04:52:36 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:32 GMT-0600 (Mountain Daylight Time),2443,Darius Songaila,Assistant Coach,2,1610612759,nba/coaches/2443
+1629761,Mon Aug 09 2021 04:51:22 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:57 GMT-0600 (Mountain Daylight Time),1629761,Fab Flournoy,Assistant Coach,2,1610612761,nba/coaches/1629761
+1629821,Mon Aug 09 2021 04:52:38 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:58 GMT-0600 (Mountain Daylight Time),1629821,Jon Goodwillie,Assistant Coach,2,1610612761,nba/coaches/1629821
+202439,Mon Aug 09 2021 04:52:39 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:22 GMT-0600 (Mountain Daylight Time),202439,Quin Snyder,Head Coach,1,1610612762,nba/coaches/202439
+202602,Mon Aug 09 2021 04:53:01 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:55:10 GMT-0600 (Mountain Daylight Time),202602,Chad Iske,Assistant Coach,2,1610612766,nba/coaches/202602
 203168,Mon Aug 09 2021 04:52:18 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:18 GMT-0600 (Mountain Daylight Time),203168,Jay Larranaga,Assistant Coach,2,1610612738,nba/coaches/203168
-202599,Mon Aug 09 2021 04:52:43 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:44 GMT-0600 (Mountain Daylight Time),202599,Darrell Armstrong,Assistant Coach,2,1610612742,nba/coaches/202599
-1629110,Mon Aug 09 2021 04:52:18 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:19 GMT-0600 (Mountain Daylight Time),1629110,Dan Geriot,Assistant Coach,2,1610612739,nba/coaches/1629110
-1630455,Mon Aug 09 2021 04:52:56 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:57 GMT-0600 (Mountain Daylight Time),1630455,Zach Peterson,Assistant Coach for Player Development,12,1610612760,nba/coaches/1630455
-202108,Mon Aug 09 2021 04:52:44 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:45 GMT-0600 (Mountain Daylight Time),202108,Sam Cassell,Assistant Coach,2,1610612755,nba/coaches/202108
-1226,Mon Aug 09 2021 04:52:20 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:20 GMT-0600 (Mountain Daylight Time),1226,Sidney Lowe,Assistant Coach,2,1610612765,nba/coaches/1226
-201696,Mon Aug 09 2021 04:52:20 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:21 GMT-0600 (Mountain Daylight Time),201696,Kaleb Canales,Assistant Coach,2,1610612754,nba/coaches/201696
-2152,Mon Aug 09 2021 04:52:45 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:46 GMT-0600 (Mountain Daylight Time),2152,Stephen Silas,Head Coach,1,1610612745,nba/coaches/2152
-203758,Mon Aug 09 2021 04:52:21 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:22 GMT-0600 (Mountain Daylight Time),203758,Mike Miller,Assistant Coach,2,1610612760,nba/coaches/203758
-203456,Mon Aug 09 2021 04:52:46 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:46 GMT-0600 (Mountain Daylight Time),203456,Jason Kidd,Assistant Coach,2,1610612747,nba/coaches/203456
-1630491,Mon Aug 09 2021 04:52:22 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:23 GMT-0600 (Mountain Daylight Time),1630491,John Beckett,Assistant Coach,2,1610612743,nba/coaches/1630491
-1628181,Mon Aug 09 2021 04:52:57 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:58 GMT-0600 (Mountain Daylight Time),1628181,Will Hardy,Assistant Coach,2,1610612759,nba/coaches/1628181
-203599,Mon Aug 09 2021 04:52:23 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:24 GMT-0600 (Mountain Daylight Time),203599,Dan Craig,Associate Head Coach,9,1610612746,nba/coaches/203599
-1627564,Mon Aug 09 2021 04:52:47 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:47 GMT-0600 (Mountain Daylight Time),1627564,Jonah Herscu,Assistant Coach,2,1610612758,nba/coaches/1627564
-203797,Mon Aug 09 2021 04:52:24 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:25 GMT-0600 (Mountain Daylight Time),203797,Brad Jones,Assistant Coach,2,1610612763,nba/coaches/203797
-1626233,Mon Aug 09 2021 04:52:48 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:48 GMT-0600 (Mountain Daylight Time),1626233,Jeff Watkinson,Assistant Coach,2,1610612762,nba/coaches/1626233
-201676,Mon Aug 09 2021 04:52:25 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:26 GMT-0600 (Mountain Daylight Time),201676,Fred Vinson,Assistant Coach,2,1610612740,nba/coaches/201676
-2515,Mon Aug 09 2021 04:52:26 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:27 GMT-0600 (Mountain Daylight Time),2515,Dan Burke,Assistant Coach,2,1610612755,nba/coaches/2515
-1627657,Mon Aug 09 2021 04:52:48 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:49 GMT-0600 (Mountain Daylight Time),1627657,Will Weaver,Assistant Coach,2,1610612745,nba/coaches/1627657
-1627331,Mon Aug 09 2021 04:52:27 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:27 GMT-0600 (Mountain Daylight Time),1627331,Will Scott,Assistant Coach for Player Development,12,1610612758,nba/coaches/1627331
-1630364,Mon Aug 09 2021 04:52:58 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:59 GMT-0600 (Mountain Daylight Time),1630364,David Atkins,Assistant Coach,2,1610612764,nba/coaches/1630364
-1630290,Mon Aug 09 2021 04:52:49 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:50 GMT-0600 (Mountain Daylight Time),1630290,Sonia Raman,Assistant Coach,2,1610612763,nba/coaches/1630290
-203150,Mon Aug 09 2021 04:52:28 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:28 GMT-0600 (Mountain Daylight Time),203150,David Vanterpool,Associate Head Coach,9,1610612750,nba/coaches/203150
-1628228,Mon Aug 09 2021 04:52:29 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:29 GMT-0600 (Mountain Daylight Time),1628228,Willie Green,Assistant Coach,2,1610612756,nba/coaches/1628228
-777,Mon Aug 09 2021 04:52:50 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:51 GMT-0600 (Mountain Daylight Time),777,Rex Walters,Assistant Coach,2,1610612740,nba/coaches/777
-1627971,Mon Aug 09 2021 04:52:30 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:30 GMT-0600 (Mountain Daylight Time),1627971,Rico Hines,Assistant Coach for Player Development,12,1610612758,nba/coaches/1627971
-203601,Mon Aug 09 2021 04:52:51 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:52 GMT-0600 (Mountain Daylight Time),203601,Mike Terpstra,Assistant Coach,2,1610612764,nba/coaches/203601
-101203,Mon Aug 09 2021 04:52:30 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:31 GMT-0600 (Mountain Daylight Time),101203,Eric Waters,Trainer,3,1610612762,nba/coaches/101203
-1628807,Mon Aug 09 2021 04:52:59 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:53:00 GMT-0600 (Mountain Daylight Time),1628807,Brandon Bailey,Assistant Coach,2,1610612738,nba/coaches/1628807
-202109,Mon Aug 09 2021 04:52:31 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:32 GMT-0600 (Mountain Daylight Time),202109,Bryan Gates,Assistant Coach,2,1610612750,nba/coaches/202109
-202896,Mon Aug 09 2021 04:52:32 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:33 GMT-0600 (Mountain Daylight Time),202896,Chris Finch,Head Coach,1,1610612750,nba/coaches/202896
-1360,Mon Aug 09 2021 04:52:52 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:53 GMT-0600 (Mountain Daylight Time),1360,Kevin Johnson,Trainer,3,1610612755,nba/coaches/1360
-2887,Mon Aug 09 2021 04:52:53 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:54 GMT-0600 (Mountain Daylight Time),2887,Chip Engelland,Assistant Coach,2,1610612759,nba/coaches/2887
-1629412,Mon Aug 09 2021 04:53:00 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:53:01 GMT-0600 (Mountain Daylight Time),1629412,Dan Liburd,Strength and Conditioning Coach,5,1610612751,nba/coaches/1629412
-204226,Mon Aug 09 2021 04:52:54 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:55 GMT-0600 (Mountain Daylight Time),204226,Chris Quinn,Assistant Coach,2,1610612748,nba/coaches/204226
-1630363,Mon Aug 09 2021 04:52:55 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:55 GMT-0600 (Mountain Daylight Time),1630363,Dean Oliver,Assistant Coach,2,1610612764,nba/coaches/1630363
-1627380,Mon Aug 09 2021 04:52:56 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:52:56 GMT-0600 (Mountain Daylight Time),1627380,Kameron Woods,Assistant Coach for Player Development,12,1610612760,nba/coaches/1627380
-202602,Mon Aug 09 2021 04:53:01 GMT-0600 (Mountain Daylight Time),Mon Aug 09 2021 04:53:02 GMT-0600 (Mountain Daylight Time),202602,Chad Iske,Assistant Coach,2,1610612766,nba/coaches/202602
+203797,Mon Aug 09 2021 04:52:24 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:01 GMT-0600 (Mountain Daylight Time),203797,Brad Jones,Assistant Coach,2,1610612763,nba/coaches/203797
+1629110,Mon Aug 09 2021 04:52:18 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:02 GMT-0600 (Mountain Daylight Time),1629110,Dan Geriot,Assistant Coach,2,1610612739,nba/coaches/1629110
+203456,Mon Aug 09 2021 04:52:46 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:25 GMT-0600 (Mountain Daylight Time),203456,Jason Kidd,Head Coach,1,1610612742,nba/coaches/203456
+1630290,Mon Aug 09 2021 04:52:49 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:04 GMT-0600 (Mountain Daylight Time),1630290,Sonia Raman,Assistant Coach,2,1610612763,nba/coaches/1630290
+202599,Mon Aug 09 2021 04:52:43 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:26 GMT-0600 (Mountain Daylight Time),202599,Darrell Armstrong,Assistant Coach,2,1610612742,nba/coaches/202599
+1628181,Mon Aug 09 2021 04:52:57 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:12 GMT-0600 (Mountain Daylight Time),1628181,Will Hardy,Assistant Coach,2,1610612738,nba/coaches/1628181
+1627380,Mon Aug 09 2021 04:52:56 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:43 GMT-0600 (Mountain Daylight Time),1627380,Kameron Woods,Assistant Coach for Player Development,12,1610612760,nba/coaches/1627380
+1628807,Mon Aug 09 2021 04:52:59 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:13 GMT-0600 (Mountain Daylight Time),1628807,Brandon Bailey,Assistant Coach,2,1610612738,nba/coaches/1628807
+1630491,Mon Aug 09 2021 04:52:22 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:56:53 GMT-0600 (Mountain Daylight Time),1630491,John Beckett,Assistant Coach,2,1610612743,nba/coaches/1630491
+203150,Mon Aug 09 2021 04:52:28 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:43 GMT-0600 (Mountain Daylight Time),203150,David Vanterpool,Assistant Coach,2,1610612751,nba/coaches/203150
+204226,Mon Aug 09 2021 04:52:54 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:00:29 GMT-0600 (Mountain Daylight Time),204226,Chris Quinn,Assistant Coach,2,1610612748,nba/coaches/204226
+1629412,Mon Aug 09 2021 04:53:00 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:54:47 GMT-0600 (Mountain Daylight Time),1629412,Dan Liburd,Strength and Conditioning Coach,5,1610612751,nba/coaches/1629412
+101203,Mon Aug 09 2021 04:52:30 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:32 GMT-0600 (Mountain Daylight Time),101203,Eric Waters,Trainer,3,1610612762,nba/coaches/101203
+1226,Mon Aug 09 2021 04:52:20 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:57:20 GMT-0600 (Mountain Daylight Time),1226,Sidney Lowe,Assistant Coach,2,1610612765,nba/coaches/1226
+202896,Mon Aug 09 2021 04:52:32 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:17 GMT-0600 (Mountain Daylight Time),202896,Chris Finch,Head Coach,1,1610612750,nba/coaches/202896
+2152,Mon Aug 09 2021 04:52:45 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:06 GMT-0600 (Mountain Daylight Time),2152,Stephen Silas,Head Coach,1,1610612745,nba/coaches/2152
+2515,Mon Aug 09 2021 04:52:26 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:36 GMT-0600 (Mountain Daylight Time),2515,Dan Burke,Assistant Coach,2,1610612755,nba/coaches/2515
+1627657,Mon Aug 09 2021 04:52:48 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:10 GMT-0600 (Mountain Daylight Time),1627657,Will Weaver,Assistant Coach,2,1610612745,nba/coaches/1627657
+202109,Mon Aug 09 2021 04:52:31 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:21 GMT-0600 (Mountain Daylight Time),202109,Bryan Gates,Assistant Coach,2,1610612750,nba/coaches/202109
+201696,Mon Aug 09 2021 04:52:20 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:58:43 GMT-0600 (Mountain Daylight Time),201696,Kaleb Canales,Assistant Coach,2,1610612754,nba/coaches/201696
+203599,Mon Aug 09 2021 04:52:23 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 06:59:08 GMT-0600 (Mountain Daylight Time),203599,Dan Craig,Associate Head Coach,9,1610612746,nba/coaches/203599
+202108,Mon Aug 09 2021 04:52:44 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:37 GMT-0600 (Mountain Daylight Time),202108,Sam Cassell,Assistant Coach,2,1610612755,nba/coaches/202108
+1628228,Mon Aug 09 2021 04:52:29 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:42 GMT-0600 (Mountain Daylight Time),1628228,Willie Green,Head Coach,1,1610612740,nba/coaches/1628228
+1630363,Mon Aug 09 2021 04:52:55 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:58 GMT-0600 (Mountain Daylight Time),1630363,Dean Oliver,Assistant Coach,2,1610612764,nba/coaches/1630363
+201676,Mon Aug 09 2021 04:52:25 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:45 GMT-0600 (Mountain Daylight Time),201676,Fred Vinson,Assistant Coach,2,1610612740,nba/coaches/201676
+1360,Mon Aug 09 2021 04:52:52 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:03:41 GMT-0600 (Mountain Daylight Time),1360,Kevin Johnson,Trainer,3,1610612755,nba/coaches/1360
+777,Mon Aug 09 2021 04:52:50 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:01:46 GMT-0600 (Mountain Daylight Time),777,Rex Walters,Assistant Coach,2,1610612740,nba/coaches/777
+203758,Mon Aug 09 2021 04:52:21 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:41 GMT-0600 (Mountain Daylight Time),203758,Mike Miller,Assistant Coach,2,1610612760,nba/coaches/203758
+1630364,Mon Aug 09 2021 04:52:58 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:59 GMT-0600 (Mountain Daylight Time),1630364,David Atkins,Assistant Coach,2,1610612764,nba/coaches/1630364
+1630455,Mon Aug 09 2021 04:52:56 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:02:42 GMT-0600 (Mountain Daylight Time),1630455,Zach Peterson,Assistant Coach for Player Development,12,1610612760,nba/coaches/1630455
+1627331,Mon Aug 09 2021 04:52:27 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:02 GMT-0600 (Mountain Daylight Time),1627331,Will Scott,Assistant Coach,2,1610612758,nba/coaches/1627331
+1627564,Mon Aug 09 2021 04:52:47 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:04 GMT-0600 (Mountain Daylight Time),1627564,Jonah Herscu,Assistant Coach,2,1610612758,nba/coaches/1627564
+203601,Mon Aug 09 2021 04:52:51 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:07:00 GMT-0600 (Mountain Daylight Time),203601,Mike Terpstra,Assistant Coach,2,1610612764,nba/coaches/203601
+1627971,Mon Aug 09 2021 04:52:30 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:05 GMT-0600 (Mountain Daylight Time),1627971,Rico Hines,Assistant Coach,2,1610612758,nba/coaches/1627971
+2887,Mon Aug 09 2021 04:52:53 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:05:33 GMT-0600 (Mountain Daylight Time),2887,Chip Engelland,Assistant Coach,2,1610612759,nba/coaches/2887
+1626233,Mon Aug 09 2021 04:52:48 GMT-0600 (Mountain Daylight Time),Tue Aug 24 2021 07:06:26 GMT-0600 (Mountain Daylight Time),1626233,Jeff Watkinson,Assistant Coach,2,1610612762,nba/coaches/1626233
