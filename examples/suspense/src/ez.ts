@@ -1,4 +1,4 @@
-import { CreateApp, BuildContextArgs, InferContext } from '@graphql-ez/nextjs'
+import { CreateApp, BuildContextArgs, InferContext, EZContext } from '@graphql-ez/nextjs'
 import { ezCodegen } from '@graphql-ez/plugin-codegen'
 import { ezAltairIDE } from '@graphql-ez/plugin-altair'
 import { ezScalars } from '@graphql-ez/plugin-scalars'
@@ -46,5 +46,5 @@ export const ezApp = CreateApp({
   },
   buildContext,
   // Other Options
-  cors: false,
+  cors: true,
 })
