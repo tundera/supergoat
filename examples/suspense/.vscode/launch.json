@@ -6,7 +6,7 @@
       "type": "pwa-node",
       "program": "${workspaceFolder}/scripts/seed.ts",
       "runtimeArgs": ["-r", "esbuild-register", "-r", "tsconfig-paths/register"],
-      "envFile": "${workspaceFolder}/.env.production.local",
+      "envFile": "${workspaceFolder}/.env.development.local",
       "sourceMaps": true,
       "request": "launch",
       "skipFiles": ["<node_internals>/**"]
@@ -16,7 +16,7 @@
       "type": "pwa-node",
       "program": "${workspaceFolder}/scripts/get-updated-data.ts",
       "runtimeArgs": ["-r", "esbuild-register", "-r", "tsconfig-paths/register"],
-      "envFile": "${workspaceFolder}/.env.production.local",
+      "envFile": "${workspaceFolder}/.env.development.local",
       "sourceMaps": true,
       "request": "launch",
       "skipFiles": ["<node_internals>/**"]
