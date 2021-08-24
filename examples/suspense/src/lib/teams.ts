@@ -1,5 +1,5 @@
-import { QueryClient } from 'react-query'
 import { request, GraphQLClient } from 'graphql-request'
+import { QueryClient } from 'react-query'
 
 import {
   TeamQuery,
