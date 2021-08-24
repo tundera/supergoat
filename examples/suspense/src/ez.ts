@@ -35,7 +35,7 @@ export const ezApp = CreateApp({
       }),
       ezAltairIDE(),
       ezSchema({
-        schema: schema,
+        schema,
       }),
     ],
   },
