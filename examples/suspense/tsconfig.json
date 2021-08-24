@@ -36,5 +36,5 @@
     "baseUrl": "."
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "src", "db", "scripts", ".storybook"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
