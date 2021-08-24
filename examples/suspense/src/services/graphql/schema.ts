@@ -45,4 +45,5 @@ const baseSchema = makeSchema({
   prettierConfig: join(cwd, 'prettier.config.js'),
 })
 
-export const schema = applyMiddleware(baseSchema, permissions)
+// export const schema = applyMiddleware(baseSchema, permissions)
+export const schema = baseSchema
