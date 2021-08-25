@@ -2,7 +2,7 @@
   "name": "suspense-example",
   "version": "0.1.0",
   "private": true,
-  "description": "Suspense example built with Next.js",
+  "description": "React suspense example built with Next.js",
   "scripts": {
     "dev": "NODE_ENV='development' ts-node scripts/dev",
     "dev:next": "next dev",
