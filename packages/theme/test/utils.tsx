@@ -1,4 +1,4 @@
-import { ThemeProvider } from '../src/ThemeProvider'
+import { ThemeProvider } from '../src/ThemeProvider/ThemeProvider'
 import { render as defaultRender } from '@testing-library/react'
 import { renderHook as defaultRenderHook } from '@testing-library/react-hooks'
 
