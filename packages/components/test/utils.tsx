@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@sherbet/theme'
+import { ThemeProvider } from '@monorepo/theme'
 import { render as defaultRender } from '@testing-library/react'
 import { renderHook as defaultRenderHook } from '@testing-library/react-hooks'
 

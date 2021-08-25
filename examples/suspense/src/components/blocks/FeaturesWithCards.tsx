@@ -49,7 +49,7 @@ const FeaturesWithCards: FC = () => {
         </Text>
       </Box>
       <Box
-        w={{ base: 'full', sm: '50%', lg: '25%' }}
+        w={{ base: 'full', md: '50%', lg: '25%' }}
         px="4"
         py="4"
         mt={{ base: 6, sm: 16, md: 20, lg: 24 }}
