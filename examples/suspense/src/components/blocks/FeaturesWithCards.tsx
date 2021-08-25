@@ -12,7 +12,7 @@ const FeaturesWithCards: FC = () => {
 
   return (
     <Box
-      display={{ sm: 'flex' }}
+      display="flex"
       flexWrap="wrap"
       justifyContent="center"
       alignItems="center"
@@ -20,13 +20,13 @@ const FeaturesWithCards: FC = () => {
       gridGap={8}
     >
       <Box
-        w={{ base: 'full', sm: '50%', lg: '25%' }}
+        w={{ base: '75%', md: '50%', lg: '25%' }}
         px="4"
         py="4"
         mt="6"
         bg={bg}
         shadow="dark-lg"
-        rounded={{ base: 'none', md: 'lg' }}
+        rounded="lg"
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">
@@ -49,13 +49,13 @@ const FeaturesWithCards: FC = () => {
         </Text>
       </Box>
       <Box
-        w={{ base: 'full', md: '50%', lg: '25%' }}
+        w={{ base: '75%', md: '50%', lg: '25%' }}
         px="4"
         py="4"
         mt={{ base: 6, sm: 16, md: 20, lg: 24 }}
         bg={bg}
         shadow="dark-lg"
-        rounded={{ base: 'none', md: 'lg' }}
+        rounded="lg"
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">
@@ -78,13 +78,13 @@ const FeaturesWithCards: FC = () => {
         </Text>
       </Box>
       <Box
-        w={{ base: 'full', sm: '50%', lg: '25%' }}
+        w={{ base: '75%', md: '50%', lg: '25%' }}
         mt={{ base: '6', sm: '16', md: '20', lg: '6' }}
         px="4"
         py="4"
         bg={bg}
         shadow="dark-lg"
-        rounded={{ base: 'none', md: 'lg' }}
+        rounded="lg"
       >
         <Box flexShrink={0}>
           <Flex align="center" justify="center" mx="auto" rounded="md" color="white">

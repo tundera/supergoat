@@ -42,14 +42,7 @@ const TeamInfo: FC = () => {
         </title>
       </Head>
 
-      <Stack
-        alignItems="center"
-        spacing={4}
-        bgGradient={bgGradient}
-        p={4}
-        w="full"
-        py={{ base: '8', sm: '16', md: '32' }}
-      >
+      <Stack alignItems="center" spacing={4} p={4} w="full" py={{ base: '8', sm: '16', md: '32' }}>
         <Heading
           as="h1"
           color={headingColor}
@@ -57,6 +50,8 @@ const TeamInfo: FC = () => {
           fontSize={{ base: '6xl', md: '8xl' }}
           overflow="hidden"
           textAlign="center"
+          bgGradient={bgGradient}
+          bgClip="text"
         >
           {data?.team?.city} {data?.team?.name}
         </Heading>

@@ -90,7 +90,7 @@ const Footer: FC = () => {
 
         {/* Mobile View */}
         <Stack display={{ base: 'initial', md: 'none' }}>
-          <Accordion defaultIndex={[0]} allowToggle allowMultiple>
+          <Accordion allowToggle allowMultiple>
             <AccordionItem>
               {({ isExpanded }) => (
                 <>
