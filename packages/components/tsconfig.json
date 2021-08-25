@@ -1,14 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "./src",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "jsx": "preserve",
-    "noEmit": false,
-    "incremental": true,
-    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
     "baseUrl": "."
   },
   "exclude": ["node_modules"],

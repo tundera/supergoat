@@ -4362,6 +4362,11 @@
     pirates "^4.0.1"
     source-map-support "^0.5.16"
 
+"@preconstruct/next@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@preconstruct/next/-/next-3.0.0.tgz#71781cbaecd011f43e456a149817094a43e4755f"
+  integrity sha512-G90cyJX9w4Zr3Bt/j2fURgDhsJb5+agqf4YUgrvDe3Dyvbbssy9a6d0tzLH0ehfa2Osxw/EEhQb+W4X+v/x06A==
+
 "@prisma/client@^2.29.1":
   version "2.29.1"
   resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.29.1.tgz#a7b91c9644800de4e00b2f7c3789ff4bae42b3d6"

@@ -1,7 +1,9 @@
 // @ts-check
 const withPlugins = require('next-compose-plugins')
-const withTM = require('next-transpile-modules')
-const withMDX = require('@next/mdx')
+const withPreconstruct = require('@preconstruct/next')
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+})
 
 // const packageManifest = require('./package.json')
 // const { i18n } = require('./next-i18next.config')
@@ -94,12 +96,7 @@ const nextConfig = {
   },
 }
 
-const plugins = [
-  withTM(['@monorepo/components', '@monorepo/theme']),
-  withMDX({
-    extension: /\.mdx?$/,
-  }),
-]
+const plugins = [withPreconstruct, withMDX]
 
 if (process.env.ANALYZE === 'true') {
   const withBundleAnalyzer = require('@next/bundle-analyzer')({

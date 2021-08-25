@@ -3,7 +3,7 @@ import type { ChakraProviderProps } from '@chakra-ui/react'
 
 import { cookieStorageManager, localStorageManager, ChakraProvider } from '@chakra-ui/react'
 
-import { theme as defaultTheme } from 'src/theme'
+import { theme as defaultTheme } from '../../src/theme'
 
 export type ServerSideProps<T> = { props: T } | Promise<{ props: T }>
 

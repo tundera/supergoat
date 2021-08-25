@@ -61,7 +61,7 @@
     "packages:lint": "ultra -r --filter --silent '@monorepo/*' lint",
     "packages:typecheck": "ultra -r --filter --silent '@monorepo/*' typecheck",
     "packages:clean": "ultra -r --filter --silent '@monorepo/*' clean",
-    "postinstall": "is-ci || yarn husky install && yarn manypkg check",
+    "postinstall": "is-ci || husky install && preconstruct dev && manypkg check",
     "docker:up": "docker-compose up -d",
     "docker:up:database": "docker-compose up -d database",
     "docker:down": "docker-compose down"

@@ -1,8 +1,8 @@
 import { extendTheme, ThemeOverride } from '@chakra-ui/react'
 
-import colors from 'src/theme/colors'
-import fonts from 'src/theme/fonts'
-import styles from 'src/theme/styles'
+import colors from './colors'
+import fonts from './fonts'
+import styles from './styles'
 
 const overrides: ThemeOverride = {
   config: {

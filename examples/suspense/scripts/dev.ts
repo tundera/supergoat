@@ -32,7 +32,7 @@ const preDevTasks = new Listr(
 const dev = async () => {
   await concurrently(
     [
-      { command: 'yarn vc dev', name: 'NEXT', prefixColor: 'green.bold' },
+      { command: 'yarn dev:next', name: 'NEXT', prefixColor: 'green.bold' },
       {
         command: 'yarn watch:nexus',
         name: 'NEXUS',
