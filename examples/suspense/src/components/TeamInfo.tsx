@@ -64,7 +64,7 @@ const TeamInfo: FC = () => {
           placeholder="blur"
           blurDataURL={blurDataURL}
         />
-        <SimpleGrid columns={[1, null, 3]} spacing={4}>
+        <SimpleGrid columns={[1, null, 2, 3]} spacing={4}>
           <SuspenseList revealOrder="forwards" tail="collapsed">
             {data?.team?.players?.map((player) => (
               <IntersectionSlide key={player?.number}>
