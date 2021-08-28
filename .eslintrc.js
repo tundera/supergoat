@@ -1,4 +1,4 @@
-import { join } from 'path'
+const { join } = require('path')
 
 const cwd = process.cwd()
 
@@ -27,16 +27,6 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: '.',
-    project: [
-      join(cwd, './tsconfig.base.json'),
-      join(cwd, './packages/*/tsconfig.json'),
-      join(cwd, './sites/*/tsconfig.json'),
-      join(cwd, './examples/*/tsconfig.json'),
-      join(cwd, './services/*/tsconfig.json'),
-      join(cwd, './scripts/tsconfig.json'),
-      join(cwd, './db/tsconfig.json'),
-      join(cwd, './tools/tsconfig.tools.json'),
-    ],
     ecmaFeatures: {
       jsx: true,
     },

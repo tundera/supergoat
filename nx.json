@@ -65,6 +65,6 @@
   },
   "workspaceLayout": {
     "libsDir": "packages",
-    "appsDir": "packages"
+    "appsDir": "examples"
   }
 }
