@@ -156,6 +156,7 @@
     "esbuild-register": "3.0.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
+    "eslint-plugin-jest-dom": "3.9.0",
     "execa": "5.1.1",
     "fast-csv": "^4.3.6",
     "favicons": "6.2.2",
