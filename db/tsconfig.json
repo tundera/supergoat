@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../tsconfig.json",
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"
@@ -10,7 +10,7 @@
     "require": ["tsconfig-paths/register"]
   },
   "compilerOptions": {
-    "target": "es2019",
+    "target": "esnext",
     "module": "commonjs",
     "noEmit": true,
     "sourceMap": true,

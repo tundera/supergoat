@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.json",
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"
@@ -20,7 +20,7 @@
     "noEmit": true,
     "noUncheckedIndexedAccess": true,
     "incremental": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,

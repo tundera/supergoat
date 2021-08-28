@@ -2,7 +2,6 @@
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  root: true,
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -12,6 +11,11 @@ module.exports = {
     'plugin:jest-formatting/recommended',
     'plugin:prettier/recommended',
   ],
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
   globals: {
     context: 'readonly',
     cy: 'readonly',
@@ -22,6 +26,8 @@ module.exports = {
   plugins: ['@typescript-eslint', 'prettier', 'jest', 'jest-dom', 'jest-formatting'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.eslint.json'],
     ecmaFeatures: {
       jsx: true,
     },
@@ -37,7 +43,6 @@ module.exports = {
       { allow: ['private-constructors', 'decoratedFunctions'] },
     ],
     '@typescript-eslint/no-floating-promises': 'off',
-    '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',

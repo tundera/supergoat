@@ -18,19 +18,22 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "incremental": true,
+    "jsx": "react-jsx",
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
       "@monorepo/components": ["packages/components/src/index.ts"],
       "@monorepo/components/*": ["packages/components/src/*"],
-      "@monorepo/db": ["packages/db/src/index.ts"],
-      "@monorepo/db/*": ["packages/db/src/*"],
+      "@monorepo/db": ["db/src/index.ts"],
+      "@monorepo/db/*": ["db/src/*"],
       "@monorepo/graphql": ["packages/graphql/src/index.ts"],
       "@monorepo/graphql/*": ["packages/graphql/src/*"],
-      "@monorepo/scripts/*": ["packages/scripts/*"],
+      "@monorepo/scripts/*": ["scripts/*"],
       "@monorepo/theme": ["packages/theme/src/index.ts"],
       "@monorepo/theme/*": ["packages/theme/src/*"]
     }
   },
-  "exclude": ["node_modules", ".yarn"]
+  "exclude": ["node_modules", ".yarn", "*.test.ts", "*.test.tsx"]
 }

@@ -1,7 +1,11 @@
+/**
+ * @type {import('eslint').Linter.Config}
+ */
 module.exports = {
-  root: true, // Make sure eslint picks up the config at the root of the directory
   parser: "@typescript-eslint/parser",
   parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ["./tsconfig.json"],
     ecmaVersion: 2020, // Use the latest ecmascript standard
     sourceType: "module", // Allows using import/export statements
     ecmaFeatures: {

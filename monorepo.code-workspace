@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "✨ root",
+      "name": "✨ monorepo",
       "path": "."
     },
     {
@@ -33,5 +33,7 @@
       "path": "sites/docs"
     }
   ],
-  "settings": {}
+  "settings": {
+    "typescript.tsdk": "✨ monorepo/node_modules/typescript/lib"
+  }
 }

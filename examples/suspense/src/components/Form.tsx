@@ -41,7 +41,7 @@ interface OnSubmitResult {
 export const FORM_ERROR = 'FORM_ERROR'
 
 const SubmitError = ({ formError }: { formError: string | null }) => {
-  return !!formError ? (
+  return formError ? (
     <Box role="alert" color="red.500">
       <SlideFade in offsetY={-6}>
         <Icon as={FiAlertCircle} mr="2" />
