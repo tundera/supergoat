@@ -1,7 +1,3 @@
-const { join } = require('path')
-
-const cwd = process.cwd()
-
 /**
  * @type {import('eslint').Linter.Config}
  */
@@ -10,7 +6,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:jest/recommended',
     'plugin:jest-dom/recommended',
     'plugin:jest-formatting/recommended',
@@ -26,7 +22,6 @@ module.exports = {
   plugins: ['@typescript-eslint', 'prettier', 'jest', 'jest-dom', 'jest-formatting'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    tsconfigRootDir: '.',
     ecmaFeatures: {
       jsx: true,
     },
