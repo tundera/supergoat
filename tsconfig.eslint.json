@@ -10,6 +10,8 @@
     "packages/**/*",
     "examples/**/*",
     "test/**/*",
+    "services/**/*",
+    "sites/**/*",
     "scripts/**/*",
     "db/**/*",
     "**/.eslintrc.js"
