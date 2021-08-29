@@ -1,0 +1,67 @@
+---
+to: <%= h.createModelPath(`src/modules/${name}.ts`) %>
+sh: "yarn --cwd <%= h.modelsPath %> generate"
+---
+<% model = h.changeCase.pascal(name) -%>
+import { objectType, extendType, list, stringArg, nonNull } from 'nexus'
+import { <%= model %> } from 'nexus-prisma'
+
+/**
+ * <%= model %> Object Type
+ */
+export const <%= model %>Object = objectType({
+  name: <%= model %>.$name,
+  description: <%= model %>.$description,
+  definition(t) {
+    t.field('id', <%= model %>.id)
+    t.field('createdAt', <%= model %>.createdAt)
+    t.field('updatedAt', <%= model %>.updatedAt)
+  },
+})
+
+/**
+ * <%= model %> Query Types
+ */
+export const <%= model %>Queries = extendType({
+  type: 'Query',
+  definition(t) {
+    t.field('<%= h.inflection.pluralize(name) %>', {
+      type: list('<%= model %>'),
+      resolve(_parent, _args, ctx) {
+        return ctx.db.<%= name %>.findMany({})
+      },
+    })
+
+    t.field('<%= name %>ById', {
+      type: '<%= model %>',
+      args: {
+        id: nonNull(stringArg()),
+      },
+      resolve(_parent, args, ctx) {
+        return ctx.db.<%= name %>.findUnique({
+          where: { id: args.id },
+        })
+      },
+    })
+  },
+})
+
+/**
+ * <%= model %> Mutation Types
+ */
+ export const <%= model %>Mutations = extendType({
+  type: 'Mutation',
+  definition: (t) => {
+    t.field('delete<%= model %>', {
+      type: '<%= model %>',
+      args: {
+        id: nonNull(stringArg()),
+      },
+      resolve(_parent, args, ctx) {
+        return ctx.db.<%= name %>.delete({
+          where: { id: args.id },
+        })
+      },
+    })
+  },
+})

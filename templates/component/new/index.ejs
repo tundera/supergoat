@@ -1,0 +1,5 @@
+---
+to: <%= h.prependComponentsPath(`src/${h.changeCase.pascal(name)}/index.ts`) %>
+---
+<% component = h.changeCase.pascal(name) -%>
+export * from './<%= component %>'

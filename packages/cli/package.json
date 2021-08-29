@@ -1,0 +1,96 @@
+{
+  "name": "@monorepo/cli",
+  "description": "Monorepo CLI",
+  "version": "0.1.0",
+  "author": {
+    "name": "Philip Johnston",
+    "email": "tunderadev@gmail.com",
+    "url": "https://github.com/tundera"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tundera/monorepo.git",
+    "directory": "packages/cli"
+  },
+  "license": "MIT",
+  "main": "dist/monorepo-cli.cjs.js",
+  "module": "dist/monorepo-cli.esm.js",
+  "typings": "dist/monorepo-cli.cjs.d.ts",
+  "files": [
+    "bin",
+    "dist",
+    "oclif.manifest.json"
+  ],
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "monorepo",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-not-found",
+      "@oclif/plugin-update",
+      "@oclif/plugin-autocomplete"
+    ],
+    "hooks": {
+      "init": []
+    }
+  },
+  "bin": {
+    "monorepo": "./bin/run",
+    "mono": "./bin/run"
+  },
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md",
+    "lint": "yarn eslint --ignore-path '../../.eslintignore' --ext '.js,.ts,.tsx' ."
+  },
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-autocomplete": "0.3.0",
+    "@oclif/plugin-help": "^3",
+    "@oclif/plugin-not-found": "1.2.4",
+    "@oclif/plugin-update": "1.5.0",
+    "chalk": "^4.1.2",
+    "cli-ux": "5.6.3",
+    "cross-spawn": "7.0.3",
+    "eslint-plugin-mdx": "^1.14.1",
+    "execa": "5.1.1",
+    "find-yarn-workspace-root": "^2.0.0",
+    "fs-extra": "10.0.0",
+    "listr": "0.14.3",
+    "ora": "6.0.0",
+    "p-retry": "4.6.1",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.2.0",
+    "tsconfig-paths": "^3.11.0",
+    "tslib": "^2.3.1",
+    "yarn-or-npm": "3.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "7.15.0",
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "1.2.8",
+    "@types/chalk": "2.2.0",
+    "@types/cross-spawn": "6.0.2",
+    "@types/jest": "^27.0.1",
+    "@types/listr": "0.14.4",
+    "@types/node": "16.7.5",
+    "@types/react": "^17.0.18",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^7.32.0",
+    "eslint-config-oclif": "^3.1",
+    "eslint-config-oclif-typescript": "^0.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "globby": "^11.0.2",
+    "ts-jest": "^27.0.5",
+    "typescript": "4.4.2"
+  }
+}

@@ -1,0 +1,23 @@
+---
+to: <%= h.createPagePath(`${h.changeCase.param(name)}.tsx`) %>
+---
+<% page = h.changeCase.pascal(name) -%>
+import type { CustomNextPage } from 'types'
+
+import { Flex, Heading } from '@chakra-ui/react'
+
+import { getLayout } from 'src/components/layouts/SiteLayout'
+
+const <%= page %>Page: CustomNextPage = () => {
+  return (
+    <>
+      <Flex flexDir="column" alignItems="center">
+        <Heading as="h1"><%= page %> Page</Heading>
+      </Flex>
+    </>
+  )
+}
+
+<%= page %>.getLayout = getLayout
+
+export default <%= page %>

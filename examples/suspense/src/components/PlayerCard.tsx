@@ -22,7 +22,7 @@ const PlayerCard: FC<Props> = ({ player, colorScheme }) => {
   const { imageURL, blurDataURL } = useImageUrlBuilder(player?.image?.id as string)
 
   return (
-    <Box w={{ base: '500px', md: '350px' }} h="full" p="4">
+    <Box h="full" p="4">
       <MotionBox
         w="full"
         h="full"
