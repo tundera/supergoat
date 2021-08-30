@@ -13,6 +13,10 @@
       "path": "examples/suspense"
     },
     {
+      "name": "📦 @monorepo/cli",
+      "path": "packages/cli"
+    },
+    {
       "name": "📦 @monorepo/components",
       "path": "packages/components"
     },

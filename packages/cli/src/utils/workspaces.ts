@@ -4,7 +4,7 @@ import findWorkspaceRoot from 'find-yarn-workspace-root'
 import { readJSON } from 'fs-extra'
 import path from 'path'
 
-export const workspaceRoot = findWorkspaceRoot(process.cwd()) ?? process.cwd()
+export const workspaceRoot = findWorkspaceRoot(process.cwd()) as string
 
 export const getRootInfo = async () => {
   const manifest = await readJSON(path.resolve(workspaceRoot, 'package.json'))
@@ -79,7 +79,7 @@ export const typeCheck = async () => {
       stdio: ['ignore', 'pipe', 'inherit'],
     })
   } catch (err) {
-    throw new Error(err)
+    throw new Error(err as string)
   }
 }
 

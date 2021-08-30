@@ -42,6 +42,8 @@
   },
   "scripts": {
     "clean": "ultra -r --silent clean",
+    "cli:link": "yarn workspace @monorepo/cli link",
+    "cli:unlink": "yarn workspace @monorepo/cli unlink",
     "test": "run-s 'test:*'",
     "test:unit": "ultra -r --silent test:unit",
     "fix:staged-files": "ultra -r --silent fix:staged-files",

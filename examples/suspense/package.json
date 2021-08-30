@@ -177,7 +177,7 @@
     "ora": "6.0.0",
     "pg": "^8.7.1",
     "prettier": "^2.3.2",
-    "prettier-plugin-prisma": "2.29.1",
+    "prettier-plugin-prisma": "2.30.0",
     "prisma": "^2.29.1",
     "rss": "1.2.2",
     "ts-node": "^10.2.0",

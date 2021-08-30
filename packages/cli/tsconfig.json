@@ -1,18 +1,31 @@
 {
   "extends": "../../tsconfig.json",
+  "ts-node": {
+    "compilerOptions": {
+      "target": "esnext",
+      "allowJs": true,
+      "module": "esnext"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental",
+    "require": ["tsconfig-paths/register"]
+  },
   "compilerOptions": {
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "commonjs",
+    "module": "esnext",
     "importHelpers": true,
     "noEmit": true,
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["src/**/*", "types"],
+  "include": ["**/*.ts", "types", "bin"],
   "exclude": ["node_modules"]
 }

@@ -1,7 +1,8 @@
 {
   "ts-node": {
     "compilerOptions": {
-      "module": "commonjs"
+      "target": "esnext",
+      "module": "esnext"
     },
     "pretty": true,
     "transpileOnly": true,
