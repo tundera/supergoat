@@ -26,6 +26,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["**/*.ts", "types", "bin"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.js", "types", "bin"]
 }

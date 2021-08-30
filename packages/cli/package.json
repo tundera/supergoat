@@ -2,7 +2,6 @@
   "name": "@monorepo/cli",
   "description": "Monorepo CLI",
   "version": "0.1.0",
-  "type": "module",
   "author": {
     "name": "Philip Johnston",
     "email": "tunderadev@gmail.com",
@@ -44,7 +43,7 @@
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md",
-    "lint": "yarn eslint --ignore-path '../../.eslintignore' --ext '.js,.ts,.tsx' ."
+    "lint": "yarn eslint . --ext '.js,.ts,.tsx'"
   },
   "dependencies": {
     "@monorepo-utils/package-utils": "2.4.4",
