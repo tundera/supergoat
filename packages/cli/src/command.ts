@@ -1,4 +1,4 @@
-import { Command as OclifCommand } from '@oclif/command'
+import { Command as OclifCommand } from '@oclif/core'
 import Enquirer from 'enquirer'
 import { getProjectExamples, getProjectWorkspaces, workspaceRoot } from './utils/workspaces'
 

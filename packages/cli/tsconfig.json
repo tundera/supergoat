@@ -6,6 +6,9 @@
       "allowJs": true,
       "module": "esnext"
     },
+    "moduleTypes": {
+      "bin": "esm"
+    },
     "pretty": true,
     "transpileOnly": true,
     "transpiler": "ts-node/transpilers/swc-experimental",
@@ -20,12 +23,12 @@
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.js", "types", "bin"]
+  "include": ["**/*.ts", "**/*.js", "bin/run"]
 }

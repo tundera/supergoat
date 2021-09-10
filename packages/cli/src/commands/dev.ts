@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import ora from 'ora'
 import { Command } from '../command'
 import { watchPackages } from '../utils/packages'
@@ -21,18 +21,18 @@ export class Dev extends Command {
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    port: flags.integer({
+    help: Flags.help({ char: 'h' }),
+    port: Flags.integer({
       char: 'p',
       description: 'Set port number',
     }),
-    inspect: flags.boolean({
+    inspect: Flags.boolean({
       description: 'Enable the Node.js inspector',
     }),
   }
 
   async run() {
-    const { argv } = this.parse(Dev)
+    const { argv } = await this.parse(Dev)
 
     try {
       const spinner = ora().start('Preparing packages for development')

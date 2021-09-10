@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import c from 'chalk'
 import ora from 'ora'
 import { Command } from '../command'
@@ -24,23 +24,23 @@ export class Add extends Command {
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    dev: flags.boolean({
+    help: Flags.help({ char: 'h' }),
+    dev: Flags.boolean({
       char: 'D',
       description: 'Install module as dev dependency',
     }),
-    exact: flags.boolean({
+    exact: Flags.boolean({
       char: 'E',
       description: 'Install module with exact version',
     }),
-    peer: flags.boolean({
+    peer: Flags.boolean({
       char: 'P',
       description: 'Install module as peer dependency',
     }),
   }
 
   async run() {
-    const { args, flags } = this.parse(Add)
+    const { args, flags } = await this.parse(Add)
 
     const options = []
 

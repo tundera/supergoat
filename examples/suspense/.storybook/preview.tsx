@@ -1,8 +1,10 @@
-import React from 'react'
-
-import ThemeProvider from '../src/providers/ChakraProvider'
+import { RouterContext } from 'next/dist/shared/lib/router-context'
+import ThemeProvider from '../src/providers/ThemeProvider'
 
 export const parameters = {
+  nextRouter: {
+    Provider: RouterContext.Provider,
+  },
   options: {
     storySort: {
       order: ['StyleGuide', 'Components', 'Fields', 'App Layout'],

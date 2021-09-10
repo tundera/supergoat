@@ -4,7 +4,7 @@ const toPath = (_path) => path.join(process.cwd(), _path)
 
 module.exports = {
   stories: [toPath('src/stories/**/*.stories.@(js|jsx|ts|tsx|mdx)')],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials', 'storybook-addon-next-router'],
   typescript: {
     reactDocgen: false,
   },
@@ -32,6 +32,7 @@ module.exports = {
     const indexOfRuleToRemove = config.module.rules.findIndex((rule) =>
       rule.test.toString().includes('svg'),
     )
+
     config.module.rules.splice(indexOfRuleToRemove, 1, {
       test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/,
       loader: require.resolve('file-loader'),
