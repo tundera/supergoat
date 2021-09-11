@@ -25,7 +25,7 @@ export interface FormProps<S extends z.ZodType<any, any>> extends BoxProps {
   schema?: S
   onSubmit: (values: z.infer<S>) => Promise<void | OnSubmitResult>
   initialValues?: UseFormProps<z.infer<S>>['defaultValues']
-  submitButtonProps?: Partial<ButtonProps>
+  submitButtonProps?: Partial<Omit<ButtonProps, 'css'>>
   disableIfNotDirty?: boolean
   showDevTools?: boolean
   showResetButton?: boolean
