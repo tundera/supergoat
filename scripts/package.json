@@ -18,9 +18,9 @@
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
   },
   "devDependencies": {
-    "@swc/core": "^1.2.84",
+    "@swc/core": "^1.2.85",
     "@swc/helpers": "^0.2.13",
-    "@types/node": "16.7.10",
+    "@types/node": "16.9.1",
     "chalk": "^4.1.2",
     "change-case": "^4.1.2",
     "dotenv": "^10.0.0",
@@ -31,7 +31,7 @@
     "execa": "5.1.1",
     "find-yarn-workspace-root": "^2.0.0",
     "ora": "6.0.0",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.0",
     "ts-node": "^10.2.1",
     "tsconfig-paths": "^3.11.0",
     "ultra-runner": "^3.10.5"
