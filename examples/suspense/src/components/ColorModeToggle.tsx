@@ -3,10 +3,11 @@ import type { FC } from 'react'
 import { useColorMode, useColorModeValue, IconButton, IconButtonProps } from '@chakra-ui/react'
 import { FiMoon, FiSun } from 'react-icons/fi'
 
-type Props = Omit<IconButtonProps, 'aria-label'>
+type Props = Omit<IconButtonProps, 'aria-label' | 'css'>
 
 const ColorModeToggle: FC<Props> = (props) => {
   const { toggleColorMode } = useColorMode()
+
   const text = useColorModeValue('dark', 'light')
   const SwitchIcon = useColorModeValue(FiMoon, FiSun)
 
