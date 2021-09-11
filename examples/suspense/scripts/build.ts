@@ -13,17 +13,17 @@ const build = async () => {
     await execa('yarn', ['ts-node', 'src/services/graphql/schema'])
   }
 
-  const pushGraphQLSchema = async () => {
-    await execa('yarn', ['graphcdn', 'push', 'schema'])
-  }
+  // const pushGraphQLSchema = async () => {
+  //   await execa('yarn', ['graphcdn', 'push', 'schema'])
+  // }
 
   const generateThemeTypes = async () => {
     await execa('yarn', ['chakra-cli', 'tokens', 'src/styles/theme'])
   }
 
-  const generateGQtyTypes = async () => {
-    await execa('yarn', ['generate:gqty'])
-  }
+  // const generateGQtyTypes = async () => {
+  //   await execa('yarn', ['generate:gqty'])
+  // }
 
   const runGraphQLCodegen = async () => {
     await execa('yarn', ['graphql-codegen'])
@@ -55,10 +55,10 @@ const build = async () => {
       //   title: 'Pushing generated schema to GraphCDN',
       //   task: async () => await pushGraphQLSchema(),
       // },
-      {
-        title: 'Generating GQty types',
-        task: async () => await generateGQtyTypes(),
-      },
+      // {
+      //   title: 'Generating GQty types',
+      //   task: async () => await generateGQtyTypes(),
+      // },
       {
         title: 'Running GraphQL Codegen',
         task: async () => await runGraphQLCodegen(),
