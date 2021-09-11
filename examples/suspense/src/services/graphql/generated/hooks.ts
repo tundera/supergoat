@@ -1,10 +1,11 @@
 import * as Types from 'src/services/graphql/generated/codegen';
 
 import { GraphQLClient } from 'graphql-request';
+import { RequestInit } from 'graphql-request/dist/types.dom';
 import { useQuery, UseQueryOptions } from 'react-query';
 
-function fetcher<TData, TVariables>(client: GraphQLClient, query: string, variables?: TVariables) {
-  return async (): Promise<TData> => client.request<TData, TVariables>(query, variables);
+function fetcher<TData, TVariables>(client: GraphQLClient, query: string, variables?: TVariables, headers?: RequestInit['headers']) {
+  return async (): Promise<TData> => client.request<TData, TVariables>(query, variables, headers);
 }
 export const PlayerProfileFragmentDoc = `
     fragment PlayerProfile on Player {
@@ -37,11 +38,12 @@ export const useAllTeamsQuery = <
     >(
       client: GraphQLClient, 
       variables?: Types.AllTeamsQueryVariables, 
-      options?: UseQueryOptions<Types.AllTeamsQuery, TError, TData>
+      options?: UseQueryOptions<Types.AllTeamsQuery, TError, TData>,
+      headers?: RequestInit['headers']
     ) => 
     useQuery<Types.AllTeamsQuery, TError, TData>(
-      ['AllTeams', variables],
-      fetcher<Types.AllTeamsQuery, Types.AllTeamsQueryVariables>(client, AllTeamsDocument, variables),
+      variables === undefined ? ['AllTeams'] : ['AllTeams', variables],
+      fetcher<Types.AllTeamsQuery, Types.AllTeamsQueryVariables>(client, AllTeamsDocument, variables, headers),
       options
     );
 export const AllUsersDocument = `
@@ -59,11 +61,12 @@ export const useAllUsersQuery = <
     >(
       client: GraphQLClient, 
       variables?: Types.AllUsersQueryVariables, 
-      options?: UseQueryOptions<Types.AllUsersQuery, TError, TData>
+      options?: UseQueryOptions<Types.AllUsersQuery, TError, TData>,
+      headers?: RequestInit['headers']
     ) => 
     useQuery<Types.AllUsersQuery, TError, TData>(
-      ['AllUsers', variables],
-      fetcher<Types.AllUsersQuery, Types.AllUsersQueryVariables>(client, AllUsersDocument, variables),
+      variables === undefined ? ['AllUsers'] : ['AllUsers', variables],
+      fetcher<Types.AllUsersQuery, Types.AllUsersQueryVariables>(client, AllUsersDocument, variables, headers),
       options
     );
 export const TeamDocument = `
@@ -108,10 +111,11 @@ export const useTeamQuery = <
     >(
       client: GraphQLClient, 
       variables: Types.TeamQueryVariables, 
-      options?: UseQueryOptions<Types.TeamQuery, TError, TData>
+      options?: UseQueryOptions<Types.TeamQuery, TError, TData>,
+      headers?: RequestInit['headers']
     ) => 
     useQuery<Types.TeamQuery, TError, TData>(
       ['Team', variables],
-      fetcher<Types.TeamQuery, Types.TeamQueryVariables>(client, TeamDocument, variables),
+      fetcher<Types.TeamQuery, Types.TeamQueryVariables>(client, TeamDocument, variables, headers),
       options
     );

@@ -26,58 +26,58 @@ export type Scalars = {
 
 export type Account = {
   __typename?: 'Account';
-  id: Scalars['ID'];
-  userId: Scalars['String'];
-  providerType: Scalars['String'];
-  providerId: Scalars['String'];
-  providerAccountId: Scalars['String'];
-  refreshToken?: Maybe<Scalars['String']>;
   accessToken?: Maybe<Scalars['String']>;
   accessTokenExpires?: Maybe<Scalars['DateTime']>;
   createdAt: Scalars['DateTime'];
+  id: Scalars['ID'];
+  providerAccountId: Scalars['String'];
+  providerId: Scalars['String'];
+  providerType: Scalars['String'];
+  refreshToken?: Maybe<Scalars['String']>;
   updatedAt: Scalars['DateTime'];
   user: User;
+  userId: Scalars['String'];
 };
 
 export type AccountListRelationFilter = {
   every?: Maybe<AccountWhereInput>;
-  some?: Maybe<AccountWhereInput>;
   none?: Maybe<AccountWhereInput>;
+  some?: Maybe<AccountWhereInput>;
 };
 
 export type AccountOrderByInput = {
-  id?: Maybe<SortOrder>;
-  userId?: Maybe<SortOrder>;
-  providerType?: Maybe<SortOrder>;
-  providerId?: Maybe<SortOrder>;
-  providerAccountId?: Maybe<SortOrder>;
-  refreshToken?: Maybe<SortOrder>;
   accessToken?: Maybe<SortOrder>;
   accessTokenExpires?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
+  id?: Maybe<SortOrder>;
+  providerAccountId?: Maybe<SortOrder>;
+  providerId?: Maybe<SortOrder>;
+  providerType?: Maybe<SortOrder>;
+  refreshToken?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
+  userId?: Maybe<SortOrder>;
 };
 
 export type AccountProviderIdProviderAccountIdCompoundUniqueInput = {
-  providerId: Scalars['String'];
   providerAccountId: Scalars['String'];
+  providerId: Scalars['String'];
 };
 
 export type AccountWhereInput = {
   AND?: Maybe<Array<AccountWhereInput>>;
-  OR?: Maybe<Array<AccountWhereInput>>;
   NOT?: Maybe<Array<AccountWhereInput>>;
-  id?: Maybe<StringFilter>;
-  userId?: Maybe<StringFilter>;
-  providerType?: Maybe<StringFilter>;
-  providerId?: Maybe<StringFilter>;
-  providerAccountId?: Maybe<StringFilter>;
-  refreshToken?: Maybe<StringNullableFilter>;
+  OR?: Maybe<Array<AccountWhereInput>>;
   accessToken?: Maybe<StringNullableFilter>;
   accessTokenExpires?: Maybe<DateTimeNullableFilter>;
   createdAt?: Maybe<DateTimeFilter>;
+  id?: Maybe<StringFilter>;
+  providerAccountId?: Maybe<StringFilter>;
+  providerId?: Maybe<StringFilter>;
+  providerType?: Maybe<StringFilter>;
+  refreshToken?: Maybe<StringNullableFilter>;
   updatedAt?: Maybe<DateTimeFilter>;
   user?: Maybe<UserWhereInput>;
+  userId?: Maybe<StringFilter>;
 };
 
 export type AccountWhereUniqueInput = {
@@ -85,33 +85,31 @@ export type AccountWhereUniqueInput = {
   providerId_providerAccountId?: Maybe<AccountProviderIdProviderAccountIdCompoundUniqueInput>;
 };
 
-
-
 /** Coach model */
 export type Coach = {
   __typename?: 'Coach';
-  id: Scalars['ID'];
   createdAt: Scalars['DateTime'];
-  updatedAt: Scalars['DateTime'];
   handle: Scalars['String'];
+  id: Scalars['ID'];
+  image?: Maybe<Image>;
   imageId?: Maybe<Scalars['String']>;
+  isAssistant?: Maybe<Scalars['String']>;
   name: Scalars['String'];
+  team?: Maybe<Team>;
   teamId?: Maybe<Scalars['String']>;
   type?: Maybe<Scalars['String']>;
-  isAssistant?: Maybe<Scalars['String']>;
-  team?: Maybe<Team>;
-  image?: Maybe<Image>;
+  updatedAt: Scalars['DateTime'];
 };
 
 export type CoachCreateManyTeamInput = {
-  id: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
   handle: Scalars['String'];
+  id: Scalars['String'];
+  imageId?: Maybe<Scalars['String']>;
+  isAssistant?: Maybe<Scalars['String']>;
   name: Scalars['String'];
   type?: Maybe<Scalars['String']>;
-  isAssistant?: Maybe<Scalars['String']>;
-  imageId?: Maybe<Scalars['String']>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
 export type CoachCreateManyTeamInputEnvelope = {
@@ -120,260 +118,259 @@ export type CoachCreateManyTeamInputEnvelope = {
 };
 
 export type CoachCreateNestedManyWithoutTeamInput = {
-  create?: Maybe<Array<CoachCreateWithoutTeamInput>>;
-  connectOrCreate?: Maybe<Array<CoachCreateOrConnectWithoutTeamInput>>;
-  createMany?: Maybe<CoachCreateManyTeamInputEnvelope>;
   connect?: Maybe<Array<CoachWhereUniqueInput>>;
+  connectOrCreate?: Maybe<Array<CoachCreateOrConnectWithoutTeamInput>>;
+  create?: Maybe<Array<CoachCreateWithoutTeamInput>>;
+  createMany?: Maybe<CoachCreateManyTeamInputEnvelope>;
 };
 
 export type CoachCreateNestedOneWithoutImageInput = {
-  create?: Maybe<CoachCreateWithoutImageInput>;
-  connectOrCreate?: Maybe<CoachCreateOrConnectWithoutImageInput>;
   connect?: Maybe<CoachWhereUniqueInput>;
+  connectOrCreate?: Maybe<CoachCreateOrConnectWithoutImageInput>;
+  create?: Maybe<CoachCreateWithoutImageInput>;
 };
 
 export type CoachCreateOrConnectWithoutImageInput = {
-  where: CoachWhereUniqueInput;
   create: CoachCreateWithoutImageInput;
+  where: CoachWhereUniqueInput;
 };
 
 export type CoachCreateOrConnectWithoutTeamInput = {
-  where: CoachWhereUniqueInput;
   create: CoachCreateWithoutTeamInput;
+  where: CoachWhereUniqueInput;
 };
 
 export type CoachCreateWithoutImageInput = {
-  id: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
   handle: Scalars['String'];
-  name: Scalars['String'];
-  type?: Maybe<Scalars['String']>;
+  id: Scalars['String'];
   isAssistant?: Maybe<Scalars['String']>;
+  name: Scalars['String'];
   team?: Maybe<TeamCreateNestedOneWithoutCoachesInput>;
+  type?: Maybe<Scalars['String']>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
 export type CoachCreateWithoutTeamInput = {
-  id: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
   handle: Scalars['String'];
+  id: Scalars['String'];
+  image?: Maybe<ImageCreateNestedOneWithoutCoachInput>;
+  isAssistant?: Maybe<Scalars['String']>;
   name: Scalars['String'];
   type?: Maybe<Scalars['String']>;
-  isAssistant?: Maybe<Scalars['String']>;
-  image?: Maybe<ImageCreateNestedOneWithoutCoachInput>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
 export type CoachListRelationFilter = {
   every?: Maybe<CoachWhereInput>;
-  some?: Maybe<CoachWhereInput>;
   none?: Maybe<CoachWhereInput>;
+  some?: Maybe<CoachWhereInput>;
 };
 
 export type CoachOrderByInput = {
-  id?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
-  updatedAt?: Maybe<SortOrder>;
   handle?: Maybe<SortOrder>;
-  name?: Maybe<SortOrder>;
-  type?: Maybe<SortOrder>;
-  isAssistant?: Maybe<SortOrder>;
-  teamId?: Maybe<SortOrder>;
+  id?: Maybe<SortOrder>;
   imageId?: Maybe<SortOrder>;
+  isAssistant?: Maybe<SortOrder>;
+  name?: Maybe<SortOrder>;
+  teamId?: Maybe<SortOrder>;
+  type?: Maybe<SortOrder>;
+  updatedAt?: Maybe<SortOrder>;
 };
 
 export type CoachScalarWhereInput = {
   AND?: Maybe<Array<CoachScalarWhereInput>>;
-  OR?: Maybe<Array<CoachScalarWhereInput>>;
   NOT?: Maybe<Array<CoachScalarWhereInput>>;
-  id?: Maybe<StringFilter>;
+  OR?: Maybe<Array<CoachScalarWhereInput>>;
   createdAt?: Maybe<DateTimeFilter>;
-  updatedAt?: Maybe<DateTimeFilter>;
   handle?: Maybe<StringFilter>;
-  name?: Maybe<StringFilter>;
-  type?: Maybe<StringNullableFilter>;
-  isAssistant?: Maybe<StringNullableFilter>;
-  teamId?: Maybe<StringNullableFilter>;
+  id?: Maybe<StringFilter>;
   imageId?: Maybe<StringNullableFilter>;
+  isAssistant?: Maybe<StringNullableFilter>;
+  name?: Maybe<StringFilter>;
+  teamId?: Maybe<StringNullableFilter>;
+  type?: Maybe<StringNullableFilter>;
+  updatedAt?: Maybe<DateTimeFilter>;
 };
 
 export type CoachUpdateManyMutationInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   handle?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
+  isAssistant?: Maybe<NullableStringFieldUpdateOperationsInput>;
   name?: Maybe<StringFieldUpdateOperationsInput>;
   type?: Maybe<NullableStringFieldUpdateOperationsInput>;
-  isAssistant?: Maybe<NullableStringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
 };
 
 export type CoachUpdateManyWithWhereWithoutTeamInput = {
-  where: CoachScalarWhereInput;
   data: CoachUpdateManyMutationInput;
+  where: CoachScalarWhereInput;
 };
 
 export type CoachUpdateManyWithoutTeamInput = {
-  create?: Maybe<Array<CoachCreateWithoutTeamInput>>;
-  connectOrCreate?: Maybe<Array<CoachCreateOrConnectWithoutTeamInput>>;
-  upsert?: Maybe<Array<CoachUpsertWithWhereUniqueWithoutTeamInput>>;
-  createMany?: Maybe<CoachCreateManyTeamInputEnvelope>;
   connect?: Maybe<Array<CoachWhereUniqueInput>>;
-  set?: Maybe<Array<CoachWhereUniqueInput>>;
-  disconnect?: Maybe<Array<CoachWhereUniqueInput>>;
+  connectOrCreate?: Maybe<Array<CoachCreateOrConnectWithoutTeamInput>>;
+  create?: Maybe<Array<CoachCreateWithoutTeamInput>>;
+  createMany?: Maybe<CoachCreateManyTeamInputEnvelope>;
   delete?: Maybe<Array<CoachWhereUniqueInput>>;
+  deleteMany?: Maybe<Array<CoachScalarWhereInput>>;
+  disconnect?: Maybe<Array<CoachWhereUniqueInput>>;
+  set?: Maybe<Array<CoachWhereUniqueInput>>;
   update?: Maybe<Array<CoachUpdateWithWhereUniqueWithoutTeamInput>>;
   updateMany?: Maybe<Array<CoachUpdateManyWithWhereWithoutTeamInput>>;
-  deleteMany?: Maybe<Array<CoachScalarWhereInput>>;
+  upsert?: Maybe<Array<CoachUpsertWithWhereUniqueWithoutTeamInput>>;
 };
 
 export type CoachUpdateOneWithoutImageInput = {
-  create?: Maybe<CoachCreateWithoutImageInput>;
-  connectOrCreate?: Maybe<CoachCreateOrConnectWithoutImageInput>;
-  upsert?: Maybe<CoachUpsertWithoutImageInput>;
   connect?: Maybe<CoachWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<CoachCreateOrConnectWithoutImageInput>;
+  create?: Maybe<CoachCreateWithoutImageInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<CoachUpdateWithoutImageInput>;
+  upsert?: Maybe<CoachUpsertWithoutImageInput>;
 };
 
 export type CoachUpdateWithWhereUniqueWithoutTeamInput = {
-  where: CoachWhereUniqueInput;
   data: CoachUpdateWithoutTeamInput;
+  where: CoachWhereUniqueInput;
 };
 
 export type CoachUpdateWithoutImageInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   handle?: Maybe<StringFieldUpdateOperationsInput>;
-  name?: Maybe<StringFieldUpdateOperationsInput>;
-  type?: Maybe<NullableStringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
   isAssistant?: Maybe<NullableStringFieldUpdateOperationsInput>;
+  name?: Maybe<StringFieldUpdateOperationsInput>;
   team?: Maybe<TeamUpdateOneWithoutCoachesInput>;
+  type?: Maybe<NullableStringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
 };
 
 export type CoachUpdateWithoutTeamInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   handle?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
+  image?: Maybe<ImageUpdateOneWithoutCoachInput>;
+  isAssistant?: Maybe<NullableStringFieldUpdateOperationsInput>;
   name?: Maybe<StringFieldUpdateOperationsInput>;
   type?: Maybe<NullableStringFieldUpdateOperationsInput>;
-  isAssistant?: Maybe<NullableStringFieldUpdateOperationsInput>;
-  image?: Maybe<ImageUpdateOneWithoutCoachInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
 };
 
 export type CoachUpsertWithWhereUniqueWithoutTeamInput = {
-  where: CoachWhereUniqueInput;
-  update: CoachUpdateWithoutTeamInput;
   create: CoachCreateWithoutTeamInput;
+  update: CoachUpdateWithoutTeamInput;
+  where: CoachWhereUniqueInput;
 };
 
 export type CoachUpsertWithoutImageInput = {
-  update: CoachUpdateWithoutImageInput;
   create: CoachCreateWithoutImageInput;
+  update: CoachUpdateWithoutImageInput;
 };
 
 export type CoachWhereInput = {
   AND?: Maybe<Array<CoachWhereInput>>;
-  OR?: Maybe<Array<CoachWhereInput>>;
   NOT?: Maybe<Array<CoachWhereInput>>;
-  id?: Maybe<StringFilter>;
+  OR?: Maybe<Array<CoachWhereInput>>;
   createdAt?: Maybe<DateTimeFilter>;
-  updatedAt?: Maybe<DateTimeFilter>;
   handle?: Maybe<StringFilter>;
-  name?: Maybe<StringFilter>;
-  type?: Maybe<StringNullableFilter>;
-  isAssistant?: Maybe<StringNullableFilter>;
-  teamId?: Maybe<StringNullableFilter>;
-  team?: Maybe<TeamWhereInput>;
-  imageId?: Maybe<StringNullableFilter>;
+  id?: Maybe<StringFilter>;
   image?: Maybe<ImageWhereInput>;
+  imageId?: Maybe<StringNullableFilter>;
+  isAssistant?: Maybe<StringNullableFilter>;
+  name?: Maybe<StringFilter>;
+  team?: Maybe<TeamWhereInput>;
+  teamId?: Maybe<StringNullableFilter>;
+  type?: Maybe<StringNullableFilter>;
+  updatedAt?: Maybe<DateTimeFilter>;
 };
 
 export type CoachWhereUniqueInput = {
-  id?: Maybe<Scalars['String']>;
   handle?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
 };
 
 /** Color scheme model */
 export type ColorScheme = {
   __typename?: 'ColorScheme';
-  id: Scalars['ID'];
   createdAt: Scalars['DateTime'];
-  updatedAt: Scalars['DateTime'];
+  id: Scalars['ID'];
   primary: Scalars['String'];
   secondary: Scalars['String'];
   team?: Maybe<Team>;
+  updatedAt: Scalars['DateTime'];
 };
 
 export type ColorSchemeCreateNestedOneWithoutTeamInput = {
-  create?: Maybe<ColorSchemeCreateWithoutTeamInput>;
-  connectOrCreate?: Maybe<ColorSchemeCreateOrConnectWithoutTeamInput>;
   connect?: Maybe<ColorSchemeWhereUniqueInput>;
+  connectOrCreate?: Maybe<ColorSchemeCreateOrConnectWithoutTeamInput>;
+  create?: Maybe<ColorSchemeCreateWithoutTeamInput>;
 };
 
 export type ColorSchemeCreateOrConnectWithoutTeamInput = {
-  where: ColorSchemeWhereUniqueInput;
   create: ColorSchemeCreateWithoutTeamInput;
+  where: ColorSchemeWhereUniqueInput;
 };
 
 export type ColorSchemeCreateWithoutTeamInput = {
-  id: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
+  id: Scalars['String'];
   primary: Scalars['String'];
   secondary: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
 export type ColorSchemeOrderByInput = {
-  id?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
-  updatedAt?: Maybe<SortOrder>;
+  id?: Maybe<SortOrder>;
   primary?: Maybe<SortOrder>;
   secondary?: Maybe<SortOrder>;
+  updatedAt?: Maybe<SortOrder>;
 };
 
 export type ColorSchemeUpdateOneWithoutTeamInput = {
-  create?: Maybe<ColorSchemeCreateWithoutTeamInput>;
-  connectOrCreate?: Maybe<ColorSchemeCreateOrConnectWithoutTeamInput>;
-  upsert?: Maybe<ColorSchemeUpsertWithoutTeamInput>;
   connect?: Maybe<ColorSchemeWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<ColorSchemeCreateOrConnectWithoutTeamInput>;
+  create?: Maybe<ColorSchemeCreateWithoutTeamInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<ColorSchemeUpdateWithoutTeamInput>;
+  upsert?: Maybe<ColorSchemeUpsertWithoutTeamInput>;
 };
 
 export type ColorSchemeUpdateWithoutTeamInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
   primary?: Maybe<StringFieldUpdateOperationsInput>;
   secondary?: Maybe<StringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
 };
 
 export type ColorSchemeUpsertWithoutTeamInput = {
-  update: ColorSchemeUpdateWithoutTeamInput;
   create: ColorSchemeCreateWithoutTeamInput;
+  update: ColorSchemeUpdateWithoutTeamInput;
 };
 
 export type ColorSchemeWhereInput = {
   AND?: Maybe<Array<ColorSchemeWhereInput>>;
-  OR?: Maybe<Array<ColorSchemeWhereInput>>;
   NOT?: Maybe<Array<ColorSchemeWhereInput>>;
-  id?: Maybe<StringFilter>;
+  OR?: Maybe<Array<ColorSchemeWhereInput>>;
   createdAt?: Maybe<DateTimeFilter>;
-  updatedAt?: Maybe<DateTimeFilter>;
+  id?: Maybe<StringFilter>;
   primary?: Maybe<StringFilter>;
   secondary?: Maybe<StringFilter>;
   team?: Maybe<TeamWhereInput>;
+  updatedAt?: Maybe<DateTimeFilter>;
 };
 
 export type ColorSchemeWhereUniqueInput = {
   id?: Maybe<Scalars['String']>;
 };
-
 
 export type DateTimeFieldUpdateOperationsInput = {
   set?: Maybe<Scalars['DateTime']>;
@@ -381,26 +378,25 @@ export type DateTimeFieldUpdateOperationsInput = {
 
 export type DateTimeFilter = {
   equals?: Maybe<Scalars['DateTime']>;
-  in?: Maybe<Array<Scalars['DateTime']>>;
-  notIn?: Maybe<Array<Scalars['DateTime']>>;
-  lt?: Maybe<Scalars['DateTime']>;
-  lte?: Maybe<Scalars['DateTime']>;
   gt?: Maybe<Scalars['DateTime']>;
   gte?: Maybe<Scalars['DateTime']>;
+  in?: Maybe<Array<Scalars['DateTime']>>;
+  lt?: Maybe<Scalars['DateTime']>;
+  lte?: Maybe<Scalars['DateTime']>;
   not?: Maybe<NestedDateTimeFilter>;
+  notIn?: Maybe<Array<Scalars['DateTime']>>;
 };
 
 export type DateTimeNullableFilter = {
   equals?: Maybe<Scalars['DateTime']>;
-  in?: Maybe<Array<Scalars['DateTime']>>;
-  notIn?: Maybe<Array<Scalars['DateTime']>>;
-  lt?: Maybe<Scalars['DateTime']>;
-  lte?: Maybe<Scalars['DateTime']>;
   gt?: Maybe<Scalars['DateTime']>;
   gte?: Maybe<Scalars['DateTime']>;
+  in?: Maybe<Array<Scalars['DateTime']>>;
+  lt?: Maybe<Scalars['DateTime']>;
+  lte?: Maybe<Scalars['DateTime']>;
   not?: Maybe<NestedDateTimeNullableFilter>;
+  notIn?: Maybe<Array<Scalars['DateTime']>>;
 };
-
 
 export type EnumImageTypeFieldUpdateOperationsInput = {
   set?: Maybe<ImageType>;
@@ -409,197 +405,197 @@ export type EnumImageTypeFieldUpdateOperationsInput = {
 export type EnumImageTypeFilter = {
   equals?: Maybe<ImageType>;
   in?: Maybe<Array<ImageType>>;
-  notIn?: Maybe<Array<ImageType>>;
   not?: Maybe<NestedEnumImageTypeFilter>;
+  notIn?: Maybe<Array<ImageType>>;
 };
 
 export type FloatNullableFilter = {
   equals?: Maybe<Scalars['Float']>;
-  in?: Maybe<Array<Scalars['Float']>>;
-  notIn?: Maybe<Array<Scalars['Float']>>;
-  lt?: Maybe<Scalars['Float']>;
-  lte?: Maybe<Scalars['Float']>;
   gt?: Maybe<Scalars['Float']>;
   gte?: Maybe<Scalars['Float']>;
+  in?: Maybe<Array<Scalars['Float']>>;
+  lt?: Maybe<Scalars['Float']>;
+  lte?: Maybe<Scalars['Float']>;
   not?: Maybe<NestedFloatNullableFilter>;
+  notIn?: Maybe<Array<Scalars['Float']>>;
 };
 
 /** Image for NBA team, player, or coach */
 export type Image = {
   __typename?: 'Image';
-  id: Scalars['ID'];
+  coach?: Maybe<Coach>;
   createdAt: Scalars['DateTime'];
+  id: Scalars['ID'];
+  player?: Maybe<Player>;
+  team?: Maybe<Team>;
+  type: ImageType;
   updatedAt: Scalars['DateTime'];
   url: Scalars['String'];
-  type: ImageType;
-  player?: Maybe<Player>;
-  coach?: Maybe<Coach>;
-  team?: Maybe<Team>;
 };
 
 export type ImageCreateNestedOneWithoutCoachInput = {
-  create?: Maybe<ImageCreateWithoutCoachInput>;
-  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutCoachInput>;
   connect?: Maybe<ImageWhereUniqueInput>;
+  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutCoachInput>;
+  create?: Maybe<ImageCreateWithoutCoachInput>;
 };
 
 export type ImageCreateNestedOneWithoutPlayerInput = {
-  create?: Maybe<ImageCreateWithoutPlayerInput>;
-  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutPlayerInput>;
   connect?: Maybe<ImageWhereUniqueInput>;
+  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutPlayerInput>;
+  create?: Maybe<ImageCreateWithoutPlayerInput>;
 };
 
 export type ImageCreateNestedOneWithoutTeamInput = {
-  create?: Maybe<ImageCreateWithoutTeamInput>;
-  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutTeamInput>;
   connect?: Maybe<ImageWhereUniqueInput>;
+  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutTeamInput>;
+  create?: Maybe<ImageCreateWithoutTeamInput>;
 };
 
 export type ImageCreateOrConnectWithoutCoachInput = {
-  where: ImageWhereUniqueInput;
   create: ImageCreateWithoutCoachInput;
+  where: ImageWhereUniqueInput;
 };
 
 export type ImageCreateOrConnectWithoutPlayerInput = {
-  where: ImageWhereUniqueInput;
   create: ImageCreateWithoutPlayerInput;
+  where: ImageWhereUniqueInput;
 };
 
 export type ImageCreateOrConnectWithoutTeamInput = {
-  where: ImageWhereUniqueInput;
   create: ImageCreateWithoutTeamInput;
+  where: ImageWhereUniqueInput;
 };
 
 export type ImageCreateWithoutCoachInput = {
-  id: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
-  url: Scalars['String'];
-  type: ImageType;
+  id: Scalars['String'];
   player?: Maybe<PlayerCreateNestedOneWithoutImageInput>;
   team?: Maybe<TeamCreateNestedOneWithoutLogoInput>;
+  type: ImageType;
+  updatedAt?: Maybe<Scalars['DateTime']>;
+  url: Scalars['String'];
 };
 
 export type ImageCreateWithoutPlayerInput = {
-  id: Scalars['String'];
+  coach?: Maybe<CoachCreateNestedOneWithoutImageInput>;
   createdAt?: Maybe<Scalars['DateTime']>;
+  id: Scalars['String'];
+  team?: Maybe<TeamCreateNestedOneWithoutLogoInput>;
+  type: ImageType;
   updatedAt?: Maybe<Scalars['DateTime']>;
   url: Scalars['String'];
-  type: ImageType;
-  coach?: Maybe<CoachCreateNestedOneWithoutImageInput>;
-  team?: Maybe<TeamCreateNestedOneWithoutLogoInput>;
 };
 
 export type ImageCreateWithoutTeamInput = {
-  id: Scalars['String'];
+  coach?: Maybe<CoachCreateNestedOneWithoutImageInput>;
   createdAt?: Maybe<Scalars['DateTime']>;
+  id: Scalars['String'];
+  player?: Maybe<PlayerCreateNestedOneWithoutImageInput>;
+  type: ImageType;
   updatedAt?: Maybe<Scalars['DateTime']>;
   url: Scalars['String'];
-  type: ImageType;
-  player?: Maybe<PlayerCreateNestedOneWithoutImageInput>;
-  coach?: Maybe<CoachCreateNestedOneWithoutImageInput>;
 };
 
 export type ImageOrderByInput = {
-  id?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
+  id?: Maybe<SortOrder>;
+  type?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
   url?: Maybe<SortOrder>;
-  type?: Maybe<SortOrder>;
 };
 
 export enum ImageType {
-  Logo = 'LOGO',
-  Headshot = 'HEADSHOT'
+  Headshot = 'HEADSHOT',
+  Logo = 'LOGO'
 }
 
 export type ImageUpdateOneWithoutCoachInput = {
-  create?: Maybe<ImageCreateWithoutCoachInput>;
-  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutCoachInput>;
-  upsert?: Maybe<ImageUpsertWithoutCoachInput>;
   connect?: Maybe<ImageWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutCoachInput>;
+  create?: Maybe<ImageCreateWithoutCoachInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<ImageUpdateWithoutCoachInput>;
+  upsert?: Maybe<ImageUpsertWithoutCoachInput>;
 };
 
 export type ImageUpdateOneWithoutPlayerInput = {
-  create?: Maybe<ImageCreateWithoutPlayerInput>;
-  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutPlayerInput>;
-  upsert?: Maybe<ImageUpsertWithoutPlayerInput>;
   connect?: Maybe<ImageWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutPlayerInput>;
+  create?: Maybe<ImageCreateWithoutPlayerInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<ImageUpdateWithoutPlayerInput>;
+  upsert?: Maybe<ImageUpsertWithoutPlayerInput>;
 };
 
 export type ImageUpdateOneWithoutTeamInput = {
-  create?: Maybe<ImageCreateWithoutTeamInput>;
-  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutTeamInput>;
-  upsert?: Maybe<ImageUpsertWithoutTeamInput>;
   connect?: Maybe<ImageWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<ImageCreateOrConnectWithoutTeamInput>;
+  create?: Maybe<ImageCreateWithoutTeamInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<ImageUpdateWithoutTeamInput>;
+  upsert?: Maybe<ImageUpsertWithoutTeamInput>;
 };
 
 export type ImageUpdateWithoutCoachInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  url?: Maybe<StringFieldUpdateOperationsInput>;
-  type?: Maybe<EnumImageTypeFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
   player?: Maybe<PlayerUpdateOneWithoutImageInput>;
   team?: Maybe<TeamUpdateOneWithoutLogoInput>;
+  type?: Maybe<EnumImageTypeFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  url?: Maybe<StringFieldUpdateOperationsInput>;
 };
 
 export type ImageUpdateWithoutPlayerInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
+  coach?: Maybe<CoachUpdateOneWithoutImageInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
+  team?: Maybe<TeamUpdateOneWithoutLogoInput>;
+  type?: Maybe<EnumImageTypeFieldUpdateOperationsInput>;
   updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   url?: Maybe<StringFieldUpdateOperationsInput>;
-  type?: Maybe<EnumImageTypeFieldUpdateOperationsInput>;
-  coach?: Maybe<CoachUpdateOneWithoutImageInput>;
-  team?: Maybe<TeamUpdateOneWithoutLogoInput>;
 };
 
 export type ImageUpdateWithoutTeamInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
+  coach?: Maybe<CoachUpdateOneWithoutImageInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
+  player?: Maybe<PlayerUpdateOneWithoutImageInput>;
+  type?: Maybe<EnumImageTypeFieldUpdateOperationsInput>;
   updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   url?: Maybe<StringFieldUpdateOperationsInput>;
-  type?: Maybe<EnumImageTypeFieldUpdateOperationsInput>;
-  player?: Maybe<PlayerUpdateOneWithoutImageInput>;
-  coach?: Maybe<CoachUpdateOneWithoutImageInput>;
 };
 
 export type ImageUpsertWithoutCoachInput = {
-  update: ImageUpdateWithoutCoachInput;
   create: ImageCreateWithoutCoachInput;
+  update: ImageUpdateWithoutCoachInput;
 };
 
 export type ImageUpsertWithoutPlayerInput = {
-  update: ImageUpdateWithoutPlayerInput;
   create: ImageCreateWithoutPlayerInput;
+  update: ImageUpdateWithoutPlayerInput;
 };
 
 export type ImageUpsertWithoutTeamInput = {
-  update: ImageUpdateWithoutTeamInput;
   create: ImageCreateWithoutTeamInput;
+  update: ImageUpdateWithoutTeamInput;
 };
 
 export type ImageWhereInput = {
   AND?: Maybe<Array<ImageWhereInput>>;
-  OR?: Maybe<Array<ImageWhereInput>>;
   NOT?: Maybe<Array<ImageWhereInput>>;
-  id?: Maybe<StringFilter>;
+  OR?: Maybe<Array<ImageWhereInput>>;
+  coach?: Maybe<CoachWhereInput>;
   createdAt?: Maybe<DateTimeFilter>;
+  id?: Maybe<StringFilter>;
+  player?: Maybe<PlayerWhereInput>;
+  team?: Maybe<TeamWhereInput>;
+  type?: Maybe<EnumImageTypeFilter>;
   updatedAt?: Maybe<DateTimeFilter>;
   url?: Maybe<StringFilter>;
-  type?: Maybe<EnumImageTypeFilter>;
-  player?: Maybe<PlayerWhereInput>;
-  coach?: Maybe<CoachWhereInput>;
-  team?: Maybe<TeamWhereInput>;
 };
 
 export type ImageWhereUniqueInput = {
@@ -622,15 +618,14 @@ export type IntFilter = {
 
 export type IntNullableFilter = {
   equals?: Maybe<Scalars['Int']>;
-  in?: Maybe<Array<Scalars['Int']>>;
-  notIn?: Maybe<Array<Scalars['Int']>>;
-  lt?: Maybe<Scalars['Int']>;
-  lte?: Maybe<Scalars['Int']>;
   gt?: Maybe<Scalars['Int']>;
   gte?: Maybe<Scalars['Int']>;
+  in?: Maybe<Array<Scalars['Int']>>;
+  lt?: Maybe<Scalars['Int']>;
+  lte?: Maybe<Scalars['Int']>;
   not?: Maybe<NestedIntNullableFilter>;
+  notIn?: Maybe<Array<Scalars['Int']>>;
 };
-
 
 export type Mutation = {
   __typename?: 'Mutation';
@@ -651,83 +646,83 @@ export type MutationUpdateOneTeamArgs = {
 
 export type NestedDateTimeFilter = {
   equals?: Maybe<Scalars['DateTime']>;
-  in?: Maybe<Array<Scalars['DateTime']>>;
-  notIn?: Maybe<Array<Scalars['DateTime']>>;
-  lt?: Maybe<Scalars['DateTime']>;
-  lte?: Maybe<Scalars['DateTime']>;
   gt?: Maybe<Scalars['DateTime']>;
   gte?: Maybe<Scalars['DateTime']>;
+  in?: Maybe<Array<Scalars['DateTime']>>;
+  lt?: Maybe<Scalars['DateTime']>;
+  lte?: Maybe<Scalars['DateTime']>;
   not?: Maybe<NestedDateTimeFilter>;
+  notIn?: Maybe<Array<Scalars['DateTime']>>;
 };
 
 export type NestedDateTimeNullableFilter = {
   equals?: Maybe<Scalars['DateTime']>;
-  in?: Maybe<Array<Scalars['DateTime']>>;
-  notIn?: Maybe<Array<Scalars['DateTime']>>;
-  lt?: Maybe<Scalars['DateTime']>;
-  lte?: Maybe<Scalars['DateTime']>;
   gt?: Maybe<Scalars['DateTime']>;
   gte?: Maybe<Scalars['DateTime']>;
+  in?: Maybe<Array<Scalars['DateTime']>>;
+  lt?: Maybe<Scalars['DateTime']>;
+  lte?: Maybe<Scalars['DateTime']>;
   not?: Maybe<NestedDateTimeNullableFilter>;
+  notIn?: Maybe<Array<Scalars['DateTime']>>;
 };
 
 export type NestedEnumImageTypeFilter = {
   equals?: Maybe<ImageType>;
   in?: Maybe<Array<ImageType>>;
-  notIn?: Maybe<Array<ImageType>>;
   not?: Maybe<NestedEnumImageTypeFilter>;
+  notIn?: Maybe<Array<ImageType>>;
 };
 
 export type NestedFloatNullableFilter = {
   equals?: Maybe<Scalars['Float']>;
-  in?: Maybe<Array<Scalars['Float']>>;
-  notIn?: Maybe<Array<Scalars['Float']>>;
-  lt?: Maybe<Scalars['Float']>;
-  lte?: Maybe<Scalars['Float']>;
   gt?: Maybe<Scalars['Float']>;
   gte?: Maybe<Scalars['Float']>;
+  in?: Maybe<Array<Scalars['Float']>>;
+  lt?: Maybe<Scalars['Float']>;
+  lte?: Maybe<Scalars['Float']>;
   not?: Maybe<NestedFloatNullableFilter>;
+  notIn?: Maybe<Array<Scalars['Float']>>;
 };
 
 export type NestedIntNullableFilter = {
   equals?: Maybe<Scalars['Int']>;
-  in?: Maybe<Array<Scalars['Int']>>;
-  notIn?: Maybe<Array<Scalars['Int']>>;
-  lt?: Maybe<Scalars['Int']>;
-  lte?: Maybe<Scalars['Int']>;
   gt?: Maybe<Scalars['Int']>;
   gte?: Maybe<Scalars['Int']>;
+  in?: Maybe<Array<Scalars['Int']>>;
+  lt?: Maybe<Scalars['Int']>;
+  lte?: Maybe<Scalars['Int']>;
   not?: Maybe<NestedIntNullableFilter>;
+  notIn?: Maybe<Array<Scalars['Int']>>;
 };
 
 export type NestedStringNullableFilter = {
+  contains?: Maybe<Scalars['String']>;
+  endsWith?: Maybe<Scalars['String']>;
   equals?: Maybe<Scalars['String']>;
-  in?: Maybe<Array<Scalars['String']>>;
-  notIn?: Maybe<Array<Scalars['String']>>;
-  lt?: Maybe<Scalars['String']>;
-  lte?: Maybe<Scalars['String']>;
   gt?: Maybe<Scalars['String']>;
   gte?: Maybe<Scalars['String']>;
-  contains?: Maybe<Scalars['String']>;
-  startsWith?: Maybe<Scalars['String']>;
-  endsWith?: Maybe<Scalars['String']>;
+  in?: Maybe<Array<Scalars['String']>>;
+  lt?: Maybe<Scalars['String']>;
+  lte?: Maybe<Scalars['String']>;
   not?: Maybe<NestedStringNullableFilter>;
+  notIn?: Maybe<Array<Scalars['String']>>;
+  startsWith?: Maybe<Scalars['String']>;
 };
 
 export type NullableFloatFieldUpdateOperationsInput = {
-  set?: Maybe<Scalars['Float']>;
-  increment?: Maybe<Scalars['Float']>;
   decrement?: Maybe<Scalars['Float']>;
-  multiply?: Maybe<Scalars['Float']>;
   divide?: Maybe<Scalars['Float']>;
+  increment?: Maybe<Scalars['Float']>;
+  multiply?: Maybe<Scalars['Float']>;
+  set?: Maybe<Scalars['Float']>;
 };
 
 export type NullableIntFieldUpdateOperationsInput = {
-  set?: Maybe<Scalars['Int']>;
-  increment?: Maybe<Scalars['Int']>;
   decrement?: Maybe<Scalars['Int']>;
-  multiply?: Maybe<Scalars['Int']>;
   divide?: Maybe<Scalars['Int']>;
+  increment?: Maybe<Scalars['Int']>;
+  multiply?: Maybe<Scalars['Int']>;
+  set?: Maybe<Scalars['Int']>;
 };
 
 export type NullableStringFieldUpdateOperationsInput = {
@@ -737,34 +732,34 @@ export type NullableStringFieldUpdateOperationsInput = {
 /** Player model */
 export type Player = {
   __typename?: 'Player';
-  id: Scalars['ID'];
   createdAt: Scalars['DateTime'];
-  updatedAt: Scalars['DateTime'];
   handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
-  imageId?: Maybe<Scalars['String']>;
-  teamId?: Maybe<Scalars['String']>;
   height: Scalars['String'];
-  weight: Scalars['String'];
+  id: Scalars['ID'];
+  image?: Maybe<Image>;
+  imageId?: Maybe<Scalars['String']>;
+  name: Scalars['String'];
   number?: Maybe<Scalars['String']>;
   position?: Maybe<Scalars['String']>;
+  slug: Scalars['String'];
   team?: Maybe<Team>;
-  image?: Maybe<Image>;
+  teamId?: Maybe<Scalars['String']>;
+  updatedAt: Scalars['DateTime'];
+  weight: Scalars['String'];
 };
 
 export type PlayerCreateManyTeamInput = {
-  id: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
   handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
   height: Scalars['String'];
-  weight: Scalars['String'];
+  id: Scalars['String'];
+  imageId?: Maybe<Scalars['String']>;
+  name: Scalars['String'];
   number?: Maybe<Scalars['String']>;
   position?: Maybe<Scalars['String']>;
-  imageId?: Maybe<Scalars['String']>;
+  slug: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+  weight: Scalars['String'];
 };
 
 export type PlayerCreateManyTeamInputEnvelope = {
@@ -773,204 +768,204 @@ export type PlayerCreateManyTeamInputEnvelope = {
 };
 
 export type PlayerCreateNestedManyWithoutTeamInput = {
-  create?: Maybe<Array<PlayerCreateWithoutTeamInput>>;
-  connectOrCreate?: Maybe<Array<PlayerCreateOrConnectWithoutTeamInput>>;
-  createMany?: Maybe<PlayerCreateManyTeamInputEnvelope>;
   connect?: Maybe<Array<PlayerWhereUniqueInput>>;
+  connectOrCreate?: Maybe<Array<PlayerCreateOrConnectWithoutTeamInput>>;
+  create?: Maybe<Array<PlayerCreateWithoutTeamInput>>;
+  createMany?: Maybe<PlayerCreateManyTeamInputEnvelope>;
 };
 
 export type PlayerCreateNestedOneWithoutImageInput = {
-  create?: Maybe<PlayerCreateWithoutImageInput>;
-  connectOrCreate?: Maybe<PlayerCreateOrConnectWithoutImageInput>;
   connect?: Maybe<PlayerWhereUniqueInput>;
+  connectOrCreate?: Maybe<PlayerCreateOrConnectWithoutImageInput>;
+  create?: Maybe<PlayerCreateWithoutImageInput>;
 };
 
 export type PlayerCreateOrConnectWithoutImageInput = {
-  where: PlayerWhereUniqueInput;
   create: PlayerCreateWithoutImageInput;
+  where: PlayerWhereUniqueInput;
 };
 
 export type PlayerCreateOrConnectWithoutTeamInput = {
-  where: PlayerWhereUniqueInput;
   create: PlayerCreateWithoutTeamInput;
+  where: PlayerWhereUniqueInput;
 };
 
 export type PlayerCreateWithoutImageInput = {
-  id: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
   handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
   height: Scalars['String'];
-  weight: Scalars['String'];
+  id: Scalars['String'];
+  name: Scalars['String'];
   number?: Maybe<Scalars['String']>;
   position?: Maybe<Scalars['String']>;
+  slug: Scalars['String'];
   team?: Maybe<TeamCreateNestedOneWithoutPlayersInput>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
+  weight: Scalars['String'];
 };
 
 export type PlayerCreateWithoutTeamInput = {
-  id: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
   handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
   height: Scalars['String'];
-  weight: Scalars['String'];
+  id: Scalars['String'];
+  image?: Maybe<ImageCreateNestedOneWithoutPlayerInput>;
+  name: Scalars['String'];
   number?: Maybe<Scalars['String']>;
   position?: Maybe<Scalars['String']>;
-  image?: Maybe<ImageCreateNestedOneWithoutPlayerInput>;
+  slug: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+  weight: Scalars['String'];
 };
 
 export type PlayerListRelationFilter = {
   every?: Maybe<PlayerWhereInput>;
-  some?: Maybe<PlayerWhereInput>;
   none?: Maybe<PlayerWhereInput>;
+  some?: Maybe<PlayerWhereInput>;
 };
 
 export type PlayerOrderByInput = {
-  id?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
-  updatedAt?: Maybe<SortOrder>;
   handle?: Maybe<SortOrder>;
-  name?: Maybe<SortOrder>;
-  slug?: Maybe<SortOrder>;
   height?: Maybe<SortOrder>;
-  weight?: Maybe<SortOrder>;
+  id?: Maybe<SortOrder>;
+  imageId?: Maybe<SortOrder>;
+  name?: Maybe<SortOrder>;
   number?: Maybe<SortOrder>;
   position?: Maybe<SortOrder>;
+  slug?: Maybe<SortOrder>;
   teamId?: Maybe<SortOrder>;
-  imageId?: Maybe<SortOrder>;
+  updatedAt?: Maybe<SortOrder>;
+  weight?: Maybe<SortOrder>;
 };
 
 export type PlayerScalarWhereInput = {
   AND?: Maybe<Array<PlayerScalarWhereInput>>;
-  OR?: Maybe<Array<PlayerScalarWhereInput>>;
   NOT?: Maybe<Array<PlayerScalarWhereInput>>;
-  id?: Maybe<StringFilter>;
+  OR?: Maybe<Array<PlayerScalarWhereInput>>;
   createdAt?: Maybe<DateTimeFilter>;
-  updatedAt?: Maybe<DateTimeFilter>;
   handle?: Maybe<StringFilter>;
-  name?: Maybe<StringFilter>;
-  slug?: Maybe<StringFilter>;
   height?: Maybe<StringFilter>;
-  weight?: Maybe<StringFilter>;
+  id?: Maybe<StringFilter>;
+  imageId?: Maybe<StringNullableFilter>;
+  name?: Maybe<StringFilter>;
   number?: Maybe<StringNullableFilter>;
   position?: Maybe<StringNullableFilter>;
+  slug?: Maybe<StringFilter>;
   teamId?: Maybe<StringNullableFilter>;
-  imageId?: Maybe<StringNullableFilter>;
+  updatedAt?: Maybe<DateTimeFilter>;
+  weight?: Maybe<StringFilter>;
 };
 
 export type PlayerUpdateManyMutationInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   handle?: Maybe<StringFieldUpdateOperationsInput>;
-  name?: Maybe<StringFieldUpdateOperationsInput>;
-  slug?: Maybe<StringFieldUpdateOperationsInput>;
   height?: Maybe<StringFieldUpdateOperationsInput>;
-  weight?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
+  name?: Maybe<StringFieldUpdateOperationsInput>;
   number?: Maybe<NullableStringFieldUpdateOperationsInput>;
   position?: Maybe<NullableStringFieldUpdateOperationsInput>;
+  slug?: Maybe<StringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  weight?: Maybe<StringFieldUpdateOperationsInput>;
 };
 
 export type PlayerUpdateManyWithWhereWithoutTeamInput = {
-  where: PlayerScalarWhereInput;
   data: PlayerUpdateManyMutationInput;
+  where: PlayerScalarWhereInput;
 };
 
 export type PlayerUpdateManyWithoutTeamInput = {
-  create?: Maybe<Array<PlayerCreateWithoutTeamInput>>;
-  connectOrCreate?: Maybe<Array<PlayerCreateOrConnectWithoutTeamInput>>;
-  upsert?: Maybe<Array<PlayerUpsertWithWhereUniqueWithoutTeamInput>>;
-  createMany?: Maybe<PlayerCreateManyTeamInputEnvelope>;
   connect?: Maybe<Array<PlayerWhereUniqueInput>>;
-  set?: Maybe<Array<PlayerWhereUniqueInput>>;
-  disconnect?: Maybe<Array<PlayerWhereUniqueInput>>;
+  connectOrCreate?: Maybe<Array<PlayerCreateOrConnectWithoutTeamInput>>;
+  create?: Maybe<Array<PlayerCreateWithoutTeamInput>>;
+  createMany?: Maybe<PlayerCreateManyTeamInputEnvelope>;
   delete?: Maybe<Array<PlayerWhereUniqueInput>>;
+  deleteMany?: Maybe<Array<PlayerScalarWhereInput>>;
+  disconnect?: Maybe<Array<PlayerWhereUniqueInput>>;
+  set?: Maybe<Array<PlayerWhereUniqueInput>>;
   update?: Maybe<Array<PlayerUpdateWithWhereUniqueWithoutTeamInput>>;
   updateMany?: Maybe<Array<PlayerUpdateManyWithWhereWithoutTeamInput>>;
-  deleteMany?: Maybe<Array<PlayerScalarWhereInput>>;
+  upsert?: Maybe<Array<PlayerUpsertWithWhereUniqueWithoutTeamInput>>;
 };
 
 export type PlayerUpdateOneWithoutImageInput = {
-  create?: Maybe<PlayerCreateWithoutImageInput>;
-  connectOrCreate?: Maybe<PlayerCreateOrConnectWithoutImageInput>;
-  upsert?: Maybe<PlayerUpsertWithoutImageInput>;
   connect?: Maybe<PlayerWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<PlayerCreateOrConnectWithoutImageInput>;
+  create?: Maybe<PlayerCreateWithoutImageInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<PlayerUpdateWithoutImageInput>;
+  upsert?: Maybe<PlayerUpsertWithoutImageInput>;
 };
 
 export type PlayerUpdateWithWhereUniqueWithoutTeamInput = {
-  where: PlayerWhereUniqueInput;
   data: PlayerUpdateWithoutTeamInput;
+  where: PlayerWhereUniqueInput;
 };
 
 export type PlayerUpdateWithoutImageInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   handle?: Maybe<StringFieldUpdateOperationsInput>;
-  name?: Maybe<StringFieldUpdateOperationsInput>;
-  slug?: Maybe<StringFieldUpdateOperationsInput>;
   height?: Maybe<StringFieldUpdateOperationsInput>;
-  weight?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
+  name?: Maybe<StringFieldUpdateOperationsInput>;
   number?: Maybe<NullableStringFieldUpdateOperationsInput>;
   position?: Maybe<NullableStringFieldUpdateOperationsInput>;
+  slug?: Maybe<StringFieldUpdateOperationsInput>;
   team?: Maybe<TeamUpdateOneWithoutPlayersInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  weight?: Maybe<StringFieldUpdateOperationsInput>;
 };
 
 export type PlayerUpdateWithoutTeamInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
   createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   handle?: Maybe<StringFieldUpdateOperationsInput>;
-  name?: Maybe<StringFieldUpdateOperationsInput>;
-  slug?: Maybe<StringFieldUpdateOperationsInput>;
   height?: Maybe<StringFieldUpdateOperationsInput>;
-  weight?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
+  image?: Maybe<ImageUpdateOneWithoutPlayerInput>;
+  name?: Maybe<StringFieldUpdateOperationsInput>;
   number?: Maybe<NullableStringFieldUpdateOperationsInput>;
   position?: Maybe<NullableStringFieldUpdateOperationsInput>;
-  image?: Maybe<ImageUpdateOneWithoutPlayerInput>;
+  slug?: Maybe<StringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  weight?: Maybe<StringFieldUpdateOperationsInput>;
 };
 
 export type PlayerUpsertWithWhereUniqueWithoutTeamInput = {
-  where: PlayerWhereUniqueInput;
-  update: PlayerUpdateWithoutTeamInput;
   create: PlayerCreateWithoutTeamInput;
+  update: PlayerUpdateWithoutTeamInput;
+  where: PlayerWhereUniqueInput;
 };
 
 export type PlayerUpsertWithoutImageInput = {
-  update: PlayerUpdateWithoutImageInput;
   create: PlayerCreateWithoutImageInput;
+  update: PlayerUpdateWithoutImageInput;
 };
 
 export type PlayerWhereInput = {
   AND?: Maybe<Array<PlayerWhereInput>>;
-  OR?: Maybe<Array<PlayerWhereInput>>;
   NOT?: Maybe<Array<PlayerWhereInput>>;
-  id?: Maybe<StringFilter>;
+  OR?: Maybe<Array<PlayerWhereInput>>;
   createdAt?: Maybe<DateTimeFilter>;
-  updatedAt?: Maybe<DateTimeFilter>;
   handle?: Maybe<StringFilter>;
-  name?: Maybe<StringFilter>;
-  slug?: Maybe<StringFilter>;
   height?: Maybe<StringFilter>;
-  weight?: Maybe<StringFilter>;
+  id?: Maybe<StringFilter>;
+  image?: Maybe<ImageWhereInput>;
+  imageId?: Maybe<StringNullableFilter>;
+  name?: Maybe<StringFilter>;
   number?: Maybe<StringNullableFilter>;
   position?: Maybe<StringNullableFilter>;
-  teamId?: Maybe<StringNullableFilter>;
+  slug?: Maybe<StringFilter>;
   team?: Maybe<TeamWhereInput>;
-  imageId?: Maybe<StringNullableFilter>;
-  image?: Maybe<ImageWhereInput>;
+  teamId?: Maybe<StringNullableFilter>;
+  updatedAt?: Maybe<DateTimeFilter>;
+  weight?: Maybe<StringFilter>;
 };
 
 export type PlayerWhereUniqueInput = {
-  id?: Maybe<Scalars['String']>;
   handle?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
 };
@@ -979,20 +974,20 @@ export type Query = {
   __typename?: 'Query';
   account?: Maybe<Account>;
   accounts: Array<Account>;
-  player?: Maybe<Player>;
-  players: Array<Player>;
-  team?: Maybe<Team>;
-  teams: Array<Team>;
   coach?: Maybe<Coach>;
   coaches: Array<Coach>;
   colorScheme?: Maybe<ColorScheme>;
   colorSchemes: Array<ColorScheme>;
   image?: Maybe<Image>;
   images: Array<Image>;
-  user?: Maybe<User>;
-  users: Array<User>;
+  player?: Maybe<Player>;
+  players: Array<Player>;
   session?: Maybe<Session>;
   sessions: Array<Session>;
+  team?: Maybe<Team>;
+  teams: Array<Team>;
+  user?: Maybe<User>;
+  users: Array<User>;
 };
 
 
@@ -1002,42 +997,12 @@ export type QueryAccountArgs = {
 
 
 export type QueryAccountsArgs = {
-  where?: Maybe<AccountWhereInput>;
-  orderBy?: Maybe<Array<AccountOrderByInput>>;
-  first?: Maybe<Scalars['Int']>;
-  last?: Maybe<Scalars['Int']>;
-  before?: Maybe<AccountWhereUniqueInput>;
   after?: Maybe<AccountWhereUniqueInput>;
-};
-
-
-export type QueryPlayerArgs = {
-  where: PlayerWhereUniqueInput;
-};
-
-
-export type QueryPlayersArgs = {
-  where?: Maybe<PlayerWhereInput>;
-  orderBy?: Maybe<Array<PlayerOrderByInput>>;
+  before?: Maybe<AccountWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  before?: Maybe<PlayerWhereUniqueInput>;
-  after?: Maybe<PlayerWhereUniqueInput>;
-};
-
-
-export type QueryTeamArgs = {
-  where: TeamWhereUniqueInput;
-};
-
-
-export type QueryTeamsArgs = {
-  where?: Maybe<TeamWhereInput>;
-  orderBy?: Maybe<Array<TeamOrderByInput>>;
-  first?: Maybe<Scalars['Int']>;
-  last?: Maybe<Scalars['Int']>;
-  before?: Maybe<TeamWhereUniqueInput>;
-  after?: Maybe<TeamWhereUniqueInput>;
+  orderBy?: Maybe<Array<AccountOrderByInput>>;
+  where?: Maybe<AccountWhereInput>;
 };
 
 
@@ -1047,12 +1012,12 @@ export type QueryCoachArgs = {
 
 
 export type QueryCoachesArgs = {
-  where?: Maybe<CoachWhereInput>;
-  orderBy?: Maybe<Array<CoachOrderByInput>>;
+  after?: Maybe<CoachWhereUniqueInput>;
+  before?: Maybe<CoachWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  before?: Maybe<CoachWhereUniqueInput>;
-  after?: Maybe<CoachWhereUniqueInput>;
+  orderBy?: Maybe<Array<CoachOrderByInput>>;
+  where?: Maybe<CoachWhereInput>;
 };
 
 
@@ -1062,12 +1027,12 @@ export type QueryColorSchemeArgs = {
 
 
 export type QueryColorSchemesArgs = {
-  where?: Maybe<ColorSchemeWhereInput>;
-  orderBy?: Maybe<Array<ColorSchemeOrderByInput>>;
+  after?: Maybe<ColorSchemeWhereUniqueInput>;
+  before?: Maybe<ColorSchemeWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  before?: Maybe<ColorSchemeWhereUniqueInput>;
-  after?: Maybe<ColorSchemeWhereUniqueInput>;
+  orderBy?: Maybe<Array<ColorSchemeOrderByInput>>;
+  where?: Maybe<ColorSchemeWhereInput>;
 };
 
 
@@ -1077,27 +1042,27 @@ export type QueryImageArgs = {
 
 
 export type QueryImagesArgs = {
-  where?: Maybe<ImageWhereInput>;
-  orderBy?: Maybe<Array<ImageOrderByInput>>;
-  first?: Maybe<Scalars['Int']>;
-  last?: Maybe<Scalars['Int']>;
-  before?: Maybe<ImageWhereUniqueInput>;
   after?: Maybe<ImageWhereUniqueInput>;
-};
-
-
-export type QueryUserArgs = {
-  where: UserWhereUniqueInput;
-};
-
-
-export type QueryUsersArgs = {
-  where?: Maybe<UserWhereInput>;
-  orderBy?: Maybe<Array<UserOrderByInput>>;
+  before?: Maybe<ImageWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  before?: Maybe<UserWhereUniqueInput>;
-  after?: Maybe<UserWhereUniqueInput>;
+  orderBy?: Maybe<Array<ImageOrderByInput>>;
+  where?: Maybe<ImageWhereInput>;
+};
+
+
+export type QueryPlayerArgs = {
+  where: PlayerWhereUniqueInput;
+};
+
+
+export type QueryPlayersArgs = {
+  after?: Maybe<PlayerWhereUniqueInput>;
+  before?: Maybe<PlayerWhereUniqueInput>;
+  first?: Maybe<Scalars['Int']>;
+  last?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Array<PlayerOrderByInput>>;
+  where?: Maybe<PlayerWhereInput>;
 };
 
 
@@ -1107,12 +1072,42 @@ export type QuerySessionArgs = {
 
 
 export type QuerySessionsArgs = {
-  where?: Maybe<SessionWhereInput>;
-  orderBy?: Maybe<Array<SessionOrderByInput>>;
+  after?: Maybe<SessionWhereUniqueInput>;
+  before?: Maybe<SessionWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  before?: Maybe<SessionWhereUniqueInput>;
-  after?: Maybe<SessionWhereUniqueInput>;
+  orderBy?: Maybe<Array<SessionOrderByInput>>;
+  where?: Maybe<SessionWhereInput>;
+};
+
+
+export type QueryTeamArgs = {
+  where: TeamWhereUniqueInput;
+};
+
+
+export type QueryTeamsArgs = {
+  after?: Maybe<TeamWhereUniqueInput>;
+  before?: Maybe<TeamWhereUniqueInput>;
+  first?: Maybe<Scalars['Int']>;
+  last?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Array<TeamOrderByInput>>;
+  where?: Maybe<TeamWhereInput>;
+};
+
+
+export type QueryUserArgs = {
+  where: UserWhereUniqueInput;
+};
+
+
+export type QueryUsersArgs = {
+  after?: Maybe<UserWhereUniqueInput>;
+  before?: Maybe<UserWhereUniqueInput>;
+  first?: Maybe<Scalars['Int']>;
+  last?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Array<UserOrderByInput>>;
+  where?: Maybe<UserWhereInput>;
 };
 
 export enum QueryMode {
@@ -1122,50 +1117,50 @@ export enum QueryMode {
 
 export type Session = {
   __typename?: 'Session';
-  id: Scalars['ID'];
-  userId: Scalars['String'];
-  expires: Scalars['DateTime'];
-  sessionToken: Scalars['String'];
   accessToken: Scalars['String'];
   createdAt: Scalars['DateTime'];
+  expires: Scalars['DateTime'];
+  id: Scalars['ID'];
+  sessionToken: Scalars['String'];
   updatedAt: Scalars['DateTime'];
   user: User;
+  userId: Scalars['String'];
 };
 
 export type SessionListRelationFilter = {
   every?: Maybe<SessionWhereInput>;
-  some?: Maybe<SessionWhereInput>;
   none?: Maybe<SessionWhereInput>;
+  some?: Maybe<SessionWhereInput>;
 };
 
 export type SessionOrderByInput = {
-  id?: Maybe<SortOrder>;
-  userId?: Maybe<SortOrder>;
-  expires?: Maybe<SortOrder>;
-  sessionToken?: Maybe<SortOrder>;
   accessToken?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
+  expires?: Maybe<SortOrder>;
+  id?: Maybe<SortOrder>;
+  sessionToken?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
+  userId?: Maybe<SortOrder>;
 };
 
 export type SessionWhereInput = {
   AND?: Maybe<Array<SessionWhereInput>>;
-  OR?: Maybe<Array<SessionWhereInput>>;
   NOT?: Maybe<Array<SessionWhereInput>>;
-  id?: Maybe<StringFilter>;
-  userId?: Maybe<StringFilter>;
-  expires?: Maybe<DateTimeFilter>;
-  sessionToken?: Maybe<StringFilter>;
+  OR?: Maybe<Array<SessionWhereInput>>;
   accessToken?: Maybe<StringFilter>;
   createdAt?: Maybe<DateTimeFilter>;
+  expires?: Maybe<DateTimeFilter>;
+  id?: Maybe<StringFilter>;
+  sessionToken?: Maybe<StringFilter>;
   updatedAt?: Maybe<DateTimeFilter>;
   user?: Maybe<UserWhereInput>;
+  userId?: Maybe<StringFilter>;
 };
 
 export type SessionWhereUniqueInput = {
+  accessToken?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['String']>;
   sessionToken?: Maybe<Scalars['String']>;
-  accessToken?: Maybe<Scalars['String']>;
 };
 
 export enum SortOrder {
@@ -1191,391 +1186,391 @@ export type StringFilter = {
 };
 
 export type StringNullableFilter = {
+  contains?: Maybe<Scalars['String']>;
+  endsWith?: Maybe<Scalars['String']>;
   equals?: Maybe<Scalars['String']>;
-  in?: Maybe<Array<Scalars['String']>>;
-  notIn?: Maybe<Array<Scalars['String']>>;
-  lt?: Maybe<Scalars['String']>;
-  lte?: Maybe<Scalars['String']>;
   gt?: Maybe<Scalars['String']>;
   gte?: Maybe<Scalars['String']>;
-  contains?: Maybe<Scalars['String']>;
-  startsWith?: Maybe<Scalars['String']>;
-  endsWith?: Maybe<Scalars['String']>;
+  in?: Maybe<Array<Scalars['String']>>;
+  lt?: Maybe<Scalars['String']>;
+  lte?: Maybe<Scalars['String']>;
   mode?: Maybe<QueryMode>;
   not?: Maybe<NestedStringNullableFilter>;
+  notIn?: Maybe<Array<Scalars['String']>>;
+  startsWith?: Maybe<Scalars['String']>;
 };
 
 /** Team model */
 export type Team = {
   __typename?: 'Team';
-  id: Scalars['ID'];
-  createdAt: Scalars['DateTime'];
-  updatedAt: Scalars['DateTime'];
-  handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
-  city: Scalars['String'];
   abbreviation: Scalars['String'];
-  wins?: Maybe<Scalars['Int']>;
-  losses?: Maybe<Scalars['Int']>;
-  winPercentage?: Maybe<Scalars['Float']>;
+  city: Scalars['String'];
+  coaches: Array<Coach>;
+  colorScheme?: Maybe<ColorScheme>;
   conference: Scalars['String'];
+  createdAt: Scalars['DateTime'];
   division: Scalars['String'];
   established: Scalars['String'];
-  coaches: Array<Coach>;
-  players: Array<Player>;
-  colorScheme?: Maybe<ColorScheme>;
+  handle: Scalars['String'];
+  id: Scalars['ID'];
   logo?: Maybe<Image>;
+  losses?: Maybe<Scalars['Int']>;
+  name: Scalars['String'];
+  players: Array<Player>;
+  slug: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
+  winPercentage?: Maybe<Scalars['Float']>;
+  wins?: Maybe<Scalars['Int']>;
 };
 
 export type TeamCreateInput = {
-  id: Scalars['String'];
-  createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
-  handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
-  city: Scalars['String'];
   abbreviation: Scalars['String'];
-  wins?: Maybe<Scalars['Int']>;
-  losses?: Maybe<Scalars['Int']>;
-  winPercentage?: Maybe<Scalars['Float']>;
+  city: Scalars['String'];
+  coaches?: Maybe<CoachCreateNestedManyWithoutTeamInput>;
+  colorScheme?: Maybe<ColorSchemeCreateNestedOneWithoutTeamInput>;
   conference: Scalars['String'];
+  createdAt?: Maybe<Scalars['DateTime']>;
   division: Scalars['String'];
   established: Scalars['String'];
-  coaches?: Maybe<CoachCreateNestedManyWithoutTeamInput>;
-  players?: Maybe<PlayerCreateNestedManyWithoutTeamInput>;
-  colorScheme?: Maybe<ColorSchemeCreateNestedOneWithoutTeamInput>;
+  handle: Scalars['String'];
+  id: Scalars['String'];
   logo?: Maybe<ImageCreateNestedOneWithoutTeamInput>;
+  losses?: Maybe<Scalars['Int']>;
+  name: Scalars['String'];
+  players?: Maybe<PlayerCreateNestedManyWithoutTeamInput>;
+  slug: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+  winPercentage?: Maybe<Scalars['Float']>;
+  wins?: Maybe<Scalars['Int']>;
 };
 
 export type TeamCreateNestedOneWithoutCoachesInput = {
-  create?: Maybe<TeamCreateWithoutCoachesInput>;
-  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutCoachesInput>;
   connect?: Maybe<TeamWhereUniqueInput>;
+  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutCoachesInput>;
+  create?: Maybe<TeamCreateWithoutCoachesInput>;
 };
 
 export type TeamCreateNestedOneWithoutLogoInput = {
-  create?: Maybe<TeamCreateWithoutLogoInput>;
-  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutLogoInput>;
   connect?: Maybe<TeamWhereUniqueInput>;
+  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutLogoInput>;
+  create?: Maybe<TeamCreateWithoutLogoInput>;
 };
 
 export type TeamCreateNestedOneWithoutPlayersInput = {
-  create?: Maybe<TeamCreateWithoutPlayersInput>;
-  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutPlayersInput>;
   connect?: Maybe<TeamWhereUniqueInput>;
+  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutPlayersInput>;
+  create?: Maybe<TeamCreateWithoutPlayersInput>;
 };
 
 export type TeamCreateOrConnectWithoutCoachesInput = {
-  where: TeamWhereUniqueInput;
   create: TeamCreateWithoutCoachesInput;
+  where: TeamWhereUniqueInput;
 };
 
 export type TeamCreateOrConnectWithoutLogoInput = {
-  where: TeamWhereUniqueInput;
   create: TeamCreateWithoutLogoInput;
+  where: TeamWhereUniqueInput;
 };
 
 export type TeamCreateOrConnectWithoutPlayersInput = {
-  where: TeamWhereUniqueInput;
   create: TeamCreateWithoutPlayersInput;
+  where: TeamWhereUniqueInput;
 };
 
 export type TeamCreateWithoutCoachesInput = {
-  id: Scalars['String'];
-  createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
-  handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
-  city: Scalars['String'];
   abbreviation: Scalars['String'];
-  wins?: Maybe<Scalars['Int']>;
-  losses?: Maybe<Scalars['Int']>;
-  winPercentage?: Maybe<Scalars['Float']>;
+  city: Scalars['String'];
+  colorScheme?: Maybe<ColorSchemeCreateNestedOneWithoutTeamInput>;
   conference: Scalars['String'];
+  createdAt?: Maybe<Scalars['DateTime']>;
   division: Scalars['String'];
   established: Scalars['String'];
-  players?: Maybe<PlayerCreateNestedManyWithoutTeamInput>;
-  colorScheme?: Maybe<ColorSchemeCreateNestedOneWithoutTeamInput>;
+  handle: Scalars['String'];
+  id: Scalars['String'];
   logo?: Maybe<ImageCreateNestedOneWithoutTeamInput>;
+  losses?: Maybe<Scalars['Int']>;
+  name: Scalars['String'];
+  players?: Maybe<PlayerCreateNestedManyWithoutTeamInput>;
+  slug: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+  winPercentage?: Maybe<Scalars['Float']>;
+  wins?: Maybe<Scalars['Int']>;
 };
 
 export type TeamCreateWithoutLogoInput = {
-  id: Scalars['String'];
-  createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
-  handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
-  city: Scalars['String'];
   abbreviation: Scalars['String'];
-  wins?: Maybe<Scalars['Int']>;
-  losses?: Maybe<Scalars['Int']>;
-  winPercentage?: Maybe<Scalars['Float']>;
+  city: Scalars['String'];
+  coaches?: Maybe<CoachCreateNestedManyWithoutTeamInput>;
+  colorScheme?: Maybe<ColorSchemeCreateNestedOneWithoutTeamInput>;
   conference: Scalars['String'];
+  createdAt?: Maybe<Scalars['DateTime']>;
   division: Scalars['String'];
   established: Scalars['String'];
-  coaches?: Maybe<CoachCreateNestedManyWithoutTeamInput>;
+  handle: Scalars['String'];
+  id: Scalars['String'];
+  losses?: Maybe<Scalars['Int']>;
+  name: Scalars['String'];
   players?: Maybe<PlayerCreateNestedManyWithoutTeamInput>;
-  colorScheme?: Maybe<ColorSchemeCreateNestedOneWithoutTeamInput>;
+  slug: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+  winPercentage?: Maybe<Scalars['Float']>;
+  wins?: Maybe<Scalars['Int']>;
 };
 
 export type TeamCreateWithoutPlayersInput = {
-  id: Scalars['String'];
-  createdAt?: Maybe<Scalars['DateTime']>;
-  updatedAt?: Maybe<Scalars['DateTime']>;
-  handle: Scalars['String'];
-  name: Scalars['String'];
-  slug: Scalars['String'];
-  city: Scalars['String'];
   abbreviation: Scalars['String'];
-  wins?: Maybe<Scalars['Int']>;
-  losses?: Maybe<Scalars['Int']>;
-  winPercentage?: Maybe<Scalars['Float']>;
-  conference: Scalars['String'];
-  division: Scalars['String'];
-  established: Scalars['String'];
+  city: Scalars['String'];
   coaches?: Maybe<CoachCreateNestedManyWithoutTeamInput>;
   colorScheme?: Maybe<ColorSchemeCreateNestedOneWithoutTeamInput>;
+  conference: Scalars['String'];
+  createdAt?: Maybe<Scalars['DateTime']>;
+  division: Scalars['String'];
+  established: Scalars['String'];
+  handle: Scalars['String'];
+  id: Scalars['String'];
   logo?: Maybe<ImageCreateNestedOneWithoutTeamInput>;
+  losses?: Maybe<Scalars['Int']>;
+  name: Scalars['String'];
+  slug: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+  winPercentage?: Maybe<Scalars['Float']>;
+  wins?: Maybe<Scalars['Int']>;
 };
 
 export type TeamOrderByInput = {
-  id?: Maybe<SortOrder>;
-  createdAt?: Maybe<SortOrder>;
-  updatedAt?: Maybe<SortOrder>;
-  handle?: Maybe<SortOrder>;
-  name?: Maybe<SortOrder>;
-  slug?: Maybe<SortOrder>;
-  city?: Maybe<SortOrder>;
   abbreviation?: Maybe<SortOrder>;
-  wins?: Maybe<SortOrder>;
-  losses?: Maybe<SortOrder>;
-  winPercentage?: Maybe<SortOrder>;
+  city?: Maybe<SortOrder>;
+  colorSchemeId?: Maybe<SortOrder>;
   conference?: Maybe<SortOrder>;
+  createdAt?: Maybe<SortOrder>;
   division?: Maybe<SortOrder>;
   established?: Maybe<SortOrder>;
-  colorSchemeId?: Maybe<SortOrder>;
+  handle?: Maybe<SortOrder>;
+  id?: Maybe<SortOrder>;
   logoId?: Maybe<SortOrder>;
+  losses?: Maybe<SortOrder>;
+  name?: Maybe<SortOrder>;
+  slug?: Maybe<SortOrder>;
+  updatedAt?: Maybe<SortOrder>;
+  winPercentage?: Maybe<SortOrder>;
+  wins?: Maybe<SortOrder>;
 };
 
 export type TeamUpdateInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
-  createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  handle?: Maybe<StringFieldUpdateOperationsInput>;
-  name?: Maybe<StringFieldUpdateOperationsInput>;
-  slug?: Maybe<StringFieldUpdateOperationsInput>;
-  city?: Maybe<StringFieldUpdateOperationsInput>;
   abbreviation?: Maybe<StringFieldUpdateOperationsInput>;
-  wins?: Maybe<NullableIntFieldUpdateOperationsInput>;
-  losses?: Maybe<NullableIntFieldUpdateOperationsInput>;
-  winPercentage?: Maybe<NullableFloatFieldUpdateOperationsInput>;
+  city?: Maybe<StringFieldUpdateOperationsInput>;
+  coaches?: Maybe<CoachUpdateManyWithoutTeamInput>;
+  colorScheme?: Maybe<ColorSchemeUpdateOneWithoutTeamInput>;
   conference?: Maybe<StringFieldUpdateOperationsInput>;
+  createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   division?: Maybe<StringFieldUpdateOperationsInput>;
   established?: Maybe<StringFieldUpdateOperationsInput>;
-  coaches?: Maybe<CoachUpdateManyWithoutTeamInput>;
-  players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
-  colorScheme?: Maybe<ColorSchemeUpdateOneWithoutTeamInput>;
+  handle?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
   logo?: Maybe<ImageUpdateOneWithoutTeamInput>;
+  losses?: Maybe<NullableIntFieldUpdateOperationsInput>;
+  name?: Maybe<StringFieldUpdateOperationsInput>;
+  players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
+  slug?: Maybe<StringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  winPercentage?: Maybe<NullableFloatFieldUpdateOperationsInput>;
+  wins?: Maybe<NullableIntFieldUpdateOperationsInput>;
 };
 
 export type TeamUpdateOneWithoutCoachesInput = {
-  create?: Maybe<TeamCreateWithoutCoachesInput>;
-  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutCoachesInput>;
-  upsert?: Maybe<TeamUpsertWithoutCoachesInput>;
   connect?: Maybe<TeamWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutCoachesInput>;
+  create?: Maybe<TeamCreateWithoutCoachesInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<TeamUpdateWithoutCoachesInput>;
+  upsert?: Maybe<TeamUpsertWithoutCoachesInput>;
 };
 
 export type TeamUpdateOneWithoutLogoInput = {
-  create?: Maybe<TeamCreateWithoutLogoInput>;
-  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutLogoInput>;
-  upsert?: Maybe<TeamUpsertWithoutLogoInput>;
   connect?: Maybe<TeamWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutLogoInput>;
+  create?: Maybe<TeamCreateWithoutLogoInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<TeamUpdateWithoutLogoInput>;
+  upsert?: Maybe<TeamUpsertWithoutLogoInput>;
 };
 
 export type TeamUpdateOneWithoutPlayersInput = {
-  create?: Maybe<TeamCreateWithoutPlayersInput>;
-  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutPlayersInput>;
-  upsert?: Maybe<TeamUpsertWithoutPlayersInput>;
   connect?: Maybe<TeamWhereUniqueInput>;
-  disconnect?: Maybe<Scalars['Boolean']>;
+  connectOrCreate?: Maybe<TeamCreateOrConnectWithoutPlayersInput>;
+  create?: Maybe<TeamCreateWithoutPlayersInput>;
   delete?: Maybe<Scalars['Boolean']>;
+  disconnect?: Maybe<Scalars['Boolean']>;
   update?: Maybe<TeamUpdateWithoutPlayersInput>;
+  upsert?: Maybe<TeamUpsertWithoutPlayersInput>;
 };
 
 export type TeamUpdateWithoutCoachesInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
-  createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  handle?: Maybe<StringFieldUpdateOperationsInput>;
-  name?: Maybe<StringFieldUpdateOperationsInput>;
-  slug?: Maybe<StringFieldUpdateOperationsInput>;
-  city?: Maybe<StringFieldUpdateOperationsInput>;
   abbreviation?: Maybe<StringFieldUpdateOperationsInput>;
-  wins?: Maybe<NullableIntFieldUpdateOperationsInput>;
-  losses?: Maybe<NullableIntFieldUpdateOperationsInput>;
-  winPercentage?: Maybe<NullableFloatFieldUpdateOperationsInput>;
+  city?: Maybe<StringFieldUpdateOperationsInput>;
+  colorScheme?: Maybe<ColorSchemeUpdateOneWithoutTeamInput>;
   conference?: Maybe<StringFieldUpdateOperationsInput>;
+  createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   division?: Maybe<StringFieldUpdateOperationsInput>;
   established?: Maybe<StringFieldUpdateOperationsInput>;
-  players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
-  colorScheme?: Maybe<ColorSchemeUpdateOneWithoutTeamInput>;
+  handle?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
   logo?: Maybe<ImageUpdateOneWithoutTeamInput>;
+  losses?: Maybe<NullableIntFieldUpdateOperationsInput>;
+  name?: Maybe<StringFieldUpdateOperationsInput>;
+  players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
+  slug?: Maybe<StringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  winPercentage?: Maybe<NullableFloatFieldUpdateOperationsInput>;
+  wins?: Maybe<NullableIntFieldUpdateOperationsInput>;
 };
 
 export type TeamUpdateWithoutLogoInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
-  createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  handle?: Maybe<StringFieldUpdateOperationsInput>;
-  name?: Maybe<StringFieldUpdateOperationsInput>;
-  slug?: Maybe<StringFieldUpdateOperationsInput>;
-  city?: Maybe<StringFieldUpdateOperationsInput>;
   abbreviation?: Maybe<StringFieldUpdateOperationsInput>;
-  wins?: Maybe<NullableIntFieldUpdateOperationsInput>;
-  losses?: Maybe<NullableIntFieldUpdateOperationsInput>;
-  winPercentage?: Maybe<NullableFloatFieldUpdateOperationsInput>;
+  city?: Maybe<StringFieldUpdateOperationsInput>;
+  coaches?: Maybe<CoachUpdateManyWithoutTeamInput>;
+  colorScheme?: Maybe<ColorSchemeUpdateOneWithoutTeamInput>;
   conference?: Maybe<StringFieldUpdateOperationsInput>;
+  createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
   division?: Maybe<StringFieldUpdateOperationsInput>;
   established?: Maybe<StringFieldUpdateOperationsInput>;
-  coaches?: Maybe<CoachUpdateManyWithoutTeamInput>;
+  handle?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
+  losses?: Maybe<NullableIntFieldUpdateOperationsInput>;
+  name?: Maybe<StringFieldUpdateOperationsInput>;
   players?: Maybe<PlayerUpdateManyWithoutTeamInput>;
-  colorScheme?: Maybe<ColorSchemeUpdateOneWithoutTeamInput>;
+  slug?: Maybe<StringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  winPercentage?: Maybe<NullableFloatFieldUpdateOperationsInput>;
+  wins?: Maybe<NullableIntFieldUpdateOperationsInput>;
 };
 
 export type TeamUpdateWithoutPlayersInput = {
-  id?: Maybe<StringFieldUpdateOperationsInput>;
-  createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
-  handle?: Maybe<StringFieldUpdateOperationsInput>;
-  name?: Maybe<StringFieldUpdateOperationsInput>;
-  slug?: Maybe<StringFieldUpdateOperationsInput>;
-  city?: Maybe<StringFieldUpdateOperationsInput>;
   abbreviation?: Maybe<StringFieldUpdateOperationsInput>;
-  wins?: Maybe<NullableIntFieldUpdateOperationsInput>;
-  losses?: Maybe<NullableIntFieldUpdateOperationsInput>;
-  winPercentage?: Maybe<NullableFloatFieldUpdateOperationsInput>;
-  conference?: Maybe<StringFieldUpdateOperationsInput>;
-  division?: Maybe<StringFieldUpdateOperationsInput>;
-  established?: Maybe<StringFieldUpdateOperationsInput>;
+  city?: Maybe<StringFieldUpdateOperationsInput>;
   coaches?: Maybe<CoachUpdateManyWithoutTeamInput>;
   colorScheme?: Maybe<ColorSchemeUpdateOneWithoutTeamInput>;
+  conference?: Maybe<StringFieldUpdateOperationsInput>;
+  createdAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  division?: Maybe<StringFieldUpdateOperationsInput>;
+  established?: Maybe<StringFieldUpdateOperationsInput>;
+  handle?: Maybe<StringFieldUpdateOperationsInput>;
+  id?: Maybe<StringFieldUpdateOperationsInput>;
   logo?: Maybe<ImageUpdateOneWithoutTeamInput>;
+  losses?: Maybe<NullableIntFieldUpdateOperationsInput>;
+  name?: Maybe<StringFieldUpdateOperationsInput>;
+  slug?: Maybe<StringFieldUpdateOperationsInput>;
+  updatedAt?: Maybe<DateTimeFieldUpdateOperationsInput>;
+  winPercentage?: Maybe<NullableFloatFieldUpdateOperationsInput>;
+  wins?: Maybe<NullableIntFieldUpdateOperationsInput>;
 };
 
 export type TeamUpsertWithoutCoachesInput = {
-  update: TeamUpdateWithoutCoachesInput;
   create: TeamCreateWithoutCoachesInput;
+  update: TeamUpdateWithoutCoachesInput;
 };
 
 export type TeamUpsertWithoutLogoInput = {
-  update: TeamUpdateWithoutLogoInput;
   create: TeamCreateWithoutLogoInput;
+  update: TeamUpdateWithoutLogoInput;
 };
 
 export type TeamUpsertWithoutPlayersInput = {
-  update: TeamUpdateWithoutPlayersInput;
   create: TeamCreateWithoutPlayersInput;
+  update: TeamUpdateWithoutPlayersInput;
 };
 
 export type TeamWhereInput = {
   AND?: Maybe<Array<TeamWhereInput>>;
-  OR?: Maybe<Array<TeamWhereInput>>;
   NOT?: Maybe<Array<TeamWhereInput>>;
-  id?: Maybe<StringFilter>;
-  createdAt?: Maybe<DateTimeFilter>;
-  updatedAt?: Maybe<DateTimeFilter>;
-  handle?: Maybe<StringFilter>;
-  name?: Maybe<StringFilter>;
-  slug?: Maybe<StringFilter>;
-  city?: Maybe<StringFilter>;
+  OR?: Maybe<Array<TeamWhereInput>>;
   abbreviation?: Maybe<StringFilter>;
-  wins?: Maybe<IntNullableFilter>;
-  losses?: Maybe<IntNullableFilter>;
-  winPercentage?: Maybe<FloatNullableFilter>;
+  city?: Maybe<StringFilter>;
+  coaches?: Maybe<CoachListRelationFilter>;
+  colorScheme?: Maybe<ColorSchemeWhereInput>;
+  colorSchemeId?: Maybe<StringNullableFilter>;
   conference?: Maybe<StringFilter>;
+  createdAt?: Maybe<DateTimeFilter>;
   division?: Maybe<StringFilter>;
   established?: Maybe<StringFilter>;
-  coaches?: Maybe<CoachListRelationFilter>;
-  players?: Maybe<PlayerListRelationFilter>;
-  colorSchemeId?: Maybe<StringNullableFilter>;
-  colorScheme?: Maybe<ColorSchemeWhereInput>;
-  logoId?: Maybe<StringNullableFilter>;
+  handle?: Maybe<StringFilter>;
+  id?: Maybe<StringFilter>;
   logo?: Maybe<ImageWhereInput>;
+  logoId?: Maybe<StringNullableFilter>;
+  losses?: Maybe<IntNullableFilter>;
+  name?: Maybe<StringFilter>;
+  players?: Maybe<PlayerListRelationFilter>;
+  slug?: Maybe<StringFilter>;
+  updatedAt?: Maybe<DateTimeFilter>;
+  winPercentage?: Maybe<FloatNullableFilter>;
+  wins?: Maybe<IntNullableFilter>;
 };
 
 export type TeamWhereUniqueInput = {
-  id?: Maybe<Scalars['String']>;
+  abbreviation?: Maybe<Scalars['String']>;
   handle?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
-  abbreviation?: Maybe<Scalars['String']>;
 };
 
 export type User = {
   __typename?: 'User';
-  id: Scalars['ID'];
-  name?: Maybe<Scalars['String']>;
-  email?: Maybe<Scalars['String']>;
-  image?: Maybe<Scalars['String']>;
+  accounts: Array<Account>;
   apple?: Maybe<Scalars['String']>;
+  createdAt: Scalars['DateTime'];
+  email?: Maybe<Scalars['String']>;
   facebook?: Maybe<Scalars['String']>;
   github?: Maybe<Scalars['String']>;
   google?: Maybe<Scalars['String']>;
-  twitter?: Maybe<Scalars['String']>;
-  createdAt: Scalars['DateTime'];
-  updatedAt: Scalars['DateTime'];
-  accounts: Array<Account>;
+  id: Scalars['ID'];
+  image?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
   sessions: Array<Session>;
+  twitter?: Maybe<Scalars['String']>;
+  updatedAt: Scalars['DateTime'];
 };
 
 export type UserOrderByInput = {
-  id?: Maybe<SortOrder>;
-  name?: Maybe<SortOrder>;
+  apple?: Maybe<SortOrder>;
+  createdAt?: Maybe<SortOrder>;
   email?: Maybe<SortOrder>;
   emailVerified?: Maybe<SortOrder>;
-  image?: Maybe<SortOrder>;
-  apple?: Maybe<SortOrder>;
   facebook?: Maybe<SortOrder>;
   github?: Maybe<SortOrder>;
   google?: Maybe<SortOrder>;
+  id?: Maybe<SortOrder>;
+  image?: Maybe<SortOrder>;
+  name?: Maybe<SortOrder>;
   twitter?: Maybe<SortOrder>;
-  createdAt?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
 };
 
 export type UserWhereInput = {
   AND?: Maybe<Array<UserWhereInput>>;
-  OR?: Maybe<Array<UserWhereInput>>;
   NOT?: Maybe<Array<UserWhereInput>>;
-  id?: Maybe<StringFilter>;
-  name?: Maybe<StringNullableFilter>;
+  OR?: Maybe<Array<UserWhereInput>>;
+  accounts?: Maybe<AccountListRelationFilter>;
+  apple?: Maybe<StringNullableFilter>;
+  createdAt?: Maybe<DateTimeFilter>;
   email?: Maybe<StringNullableFilter>;
   emailVerified?: Maybe<DateTimeNullableFilter>;
-  image?: Maybe<StringNullableFilter>;
-  apple?: Maybe<StringNullableFilter>;
   facebook?: Maybe<StringNullableFilter>;
   github?: Maybe<StringNullableFilter>;
   google?: Maybe<StringNullableFilter>;
-  twitter?: Maybe<StringNullableFilter>;
-  createdAt?: Maybe<DateTimeFilter>;
-  updatedAt?: Maybe<DateTimeFilter>;
-  accounts?: Maybe<AccountListRelationFilter>;
+  id?: Maybe<StringFilter>;
+  image?: Maybe<StringNullableFilter>;
+  name?: Maybe<StringNullableFilter>;
   sessions?: Maybe<SessionListRelationFilter>;
+  twitter?: Maybe<StringNullableFilter>;
+  updatedAt?: Maybe<DateTimeFilter>;
 };
 
 export type UserWhereUniqueInput = {
-  id?: Maybe<Scalars['String']>;
   email?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
 };
 
 export type PlayerProfileFragment = { __typename?: 'Player', id: string, name: string, height: string, weight: string, position?: Maybe<string>, number?: Maybe<string> };

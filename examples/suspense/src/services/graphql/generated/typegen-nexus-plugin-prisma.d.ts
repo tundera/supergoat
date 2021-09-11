@@ -30,15 +30,15 @@ interface NexusPrismaInputs {
   Query: {
     accounts: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'userId' | 'providerType' | 'providerId' | 'providerAccountId' | 'refreshToken' | 'accessToken' | 'accessTokenExpires' | 'createdAt' | 'updatedAt' | 'user'
-      ordering: 'id' | 'userId' | 'providerType' | 'providerId' | 'providerAccountId' | 'refreshToken' | 'accessToken' | 'accessTokenExpires' | 'createdAt' | 'updatedAt'
+      ordering: 'id' | 'userId' | 'providerType' | 'providerId' | 'providerAccountId' | 'refreshToken' | 'accessToken' | 'accessTokenExpires' | 'createdAt' | 'updatedAt' | 'user'
     }
     sessions: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'userId' | 'expires' | 'sessionToken' | 'accessToken' | 'createdAt' | 'updatedAt' | 'user'
-      ordering: 'id' | 'userId' | 'expires' | 'sessionToken' | 'accessToken' | 'createdAt' | 'updatedAt'
+      ordering: 'id' | 'userId' | 'expires' | 'sessionToken' | 'accessToken' | 'createdAt' | 'updatedAt' | 'user'
     }
     users: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'name' | 'email' | 'emailVerified' | 'image' | 'apple' | 'facebook' | 'github' | 'google' | 'twitter' | 'createdAt' | 'updatedAt' | 'accounts' | 'sessions'
-      ordering: 'id' | 'name' | 'email' | 'emailVerified' | 'image' | 'apple' | 'facebook' | 'github' | 'google' | 'twitter' | 'createdAt' | 'updatedAt'
+      ordering: 'id' | 'name' | 'email' | 'emailVerified' | 'image' | 'apple' | 'facebook' | 'github' | 'google' | 'twitter' | 'createdAt' | 'updatedAt' | 'accounts' | 'sessions'
     }
     verificationRequests: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'identifier' | 'token' | 'expires' | 'createdAt' | 'updatedAt'
@@ -46,23 +46,23 @@ interface NexusPrismaInputs {
     }
     coaches: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'type' | 'isAssistant' | 'teamId' | 'team' | 'imageId' | 'image'
-      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'type' | 'isAssistant' | 'teamId' | 'imageId'
+      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'type' | 'isAssistant' | 'teamId' | 'team' | 'imageId' | 'image'
     }
     players: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'height' | 'weight' | 'number' | 'position' | 'teamId' | 'team' | 'imageId' | 'image'
-      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'height' | 'weight' | 'number' | 'position' | 'teamId' | 'imageId'
+      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'height' | 'weight' | 'number' | 'position' | 'teamId' | 'team' | 'imageId' | 'image'
     }
     colorSchemes: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'createdAt' | 'updatedAt' | 'primary' | 'secondary' | 'team'
-      ordering: 'id' | 'createdAt' | 'updatedAt' | 'primary' | 'secondary'
+      ordering: 'id' | 'createdAt' | 'updatedAt' | 'primary' | 'secondary' | 'team'
     }
     teams: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'city' | 'abbreviation' | 'wins' | 'losses' | 'winPercentage' | 'conference' | 'division' | 'established' | 'coaches' | 'players' | 'colorSchemeId' | 'colorScheme' | 'logoId' | 'logo'
-      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'city' | 'abbreviation' | 'wins' | 'losses' | 'winPercentage' | 'conference' | 'division' | 'established' | 'colorSchemeId' | 'logoId'
+      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'city' | 'abbreviation' | 'wins' | 'losses' | 'winPercentage' | 'conference' | 'division' | 'established' | 'coaches' | 'players' | 'colorSchemeId' | 'colorScheme' | 'logoId' | 'logo'
     }
     images: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'createdAt' | 'updatedAt' | 'url' | 'type' | 'player' | 'coach' | 'team'
-      ordering: 'id' | 'createdAt' | 'updatedAt' | 'url' | 'type'
+      ordering: 'id' | 'createdAt' | 'updatedAt' | 'url' | 'type' | 'player' | 'coach' | 'team'
     }
   },
   Account: {
@@ -74,11 +74,11 @@ interface NexusPrismaInputs {
   User: {
     accounts: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'userId' | 'providerType' | 'providerId' | 'providerAccountId' | 'refreshToken' | 'accessToken' | 'accessTokenExpires' | 'createdAt' | 'updatedAt' | 'user'
-      ordering: 'id' | 'userId' | 'providerType' | 'providerId' | 'providerAccountId' | 'refreshToken' | 'accessToken' | 'accessTokenExpires' | 'createdAt' | 'updatedAt'
+      ordering: 'id' | 'userId' | 'providerType' | 'providerId' | 'providerAccountId' | 'refreshToken' | 'accessToken' | 'accessTokenExpires' | 'createdAt' | 'updatedAt' | 'user'
     }
     sessions: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'userId' | 'expires' | 'sessionToken' | 'accessToken' | 'createdAt' | 'updatedAt' | 'user'
-      ordering: 'id' | 'userId' | 'expires' | 'sessionToken' | 'accessToken' | 'createdAt' | 'updatedAt'
+      ordering: 'id' | 'userId' | 'expires' | 'sessionToken' | 'accessToken' | 'createdAt' | 'updatedAt' | 'user'
     }
   }
   VerificationRequest: {
@@ -96,11 +96,11 @@ interface NexusPrismaInputs {
   Team: {
     coaches: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'type' | 'isAssistant' | 'teamId' | 'team' | 'imageId' | 'image'
-      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'type' | 'isAssistant' | 'teamId' | 'imageId'
+      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'type' | 'isAssistant' | 'teamId' | 'team' | 'imageId' | 'image'
     }
     players: {
       filtering: 'AND' | 'OR' | 'NOT' | 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'height' | 'weight' | 'number' | 'position' | 'teamId' | 'team' | 'imageId' | 'image'
-      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'height' | 'weight' | 'number' | 'position' | 'teamId' | 'imageId'
+      ordering: 'id' | 'createdAt' | 'updatedAt' | 'handle' | 'name' | 'slug' | 'height' | 'weight' | 'number' | 'position' | 'teamId' | 'team' | 'imageId' | 'image'
     }
   }
   Image: {
