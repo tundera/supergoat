@@ -43,6 +43,7 @@
     "@formspree/react": "^2.2.4",
     "@gqty/react": "1.1.1",
     "@graphql-ez/nextjs": "0.10.0",
+    "@graphql-ez/plugin-altair": "^0.9.1",
     "@graphql-ez/plugin-graphiql": "^0.10.0",
     "@hookform/devtools": "4.0.1",
     "@hookform/resolvers": "2.8.0",

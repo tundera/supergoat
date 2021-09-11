@@ -14,7 +14,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['next.config.js'],
+      files: ['*.config.js', '*.config.cjs'],
       parser: 'espree',
       parserOptions: {
         ecmaVersion: 2020,

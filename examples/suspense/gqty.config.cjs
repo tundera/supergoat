@@ -9,7 +9,6 @@ const config = {
     headers: {},
   },
   destination: './src/lib/graphql/gqty/index.ts',
-  subscriptions: false,
 }
 
 module.exports = config
