@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import { gql } from 'graphql-request'
 
 const PlayerProfileFragment = gql`
   fragment PlayerProfile on Player {
