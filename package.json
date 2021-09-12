@@ -100,7 +100,7 @@
     "eslint-config-next": "^11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.4.0",
-    "eslint-plugin-jest-dom": "3.9.1",
+    "eslint-plugin-jest-dom": "3.9.2",
     "eslint-plugin-jest-formatting": "^3.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "find-yarn-workspace-root": "^2.0.0",

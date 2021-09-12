@@ -24,11 +24,12 @@
   },
   "scripts": {
     "dev": "NODE_ENV='development' ts-node scripts/dev",
-    "watch": "ts-node-dev --no-notify --respawn --transpile-only -r tsconfig-paths/register src/index",
-    "start": "ts-node src/index",
+    "watch": "NO_PEER_DEPENDENCY_CHECK=1 ts-node-dev --no-notify --respawn --transpile-only -r tsconfig-paths/register src/index",
+    "start": "NO_PEER_DEPENDENCY_CHECK=1 ts-node src/index",
     "test": "run-s 'test:*'",
     "test:unit": "echo \"No tests yet\"",
-    "generate": "ts-node src/schema",
+    "generate": "NO_PEER_DEPENDENCY_CHECK=1 ts-node src/schema",
+    "generate:prisma": "prisma generate",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
   },
   "dependencies": {

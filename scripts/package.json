@@ -30,7 +30,7 @@
     "dotenv-flow": "^3.2.0",
     "esbuild-register": "3.0.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-jest-dom": "3.9.1",
+    "eslint-plugin-jest-dom": "3.9.2",
     "execa": "5.1.1",
     "find-yarn-workspace-root": "^2.0.0",
     "ora": "6.0.0",

@@ -2,18 +2,6 @@
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  extends: [
-    "../../.eslintrc.js",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/errors",
-    "plugin:import/typescript",
-    "plugin:import/warnings",
-    "plugin:mdx/recommended",
-    "plugin:@next/next/recommended",
-    "plugin:prettier/recommended",
-  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2020, // Use the latest ecmascript standard
@@ -33,6 +21,18 @@ module.exports = {
     node: true, // Enables Node.js global variables and Node.js scoping.
   },
   plugins: ["simple-import-sort", "import"],
+  extends: [
+    "../../.eslintrc.js",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/typescript",
+    "plugin:import/warnings",
+    "plugin:mdx/recommended",
+    "plugin:@next/next/recommended",
+    "plugin:prettier/recommended",
+  ],
   rules: {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
