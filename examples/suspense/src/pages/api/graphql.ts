@@ -23,6 +23,7 @@ function buildContext({ req, next }: BuildContextArgs) {
 }
 
 const { buildApp } = CreateApp({
+  schema,
   ez: {
     plugins: [
       ezCodegen({

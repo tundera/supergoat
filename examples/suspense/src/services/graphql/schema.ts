@@ -18,10 +18,7 @@ const baseSchema = makeSchema({
     nexusPrisma({
       prismaClient: (ctx) => (ctx.prisma = db),
       experimentalCRUD: true,
-      shouldGenerateArtifacts: process.env.NODE_ENV === 'development',
-      outputs: {
-        typegen: join(cwd, 'src/services/graphql/generated/typegen-nexus-plugin-prisma.d.ts'),
-      },
+      shouldGenerateArtifacts: false,
     }),
   ],
   shouldGenerateArtifacts: process.env.NODE_ENV === 'development',
