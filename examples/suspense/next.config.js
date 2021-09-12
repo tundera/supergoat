@@ -42,7 +42,7 @@ const secureHeaders = createSecureHeaders({
 
 /**
  *  Next.js configuration object
- *  @type {import('next').NextConfig}
+ *  @type {import('next/types').NextConfig}
  */
 const nextConfig = {
   target: NEXTJS_BUILD_TARGET,

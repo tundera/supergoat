@@ -36,11 +36,15 @@ const links = [
     url: '/teams',
   },
 ]
-const MobileMenu: FC<MobileMenuProps> = ({ isOpen, onClose }) => {
+
+type Props = Omit<MobileMenuProps, 'css'>
+
+const MobileMenu: FC<Props> = ({ isOpen, onClose }) => {
   const hoverBg = useColorModeValue('blackAlpha.300', 'whiteAlpha.300')
   const bgColor = useColorModeValue('white', 'rgba(25, 25, 25, 1)')
   const color = useColorModeValue('black', 'white')
-  const buttonStyle: ButtonProps = {
+
+  const buttonStyle: Omit<ButtonProps, 'css'> = {
     as: 'a',
     borderRadius: 'none',
     py: 8,

@@ -1,5 +1,5 @@
 import { User } from 'nexus-prisma'
-import { objectType, extendType, intArg, stringArg, inputObjectType, list } from 'nexus'
+import { objectType, extendType } from 'nexus'
 
 export const UserType = objectType({
   name: User.$name,

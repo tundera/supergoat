@@ -1,7 +1,7 @@
 import { Box, BoxProps, useColorModeValue, useTheme } from '@chakra-ui/react'
 import { getColor } from '@chakra-ui/theme-tools'
 
-const Logo = (props: BoxProps) => {
+const Logo = (props: Omit<BoxProps, 'css'>) => {
   const isDark = useColorModeValue(false, true)
   const theme = useTheme()
 

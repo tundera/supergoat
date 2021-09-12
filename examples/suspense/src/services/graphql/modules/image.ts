@@ -1,5 +1,5 @@
 import { Image } from 'nexus-prisma'
-import { extendType, list, objectType, stringArg, enumType } from 'nexus'
+import { extendType, objectType, enumType } from 'nexus'
 
 export const ImageType = objectType({
   name: Image.$name,

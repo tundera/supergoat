@@ -1,5 +1,5 @@
 import { Session } from 'nexus-prisma'
-import { objectType, extendType, intArg, stringArg, inputObjectType, list } from 'nexus'
+import { objectType, extendType } from 'nexus'
 
 export const SessionType = objectType({
   name: Session.$name,

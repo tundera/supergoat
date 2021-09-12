@@ -3,7 +3,7 @@ import type { FC, PropsWithChildren } from 'react'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 import { Link as ChakraLink, LinkProps as ChakraLinkProps } from '@chakra-ui/react'
 
-type NextChakraLinkProps = PropsWithChildren<NextLinkProps & Omit<ChakraLinkProps, 'as'>>
+type NextChakraLinkProps = PropsWithChildren<NextLinkProps & Omit<ChakraLinkProps, 'as' | 'css'>>
 
 //  Has to be a new component because both chakra and next share the `as` keyword
 const NextChakraLink: FC<NextChakraLinkProps> = ({

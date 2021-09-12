@@ -11,8 +11,6 @@ import { useQueryErrorResetBoundary } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { FiRefreshCw } from 'react-icons/fi'
 
-import ThemeProvider from 'src/providers/ThemeProvider'
-import FormProvider from 'src/providers/FormProvider'
 import Main from 'src/components/Main'
 import Footer from 'src/components/Footer'
 import Header from 'src/components/Header'
@@ -37,25 +35,16 @@ const AuthenticatedLayout: FC<Props> = ({ title, children }) => {
         <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
 
-      <ThemeProvider>
-        <FormProvider>
-          <ErrorBoundary FallbackComponent={AuthenticatedLayoutErrorFallback} onReset={reset}>
-            <Suspense fallback={<FullPageSpinner />}>
-              <NProgress
-                color={color}
-                showAfterMs={100}
-                spinner={false}
-                options={{ easing: 'ease' }}
-              />
-              <Flex minH="100vh" direction="column">
-                <Header />
-                <Main>{children}</Main>
-                <Footer />
-              </Flex>
-            </Suspense>
-          </ErrorBoundary>
-        </FormProvider>
-      </ThemeProvider>
+      <ErrorBoundary FallbackComponent={AuthenticatedLayoutErrorFallback} onReset={reset}>
+        <Suspense fallback={<FullPageSpinner />}>
+          <NProgress color={color} showAfterMs={100} spinner={false} options={{ easing: 'ease' }} />
+          <Flex minH="100vh" direction="column">
+            <Header />
+            <Main>{children}</Main>
+            <Footer />
+          </Flex>
+        </Suspense>
+      </ErrorBoundary>
 
       <ReactQueryDevtools />
     </>

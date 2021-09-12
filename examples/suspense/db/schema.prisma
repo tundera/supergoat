@@ -4,9 +4,8 @@ datasource db {
 }
 
 generator client {
-  provider        = "prisma-client-js"
-  binaryTargets   = ["native"]
-  previewFeatures = ["nApi", "referentialActions"]
+  provider      = "prisma-client-js"
+  binaryTargets = ["native"]
 }
 
 generator nexusPrisma {

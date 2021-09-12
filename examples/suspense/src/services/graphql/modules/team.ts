@@ -1,5 +1,5 @@
 import { Team } from 'nexus-prisma'
-import { extendType, inputObjectType, list, objectType, stringArg } from 'nexus'
+import { extendType, objectType } from 'nexus'
 
 export const TeamType = objectType({
   name: Team.$name,
