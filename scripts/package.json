@@ -1,5 +1,6 @@
 {
   "name": "@monorepo/scripts",
+  "private": true,
   "version": "0.1.0",
   "author": {
     "name": "Philip Johnston",
@@ -15,6 +16,7 @@
   "scripts": {
     "test": "run-s 'test:*'",
     "test:unit": "echo \"No tests yet\"",
+    "clean": "rimraf dist node_modules",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
   },
   "devDependencies": {
@@ -28,6 +30,7 @@
     "dotenv-flow": "^3.2.0",
     "esbuild-register": "3.0.0",
     "eslint": "^7.32.0",
+    "eslint-plugin-jest-dom": "3.9.1",
     "execa": "5.1.1",
     "find-yarn-workspace-root": "^2.0.0",
     "ora": "6.0.0",

@@ -2,7 +2,6 @@
   "name": "@monorepo/theme",
   "version": "0.1.0",
   "license": "MIT",
-  "private": true,
   "homepage": "https://github.com/tundera/monorepo",
   "repository": {
     "type": "git",
@@ -86,6 +85,7 @@
     "react-dom": ">=17"
   },
   "dependencies": {
+    "eslint-plugin-jest-dom": "3.9.1",
     "merge-anything": "^4.0.1"
   }
 }
