@@ -18,9 +18,6 @@ const baseSchema = makeSchema({
       prismaClient: (ctx) => (ctx.prisma = db),
       experimentalCRUD: true,
       shouldGenerateArtifacts: false,
-      outputs: {
-        typegen: join(cwd, 'src/generated/typegen-nexus-plugin-prisma.d.ts'),
-      },
     }),
   ],
   shouldGenerateArtifacts: process.env.NODE_ENV === 'development',
