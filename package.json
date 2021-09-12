@@ -68,8 +68,8 @@
     "docker:down": "docker-compose down"
   },
   "resolutions": {
-    "react": "18.0.0-alpha-46a0f050a-20210828",
-    "react-dom": "18.0.0-alpha-46a0f050a-20210828"
+    "react": "18.0.0-alpha-cb8a50619-20210909",
+    "react-dom": "18.0.0-alpha-cb8a50619-20210909"
   },
   "dependencies": {
     "@babel/core": "^7.15.5",
@@ -100,6 +100,7 @@
     "eslint-config-next": "^11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jest-dom": "3.9.1",
     "eslint-plugin-jest-formatting": "^3.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "find-yarn-workspace-root": "^2.0.0",
