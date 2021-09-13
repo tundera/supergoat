@@ -4,7 +4,6 @@ import { ezCodegen } from '@graphql-ez/plugin-codegen'
 import { ezScalars } from '@graphql-ez/plugin-scalars'
 import { ezSchema } from '@graphql-ez/plugin-schema'
 import { ezGraphiQLIDE } from '@graphql-ez/plugin-graphiql'
-import { ezAltairIDE } from '@graphql-ez/plugin-altair'
 
 import { schema } from 'src/services/graphql/schema'
 import { createContext, Context } from 'src/services/graphql/context'
@@ -31,12 +30,11 @@ const { buildApp } = CreateApp({
             DateTime: 'string',
           },
         },
-        outputSchema: true,
+        outputSchema: './schema.graphql',
       }),
       ezGraphiQLIDE({
         defaultQuery: AllTeamsQuery,
       }),
-      ezAltairIDE(),
       ezScalars({
         DateTime: 1,
       }),

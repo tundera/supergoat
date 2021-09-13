@@ -91,7 +91,7 @@ export interface PlayerWhereInput {
   image?: Maybe<ImageWhereInput>
 }
 
-export interface PlayerOrderByInput {
+export interface PlayerOrderByWithRelationInput {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
@@ -103,7 +103,9 @@ export interface PlayerOrderByInput {
   number?: Maybe<SortOrder>
   position?: Maybe<SortOrder>
   teamId?: Maybe<SortOrder>
+  team?: Maybe<TeamOrderByWithRelationInput>
   imageId?: Maybe<SortOrder>
+  image?: Maybe<ImageOrderByWithRelationInput>
 }
 
 export interface TeamWhereUniqueInput {
@@ -140,7 +142,7 @@ export interface TeamWhereInput {
   logo?: Maybe<ImageWhereInput>
 }
 
-export interface TeamOrderByInput {
+export interface TeamOrderByWithRelationInput {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
@@ -155,8 +157,12 @@ export interface TeamOrderByInput {
   conference?: Maybe<SortOrder>
   division?: Maybe<SortOrder>
   established?: Maybe<SortOrder>
+  coaches?: Maybe<CoachOrderByRelationAggregateInput>
+  players?: Maybe<PlayerOrderByRelationAggregateInput>
   colorSchemeId?: Maybe<SortOrder>
+  colorScheme?: Maybe<ColorSchemeOrderByWithRelationInput>
   logoId?: Maybe<SortOrder>
+  logo?: Maybe<ImageOrderByWithRelationInput>
 }
 
 export interface TeamCreateInput {
@@ -224,7 +230,7 @@ export interface CoachWhereInput {
   image?: Maybe<ImageWhereInput>
 }
 
-export interface CoachOrderByInput {
+export interface CoachOrderByWithRelationInput {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
@@ -233,7 +239,9 @@ export interface CoachOrderByInput {
   type?: Maybe<SortOrder>
   isAssistant?: Maybe<SortOrder>
   teamId?: Maybe<SortOrder>
+  team?: Maybe<TeamOrderByWithRelationInput>
   imageId?: Maybe<SortOrder>
+  image?: Maybe<ImageOrderByWithRelationInput>
 }
 
 export interface ColorSchemeWhereUniqueInput {
@@ -252,12 +260,13 @@ export interface ColorSchemeWhereInput {
   team?: Maybe<TeamWhereInput>
 }
 
-export interface ColorSchemeOrderByInput {
+export interface ColorSchemeOrderByWithRelationInput {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
   primary?: Maybe<SortOrder>
   secondary?: Maybe<SortOrder>
+  team?: Maybe<TeamOrderByWithRelationInput>
 }
 
 export interface ImageWhereUniqueInput {
@@ -279,12 +288,15 @@ export interface ImageWhereInput {
   team?: Maybe<TeamWhereInput>
 }
 
-export interface ImageOrderByInput {
+export interface ImageOrderByWithRelationInput {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
   url?: Maybe<SortOrder>
   type?: Maybe<SortOrder>
+  player?: Maybe<PlayerOrderByWithRelationInput>
+  coach?: Maybe<CoachOrderByWithRelationInput>
+  team?: Maybe<TeamOrderByWithRelationInput>
 }
 
 export interface UserWhereUniqueInput {
@@ -312,7 +324,7 @@ export interface UserWhereInput {
   sessions?: Maybe<SessionListRelationFilter>
 }
 
-export interface UserOrderByInput {
+export interface UserOrderByWithRelationInput {
   id?: Maybe<SortOrder>
   name?: Maybe<SortOrder>
   email?: Maybe<SortOrder>
@@ -325,6 +337,8 @@ export interface UserOrderByInput {
   twitter?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
+  accounts?: Maybe<AccountOrderByRelationAggregateInput>
+  sessions?: Maybe<SessionOrderByRelationAggregateInput>
 }
 
 export interface SessionWhereUniqueInput {
@@ -347,7 +361,7 @@ export interface SessionWhereInput {
   user?: Maybe<UserWhereInput>
 }
 
-export interface SessionOrderByInput {
+export interface SessionOrderByWithRelationInput {
   id?: Maybe<SortOrder>
   userId?: Maybe<SortOrder>
   expires?: Maybe<SortOrder>
@@ -355,6 +369,7 @@ export interface SessionOrderByInput {
   accessToken?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
+  user?: Maybe<UserOrderByWithRelationInput>
 }
 
 export interface AccountWhereUniqueInput {
@@ -379,7 +394,7 @@ export interface AccountWhereInput {
   user?: Maybe<UserWhereInput>
 }
 
-export interface AccountOrderByInput {
+export interface AccountOrderByWithRelationInput {
   id?: Maybe<SortOrder>
   userId?: Maybe<SortOrder>
   providerType?: Maybe<SortOrder>
@@ -390,6 +405,7 @@ export interface AccountOrderByInput {
   accessTokenExpires?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
+  user?: Maybe<UserOrderByWithRelationInput>
 }
 
 export interface DateTimeFilter {
@@ -450,6 +466,14 @@ export interface PlayerListRelationFilter {
   every?: Maybe<PlayerWhereInput>
   some?: Maybe<PlayerWhereInput>
   none?: Maybe<PlayerWhereInput>
+}
+
+export interface CoachOrderByRelationAggregateInput {
+  _count?: Maybe<SortOrder>
+}
+
+export interface PlayerOrderByRelationAggregateInput {
+  _count?: Maybe<SortOrder>
 }
 
 export interface CoachCreateNestedManyWithoutTeamInput {
@@ -578,6 +602,14 @@ export interface SessionListRelationFilter {
   every?: Maybe<SessionWhereInput>
   some?: Maybe<SessionWhereInput>
   none?: Maybe<SessionWhereInput>
+}
+
+export interface AccountOrderByRelationAggregateInput {
+  _count?: Maybe<SortOrder>
+}
+
+export interface SessionOrderByRelationAggregateInput {
+  _count?: Maybe<SortOrder>
 }
 
 export interface AccountProviderIdProviderAccountIdCompoundUniqueInput {
@@ -1317,7 +1349,7 @@ export const generatedSchema = {
       __type: '[Account!]!',
       __args: {
         where: 'AccountWhereInput',
-        orderBy: '[AccountOrderByInput!]',
+        orderBy: '[AccountOrderByWithRelationInput!]',
         first: 'Int',
         last: 'Int',
         before: 'AccountWhereUniqueInput',
@@ -1329,7 +1361,7 @@ export const generatedSchema = {
       __type: '[Player!]!',
       __args: {
         where: 'PlayerWhereInput',
-        orderBy: '[PlayerOrderByInput!]',
+        orderBy: '[PlayerOrderByWithRelationInput!]',
         first: 'Int',
         last: 'Int',
         before: 'PlayerWhereUniqueInput',
@@ -1341,7 +1373,7 @@ export const generatedSchema = {
       __type: '[Team!]!',
       __args: {
         where: 'TeamWhereInput',
-        orderBy: '[TeamOrderByInput!]',
+        orderBy: '[TeamOrderByWithRelationInput!]',
         first: 'Int',
         last: 'Int',
         before: 'TeamWhereUniqueInput',
@@ -1353,7 +1385,7 @@ export const generatedSchema = {
       __type: '[Coach!]!',
       __args: {
         where: 'CoachWhereInput',
-        orderBy: '[CoachOrderByInput!]',
+        orderBy: '[CoachOrderByWithRelationInput!]',
         first: 'Int',
         last: 'Int',
         before: 'CoachWhereUniqueInput',
@@ -1365,7 +1397,7 @@ export const generatedSchema = {
       __type: '[ColorScheme!]!',
       __args: {
         where: 'ColorSchemeWhereInput',
-        orderBy: '[ColorSchemeOrderByInput!]',
+        orderBy: '[ColorSchemeOrderByWithRelationInput!]',
         first: 'Int',
         last: 'Int',
         before: 'ColorSchemeWhereUniqueInput',
@@ -1377,7 +1409,7 @@ export const generatedSchema = {
       __type: '[Image!]!',
       __args: {
         where: 'ImageWhereInput',
-        orderBy: '[ImageOrderByInput!]',
+        orderBy: '[ImageOrderByWithRelationInput!]',
         first: 'Int',
         last: 'Int',
         before: 'ImageWhereUniqueInput',
@@ -1389,7 +1421,7 @@ export const generatedSchema = {
       __type: '[User!]!',
       __args: {
         where: 'UserWhereInput',
-        orderBy: '[UserOrderByInput!]',
+        orderBy: '[UserOrderByWithRelationInput!]',
         first: 'Int',
         last: 'Int',
         before: 'UserWhereUniqueInput',
@@ -1401,7 +1433,7 @@ export const generatedSchema = {
       __type: '[Session!]!',
       __args: {
         where: 'SessionWhereInput',
-        orderBy: '[SessionOrderByInput!]',
+        orderBy: '[SessionOrderByWithRelationInput!]',
         first: 'Int',
         last: 'Int',
         before: 'SessionWhereUniqueInput',
@@ -1580,7 +1612,7 @@ export const generatedSchema = {
     imageId: { __type: 'StringNullableFilter' },
     image: { __type: 'ImageWhereInput' },
   },
-  PlayerOrderByInput: {
+  PlayerOrderByWithRelationInput: {
     id: { __type: 'SortOrder' },
     createdAt: { __type: 'SortOrder' },
     updatedAt: { __type: 'SortOrder' },
@@ -1592,7 +1624,9 @@ export const generatedSchema = {
     number: { __type: 'SortOrder' },
     position: { __type: 'SortOrder' },
     teamId: { __type: 'SortOrder' },
+    team: { __type: 'TeamOrderByWithRelationInput' },
     imageId: { __type: 'SortOrder' },
+    image: { __type: 'ImageOrderByWithRelationInput' },
   },
   TeamWhereUniqueInput: {
     id: { __type: 'String' },
@@ -1626,7 +1660,7 @@ export const generatedSchema = {
     logoId: { __type: 'StringNullableFilter' },
     logo: { __type: 'ImageWhereInput' },
   },
-  TeamOrderByInput: {
+  TeamOrderByWithRelationInput: {
     id: { __type: 'SortOrder' },
     createdAt: { __type: 'SortOrder' },
     updatedAt: { __type: 'SortOrder' },
@@ -1641,8 +1675,12 @@ export const generatedSchema = {
     conference: { __type: 'SortOrder' },
     division: { __type: 'SortOrder' },
     established: { __type: 'SortOrder' },
+    coaches: { __type: 'CoachOrderByRelationAggregateInput' },
+    players: { __type: 'PlayerOrderByRelationAggregateInput' },
     colorSchemeId: { __type: 'SortOrder' },
+    colorScheme: { __type: 'ColorSchemeOrderByWithRelationInput' },
     logoId: { __type: 'SortOrder' },
+    logo: { __type: 'ImageOrderByWithRelationInput' },
   },
   TeamCreateInput: {
     id: { __type: 'String!' },
@@ -1705,7 +1743,7 @@ export const generatedSchema = {
     imageId: { __type: 'StringNullableFilter' },
     image: { __type: 'ImageWhereInput' },
   },
-  CoachOrderByInput: {
+  CoachOrderByWithRelationInput: {
     id: { __type: 'SortOrder' },
     createdAt: { __type: 'SortOrder' },
     updatedAt: { __type: 'SortOrder' },
@@ -1714,7 +1752,9 @@ export const generatedSchema = {
     type: { __type: 'SortOrder' },
     isAssistant: { __type: 'SortOrder' },
     teamId: { __type: 'SortOrder' },
+    team: { __type: 'TeamOrderByWithRelationInput' },
     imageId: { __type: 'SortOrder' },
+    image: { __type: 'ImageOrderByWithRelationInput' },
   },
   ColorSchemeWhereUniqueInput: { id: { __type: 'String' } },
   ColorSchemeWhereInput: {
@@ -1728,12 +1768,13 @@ export const generatedSchema = {
     secondary: { __type: 'StringFilter' },
     team: { __type: 'TeamWhereInput' },
   },
-  ColorSchemeOrderByInput: {
+  ColorSchemeOrderByWithRelationInput: {
     id: { __type: 'SortOrder' },
     createdAt: { __type: 'SortOrder' },
     updatedAt: { __type: 'SortOrder' },
     primary: { __type: 'SortOrder' },
     secondary: { __type: 'SortOrder' },
+    team: { __type: 'TeamOrderByWithRelationInput' },
   },
   ImageWhereUniqueInput: { id: { __type: 'String' }, url: { __type: 'String' } },
   ImageWhereInput: {
@@ -1749,12 +1790,15 @@ export const generatedSchema = {
     coach: { __type: 'CoachWhereInput' },
     team: { __type: 'TeamWhereInput' },
   },
-  ImageOrderByInput: {
+  ImageOrderByWithRelationInput: {
     id: { __type: 'SortOrder' },
     createdAt: { __type: 'SortOrder' },
     updatedAt: { __type: 'SortOrder' },
     url: { __type: 'SortOrder' },
     type: { __type: 'SortOrder' },
+    player: { __type: 'PlayerOrderByWithRelationInput' },
+    coach: { __type: 'CoachOrderByWithRelationInput' },
+    team: { __type: 'TeamOrderByWithRelationInput' },
   },
   UserWhereUniqueInput: { id: { __type: 'String' }, email: { __type: 'String' } },
   UserWhereInput: {
@@ -1776,7 +1820,7 @@ export const generatedSchema = {
     accounts: { __type: 'AccountListRelationFilter' },
     sessions: { __type: 'SessionListRelationFilter' },
   },
-  UserOrderByInput: {
+  UserOrderByWithRelationInput: {
     id: { __type: 'SortOrder' },
     name: { __type: 'SortOrder' },
     email: { __type: 'SortOrder' },
@@ -1789,6 +1833,8 @@ export const generatedSchema = {
     twitter: { __type: 'SortOrder' },
     createdAt: { __type: 'SortOrder' },
     updatedAt: { __type: 'SortOrder' },
+    accounts: { __type: 'AccountOrderByRelationAggregateInput' },
+    sessions: { __type: 'SessionOrderByRelationAggregateInput' },
   },
   SessionWhereUniqueInput: {
     id: { __type: 'String' },
@@ -1808,7 +1854,7 @@ export const generatedSchema = {
     updatedAt: { __type: 'DateTimeFilter' },
     user: { __type: 'UserWhereInput' },
   },
-  SessionOrderByInput: {
+  SessionOrderByWithRelationInput: {
     id: { __type: 'SortOrder' },
     userId: { __type: 'SortOrder' },
     expires: { __type: 'SortOrder' },
@@ -1816,6 +1862,7 @@ export const generatedSchema = {
     accessToken: { __type: 'SortOrder' },
     createdAt: { __type: 'SortOrder' },
     updatedAt: { __type: 'SortOrder' },
+    user: { __type: 'UserOrderByWithRelationInput' },
   },
   AccountWhereUniqueInput: {
     id: { __type: 'String' },
@@ -1839,7 +1886,7 @@ export const generatedSchema = {
     updatedAt: { __type: 'DateTimeFilter' },
     user: { __type: 'UserWhereInput' },
   },
-  AccountOrderByInput: {
+  AccountOrderByWithRelationInput: {
     id: { __type: 'SortOrder' },
     userId: { __type: 'SortOrder' },
     providerType: { __type: 'SortOrder' },
@@ -1850,6 +1897,7 @@ export const generatedSchema = {
     accessTokenExpires: { __type: 'SortOrder' },
     createdAt: { __type: 'SortOrder' },
     updatedAt: { __type: 'SortOrder' },
+    user: { __type: 'UserOrderByWithRelationInput' },
   },
   DateTimeFilter: {
     equals: { __type: 'DateTime' },
@@ -1905,6 +1953,8 @@ export const generatedSchema = {
     some: { __type: 'PlayerWhereInput' },
     none: { __type: 'PlayerWhereInput' },
   },
+  CoachOrderByRelationAggregateInput: { _count: { __type: 'SortOrder' } },
+  PlayerOrderByRelationAggregateInput: { _count: { __type: 'SortOrder' } },
   CoachCreateNestedManyWithoutTeamInput: {
     create: { __type: '[CoachCreateWithoutTeamInput!]' },
     connectOrCreate: { __type: '[CoachCreateOrConnectWithoutTeamInput!]' },
@@ -2013,6 +2063,8 @@ export const generatedSchema = {
     some: { __type: 'SessionWhereInput' },
     none: { __type: 'SessionWhereInput' },
   },
+  AccountOrderByRelationAggregateInput: { _count: { __type: 'SortOrder' } },
+  SessionOrderByRelationAggregateInput: { _count: { __type: 'SortOrder' } },
   AccountProviderIdProviderAccountIdCompoundUniqueInput: {
     providerId: { __type: 'String!' },
     providerAccountId: { __type: 'String!' },
@@ -2646,7 +2698,7 @@ export interface Query {
   account: (args: { where: AccountWhereUniqueInput }) => Maybe<Account>
   accounts: (args?: {
     where?: Maybe<AccountWhereInput>
-    orderBy?: Maybe<Array<AccountOrderByInput>>
+    orderBy?: Maybe<Array<AccountOrderByWithRelationInput>>
     first?: Maybe<Scalars['Int']>
     last?: Maybe<Scalars['Int']>
     before?: Maybe<AccountWhereUniqueInput>
@@ -2655,7 +2707,7 @@ export interface Query {
   player: (args: { where: PlayerWhereUniqueInput }) => Maybe<Player>
   players: (args?: {
     where?: Maybe<PlayerWhereInput>
-    orderBy?: Maybe<Array<PlayerOrderByInput>>
+    orderBy?: Maybe<Array<PlayerOrderByWithRelationInput>>
     first?: Maybe<Scalars['Int']>
     last?: Maybe<Scalars['Int']>
     before?: Maybe<PlayerWhereUniqueInput>
@@ -2664,7 +2716,7 @@ export interface Query {
   team: (args: { where: TeamWhereUniqueInput }) => Maybe<Team>
   teams: (args?: {
     where?: Maybe<TeamWhereInput>
-    orderBy?: Maybe<Array<TeamOrderByInput>>
+    orderBy?: Maybe<Array<TeamOrderByWithRelationInput>>
     first?: Maybe<Scalars['Int']>
     last?: Maybe<Scalars['Int']>
     before?: Maybe<TeamWhereUniqueInput>
@@ -2673,7 +2725,7 @@ export interface Query {
   coach: (args: { where: CoachWhereUniqueInput }) => Maybe<Coach>
   coaches: (args?: {
     where?: Maybe<CoachWhereInput>
-    orderBy?: Maybe<Array<CoachOrderByInput>>
+    orderBy?: Maybe<Array<CoachOrderByWithRelationInput>>
     first?: Maybe<Scalars['Int']>
     last?: Maybe<Scalars['Int']>
     before?: Maybe<CoachWhereUniqueInput>
@@ -2682,7 +2734,7 @@ export interface Query {
   colorScheme: (args: { where: ColorSchemeWhereUniqueInput }) => Maybe<ColorScheme>
   colorSchemes: (args?: {
     where?: Maybe<ColorSchemeWhereInput>
-    orderBy?: Maybe<Array<ColorSchemeOrderByInput>>
+    orderBy?: Maybe<Array<ColorSchemeOrderByWithRelationInput>>
     first?: Maybe<Scalars['Int']>
     last?: Maybe<Scalars['Int']>
     before?: Maybe<ColorSchemeWhereUniqueInput>
@@ -2691,7 +2743,7 @@ export interface Query {
   image: (args: { where: ImageWhereUniqueInput }) => Maybe<Image>
   images: (args?: {
     where?: Maybe<ImageWhereInput>
-    orderBy?: Maybe<Array<ImageOrderByInput>>
+    orderBy?: Maybe<Array<ImageOrderByWithRelationInput>>
     first?: Maybe<Scalars['Int']>
     last?: Maybe<Scalars['Int']>
     before?: Maybe<ImageWhereUniqueInput>
@@ -2700,7 +2752,7 @@ export interface Query {
   user: (args: { where: UserWhereUniqueInput }) => Maybe<User>
   users: (args?: {
     where?: Maybe<UserWhereInput>
-    orderBy?: Maybe<Array<UserOrderByInput>>
+    orderBy?: Maybe<Array<UserOrderByWithRelationInput>>
     first?: Maybe<Scalars['Int']>
     last?: Maybe<Scalars['Int']>
     before?: Maybe<UserWhereUniqueInput>
@@ -2709,7 +2761,7 @@ export interface Query {
   session: (args: { where: SessionWhereUniqueInput }) => Maybe<Session>
   sessions: (args?: {
     where?: Maybe<SessionWhereInput>
-    orderBy?: Maybe<Array<SessionOrderByInput>>
+    orderBy?: Maybe<Array<SessionOrderByWithRelationInput>>
     first?: Maybe<Scalars['Int']>
     last?: Maybe<Scalars['Int']>
     before?: Maybe<SessionWhereUniqueInput>
