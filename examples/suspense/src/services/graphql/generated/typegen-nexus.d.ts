@@ -103,11 +103,7 @@ export interface NexusGenInputs {
     none?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
     some?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
   }
-  AccountOrderByRelationAggregateInput: {
-    // input type
-    _count?: NexusGenEnums['SortOrder'] | null // SortOrder
-  }
-  AccountOrderByWithRelationInput: {
+  AccountOrderByInput: {
     // input type
     accessToken?: NexusGenEnums['SortOrder'] | null // SortOrder
     accessTokenExpires?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -118,7 +114,6 @@ export interface NexusGenInputs {
     providerType?: NexusGenEnums['SortOrder'] | null // SortOrder
     refreshToken?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
-    user?: NexusGenInputs['UserOrderByWithRelationInput'] | null // UserOrderByWithRelationInput
     userId?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
   AccountProviderIdProviderAccountIdCompoundUniqueInput: {
@@ -217,20 +212,14 @@ export interface NexusGenInputs {
     none?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
     some?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
   }
-  CoachOrderByRelationAggregateInput: {
-    // input type
-    _count?: NexusGenEnums['SortOrder'] | null // SortOrder
-  }
-  CoachOrderByWithRelationInput: {
+  CoachOrderByInput: {
     // input type
     createdAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     handle?: NexusGenEnums['SortOrder'] | null // SortOrder
     id?: NexusGenEnums['SortOrder'] | null // SortOrder
-    image?: NexusGenInputs['ImageOrderByWithRelationInput'] | null // ImageOrderByWithRelationInput
     imageId?: NexusGenEnums['SortOrder'] | null // SortOrder
     isAssistant?: NexusGenEnums['SortOrder'] | null // SortOrder
     name?: NexusGenEnums['SortOrder'] | null // SortOrder
-    team?: NexusGenInputs['TeamOrderByWithRelationInput'] | null // TeamOrderByWithRelationInput
     teamId?: NexusGenEnums['SortOrder'] | null // SortOrder
     type?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -369,13 +358,12 @@ export interface NexusGenInputs {
     secondary: string // String!
     updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
   }
-  ColorSchemeOrderByWithRelationInput: {
+  ColorSchemeOrderByInput: {
     // input type
     createdAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     id?: NexusGenEnums['SortOrder'] | null // SortOrder
     primary?: NexusGenEnums['SortOrder'] | null // SortOrder
     secondary?: NexusGenEnums['SortOrder'] | null // SortOrder
-    team?: NexusGenInputs['TeamOrderByWithRelationInput'] | null // TeamOrderByWithRelationInput
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
   ColorSchemeUpdateOneWithoutTeamInput: {
@@ -528,13 +516,10 @@ export interface NexusGenInputs {
     updatedAt?: NexusGenScalars['DateTime'] | null // DateTime
     url: string // String!
   }
-  ImageOrderByWithRelationInput: {
+  ImageOrderByInput: {
     // input type
-    coach?: NexusGenInputs['CoachOrderByWithRelationInput'] | null // CoachOrderByWithRelationInput
     createdAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     id?: NexusGenEnums['SortOrder'] | null // SortOrder
-    player?: NexusGenInputs['PlayerOrderByWithRelationInput'] | null // PlayerOrderByWithRelationInput
-    team?: NexusGenInputs['TeamOrderByWithRelationInput'] | null // TeamOrderByWithRelationInput
     type?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     url?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -818,23 +803,17 @@ export interface NexusGenInputs {
     none?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
     some?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
   }
-  PlayerOrderByRelationAggregateInput: {
-    // input type
-    _count?: NexusGenEnums['SortOrder'] | null // SortOrder
-  }
-  PlayerOrderByWithRelationInput: {
+  PlayerOrderByInput: {
     // input type
     createdAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     handle?: NexusGenEnums['SortOrder'] | null // SortOrder
     height?: NexusGenEnums['SortOrder'] | null // SortOrder
     id?: NexusGenEnums['SortOrder'] | null // SortOrder
-    image?: NexusGenInputs['ImageOrderByWithRelationInput'] | null // ImageOrderByWithRelationInput
     imageId?: NexusGenEnums['SortOrder'] | null // SortOrder
     name?: NexusGenEnums['SortOrder'] | null // SortOrder
     number?: NexusGenEnums['SortOrder'] | null // SortOrder
     position?: NexusGenEnums['SortOrder'] | null // SortOrder
     slug?: NexusGenEnums['SortOrder'] | null // SortOrder
-    team?: NexusGenInputs['TeamOrderByWithRelationInput'] | null // TeamOrderByWithRelationInput
     teamId?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     weight?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -976,11 +955,7 @@ export interface NexusGenInputs {
     none?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
     some?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
   }
-  SessionOrderByRelationAggregateInput: {
-    // input type
-    _count?: NexusGenEnums['SortOrder'] | null // SortOrder
-  }
-  SessionOrderByWithRelationInput: {
+  SessionOrderByInput: {
     // input type
     accessToken?: NexusGenEnums['SortOrder'] | null // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -988,7 +963,6 @@ export interface NexusGenInputs {
     id?: NexusGenEnums['SortOrder'] | null // SortOrder
     sessionToken?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
-    user?: NexusGenInputs['UserOrderByWithRelationInput'] | null // UserOrderByWithRelationInput
     userId?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
   SessionWhereInput: {
@@ -1157,12 +1131,10 @@ export interface NexusGenInputs {
     winPercentage?: number | null // Float
     wins?: number | null // Int
   }
-  TeamOrderByWithRelationInput: {
+  TeamOrderByInput: {
     // input type
     abbreviation?: NexusGenEnums['SortOrder'] | null // SortOrder
     city?: NexusGenEnums['SortOrder'] | null // SortOrder
-    coaches?: NexusGenInputs['CoachOrderByRelationAggregateInput'] | null // CoachOrderByRelationAggregateInput
-    colorScheme?: NexusGenInputs['ColorSchemeOrderByWithRelationInput'] | null // ColorSchemeOrderByWithRelationInput
     colorSchemeId?: NexusGenEnums['SortOrder'] | null // SortOrder
     conference?: NexusGenEnums['SortOrder'] | null // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -1170,11 +1142,9 @@ export interface NexusGenInputs {
     established?: NexusGenEnums['SortOrder'] | null // SortOrder
     handle?: NexusGenEnums['SortOrder'] | null // SortOrder
     id?: NexusGenEnums['SortOrder'] | null // SortOrder
-    logo?: NexusGenInputs['ImageOrderByWithRelationInput'] | null // ImageOrderByWithRelationInput
     logoId?: NexusGenEnums['SortOrder'] | null // SortOrder
     losses?: NexusGenEnums['SortOrder'] | null // SortOrder
     name?: NexusGenEnums['SortOrder'] | null // SortOrder
-    players?: NexusGenInputs['PlayerOrderByRelationAggregateInput'] | null // PlayerOrderByRelationAggregateInput
     slug?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     winPercentage?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -1340,9 +1310,8 @@ export interface NexusGenInputs {
     name?: string | null // String
     slug?: string | null // String
   }
-  UserOrderByWithRelationInput: {
+  UserOrderByInput: {
     // input type
-    accounts?: NexusGenInputs['AccountOrderByRelationAggregateInput'] | null // AccountOrderByRelationAggregateInput
     apple?: NexusGenEnums['SortOrder'] | null // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null // SortOrder
     email?: NexusGenEnums['SortOrder'] | null // SortOrder
@@ -1353,7 +1322,6 @@ export interface NexusGenInputs {
     id?: NexusGenEnums['SortOrder'] | null // SortOrder
     image?: NexusGenEnums['SortOrder'] | null // SortOrder
     name?: NexusGenEnums['SortOrder'] | null // SortOrder
-    sessions?: NexusGenInputs['SessionOrderByRelationAggregateInput'] | null // SessionOrderByRelationAggregateInput
     twitter?: NexusGenEnums['SortOrder'] | null // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null // SortOrder
   }
@@ -1816,7 +1784,7 @@ export interface NexusGenArgTypes {
       before?: NexusGenInputs['AccountWhereUniqueInput'] | null // AccountWhereUniqueInput
       first?: number | null // Int
       last?: number | null // Int
-      orderBy?: NexusGenInputs['AccountOrderByWithRelationInput'][] | null // [AccountOrderByWithRelationInput!]
+      orderBy?: NexusGenInputs['AccountOrderByInput'][] | null // [AccountOrderByInput!]
       where?: NexusGenInputs['AccountWhereInput'] | null // AccountWhereInput
     }
     coach: {
@@ -1829,7 +1797,7 @@ export interface NexusGenArgTypes {
       before?: NexusGenInputs['CoachWhereUniqueInput'] | null // CoachWhereUniqueInput
       first?: number | null // Int
       last?: number | null // Int
-      orderBy?: NexusGenInputs['CoachOrderByWithRelationInput'][] | null // [CoachOrderByWithRelationInput!]
+      orderBy?: NexusGenInputs['CoachOrderByInput'][] | null // [CoachOrderByInput!]
       where?: NexusGenInputs['CoachWhereInput'] | null // CoachWhereInput
     }
     colorScheme: {
@@ -1842,7 +1810,7 @@ export interface NexusGenArgTypes {
       before?: NexusGenInputs['ColorSchemeWhereUniqueInput'] | null // ColorSchemeWhereUniqueInput
       first?: number | null // Int
       last?: number | null // Int
-      orderBy?: NexusGenInputs['ColorSchemeOrderByWithRelationInput'][] | null // [ColorSchemeOrderByWithRelationInput!]
+      orderBy?: NexusGenInputs['ColorSchemeOrderByInput'][] | null // [ColorSchemeOrderByInput!]
       where?: NexusGenInputs['ColorSchemeWhereInput'] | null // ColorSchemeWhereInput
     }
     image: {
@@ -1855,7 +1823,7 @@ export interface NexusGenArgTypes {
       before?: NexusGenInputs['ImageWhereUniqueInput'] | null // ImageWhereUniqueInput
       first?: number | null // Int
       last?: number | null // Int
-      orderBy?: NexusGenInputs['ImageOrderByWithRelationInput'][] | null // [ImageOrderByWithRelationInput!]
+      orderBy?: NexusGenInputs['ImageOrderByInput'][] | null // [ImageOrderByInput!]
       where?: NexusGenInputs['ImageWhereInput'] | null // ImageWhereInput
     }
     player: {
@@ -1868,7 +1836,7 @@ export interface NexusGenArgTypes {
       before?: NexusGenInputs['PlayerWhereUniqueInput'] | null // PlayerWhereUniqueInput
       first?: number | null // Int
       last?: number | null // Int
-      orderBy?: NexusGenInputs['PlayerOrderByWithRelationInput'][] | null // [PlayerOrderByWithRelationInput!]
+      orderBy?: NexusGenInputs['PlayerOrderByInput'][] | null // [PlayerOrderByInput!]
       where?: NexusGenInputs['PlayerWhereInput'] | null // PlayerWhereInput
     }
     session: {
@@ -1881,7 +1849,7 @@ export interface NexusGenArgTypes {
       before?: NexusGenInputs['SessionWhereUniqueInput'] | null // SessionWhereUniqueInput
       first?: number | null // Int
       last?: number | null // Int
-      orderBy?: NexusGenInputs['SessionOrderByWithRelationInput'][] | null // [SessionOrderByWithRelationInput!]
+      orderBy?: NexusGenInputs['SessionOrderByInput'][] | null // [SessionOrderByInput!]
       where?: NexusGenInputs['SessionWhereInput'] | null // SessionWhereInput
     }
     team: {
@@ -1894,7 +1862,7 @@ export interface NexusGenArgTypes {
       before?: NexusGenInputs['TeamWhereUniqueInput'] | null // TeamWhereUniqueInput
       first?: number | null // Int
       last?: number | null // Int
-      orderBy?: NexusGenInputs['TeamOrderByWithRelationInput'][] | null // [TeamOrderByWithRelationInput!]
+      orderBy?: NexusGenInputs['TeamOrderByInput'][] | null // [TeamOrderByInput!]
       where?: NexusGenInputs['TeamWhereInput'] | null // TeamWhereInput
     }
     user: {
@@ -1907,7 +1875,7 @@ export interface NexusGenArgTypes {
       before?: NexusGenInputs['UserWhereUniqueInput'] | null // UserWhereUniqueInput
       first?: number | null // Int
       last?: number | null // Int
-      orderBy?: NexusGenInputs['UserOrderByWithRelationInput'][] | null // [UserOrderByWithRelationInput!]
+      orderBy?: NexusGenInputs['UserOrderByInput'][] | null // [UserOrderByInput!]
       where?: NexusGenInputs['UserWhereInput'] | null // UserWhereInput
     }
   }

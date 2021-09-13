@@ -198,7 +198,7 @@ type Query {
   account(where: AccountWhereUniqueInput!): Account
   accounts(
     where: AccountWhereInput
-    orderBy: [AccountOrderByWithRelationInput!]
+    orderBy: [AccountOrderByInput!]
     first: Int
     last: Int
     before: AccountWhereUniqueInput
@@ -207,7 +207,7 @@ type Query {
   player(where: PlayerWhereUniqueInput!): Player
   players(
     where: PlayerWhereInput
-    orderBy: [PlayerOrderByWithRelationInput!]
+    orderBy: [PlayerOrderByInput!]
     first: Int
     last: Int
     before: PlayerWhereUniqueInput
@@ -216,7 +216,7 @@ type Query {
   team(where: TeamWhereUniqueInput!): Team
   teams(
     where: TeamWhereInput
-    orderBy: [TeamOrderByWithRelationInput!]
+    orderBy: [TeamOrderByInput!]
     first: Int
     last: Int
     before: TeamWhereUniqueInput
@@ -225,7 +225,7 @@ type Query {
   coach(where: CoachWhereUniqueInput!): Coach
   coaches(
     where: CoachWhereInput
-    orderBy: [CoachOrderByWithRelationInput!]
+    orderBy: [CoachOrderByInput!]
     first: Int
     last: Int
     before: CoachWhereUniqueInput
@@ -234,7 +234,7 @@ type Query {
   colorScheme(where: ColorSchemeWhereUniqueInput!): ColorScheme
   colorSchemes(
     where: ColorSchemeWhereInput
-    orderBy: [ColorSchemeOrderByWithRelationInput!]
+    orderBy: [ColorSchemeOrderByInput!]
     first: Int
     last: Int
     before: ColorSchemeWhereUniqueInput
@@ -243,7 +243,7 @@ type Query {
   image(where: ImageWhereUniqueInput!): Image
   images(
     where: ImageWhereInput
-    orderBy: [ImageOrderByWithRelationInput!]
+    orderBy: [ImageOrderByInput!]
     first: Int
     last: Int
     before: ImageWhereUniqueInput
@@ -252,7 +252,7 @@ type Query {
   user(where: UserWhereUniqueInput!): User
   users(
     where: UserWhereInput
-    orderBy: [UserOrderByWithRelationInput!]
+    orderBy: [UserOrderByInput!]
     first: Int
     last: Int
     before: UserWhereUniqueInput
@@ -261,7 +261,7 @@ type Query {
   session(where: SessionWhereUniqueInput!): Session
   sessions(
     where: SessionWhereInput
-    orderBy: [SessionOrderByWithRelationInput!]
+    orderBy: [SessionOrderByInput!]
     first: Int
     last: Int
     before: SessionWhereUniqueInput
@@ -296,7 +296,7 @@ input PlayerWhereInput {
   image: ImageWhereInput
 }
 
-input PlayerOrderByWithRelationInput {
+input PlayerOrderByInput {
   id: SortOrder
   createdAt: SortOrder
   updatedAt: SortOrder
@@ -308,9 +308,7 @@ input PlayerOrderByWithRelationInput {
   number: SortOrder
   position: SortOrder
   teamId: SortOrder
-  team: TeamOrderByWithRelationInput
   imageId: SortOrder
-  image: ImageOrderByWithRelationInput
 }
 
 input TeamWhereUniqueInput {
@@ -347,7 +345,7 @@ input TeamWhereInput {
   logo: ImageWhereInput
 }
 
-input TeamOrderByWithRelationInput {
+input TeamOrderByInput {
   id: SortOrder
   createdAt: SortOrder
   updatedAt: SortOrder
@@ -362,12 +360,8 @@ input TeamOrderByWithRelationInput {
   conference: SortOrder
   division: SortOrder
   established: SortOrder
-  coaches: CoachOrderByRelationAggregateInput
-  players: PlayerOrderByRelationAggregateInput
   colorSchemeId: SortOrder
-  colorScheme: ColorSchemeOrderByWithRelationInput
   logoId: SortOrder
-  logo: ImageOrderByWithRelationInput
 }
 
 input TeamCreateInput {
@@ -435,7 +429,7 @@ input CoachWhereInput {
   image: ImageWhereInput
 }
 
-input CoachOrderByWithRelationInput {
+input CoachOrderByInput {
   id: SortOrder
   createdAt: SortOrder
   updatedAt: SortOrder
@@ -444,9 +438,7 @@ input CoachOrderByWithRelationInput {
   type: SortOrder
   isAssistant: SortOrder
   teamId: SortOrder
-  team: TeamOrderByWithRelationInput
   imageId: SortOrder
-  image: ImageOrderByWithRelationInput
 }
 
 input ColorSchemeWhereUniqueInput {
@@ -465,13 +457,12 @@ input ColorSchemeWhereInput {
   team: TeamWhereInput
 }
 
-input ColorSchemeOrderByWithRelationInput {
+input ColorSchemeOrderByInput {
   id: SortOrder
   createdAt: SortOrder
   updatedAt: SortOrder
   primary: SortOrder
   secondary: SortOrder
-  team: TeamOrderByWithRelationInput
 }
 
 input ImageWhereUniqueInput {
@@ -493,15 +484,12 @@ input ImageWhereInput {
   team: TeamWhereInput
 }
 
-input ImageOrderByWithRelationInput {
+input ImageOrderByInput {
   id: SortOrder
   createdAt: SortOrder
   updatedAt: SortOrder
   url: SortOrder
   type: SortOrder
-  player: PlayerOrderByWithRelationInput
-  coach: CoachOrderByWithRelationInput
-  team: TeamOrderByWithRelationInput
 }
 
 input UserWhereUniqueInput {
@@ -529,7 +517,7 @@ input UserWhereInput {
   sessions: SessionListRelationFilter
 }
 
-input UserOrderByWithRelationInput {
+input UserOrderByInput {
   id: SortOrder
   name: SortOrder
   email: SortOrder
@@ -542,8 +530,6 @@ input UserOrderByWithRelationInput {
   twitter: SortOrder
   createdAt: SortOrder
   updatedAt: SortOrder
-  accounts: AccountOrderByRelationAggregateInput
-  sessions: SessionOrderByRelationAggregateInput
 }
 
 input SessionWhereUniqueInput {
@@ -566,7 +552,7 @@ input SessionWhereInput {
   user: UserWhereInput
 }
 
-input SessionOrderByWithRelationInput {
+input SessionOrderByInput {
   id: SortOrder
   userId: SortOrder
   expires: SortOrder
@@ -574,7 +560,6 @@ input SessionOrderByWithRelationInput {
   accessToken: SortOrder
   createdAt: SortOrder
   updatedAt: SortOrder
-  user: UserOrderByWithRelationInput
 }
 
 input AccountWhereUniqueInput {
@@ -599,7 +584,7 @@ input AccountWhereInput {
   user: UserWhereInput
 }
 
-input AccountOrderByWithRelationInput {
+input AccountOrderByInput {
   id: SortOrder
   userId: SortOrder
   providerType: SortOrder
@@ -610,7 +595,6 @@ input AccountOrderByWithRelationInput {
   accessTokenExpires: SortOrder
   createdAt: SortOrder
   updatedAt: SortOrder
-  user: UserOrderByWithRelationInput
 }
 
 input DateTimeFilter {
@@ -671,14 +655,6 @@ input PlayerListRelationFilter {
   every: PlayerWhereInput
   some: PlayerWhereInput
   none: PlayerWhereInput
-}
-
-input CoachOrderByRelationAggregateInput {
-  _count: SortOrder
-}
-
-input PlayerOrderByRelationAggregateInput {
-  _count: SortOrder
 }
 
 input CoachCreateNestedManyWithoutTeamInput {
@@ -807,14 +783,6 @@ input SessionListRelationFilter {
   every: SessionWhereInput
   some: SessionWhereInput
   none: SessionWhereInput
-}
-
-input AccountOrderByRelationAggregateInput {
-  _count: SortOrder
-}
-
-input SessionOrderByRelationAggregateInput {
-  _count: SortOrder
 }
 
 input AccountProviderIdProviderAccountIdCompoundUniqueInput {
