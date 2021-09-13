@@ -223,7 +223,7 @@ export type QueryAccountArgs = {
 
 export type QueryAccountsArgs = {
   where?: Maybe<AccountWhereInput>
-  orderBy?: Maybe<Array<AccountOrderByInput>>
+  orderBy?: Maybe<Array<AccountOrderByWithRelationInput>>
   first?: Maybe<Scalars['Int']>
   last?: Maybe<Scalars['Int']>
   before?: Maybe<AccountWhereUniqueInput>
@@ -236,7 +236,7 @@ export type QueryPlayerArgs = {
 
 export type QueryPlayersArgs = {
   where?: Maybe<PlayerWhereInput>
-  orderBy?: Maybe<Array<PlayerOrderByInput>>
+  orderBy?: Maybe<Array<PlayerOrderByWithRelationInput>>
   first?: Maybe<Scalars['Int']>
   last?: Maybe<Scalars['Int']>
   before?: Maybe<PlayerWhereUniqueInput>
@@ -249,7 +249,7 @@ export type QueryTeamArgs = {
 
 export type QueryTeamsArgs = {
   where?: Maybe<TeamWhereInput>
-  orderBy?: Maybe<Array<TeamOrderByInput>>
+  orderBy?: Maybe<Array<TeamOrderByWithRelationInput>>
   first?: Maybe<Scalars['Int']>
   last?: Maybe<Scalars['Int']>
   before?: Maybe<TeamWhereUniqueInput>
@@ -262,7 +262,7 @@ export type QueryCoachArgs = {
 
 export type QueryCoachesArgs = {
   where?: Maybe<CoachWhereInput>
-  orderBy?: Maybe<Array<CoachOrderByInput>>
+  orderBy?: Maybe<Array<CoachOrderByWithRelationInput>>
   first?: Maybe<Scalars['Int']>
   last?: Maybe<Scalars['Int']>
   before?: Maybe<CoachWhereUniqueInput>
@@ -275,7 +275,7 @@ export type QueryColorSchemeArgs = {
 
 export type QueryColorSchemesArgs = {
   where?: Maybe<ColorSchemeWhereInput>
-  orderBy?: Maybe<Array<ColorSchemeOrderByInput>>
+  orderBy?: Maybe<Array<ColorSchemeOrderByWithRelationInput>>
   first?: Maybe<Scalars['Int']>
   last?: Maybe<Scalars['Int']>
   before?: Maybe<ColorSchemeWhereUniqueInput>
@@ -288,7 +288,7 @@ export type QueryImageArgs = {
 
 export type QueryImagesArgs = {
   where?: Maybe<ImageWhereInput>
-  orderBy?: Maybe<Array<ImageOrderByInput>>
+  orderBy?: Maybe<Array<ImageOrderByWithRelationInput>>
   first?: Maybe<Scalars['Int']>
   last?: Maybe<Scalars['Int']>
   before?: Maybe<ImageWhereUniqueInput>
@@ -301,7 +301,7 @@ export type QueryUserArgs = {
 
 export type QueryUsersArgs = {
   where?: Maybe<UserWhereInput>
-  orderBy?: Maybe<Array<UserOrderByInput>>
+  orderBy?: Maybe<Array<UserOrderByWithRelationInput>>
   first?: Maybe<Scalars['Int']>
   last?: Maybe<Scalars['Int']>
   before?: Maybe<UserWhereUniqueInput>
@@ -314,7 +314,7 @@ export type QuerySessionArgs = {
 
 export type QuerySessionsArgs = {
   where?: Maybe<SessionWhereInput>
-  orderBy?: Maybe<Array<SessionOrderByInput>>
+  orderBy?: Maybe<Array<SessionOrderByWithRelationInput>>
   first?: Maybe<Scalars['Int']>
   last?: Maybe<Scalars['Int']>
   before?: Maybe<SessionWhereUniqueInput>
@@ -348,7 +348,7 @@ export type PlayerWhereInput = {
   image?: Maybe<ImageWhereInput>
 }
 
-export type PlayerOrderByInput = {
+export type PlayerOrderByWithRelationInput = {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
@@ -360,7 +360,9 @@ export type PlayerOrderByInput = {
   number?: Maybe<SortOrder>
   position?: Maybe<SortOrder>
   teamId?: Maybe<SortOrder>
+  team?: Maybe<TeamOrderByWithRelationInput>
   imageId?: Maybe<SortOrder>
+  image?: Maybe<ImageOrderByWithRelationInput>
 }
 
 export type TeamWhereUniqueInput = {
@@ -397,7 +399,7 @@ export type TeamWhereInput = {
   logo?: Maybe<ImageWhereInput>
 }
 
-export type TeamOrderByInput = {
+export type TeamOrderByWithRelationInput = {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
@@ -412,8 +414,12 @@ export type TeamOrderByInput = {
   conference?: Maybe<SortOrder>
   division?: Maybe<SortOrder>
   established?: Maybe<SortOrder>
+  coaches?: Maybe<CoachOrderByRelationAggregateInput>
+  players?: Maybe<PlayerOrderByRelationAggregateInput>
   colorSchemeId?: Maybe<SortOrder>
+  colorScheme?: Maybe<ColorSchemeOrderByWithRelationInput>
   logoId?: Maybe<SortOrder>
+  logo?: Maybe<ImageOrderByWithRelationInput>
 }
 
 export type TeamCreateInput = {
@@ -481,7 +487,7 @@ export type CoachWhereInput = {
   image?: Maybe<ImageWhereInput>
 }
 
-export type CoachOrderByInput = {
+export type CoachOrderByWithRelationInput = {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
@@ -490,7 +496,9 @@ export type CoachOrderByInput = {
   type?: Maybe<SortOrder>
   isAssistant?: Maybe<SortOrder>
   teamId?: Maybe<SortOrder>
+  team?: Maybe<TeamOrderByWithRelationInput>
   imageId?: Maybe<SortOrder>
+  image?: Maybe<ImageOrderByWithRelationInput>
 }
 
 export type ColorSchemeWhereUniqueInput = {
@@ -509,12 +517,13 @@ export type ColorSchemeWhereInput = {
   team?: Maybe<TeamWhereInput>
 }
 
-export type ColorSchemeOrderByInput = {
+export type ColorSchemeOrderByWithRelationInput = {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
   primary?: Maybe<SortOrder>
   secondary?: Maybe<SortOrder>
+  team?: Maybe<TeamOrderByWithRelationInput>
 }
 
 export type ImageWhereUniqueInput = {
@@ -536,12 +545,15 @@ export type ImageWhereInput = {
   team?: Maybe<TeamWhereInput>
 }
 
-export type ImageOrderByInput = {
+export type ImageOrderByWithRelationInput = {
   id?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
   url?: Maybe<SortOrder>
   type?: Maybe<SortOrder>
+  player?: Maybe<PlayerOrderByWithRelationInput>
+  coach?: Maybe<CoachOrderByWithRelationInput>
+  team?: Maybe<TeamOrderByWithRelationInput>
 }
 
 export type UserWhereUniqueInput = {
@@ -569,7 +581,7 @@ export type UserWhereInput = {
   sessions?: Maybe<SessionListRelationFilter>
 }
 
-export type UserOrderByInput = {
+export type UserOrderByWithRelationInput = {
   id?: Maybe<SortOrder>
   name?: Maybe<SortOrder>
   email?: Maybe<SortOrder>
@@ -582,6 +594,8 @@ export type UserOrderByInput = {
   twitter?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
+  accounts?: Maybe<AccountOrderByRelationAggregateInput>
+  sessions?: Maybe<SessionOrderByRelationAggregateInput>
 }
 
 export type SessionWhereUniqueInput = {
@@ -604,7 +618,7 @@ export type SessionWhereInput = {
   user?: Maybe<UserWhereInput>
 }
 
-export type SessionOrderByInput = {
+export type SessionOrderByWithRelationInput = {
   id?: Maybe<SortOrder>
   userId?: Maybe<SortOrder>
   expires?: Maybe<SortOrder>
@@ -612,6 +626,7 @@ export type SessionOrderByInput = {
   accessToken?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
+  user?: Maybe<UserOrderByWithRelationInput>
 }
 
 export type AccountWhereUniqueInput = {
@@ -636,7 +651,7 @@ export type AccountWhereInput = {
   user?: Maybe<UserWhereInput>
 }
 
-export type AccountOrderByInput = {
+export type AccountOrderByWithRelationInput = {
   id?: Maybe<SortOrder>
   userId?: Maybe<SortOrder>
   providerType?: Maybe<SortOrder>
@@ -647,6 +662,7 @@ export type AccountOrderByInput = {
   accessTokenExpires?: Maybe<SortOrder>
   createdAt?: Maybe<SortOrder>
   updatedAt?: Maybe<SortOrder>
+  user?: Maybe<UserOrderByWithRelationInput>
 }
 
 export type DateTimeFilter = {
@@ -707,6 +723,14 @@ export type PlayerListRelationFilter = {
   every?: Maybe<PlayerWhereInput>
   some?: Maybe<PlayerWhereInput>
   none?: Maybe<PlayerWhereInput>
+}
+
+export type CoachOrderByRelationAggregateInput = {
+  _count?: Maybe<SortOrder>
+}
+
+export type PlayerOrderByRelationAggregateInput = {
+  _count?: Maybe<SortOrder>
 }
 
 export type CoachCreateNestedManyWithoutTeamInput = {
@@ -835,6 +859,14 @@ export type SessionListRelationFilter = {
   every?: Maybe<SessionWhereInput>
   some?: Maybe<SessionWhereInput>
   none?: Maybe<SessionWhereInput>
+}
+
+export type AccountOrderByRelationAggregateInput = {
+  _count?: Maybe<SortOrder>
+}
+
+export type SessionOrderByRelationAggregateInput = {
+  _count?: Maybe<SortOrder>
 }
 
 export type AccountProviderIdProviderAccountIdCompoundUniqueInput = {
@@ -1667,36 +1699,38 @@ export type ResolversTypes = {
   Query: ResolverTypeWrapper<{}>
   PlayerWhereUniqueInput: PlayerWhereUniqueInput
   PlayerWhereInput: PlayerWhereInput
-  PlayerOrderByInput: PlayerOrderByInput
+  PlayerOrderByWithRelationInput: PlayerOrderByWithRelationInput
   TeamWhereUniqueInput: TeamWhereUniqueInput
   TeamWhereInput: TeamWhereInput
-  TeamOrderByInput: TeamOrderByInput
+  TeamOrderByWithRelationInput: TeamOrderByWithRelationInput
   TeamCreateInput: TeamCreateInput
   TeamUpdateInput: TeamUpdateInput
   CoachWhereUniqueInput: CoachWhereUniqueInput
   CoachWhereInput: CoachWhereInput
-  CoachOrderByInput: CoachOrderByInput
+  CoachOrderByWithRelationInput: CoachOrderByWithRelationInput
   ColorSchemeWhereUniqueInput: ColorSchemeWhereUniqueInput
   ColorSchemeWhereInput: ColorSchemeWhereInput
-  ColorSchemeOrderByInput: ColorSchemeOrderByInput
+  ColorSchemeOrderByWithRelationInput: ColorSchemeOrderByWithRelationInput
   ImageWhereUniqueInput: ImageWhereUniqueInput
   ImageWhereInput: ImageWhereInput
-  ImageOrderByInput: ImageOrderByInput
+  ImageOrderByWithRelationInput: ImageOrderByWithRelationInput
   UserWhereUniqueInput: UserWhereUniqueInput
   UserWhereInput: UserWhereInput
-  UserOrderByInput: UserOrderByInput
+  UserOrderByWithRelationInput: UserOrderByWithRelationInput
   SessionWhereUniqueInput: SessionWhereUniqueInput
   SessionWhereInput: SessionWhereInput
-  SessionOrderByInput: SessionOrderByInput
+  SessionOrderByWithRelationInput: SessionOrderByWithRelationInput
   AccountWhereUniqueInput: AccountWhereUniqueInput
   AccountWhereInput: AccountWhereInput
-  AccountOrderByInput: AccountOrderByInput
+  AccountOrderByWithRelationInput: AccountOrderByWithRelationInput
   DateTimeFilter: DateTimeFilter
   StringNullableFilter: StringNullableFilter
   IntNullableFilter: IntNullableFilter
   FloatNullableFilter: FloatNullableFilter
   CoachListRelationFilter: CoachListRelationFilter
   PlayerListRelationFilter: PlayerListRelationFilter
+  CoachOrderByRelationAggregateInput: CoachOrderByRelationAggregateInput
+  PlayerOrderByRelationAggregateInput: PlayerOrderByRelationAggregateInput
   CoachCreateNestedManyWithoutTeamInput: CoachCreateNestedManyWithoutTeamInput
   PlayerCreateNestedManyWithoutTeamInput: PlayerCreateNestedManyWithoutTeamInput
   ColorSchemeCreateNestedOneWithoutTeamInput: ColorSchemeCreateNestedOneWithoutTeamInput
@@ -1714,6 +1748,8 @@ export type ResolversTypes = {
   DateTimeNullableFilter: DateTimeNullableFilter
   AccountListRelationFilter: AccountListRelationFilter
   SessionListRelationFilter: SessionListRelationFilter
+  AccountOrderByRelationAggregateInput: AccountOrderByRelationAggregateInput
+  SessionOrderByRelationAggregateInput: SessionOrderByRelationAggregateInput
   AccountProviderIdProviderAccountIdCompoundUniqueInput: AccountProviderIdProviderAccountIdCompoundUniqueInput
   NestedDateTimeFilter: NestedDateTimeFilter
   QueryMode: QueryMode
@@ -1821,36 +1857,38 @@ export type ResolversParentTypes = {
   Query: {}
   PlayerWhereUniqueInput: PlayerWhereUniqueInput
   PlayerWhereInput: PlayerWhereInput
-  PlayerOrderByInput: PlayerOrderByInput
+  PlayerOrderByWithRelationInput: PlayerOrderByWithRelationInput
   TeamWhereUniqueInput: TeamWhereUniqueInput
   TeamWhereInput: TeamWhereInput
-  TeamOrderByInput: TeamOrderByInput
+  TeamOrderByWithRelationInput: TeamOrderByWithRelationInput
   TeamCreateInput: TeamCreateInput
   TeamUpdateInput: TeamUpdateInput
   CoachWhereUniqueInput: CoachWhereUniqueInput
   CoachWhereInput: CoachWhereInput
-  CoachOrderByInput: CoachOrderByInput
+  CoachOrderByWithRelationInput: CoachOrderByWithRelationInput
   ColorSchemeWhereUniqueInput: ColorSchemeWhereUniqueInput
   ColorSchemeWhereInput: ColorSchemeWhereInput
-  ColorSchemeOrderByInput: ColorSchemeOrderByInput
+  ColorSchemeOrderByWithRelationInput: ColorSchemeOrderByWithRelationInput
   ImageWhereUniqueInput: ImageWhereUniqueInput
   ImageWhereInput: ImageWhereInput
-  ImageOrderByInput: ImageOrderByInput
+  ImageOrderByWithRelationInput: ImageOrderByWithRelationInput
   UserWhereUniqueInput: UserWhereUniqueInput
   UserWhereInput: UserWhereInput
-  UserOrderByInput: UserOrderByInput
+  UserOrderByWithRelationInput: UserOrderByWithRelationInput
   SessionWhereUniqueInput: SessionWhereUniqueInput
   SessionWhereInput: SessionWhereInput
-  SessionOrderByInput: SessionOrderByInput
+  SessionOrderByWithRelationInput: SessionOrderByWithRelationInput
   AccountWhereUniqueInput: AccountWhereUniqueInput
   AccountWhereInput: AccountWhereInput
-  AccountOrderByInput: AccountOrderByInput
+  AccountOrderByWithRelationInput: AccountOrderByWithRelationInput
   DateTimeFilter: DateTimeFilter
   StringNullableFilter: StringNullableFilter
   IntNullableFilter: IntNullableFilter
   FloatNullableFilter: FloatNullableFilter
   CoachListRelationFilter: CoachListRelationFilter
   PlayerListRelationFilter: PlayerListRelationFilter
+  CoachOrderByRelationAggregateInput: CoachOrderByRelationAggregateInput
+  PlayerOrderByRelationAggregateInput: PlayerOrderByRelationAggregateInput
   CoachCreateNestedManyWithoutTeamInput: CoachCreateNestedManyWithoutTeamInput
   PlayerCreateNestedManyWithoutTeamInput: PlayerCreateNestedManyWithoutTeamInput
   ColorSchemeCreateNestedOneWithoutTeamInput: ColorSchemeCreateNestedOneWithoutTeamInput
@@ -1868,6 +1906,8 @@ export type ResolversParentTypes = {
   DateTimeNullableFilter: DateTimeNullableFilter
   AccountListRelationFilter: AccountListRelationFilter
   SessionListRelationFilter: SessionListRelationFilter
+  AccountOrderByRelationAggregateInput: AccountOrderByRelationAggregateInput
+  SessionOrderByRelationAggregateInput: SessionOrderByRelationAggregateInput
   AccountProviderIdProviderAccountIdCompoundUniqueInput: AccountProviderIdProviderAccountIdCompoundUniqueInput
   NestedDateTimeFilter: NestedDateTimeFilter
   NestedStringNullableFilter: NestedStringNullableFilter

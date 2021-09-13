@@ -45,7 +45,11 @@ export type AccountListRelationFilter = {
   some?: Maybe<AccountWhereInput>;
 };
 
-export type AccountOrderByInput = {
+export type AccountOrderByRelationAggregateInput = {
+  _count?: Maybe<SortOrder>;
+};
+
+export type AccountOrderByWithRelationInput = {
   accessToken?: Maybe<SortOrder>;
   accessTokenExpires?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
@@ -55,6 +59,7 @@ export type AccountOrderByInput = {
   providerType?: Maybe<SortOrder>;
   refreshToken?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
+  user?: Maybe<UserOrderByWithRelationInput>;
   userId?: Maybe<SortOrder>;
 };
 
@@ -168,13 +173,19 @@ export type CoachListRelationFilter = {
   some?: Maybe<CoachWhereInput>;
 };
 
-export type CoachOrderByInput = {
+export type CoachOrderByRelationAggregateInput = {
+  _count?: Maybe<SortOrder>;
+};
+
+export type CoachOrderByWithRelationInput = {
   createdAt?: Maybe<SortOrder>;
   handle?: Maybe<SortOrder>;
   id?: Maybe<SortOrder>;
+  image?: Maybe<ImageOrderByWithRelationInput>;
   imageId?: Maybe<SortOrder>;
   isAssistant?: Maybe<SortOrder>;
   name?: Maybe<SortOrder>;
+  team?: Maybe<TeamOrderByWithRelationInput>;
   teamId?: Maybe<SortOrder>;
   type?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
@@ -325,11 +336,12 @@ export type ColorSchemeCreateWithoutTeamInput = {
   updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
-export type ColorSchemeOrderByInput = {
+export type ColorSchemeOrderByWithRelationInput = {
   createdAt?: Maybe<SortOrder>;
   id?: Maybe<SortOrder>;
   primary?: Maybe<SortOrder>;
   secondary?: Maybe<SortOrder>;
+  team?: Maybe<TeamOrderByWithRelationInput>;
   updatedAt?: Maybe<SortOrder>;
 };
 
@@ -496,9 +508,12 @@ export type ImageCreateWithoutTeamInput = {
   url: Scalars['String'];
 };
 
-export type ImageOrderByInput = {
+export type ImageOrderByWithRelationInput = {
+  coach?: Maybe<CoachOrderByWithRelationInput>;
   createdAt?: Maybe<SortOrder>;
   id?: Maybe<SortOrder>;
+  player?: Maybe<PlayerOrderByWithRelationInput>;
+  team?: Maybe<TeamOrderByWithRelationInput>;
   type?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
   url?: Maybe<SortOrder>;
@@ -824,16 +839,22 @@ export type PlayerListRelationFilter = {
   some?: Maybe<PlayerWhereInput>;
 };
 
-export type PlayerOrderByInput = {
+export type PlayerOrderByRelationAggregateInput = {
+  _count?: Maybe<SortOrder>;
+};
+
+export type PlayerOrderByWithRelationInput = {
   createdAt?: Maybe<SortOrder>;
   handle?: Maybe<SortOrder>;
   height?: Maybe<SortOrder>;
   id?: Maybe<SortOrder>;
+  image?: Maybe<ImageOrderByWithRelationInput>;
   imageId?: Maybe<SortOrder>;
   name?: Maybe<SortOrder>;
   number?: Maybe<SortOrder>;
   position?: Maybe<SortOrder>;
   slug?: Maybe<SortOrder>;
+  team?: Maybe<TeamOrderByWithRelationInput>;
   teamId?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
   weight?: Maybe<SortOrder>;
@@ -1001,7 +1022,7 @@ export type QueryAccountsArgs = {
   before?: Maybe<AccountWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<Array<AccountOrderByInput>>;
+  orderBy?: Maybe<Array<AccountOrderByWithRelationInput>>;
   where?: Maybe<AccountWhereInput>;
 };
 
@@ -1016,7 +1037,7 @@ export type QueryCoachesArgs = {
   before?: Maybe<CoachWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<Array<CoachOrderByInput>>;
+  orderBy?: Maybe<Array<CoachOrderByWithRelationInput>>;
   where?: Maybe<CoachWhereInput>;
 };
 
@@ -1031,7 +1052,7 @@ export type QueryColorSchemesArgs = {
   before?: Maybe<ColorSchemeWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<Array<ColorSchemeOrderByInput>>;
+  orderBy?: Maybe<Array<ColorSchemeOrderByWithRelationInput>>;
   where?: Maybe<ColorSchemeWhereInput>;
 };
 
@@ -1046,7 +1067,7 @@ export type QueryImagesArgs = {
   before?: Maybe<ImageWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<Array<ImageOrderByInput>>;
+  orderBy?: Maybe<Array<ImageOrderByWithRelationInput>>;
   where?: Maybe<ImageWhereInput>;
 };
 
@@ -1061,7 +1082,7 @@ export type QueryPlayersArgs = {
   before?: Maybe<PlayerWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<Array<PlayerOrderByInput>>;
+  orderBy?: Maybe<Array<PlayerOrderByWithRelationInput>>;
   where?: Maybe<PlayerWhereInput>;
 };
 
@@ -1076,7 +1097,7 @@ export type QuerySessionsArgs = {
   before?: Maybe<SessionWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<Array<SessionOrderByInput>>;
+  orderBy?: Maybe<Array<SessionOrderByWithRelationInput>>;
   where?: Maybe<SessionWhereInput>;
 };
 
@@ -1091,7 +1112,7 @@ export type QueryTeamsArgs = {
   before?: Maybe<TeamWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<Array<TeamOrderByInput>>;
+  orderBy?: Maybe<Array<TeamOrderByWithRelationInput>>;
   where?: Maybe<TeamWhereInput>;
 };
 
@@ -1106,7 +1127,7 @@ export type QueryUsersArgs = {
   before?: Maybe<UserWhereUniqueInput>;
   first?: Maybe<Scalars['Int']>;
   last?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<Array<UserOrderByInput>>;
+  orderBy?: Maybe<Array<UserOrderByWithRelationInput>>;
   where?: Maybe<UserWhereInput>;
 };
 
@@ -1133,13 +1154,18 @@ export type SessionListRelationFilter = {
   some?: Maybe<SessionWhereInput>;
 };
 
-export type SessionOrderByInput = {
+export type SessionOrderByRelationAggregateInput = {
+  _count?: Maybe<SortOrder>;
+};
+
+export type SessionOrderByWithRelationInput = {
   accessToken?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
   expires?: Maybe<SortOrder>;
   id?: Maybe<SortOrder>;
   sessionToken?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
+  user?: Maybe<UserOrderByWithRelationInput>;
   userId?: Maybe<SortOrder>;
 };
 
@@ -1337,9 +1363,11 @@ export type TeamCreateWithoutPlayersInput = {
   wins?: Maybe<Scalars['Int']>;
 };
 
-export type TeamOrderByInput = {
+export type TeamOrderByWithRelationInput = {
   abbreviation?: Maybe<SortOrder>;
   city?: Maybe<SortOrder>;
+  coaches?: Maybe<CoachOrderByRelationAggregateInput>;
+  colorScheme?: Maybe<ColorSchemeOrderByWithRelationInput>;
   colorSchemeId?: Maybe<SortOrder>;
   conference?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
@@ -1347,9 +1375,11 @@ export type TeamOrderByInput = {
   established?: Maybe<SortOrder>;
   handle?: Maybe<SortOrder>;
   id?: Maybe<SortOrder>;
+  logo?: Maybe<ImageOrderByWithRelationInput>;
   logoId?: Maybe<SortOrder>;
   losses?: Maybe<SortOrder>;
   name?: Maybe<SortOrder>;
+  players?: Maybe<PlayerOrderByRelationAggregateInput>;
   slug?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
   winPercentage?: Maybe<SortOrder>;
@@ -1533,7 +1563,8 @@ export type User = {
   updatedAt: Scalars['DateTime'];
 };
 
-export type UserOrderByInput = {
+export type UserOrderByWithRelationInput = {
+  accounts?: Maybe<AccountOrderByRelationAggregateInput>;
   apple?: Maybe<SortOrder>;
   createdAt?: Maybe<SortOrder>;
   email?: Maybe<SortOrder>;
@@ -1544,6 +1575,7 @@ export type UserOrderByInput = {
   id?: Maybe<SortOrder>;
   image?: Maybe<SortOrder>;
   name?: Maybe<SortOrder>;
+  sessions?: Maybe<SessionOrderByRelationAggregateInput>;
   twitter?: Maybe<SortOrder>;
   updatedAt?: Maybe<SortOrder>;
 };
