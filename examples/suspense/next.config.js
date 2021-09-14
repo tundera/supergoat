@@ -8,8 +8,6 @@ const withMDX = require('@next/mdx')({
 // const packageManifest = require('./package.json')
 // const { i18n } = require('./next-i18next.config')
 
-const NEXTJS_BUILD_TARGET = process.env.NEXTJS_BUILD_TARGET || 'server'
-const NEXTJS_IGNORE_ESLINT = process.env.NEXTJS_IGNORE_ESLINT === '1' || false
 const isProd = process.env.NODE_ENV === 'production'
 
 /**
@@ -45,18 +43,12 @@ const secureHeaders = createSecureHeaders({
  *  @type {import('next/types').NextConfig}
  */
 const nextConfig = {
-  target: NEXTJS_BUILD_TARGET,
   reactStrictMode: true,
   productionBrowserSourceMaps: !disableSourceMaps,
   // i18n,
-  httpAgentOptions: {
-    // @link https://nextjs.org/blog/next-11-1#builds--data-fetching
-    keepAlive: true,
-  },
-
-  experimental: {
-    esmExternals: true,
-  },
+  // experimental: {
+  //   esmExternals: true,
+  // },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   // @ts-ignore
   images: {
@@ -71,11 +63,6 @@ const nextConfig = {
       'lh3.googleusercontent.com',
       'images.unsplash.com',
     ],
-  },
-
-  eslint: {
-    ignoreDuringBuilds: NEXTJS_IGNORE_ESLINT,
-    dirs: ['src'],
   },
 
   async headers() {

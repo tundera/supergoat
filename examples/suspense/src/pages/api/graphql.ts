@@ -1,4 +1,3 @@
-import { inspectWriteGenerate } from '@gqty/cli'
 import { CreateApp, BuildContextArgs, InferContext, EZContext } from '@graphql-ez/nextjs'
 import { ezCodegen } from '@graphql-ez/plugin-codegen'
 import { ezScalars } from '@graphql-ez/plugin-scalars'
@@ -25,11 +24,6 @@ const { buildApp } = CreateApp({
   ez: {
     plugins: [
       ezCodegen({
-        config: {
-          scalars: {
-            DateTime: 'string',
-          },
-        },
         outputSchema: './schema.graphql',
       }),
       ezGraphiQLIDE({
@@ -54,7 +48,3 @@ const { buildApp } = CreateApp({
 })
 
 export default buildApp().apiHandler
-
-inspectWriteGenerate({
-  endpoint: process.env.NEXT_PUBLIC_GRAPHQL_API,
-}).catch(console.error)

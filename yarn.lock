@@ -2619,30 +2619,6 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
-"@gqty/cli@1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@gqty/cli/-/cli-1.1.4.tgz#abed26f1e515b8abf5845d2ccc15ab40a87be168"
-  integrity sha512-INZrohEnmyjyyziUozCNW8va5gaJZCyNeTcYQsKMZGGIyot61nn1qTeI1k8d9m4lvFu28Nen6bjSgRTIGkLYEQ==
-  dependencies:
-    "@graphql-codegen/core" "^2.1.0"
-    "@graphql-codegen/typescript" "^2.2.0"
-    "@graphql-tools/delegate" "^8.2.1"
-    "@graphql-tools/utils" "^8.2.2"
-    "@graphql-tools/wrap" "^8.1.0"
-    commander "^8.1.0"
-    cosmiconfig "^7.0.1"
-    cross-fetch "^3.1.4"
-    gqty "^1.1.2"
-    mkdirp "^1.0.4"
-    prettier "^2.3.2"
-
-"@gqty/react@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@gqty/react/-/react-1.1.1.tgz#3863fd9b9f23e7571701ef0fd0b8999b2037cd11"
-  integrity sha512-l0i+zB3Z5zOkYTyvuiLjLsrHGQnVul04PZph3RwopWnutvpVvxjwCJXXiu4DNeh79N4k+sB7ra7EBHDpogFjfg==
-  dependencies:
-    react-ssr-prepass "^1.4.0"
-
 "@graphql-codegen/add@3.1.0", "@graphql-codegen/add@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/add/-/add-3.1.0.tgz#cd02fd6d80a7f62839cb27160b62e48366a237c5"
@@ -2784,7 +2760,7 @@
     auto-bind "~4.0.0"
     tslib "~2.3.0"
 
-"@graphql-codegen/typescript@2.2.2", "@graphql-codegen/typescript@^2.2.0", "@graphql-codegen/typescript@^2.2.1", "@graphql-codegen/typescript@^2.2.2":
+"@graphql-codegen/typescript@2.2.2", "@graphql-codegen/typescript@^2.2.1", "@graphql-codegen/typescript@^2.2.2":
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-2.2.2.tgz#8ea14c0a7853f6b73cca0ed10ff43b6dbd3731c6"
   integrity sha512-prcB4nNi2iQzZRLla6N6kEPmnE2WU1zz5+sEBcZcqphjWERqQ3zwdSKsuLorE/XxMp500p6BQ96cVo+bFkmVtA==
@@ -9813,11 +9789,6 @@ commander@^7.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
-commander@^8.1.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-8.2.0.tgz#37fe2bde301d87d47a53adeff8b5915db1381ca8"
-  integrity sha512-LLKxDvHeL91/8MIyTAD5BFMNtoIwztGPMiM/7Bl8rIPmHCZXRxmSWr91h57dpOpnQ6jIUqEWdXE/uBYMfiVZDA==
-
 common-tags@1.8.0, common-tags@^1.4.0, common-tags@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
@@ -10129,7 +10100,7 @@ cosmiconfig@^6.0.0:
     path-type "^4.0.0"
     yaml "^1.7.2"
 
-cosmiconfig@^7.0.0, cosmiconfig@^7.0.1:
+cosmiconfig@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-7.0.1.tgz#714d756522cace867867ccb4474c5d01bbae5d6d"
   integrity sha512-a1YWNUV2HwGimB7dU2s1wUMurNKjpx60HxBB6xUM8Re+2s1g1IIfJvFR0/iCF+XHdE0GMTKTuLR32UQff4TEyQ==
@@ -13630,14 +13601,6 @@ got@^9.6.0:
     to-readable-stream "^1.0.0"
     url-parse-lax "^3.0.0"
 
-gqty@1.1.3, gqty@^1.1.2:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/gqty/-/gqty-1.1.3.tgz#3db4fbce068544cf9cd1d2ccd6d7a2d984654d26"
-  integrity sha512-b4vs8IiRBmOIJrRzvu6dvTEYYktNaBQFZrmGmmpyd9o4aPFZXMEaf3kpjEPShCtqLfGl/pxEaAA3So4mvIfIkg==
-  dependencies:
-    lodash "^4.17.21"
-    lodash-es "^4.17.21"
-
 graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.5, graceful-fs@^4.1.6, graceful-fs@^4.1.9, graceful-fs@^4.2.0, graceful-fs@^4.2.3, graceful-fs@^4.2.4:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
@@ -16750,7 +16713,7 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-lodash-es@^4.17.11, lodash-es@^4.17.21:
+lodash-es@^4.17.11:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
   integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
@@ -21133,11 +21096,6 @@ react-sizeme@^3.0.1:
     invariant "^2.2.4"
     shallowequal "^1.1.0"
     throttle-debounce "^3.0.1"
-
-react-ssr-prepass@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/react-ssr-prepass/-/react-ssr-prepass-1.4.0.tgz#33a3db19414f0f8f9f3f781c88f760ae366b4f51"
-  integrity sha512-0SzdmiQUtHvhxCabHg9BI/pkJfijGkQ0jQL6fC4YFy7idaDOuaiQLsajIkkNxffFXtJFHIWFITlve2WB88e0Jw==
 
 react-style-singleton@^2.1.0:
   version "2.1.1"

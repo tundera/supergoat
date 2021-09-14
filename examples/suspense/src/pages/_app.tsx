@@ -1,8 +1,8 @@
 import type { AppProps } from 'types'
 
 import { useState, Suspense } from 'react'
-import { ThemeProvider } from '@monorepo/theme'
 import { ErrorBoundary } from 'react-error-boundary'
+import { ThemeProvider } from '@monorepo/theme'
 import { QueryClient, QueryClientProvider, useQueryErrorResetBoundary } from 'react-query'
 import { Hydrate } from 'react-query/hydration'
 import { persistQueryClient } from 'react-query/persistQueryClient-experimental'

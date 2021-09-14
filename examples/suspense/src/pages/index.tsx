@@ -5,11 +5,7 @@ import { Stack } from '@chakra-ui/react'
 import CallToAction from 'src/components/blocks/CallToAction'
 import { getLayout as getPublicLayout } from 'src/layouts/PublicLayout'
 
-interface PageProps {
-  cookies?: string
-}
-
-const HomePage: NextPage<PageProps> = () => {
+const HomePage: NextPage = () => {
   return (
     <Stack direction="column" align="center" w="full" spacing={4}>
       <CallToAction
