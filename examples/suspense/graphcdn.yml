@@ -1,6 +1,5 @@
 name: suspense-demo
-schema: https://suspense-demo.vercel.app/api/graphql
-originUrl: https://suspense-demo.vercel.app/api/graphql
+originUrl: 'https://suspense-demo.vercel.app/api/graphql'
 scopes:
   AUTHENTICATED: 'cookie:session.sig|header:Authorization'
 rules:
@@ -10,3 +9,4 @@ rules:
     swr: 900
     types:
       Query: true
+schema: 'https://suspense-demo.vercel.app/api/graphql'
