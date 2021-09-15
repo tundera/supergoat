@@ -2,10 +2,10 @@
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
+  root: true,
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:jest/recommended',
     'plugin:jest-dom/recommended',
     'plugin:jest-formatting/recommended',
@@ -15,6 +15,7 @@ module.exports = {
     browser: true,
     node: true,
     jest: true,
+    es2021: true,
   },
   globals: {
     context: 'readonly',
@@ -31,8 +32,8 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
     sourceType: 'module',
+    extraFileExtensions: ['.md', '.mdx', '.mdx', '.mjs', '.cjs'],
   },
   rules: {
     'no-empty-function': 'off',

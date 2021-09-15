@@ -1,32 +1,6 @@
 import path from 'path'
 import { db } from 'db'
 
-// const updateTeamColorSchemes = async () => {
-//   for (const colorScheme of colorSchemes) {
-//     // Add color scheme id to team
-//     await db.team.updateMany({
-//       where: { id: colorScheme.teamId },
-//       data: {
-//         colorSchemeId: colorScheme.id,
-//       },
-//     })
-//   }
-
-//   const teams = await db.team.findMany()
-//   for (const team of teams) {
-//     await db.team.update({
-//       where: { id: team.id },
-//       data: {
-//         colorScheme: {
-//           connect: {
-//             id: team.colorSchemeId as string,
-//           },
-//         },
-//       },
-//     })
-//   }
-// }
-
 const createImages = async () => {
   const teams = await db.team.findMany()
   const players = await db.player.findMany()
