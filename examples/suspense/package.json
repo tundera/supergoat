@@ -2,7 +2,7 @@
   "name": "suspense-example",
   "version": "0.1.0",
   "private": true,
-  "description": "Next.js built with React 18",
+  "description": "Next.js built with React v18",
   "repository": {
     "type": "git",
     "url": "https://github.com/tundera/monorepo",
