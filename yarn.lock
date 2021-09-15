@@ -31359,6 +31359,7 @@ resolve@^2.0.0-next.3:
     favicons: 6.2.2
     framer-motion: ^4.1.17
     graphcdn: 1.2.0
+    graphql: 15.5.3
     graphql-ez: ^0.13.0
     graphql-helix: 1.7.0
     graphql-middleware: 6.1.6
