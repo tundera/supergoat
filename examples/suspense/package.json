@@ -2,7 +2,7 @@
   "name": "suspense-example",
   "version": "0.1.0",
   "private": true,
-  "description": "React Suspense example built with Next.js",
+  "description": "Next.js example with concurrent mode",
   "repository": {
     "type": "git",
     "url": "https://github.com/tundera/monorepo",
