@@ -3871,7 +3871,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-ez/plugin-codegen@npm:^0.7.3":
+"@graphql-ez/plugin-codegen@npm:0.7.3, @graphql-ez/plugin-codegen@npm:^0.7.3":
   version: 0.7.3
   resolution: "@graphql-ez/plugin-codegen@npm:0.7.3"
   dependencies:
@@ -3921,7 +3921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-ez/plugin-scalars@npm:^0.7.3":
+"@graphql-ez/plugin-scalars@npm:0.7.3, @graphql-ez/plugin-scalars@npm:^0.7.3":
   version: 0.7.3
   resolution: "@graphql-ez/plugin-scalars@npm:0.7.3"
   dependencies:
@@ -3935,7 +3935,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-ez/plugin-schema@npm:^0.7.3":
+"@graphql-ez/plugin-schema@npm:0.7.3, @graphql-ez/plugin-schema@npm:^0.7.3":
   version: 0.7.3
   resolution: "@graphql-ez/plugin-schema@npm:0.7.3"
   dependencies:
@@ -31287,7 +31287,10 @@ resolve@^2.0.0-next.3:
     "@graphql-codegen/typescript-resolvers": 2.2.1
     "@graphql-ez/nextjs": 0.10.0
     "@graphql-ez/plugin-altair": ^0.9.1
+    "@graphql-ez/plugin-codegen": 0.7.3
     "@graphql-ez/plugin-graphiql": ^0.10.0
+    "@graphql-ez/plugin-scalars": 0.7.3
+    "@graphql-ez/plugin-schema": 0.7.3
     "@hookform/devtools": 4.0.1
     "@hookform/resolvers": 2.8.0
     "@manypkg/cli": 0.18.0
