@@ -6,7 +6,7 @@
       "type": "library"
     },
     "@monorepo/db": {
-      "root": "db",
+      "root": "services/db",
       "type": "library"
     },
     "@monorepo/docs": {

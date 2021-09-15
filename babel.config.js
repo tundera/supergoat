@@ -2,7 +2,7 @@
  * @type {import('@babel/core').ParserOptions}
  */
 module.exports = {
-  babelrcRoots: ['.', 'examples/*', 'packages/*', 'sites/*', 'services/*', 'db', 'scripts'],
+  babelrcRoots: ['.', 'examples/*', 'packages/*', 'sites/*', 'services/*', 'scripts'],
   presets: [
     '@babel/preset-typescript',
     ['@babel/preset-react', { runtime: 'automatic' }],

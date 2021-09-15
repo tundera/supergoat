@@ -41,7 +41,7 @@ yarn-error.log*
 .supabase
 
 # Database backup files
-db/backups/images
+**/db/backups/images
 
 
 # Storybook build

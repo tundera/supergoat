@@ -20,7 +20,7 @@
     "dist"
   ],
   "prisma": {
-    "schema": "../../db/schema.prisma"
+    "schema": "../db/schema.prisma"
   },
   "scripts": {
     "dev": "NODE_ENV='development' ts-node scripts/dev",

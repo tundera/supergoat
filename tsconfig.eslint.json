@@ -13,7 +13,6 @@
     "services/**/*",
     "sites/**/*",
     "scripts/**/*",
-    "db/**/*",
     "**/.eslintrc.js"
   ]
 }

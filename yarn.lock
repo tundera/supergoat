@@ -5457,9 +5457,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@monorepo/db@workspace:*, @monorepo/db@workspace:db":
+"@monorepo/db@workspace:*, @monorepo/db@workspace:services/db":
   version: 0.0.0-use.local
-  resolution: "@monorepo/db@workspace:db"
+  resolution: "@monorepo/db@workspace:services/db"
   dependencies:
     "@prisma/client": ^3.0.2
     "@swc/core": ^1.2.85
