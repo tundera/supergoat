@@ -36,7 +36,6 @@
       "@monorepo/db/*": ["db/src/*"],
       "@monorepo/graphql": ["packages/graphql/src/index.ts"],
       "@monorepo/graphql/*": ["packages/graphql/src/*"],
-      "@monorepo/scripts/*": ["scripts/*"],
       "@monorepo/theme": ["packages/theme/src/index.ts"],
       "@monorepo/theme/*": ["packages/theme/src/*"]
     }

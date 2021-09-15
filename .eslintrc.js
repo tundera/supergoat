@@ -51,6 +51,13 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['scripts/**/*'],
+
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
+    {
       files: ['jest.config.ts', '**/config/jest/**/*.ts', '**/config/jest/**/*.tsx'],
       rules: {
         '@typescript-eslint/no-explicit-any': 'off',

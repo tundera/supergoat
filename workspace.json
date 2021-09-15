@@ -17,12 +17,12 @@
       "root": "services/graphql",
       "type": "library"
     },
-    "@monorepo/scripts": {
-      "root": "scripts",
-      "type": "library"
-    },
     "@monorepo/theme": {
       "root": "packages/theme",
+      "type": "library"
+    },
+    "@monorepo/cli": {
+      "root": "packages/cli",
       "type": "library"
     },
     "suspense-example": {

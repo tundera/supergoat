@@ -49,18 +49,8 @@ export const startWorkspaces = (workspaces: string[], development = false) => {
   })
 }
 
-export const devPackages = () => {
-  return execa('yarn', ['preconstruct', 'dev'], {
-    cwd: workspaceRoot,
-    env: {
-      FORCE_COLOR: 'true',
-    },
-    stdio: ['ignore', 'pipe', 'inherit'],
-  })
-}
-
 export const buildPackages = () => {
-  return execa('yarn', ['preconstruct', 'build'], {
+  return execa('yarn', ['ultra', '-r', '--silent', '--filter', 'packages/*', 'build'], {
     cwd: workspaceRoot,
     env: {
       FORCE_COLOR: 'true',

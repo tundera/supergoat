@@ -50,9 +50,6 @@
     "@monorepo/graphql": {
       "implicitDependencies": []
     },
-    "@monorepo/scripts": {
-      "implicitDependencies": []
-    },
     "@monorepo/theme": {
       "implicitDependencies": []
     },

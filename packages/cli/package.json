@@ -46,8 +46,8 @@
     }
   },
   "bin": {
-    "mono": "./bin/run.ts",
-    "monorepo": "./bin/run.ts"
+    "mono": "./bin/run.mjs",
+    "monorepo": "./bin/run.mjs"
   },
   "scripts": {
     "build": "tsup",

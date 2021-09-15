@@ -30,5 +30,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.js", "bin/run"]
+  "include": ["**/*.ts", "**/*.js", "bin/run.mjs"]
 }

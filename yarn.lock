@@ -5401,8 +5401,8 @@ __metadata:
     update-notifier: 5.1.0
     yarn-or-npm: 3.0.1
   bin:
-    mono: ./bin/run.ts
-    monorepo: ./bin/run.ts
+    mono: ./bin/run.mjs
+    monorepo: ./bin/run.mjs
   languageName: unknown
   linkType: soft
 
@@ -5582,31 +5582,6 @@ __metadata:
     ts-node-dev: ^1.1.8
     tsconfig-paths: ^3.11.0
     typescript: 4.4.3
-  languageName: unknown
-  linkType: soft
-
-"@monorepo/scripts@workspace:scripts":
-  version: 0.0.0-use.local
-  resolution: "@monorepo/scripts@workspace:scripts"
-  dependencies:
-    "@swc/core": ^1.2.85
-    "@swc/helpers": ^0.2.13
-    "@types/node": 16.9.1
-    chalk: ^4.1.2
-    change-case: ^4.1.2
-    dotenv: ^10.0.0
-    dotenv-expand: ^5.1.0
-    dotenv-flow: ^3.2.0
-    esbuild-register: 3.0.0
-    eslint: ^7.32.0
-    eslint-plugin-jest-dom: 3.9.2
-    execa: 5.1.1
-    find-yarn-workspace-root: ^2.0.0
-    ora: 6.0.0
-    prettier: ^2.4.0
-    ts-node: ^10.2.1
-    tsconfig-paths: ^3.11.0
-    ultra-runner: ^3.10.5
   languageName: unknown
   linkType: soft
 
@@ -6149,8 +6124,8 @@ __metadata:
   linkType: hard
 
 "@oclif/core@npm:^0.5.34":
-  version: 0.5.36
-  resolution: "@oclif/core@npm:0.5.36"
+  version: 0.5.37
+  resolution: "@oclif/core@npm:0.5.37"
   dependencies:
     "@oclif/linewrap": ^1.0.0
     chalk: ^4.1.0
@@ -6169,7 +6144,7 @@ __metadata:
     tslib: ^2.0.0
     widest-line: ^3.1.0
     wrap-ansi: ^7.0.0
-  checksum: 008e8f1e789028cd95a0c515bdb8482b3a6842af92571c80560e54b19e2631fcebc1fa136bfeaa15648b2d4d3e113924c43685df3b476d2fe944eb2f1305ed12
+  checksum: c068a67a7d7df19ca7abc6eeb43831893e9e087d55df9a5264974ca0b2b49b574049c8668f2fab1345082d439732d7bc99fdfb43a7dc7c582cbd4210a2334a04
   languageName: node
   linkType: hard
 
@@ -8141,7 +8116,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:^1.2.85":
+"@swc/core@npm:1.2.87, @swc/core@npm:^1.2.85":
   version: 1.2.87
   resolution: "@swc/core@npm:1.2.87"
   dependencies:
@@ -8187,7 +8162,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/helpers@npm:^0.2.13":
+"@swc/helpers@npm:0.2.13, @swc/helpers@npm:^0.2.13":
   version: 0.2.13
   resolution: "@swc/helpers@npm:0.2.13"
   checksum: 712f15dfb42fa8bdca64fe3556001ac11c93e95b27ea0ea0c4c3f718b770d414b3a93bb9260ad68fbbcac624a834bf14c4a2261aeabf156917d532a3981bd378
@@ -12437,6 +12412,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"change-case@npm:4.1.2, change-case@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "change-case@npm:4.1.2"
+  dependencies:
+    camel-case: ^4.1.2
+    capital-case: ^1.0.4
+    constant-case: ^3.0.4
+    dot-case: ^3.0.4
+    header-case: ^2.0.4
+    no-case: ^3.0.4
+    param-case: ^3.0.4
+    pascal-case: ^3.1.2
+    path-case: ^3.0.4
+    sentence-case: ^3.0.4
+    snake-case: ^3.0.4
+    tslib: ^2.0.3
+  checksum: e4bc4a093a1f7cce8b33896665cf9e456e3bc3cc0def2ad7691b1994cfca99b3188d0a513b16855b01a6bd20692fcde12a7d4d87a5615c4c515bbbf0e651f116
+  languageName: node
+  linkType: hard
+
 "change-case@npm:^3.1.0":
   version: 3.1.0
   resolution: "change-case@npm:3.1.0"
@@ -12460,26 +12455,6 @@ __metadata:
     upper-case: ^1.1.1
     upper-case-first: ^1.1.0
   checksum: d6f9f90a5f1d2a98294e06ea62f913fa0d7cfc289f188bf05662344da6128f5710b5c99ece83682c6a848db8d996b7348e09b2235dc3363afb6ae7142e7978e1
-  languageName: node
-  linkType: hard
-
-"change-case@npm:^4.1.2":
-  version: 4.1.2
-  resolution: "change-case@npm:4.1.2"
-  dependencies:
-    camel-case: ^4.1.2
-    capital-case: ^1.0.4
-    constant-case: ^3.0.4
-    dot-case: ^3.0.4
-    header-case: ^2.0.4
-    no-case: ^3.0.4
-    param-case: ^3.0.4
-    pascal-case: ^3.1.2
-    path-case: ^3.0.4
-    sentence-case: ^3.0.4
-    snake-case: ^3.0.4
-    tslib: ^2.0.3
-  checksum: e4bc4a093a1f7cce8b33896665cf9e456e3bc3cc0def2ad7691b1994cfca99b3188d0a513b16855b01a6bd20692fcde12a7d4d87a5615c4c515bbbf0e651f116
   languageName: node
   linkType: hard
 
@@ -12867,12 +12842,12 @@ __metadata:
   linkType: hard
 
 "cli-progress@npm:^3.4.0":
-  version: 3.9.0
-  resolution: "cli-progress@npm:3.9.0"
+  version: 3.9.1
+  resolution: "cli-progress@npm:3.9.1"
   dependencies:
     colors: ^1.1.2
     string-width: ^4.2.0
-  checksum: 96f3a8a9caac61dbe05d0fa3cc44fa74b0dccee0da7e4841abc126dae605af82e4da1f3f00b48587cfed3efd45e285a9cc89fcbab92986288ea3605c2d58e16b
+  checksum: 1548550b0cf72f34fef9e99adddf70a06748a5c6231c744f3e7b41146b6c7a297136c61e5df4b67ca436a8f5d8308f148d373b2500c4bfe9fb1d9ac5ab78bb20
   languageName: node
   linkType: hard
 
@@ -13723,7 +13698,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig@npm:^7.0.0":
+"cosmiconfig@npm:^7.0.0, cosmiconfig@npm:^7.0.1":
   version: 7.0.1
   resolution: "cosmiconfig@npm:7.0.1"
   dependencies:
@@ -15038,14 +15013,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv-expand@npm:^5.1.0":
+"dotenv-expand@npm:5.1.0, dotenv-expand@npm:^5.1.0":
   version: 5.1.0
   resolution: "dotenv-expand@npm:5.1.0"
   checksum: 8017675b7f254384915d55f9eb6388e577cf0a1231a28d54b0ca03b782be9501b0ac90ac57338636d395fa59051e6209e9b44b8ddf169ce6076dffb5dea227d3
   languageName: node
   linkType: hard
 
-"dotenv-flow@npm:^3.2.0":
+"dotenv-flow@npm:3.2.0, dotenv-flow@npm:^3.2.0":
   version: 3.2.0
   resolution: "dotenv-flow@npm:3.2.0"
   dependencies:
@@ -15076,7 +15051,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^10.0.0, dotenv@npm:~10.0.0":
+"dotenv@npm:10.0.0, dotenv@npm:^10.0.0, dotenv@npm:~10.0.0":
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
   checksum: f412c5fe8c24fbe313d302d2500e247ba8a1946492db405a4de4d30dd0eb186a88a43f13c958c5a7de303938949c4231c56994f97d05c4bc1f22478d631b4005
@@ -15767,19 +15742,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-mdx@npm:^1.15.0":
-  version: 1.15.0
-  resolution: "eslint-mdx@npm:1.15.0"
+"eslint-mdx@npm:^1.15.1":
+  version: 1.15.1
+  resolution: "eslint-mdx@npm:1.15.1"
   dependencies:
-    cosmiconfig: ^7.0.0
+    cosmiconfig: ^7.0.1
     remark-mdx: ^1.6.22
     remark-parse: ^8.0.3
     remark-stringify: ^8.1.1
     tslib: ^2.3.1
-    unified: ^9.2.1
+    unified: ^9.2.2
   peerDependencies:
     eslint: ">=5.0.0"
-  checksum: 83ffc369321ad4ba9bfd20094f344c11e67ac4c2cda5548947dcded80c2942edf5b11dcd8aba53ead59b34ac00a204aed1c50f34714c88226441f03cc16de18e
+  checksum: 328f8d932f0e2a3f03964c1b95d9f0900d30085dc01ab5ef5cf5272d30ae8f164bca4d04133549df9e1d496dfc607e35cb02f991717b0f383d525e2c6c212c1f
   languageName: node
   linkType: hard
 
@@ -15900,17 +15875,17 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-mdx@npm:^1.15.0":
-  version: 1.15.0
-  resolution: "eslint-plugin-mdx@npm:1.15.0"
+  version: 1.15.1
+  resolution: "eslint-plugin-mdx@npm:1.15.1"
   dependencies:
-    eslint-mdx: ^1.15.0
+    eslint-mdx: ^1.15.1
     eslint-plugin-markdown: ^2.2.0
     synckit: ^0.3.4
     tslib: ^2.3.1
     vfile: ^4.2.1
   peerDependencies:
     eslint: ">=5.0.0"
-  checksum: f6022ef6298963be6b07bf9275495582aa1489520c8581277c65fb5f4f199e011a8f817ce92127c5e73c7607a98b76db11f38eb9ebbd1e9e520137782db63a7f
+  checksum: 29a7e1ade880d77f80501c61d51a0eba765fbf59c6c9790343acb8877ba84b3f213717ecc6b4d2a803d34bc19f39056c587d64a4be189165e1a24a7db6122f6c
   languageName: node
   linkType: hard
 
@@ -16089,7 +16064,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.32.0":
+"eslint@npm:7.32.0, eslint@npm:^7.32.0":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:
@@ -17152,7 +17127,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-yarn-workspace-root@npm:^2.0.0":
+"find-yarn-workspace-root@npm:2.0.0, find-yarn-workspace-root@npm:^2.0.0":
   version: 2.0.0
   resolution: "find-yarn-workspace-root@npm:2.0.0"
   dependencies:
@@ -23308,12 +23283,12 @@ fsevents@^1.2.7:
   linkType: hard
 
 "match-sorter@npm:^6.0.2":
-  version: 6.3.0
-  resolution: "match-sorter@npm:6.3.0"
+  version: 6.3.1
+  resolution: "match-sorter@npm:6.3.1"
   dependencies:
     "@babel/runtime": ^7.12.5
     remove-accents: 0.4.2
-  checksum: 6a306e0d4053e39e4a69c4a27d0476cc6a385b1d096adbc286cb7ca2537b68b107df5e325188156b48a4b107187d7997e9a94ba77dbf0ddb5f6a1d2de91540a2
+  checksum: a4b02b676ac4ce64a89a091539ee4a70a802684713bcf06f2b70787927f510fe8a2adc849f9288857a90906083ad303467e530e8723b4a9756df9994fc164550
   languageName: node
   linkType: hard
 
@@ -24358,25 +24333,30 @@ fsevents@^1.2.7:
     "@nrwl/nx-cloud": latest
     "@nrwl/tao": 12.9.0
     "@nrwl/workspace": 12.9.0
-    "@swc/core": ^1.2.85
-    "@swc/helpers": ^0.2.13
+    "@swc/core": 1.2.87
+    "@swc/helpers": 0.2.13
     "@testing-library/jest-dom": ^5.14.1
     "@types/dotenv-flow": 3.2.0
     "@types/eslint": ^7.28.0
     "@types/eslint-plugin-prettier": ^3.1.0
+    "@types/node": 16.9.1
     "@types/testing-library__jest-dom": ^5.14.1
     "@typescript-eslint/eslint-plugin": ^4.31.0
-    dotenv: ^10.0.0
-    dotenv-expand: ^5.1.0
-    dotenv-flow: ^3.2.0
-    eslint: ^7.32.0
+    chalk: 4.1.2
+    change-case: 4.1.2
+    dotenv: 10.0.0
+    dotenv-expand: 5.1.0
+    dotenv-flow: 3.2.0
+    esbuild-register: 3.0.0
+    eslint: 7.32.0
     eslint-config-next: ^11.1.2
     eslint-config-prettier: ^8.3.0
     eslint-plugin-jest: ^24.4.0
     eslint-plugin-jest-dom: 3.9.2
     eslint-plugin-jest-formatting: ^3.0.0
     eslint-plugin-prettier: ^4.0.0
-    find-yarn-workspace-root: ^2.0.0
+    execa: 5.1.1
+    find-yarn-workspace-root: 2.0.0
     husky: ^7.0.2
     hygen: 6.1.0
     is-ci: 3.0.0
@@ -24385,18 +24365,19 @@ fsevents@^1.2.7:
     npm-check-updates: 11.8.5
     npm-run-all: 4.1.5
     nx: 12.9.0
+    ora: 6.0.1
     patch-package: 6.4.7
-    prettier: ^2.4.0
+    prettier: 2.4.0
     pretty-quick: ^3.1.1
     rimraf: ^3.0.2
     shell-quote: 1.7.2
     ts-jest: ^27.0.5
-    ts-node: ^10.2.1
+    ts-node: 10.2.1
     ts-node-dev: ^1.1.8
-    tsconfig-paths: ^3.11.0
+    tsconfig-paths: 3.11.0
     tslib: ^2.3.1
     typescript: 4.4.3
-    ultra-runner: ^3.10.5
+    ultra-runner: 3.10.5
     wsrun: 5.2.4
   languageName: unknown
   linkType: soft
@@ -25865,6 +25846,23 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"ora@npm:6.0.1":
+  version: 6.0.1
+  resolution: "ora@npm:6.0.1"
+  dependencies:
+    bl: ^5.0.0
+    chalk: ^4.1.2
+    cli-cursor: ^4.0.0
+    cli-spinners: ^2.6.0
+    is-interactive: ^2.0.0
+    is-unicode-supported: ^1.1.0
+    log-symbols: ^5.0.0
+    strip-ansi: ^7.0.1
+    wcwidth: ^1.0.1
+  checksum: d2215b85a481a21d4e53f2e484658a7d1526b0b6dfeab63e4b350b620f2bb9df33fd3f2a9ece1695b28ffa1b8954a31bfc26a44460a60fe98785c1c37527f4da
+  languageName: node
+  linkType: hard
+
 "ora@npm:^5.3.0":
   version: 5.4.1
   resolution: "ora@npm:5.4.1"
@@ -27231,21 +27229,21 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"prettier@npm:2.4.0, prettier@npm:^2.0.5, prettier@npm:^2.3.2, prettier@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "prettier@npm:2.4.0"
+  bin:
+    prettier: bin-prettier.js
+  checksum: ac1bf07566dad5f58469e6d8a954bd5c0f833935597deb00330e9f673e14e4cf81e07dee7eff5776c0edebe11358d199f332d9940be40c8b455516034e553ce0
+  languageName: node
+  linkType: hard
+
 "prettier@npm:^1.19.1":
   version: 1.19.1
   resolution: "prettier@npm:1.19.1"
   bin:
     prettier: ./bin-prettier.js
   checksum: bc78219e0f8173a808f4c6c8e0a137dd8ebd4fbe013e63fe1a37a82b48612f17b8ae8e18a992adf802ee2cf7428f14f084e7c2846ca5759cf4013c6e54810e1f
-  languageName: node
-  linkType: hard
-
-"prettier@npm:^2.0.5, prettier@npm:^2.3.2, prettier@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "prettier@npm:2.4.0"
-  bin:
-    prettier: bin-prettier.js
-  checksum: ac1bf07566dad5f58469e6d8a954bd5c0f833935597deb00330e9f673e14e4cf81e07dee7eff5776c0edebe11358d199f332d9940be40c8b455516034e553ce0
   languageName: node
   linkType: hard
 
@@ -30153,13 +30151,13 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "socks-proxy-agent@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "socks-proxy-agent@npm:6.0.0"
+  version: 6.1.0
+  resolution: "socks-proxy-agent@npm:6.1.0"
   dependencies:
     agent-base: ^6.0.2
     debug: ^4.3.1
     socks: ^2.6.1
-  checksum: bc2b321c0ad3f4302effa791823dc100594f95222ce8c0c41143dd25dd81975bd0fd90553ce213c1c27e56a819c08e85c66b819e777072b704857dcbd6177fcf
+  checksum: 32ea0d62c848b5c246955e8d6c34832fe6cd8c5f3b66f5ace3a9bd7387bafae3e67d96474d41291723ba7135e2da46d65e008a8a35a793dfa5cb0f4ac05429df
   languageName: node
   linkType: hard
 
@@ -30911,7 +30909,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:^7.0.0":
+"strip-ansi@npm:^7.0.0, strip-ansi@npm:^7.0.1":
   version: 7.0.1
   resolution: "strip-ansi@npm:7.0.1"
   dependencies:
@@ -32304,6 +32302,42 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"ts-node@npm:10.2.1, ts-node@npm:^10.2.1":
+  version: 10.2.1
+  resolution: "ts-node@npm:10.2.1"
+  dependencies:
+    "@cspotcode/source-map-support": 0.6.1
+    "@tsconfig/node10": ^1.0.7
+    "@tsconfig/node12": ^1.0.7
+    "@tsconfig/node14": ^1.0.0
+    "@tsconfig/node16": ^1.0.2
+    acorn: ^8.4.1
+    acorn-walk: ^8.1.1
+    arg: ^4.1.0
+    create-require: ^1.1.0
+    diff: ^4.0.1
+    make-error: ^1.1.1
+    yn: 3.1.1
+  peerDependencies:
+    "@swc/core": ">=1.2.50"
+    "@swc/wasm": ">=1.2.50"
+    "@types/node": "*"
+    typescript: ">=2.7"
+  peerDependenciesMeta:
+    "@swc/core":
+      optional: true
+    "@swc/wasm":
+      optional: true
+  bin:
+    ts-node: dist/bin.js
+    ts-node-cwd: dist/bin-cwd.js
+    ts-node-script: dist/bin-script.js
+    ts-node-transpile-only: dist/bin-transpile.js
+    ts-script: dist/bin-script-deprecated.js
+  checksum: f37d2827a583c51d012cdd3d9b96629fba7a5b5dfad2c26ca48c7c89f904118924689ca56f4b9b2136217194870a76f26aae06e3490ee613b0e960f02dc96bbe
+  languageName: node
+  linkType: hard
+
 "ts-node@npm:8.9.1":
   version: 8.9.1
   resolution: "ts-node@npm:8.9.1"
@@ -32345,42 +32379,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.2.1":
-  version: 10.2.1
-  resolution: "ts-node@npm:10.2.1"
-  dependencies:
-    "@cspotcode/source-map-support": 0.6.1
-    "@tsconfig/node10": ^1.0.7
-    "@tsconfig/node12": ^1.0.7
-    "@tsconfig/node14": ^1.0.0
-    "@tsconfig/node16": ^1.0.2
-    acorn: ^8.4.1
-    acorn-walk: ^8.1.1
-    arg: ^4.1.0
-    create-require: ^1.1.0
-    diff: ^4.0.1
-    make-error: ^1.1.1
-    yn: 3.1.1
-  peerDependencies:
-    "@swc/core": ">=1.2.50"
-    "@swc/wasm": ">=1.2.50"
-    "@types/node": "*"
-    typescript: ">=2.7"
-  peerDependenciesMeta:
-    "@swc/core":
-      optional: true
-    "@swc/wasm":
-      optional: true
-  bin:
-    ts-node: dist/bin.js
-    ts-node-cwd: dist/bin-cwd.js
-    ts-node-script: dist/bin-script.js
-    ts-node-transpile-only: dist/bin-transpile.js
-    ts-script: dist/bin-script-deprecated.js
-  checksum: f37d2827a583c51d012cdd3d9b96629fba7a5b5dfad2c26ca48c7c89f904118924689ca56f4b9b2136217194870a76f26aae06e3490ee613b0e960f02dc96bbe
-  languageName: node
-  linkType: hard
-
 "ts-pnp@npm:^1.1.6":
   version: 1.2.0
   resolution: "ts-pnp@npm:1.2.0"
@@ -32418,7 +32416,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:^3.11.0, tsconfig-paths@npm:^3.9.0":
+"tsconfig-paths@npm:3.11.0, tsconfig-paths@npm:^3.11.0, tsconfig-paths@npm:^3.9.0":
   version: 3.11.0
   resolution: "tsconfig-paths@npm:3.11.0"
   dependencies:
@@ -32724,7 +32722,7 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"ultra-runner@npm:^3.10.5":
+"ultra-runner@npm:3.10.5":
   version: 3.10.5
   resolution: "ultra-runner@npm:3.10.5"
   dependencies:
@@ -32858,7 +32856,7 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"unified@npm:^9.2.1":
+"unified@npm:^9.2.2":
   version: 9.2.2
   resolution: "unified@npm:9.2.2"
   dependencies:

@@ -29,7 +29,7 @@ export class Remove extends Command {
   }
 
   watchPackages() {
-    return execa('yarn', ['preconstruct', 'watch'], {
+    return execa('yarn', ['ultra', '-r', '--silent', '--filter', 'packages/*', 'watch'], {
       cwd: this.project.root,
       env: {
         FORCE_COLOR: 'true',

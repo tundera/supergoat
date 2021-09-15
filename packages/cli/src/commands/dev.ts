@@ -2,7 +2,7 @@ import { Flags } from '@oclif/core'
 import ora from 'ora'
 import { Command } from '../command'
 import { watchPackages } from '../utils/packages'
-import { devPackages, getWorkspaceNames } from '../utils/workspaces'
+import { getWorkspaceNames } from '../utils/workspaces'
 import { startWorkspaces } from '../utils/workspaces'
 
 export class Dev extends Command {
@@ -36,8 +36,6 @@ export class Dev extends Command {
 
     try {
       const spinner = ora().start('Preparing packages for development')
-
-      await devPackages()
 
       spinner.stopAndPersist({
         symbol: '✅',
