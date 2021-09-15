@@ -3,5 +3,7 @@
  */
 module.exports = {
   extends: ['../.eslintrc.js', 'plugin:jsx-a11y/recommended'],
-  overrides: [],
+  parserOptions: {
+    sourceType: 'script',
+  },
 }

@@ -1,6 +1,6 @@
 // @ts-check
 const withPlugins = require('next-compose-plugins')
-const withPreconstruct = require('@preconstruct/next')
+const withTM = require('next-transpile-modules')(['@monorepo/components', '@monorepo/theme'])
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 })
@@ -83,7 +83,7 @@ const nextConfig = {
   },
 }
 
-const plugins = [withPreconstruct, withMDX]
+const plugins = [withTM, withMDX]
 
 if (process.env.ANALYZE === 'true') {
   const withBundleAnalyzer = require('@next/bundle-analyzer')({

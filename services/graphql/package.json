@@ -43,7 +43,7 @@
     "@graphql-ez/plugin-schema": "^0.7.3",
     "@graphql-ez/plugin-upload": "^0.6.0",
     "@graphql-ez/plugin-websockets": "^0.10.0",
-    "@monorepo/db": "0.1.0",
+    "@monorepo/db": "workspace:*",
     "@prisma/client": "^3.0.2",
     "@types/dotenv-flow": "3.2.0",
     "dotenv": "^10.0.0",

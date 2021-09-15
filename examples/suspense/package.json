@@ -3,6 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "description": "React Suspense example built with Next.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tundera/monorepo",
+    "directory": "examples/suspense"
+  },
+  "author": {
+    "name": "Philip Johnston",
+    "url": "https://github.com/tundera"
+  },
+  "browserslist": {
+    "production": [
+      ">0.3%",
+      "not ie 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "scripts": {
     "dev": "NODE_ENV='development' NO_PEER_DEPENDENCY_CHECK='1' ts-node scripts/dev",
     "debug": "NODE_ENV='development' NO_PEER_DEPENDENCY_CHECK='1' ts-node scripts/debug",
@@ -50,8 +72,8 @@
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@module-federation/nextjs-mf": "2.3.1",
-    "@monorepo/components": "0.1.0",
-    "@monorepo/theme": "0.1.0",
+    "@monorepo/components": "workspace:*",
+    "@monorepo/theme": "workspace:*",
     "@next-auth/prisma-adapter": "0.5.4",
     "@next-auth/react-query": "0.0.12",
     "@next/mdx": "^11.1.2",
@@ -59,8 +81,6 @@
     "@nrwl/devkit": "12.9.0",
     "@nrwl/tao": "12.9.0",
     "@nrwl/workspace": "12.9.0",
-    "@preconstruct/cli": "2.1.2",
-    "@preconstruct/next": "3.0.0",
     "@prisma/client": "^3.0.2",
     "@stripe/stripe-js": "1.17.1",
     "@svgr/webpack": "5.5.0",

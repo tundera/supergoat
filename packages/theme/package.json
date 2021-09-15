@@ -15,25 +15,35 @@
   },
   "exports": {
     ".": {
-      "require": "./dist/monorepo-theme.cjs.js",
-      "import": "./dist/monorepo-theme.esm.js"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": {
+      "require": "./dist/*.js",
+      "import": "./dist/*.mjs"
     }
   },
   "source": "src/index.ts",
-  "main": "dist/monorepo-theme.cjs.js",
-  "module": "dist/monorepo-theme.esm.js",
-  "types": "dist/monorepo-theme.cjs.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "clean": "rimraf ./dist ./tsconfig.tsbuildinfo",
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "clean": "rimraf --no-glob ./dist ./tsconfig.tsbuildinfo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
     "test": "run-s 'test:*'",
     "test:unit": "echo \"No tests yet\"",
     "fix:staged-files": "lint-staged --allow-empty",
     "fix:all-files": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
+  },
+  "dependencies": {
+    "eslint-plugin-jest-dom": "3.9.2",
+    "merge-anything": "^4.0.1"
   },
   "devDependencies": {
     "@chakra-ui/icons": "^1.0.15",
@@ -69,6 +79,7 @@
     "react": "18.0.0-alpha-cb8a50619-20210909",
     "react-dom": "18.0.0-alpha-cb8a50619-20210909",
     "ts-jest": "^27.0.5",
+    "tsup": "4.14.0",
     "typescript": "4.4.3"
   },
   "peerDependencies": {
@@ -83,9 +94,5 @@
     "framer-motion": "*",
     "react": ">=17",
     "react-dom": ">=17"
-  },
-  "dependencies": {
-    "eslint-plugin-jest-dom": "3.9.2",
-    "merge-anything": "^4.0.1"
   }
 }
