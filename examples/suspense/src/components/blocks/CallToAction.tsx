@@ -27,7 +27,7 @@ interface CtaWithDescriptionProps {
 const CallToAction = ({ title, subtitle, description, link }: CtaWithDescriptionProps) => {
   const color = useColorModeValue('white', 'black')
   const bgGradient = useColorModeValue(
-    'linear(to-t, white, pink.500)',
+    'linear(to-t, green.300, green.700)',
     'linear(to-t, white, purple.800)',
   )
 

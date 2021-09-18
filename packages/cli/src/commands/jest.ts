@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import execa from 'execa'
 import { Command } from '../command'
 
@@ -10,8 +10,8 @@ export class Jest extends Command {
   static args = []
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    watch: flags.boolean({
+    help: Flags.help({ char: 'h' }),
+    watch: Flags.boolean({
       description: 'Enable watch mode for tests',
     }),
   }
@@ -32,7 +32,7 @@ export class Jest extends Command {
   }
 
   async run() {
-    const { flags } = this.parse(Jest)
+    const { flags } = await this.parse(Jest)
 
     try {
       const child = await this.runJestTests(flags.watch)

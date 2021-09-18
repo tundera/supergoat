@@ -1,7 +1,7 @@
+const path = require('path')
 const withPlugins = require('next-compose-plugins')
 const withTM = require('next-transpile-modules')(['@monorepo/components', '@monorepo/theme'], {
-  resolveSymlinks: true,
-  debug: false,
+  debug: process.env.NODE_ENV === 'development',
 })
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
@@ -70,7 +70,7 @@ const nextConfig = {
     return [{ source: '/(.*)', headers: secureHeaders }]
   },
 
-  webpack: (config) => {
+  webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,
       issuer: /\.(js|ts)x?$/,

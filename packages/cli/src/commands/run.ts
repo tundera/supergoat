@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import c from 'chalk'
 import execa from 'execa'
 import { join } from 'path'
@@ -19,12 +19,12 @@ export class Run extends Command {
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    port: flags.integer({
+    help: Flags.help({ char: 'h' }),
+    port: Flags.integer({
       char: 'p',
       description: 'Set port number',
     }),
-    inspect: flags.boolean({
+    inspect: Flags.boolean({
       description: 'Enable the Node.js inspector',
     }),
   }
@@ -42,7 +42,7 @@ export class Run extends Command {
   }
 
   async run() {
-    const { args, flags } = this.parse(Run)
+    const { args, flags } = await this.parse(Run)
 
     try {
       await this.runScript(args.name, flags.inspect)

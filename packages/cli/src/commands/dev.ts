@@ -1,5 +1,6 @@
-import { Flags } from '@oclif/core'
 import ora from 'ora'
+
+import { Flags } from '@oclif/core'
 import { Command } from '../command'
 import { watchPackages } from '../utils/packages'
 import { getWorkspaceNames } from '../utils/workspaces'

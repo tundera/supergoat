@@ -8,7 +8,7 @@ require('dotenv-expand')(require('dotenv-flow').config({ silent: true }))
 const cwd = process.cwd()
 
 const generateThemeTypes = async () => {
-  await execa('yarn', ['chakra-cli', 'tokens', 'src/styles/theme'])
+  await execa('yarn', ['chakra-cli', 'tokens', '@monorepo/theme'])
 }
 
 const generatePrismaClient = async () => {

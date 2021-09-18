@@ -18,17 +18,19 @@
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
-    "importHelpers": true,
-    "noEmit": true,
-    "strict": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "jsx": "preserve",
+    "importHelpers": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
+    "incremental": true,
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.js", "bin/run.mjs"]
+  "include": ["src", "bin/run.mjs"]
 }

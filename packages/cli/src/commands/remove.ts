@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import execa from 'execa'
 import { Command } from '../command'
 
@@ -21,8 +21,8 @@ export class Remove extends Command {
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    root: flags.boolean({
+    help: Flags.help({ char: 'h' }),
+    root: Flags.boolean({
       char: 'W',
       description: 'Remove module from project root',
     }),
@@ -49,7 +49,7 @@ export class Remove extends Command {
   }
 
   async run() {
-    const { args } = this.parse(Remove)
+    const { args } = await this.parse(Remove)
 
     try {
       const subprocess = await this.runRemove(args.module, args.workspace)

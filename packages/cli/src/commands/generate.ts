@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import { Command } from '../command'
 import { generateFromTemplate } from '../utils/codegen'
 
@@ -21,8 +21,8 @@ export class Generate extends Command {
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    variant: flags.string({
+    help: Flags.help({ char: 'h' }),
+    variant: Flags.string({
       char: 'v',
       helpLabel: 'Resource variant',
       required: false,
@@ -30,7 +30,7 @@ export class Generate extends Command {
   }
 
   async run() {
-    const { args, flags } = this.parse(Generate)
+    const { args, flags } = await this.parse(Generate)
 
     try {
       await generateFromTemplate(args.resource, args.name, flags.variant)

@@ -32,7 +32,7 @@
     "types": ["react/next", "react-dom/next"],
     "jsx": "preserve",
     "plugins": [{ "name": "nexus/typescript-language-service" }],
-    "typeRoots": ["node_modules/@types", "types"],
+    "typeRoots": ["node_modules/@types", "../../node_modules/@types", "types"],
     "baseUrl": "."
   },
   "exclude": ["node_modules"],

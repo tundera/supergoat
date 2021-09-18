@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import execa from 'execa'
 import { Command } from '../command'
 import { getProjectWorkspaces } from '../utils/workspaces'
@@ -17,16 +17,16 @@ export class List extends Command {
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    dev: flags.boolean({
+    help: Flags.help({ char: 'h' }),
+    dev: Flags.boolean({
       char: 'D',
       description: 'Install module as dev dependency',
     }),
-    exact: flags.boolean({
+    exact: Flags.boolean({
       char: 'E',
       description: 'Install module with exact version',
     }),
-    peer: flags.boolean({
+    peer: Flags.boolean({
       char: 'P',
       description: 'Install module as peer dependency',
     }),

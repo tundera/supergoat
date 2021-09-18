@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import { Command } from '../command'
 import { buildAllWorkspaces, getWorkspaceNames } from '../utils/workspaces'
 
@@ -16,11 +16,11 @@ export class Build extends Command {
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
+    help: Flags.help({ char: 'h' }),
   }
 
   async run() {
-    const { args } = this.parse(Build)
+    const { args } = await this.parse(Build)
 
     try {
       if (args.workspace) {

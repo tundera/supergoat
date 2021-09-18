@@ -19,7 +19,7 @@ import { MobileNavButton, MobileNavContent } from "./MobileNav";
 
 export const Logo = () => {
   return (
-    <NextChakraLink href="/">
+    <NextChakraLink href="/" passHref>
       <Button size="md" width="100%" variant="ghost" colorScheme="gray">
         Fontsource
       </Button>

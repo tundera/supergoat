@@ -18,7 +18,7 @@ const build = async () => {
   }
 
   const generateThemeTypes = async () => {
-    await execa('yarn', ['chakra-cli', 'tokens', 'src/styles/theme'])
+    await execa('yarn', ['chakra-cli', 'tokens', '@monorepo/theme'])
   }
 
   const runGraphQLCodegen = async () => {
