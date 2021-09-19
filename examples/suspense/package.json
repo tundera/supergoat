@@ -25,6 +25,10 @@
       "last 1 safari version"
     ]
   },
+  "prisma": {
+    "schema": "db/schema.prisma",
+    "seed": "ts-node db/seed.ts"
+  },
   "scripts": {
     "dev": "NODE_ENV='development' NO_PEER_DEPENDENCY_CHECK='1' ts-node scripts/dev",
     "debug": "NODE_ENV='development' NO_PEER_DEPENDENCY_CHECK='1' ts-node scripts/debug",
@@ -45,12 +49,8 @@
     "build-storybook": "build-storybook",
     "chromatic": "chromatic --project-token=4186469d590d",
     "forms:deploy": "formspree deploy -k $FORMSPREE_DEPLOY_KEY",
-    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
     "test": "run-s 'test:*'",
     "test:unit": "echo \"No tests yet\""
-  },
-  "prisma": {
-    "schema": "db/schema.prisma"
   },
   "dependencies": {
     "@chakra-ui/icons": "1.0.15",
