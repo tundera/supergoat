@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "jsx": "preserve",
+    "noEmit": false,
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
+    "types": ["node", "react/next", "react-dom/next"],
+    "typeRoots": ["node_modules/@types", "types"],
+    "incremental": true,
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules"],
+  "include": ["src"]
+}

@@ -1,0 +1,36 @@
+{
+  "extends": "../../tsconfig.json",
+  "ts-node": {
+    "compilerOptions": {
+      "target": "esnext",
+      "allowJs": true,
+      "module": "esnext"
+    },
+    "moduleTypes": {
+      "bin": "esm"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental",
+    "require": ["universal-dotenv/register", "tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "jsx": "preserve",
+    "importHelpers": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
+    "incremental": true,
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["src", "bin/run.mjs"]
+}

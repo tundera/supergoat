@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "isolatedModules": false
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "require": ["universal-dotenv/register", "tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "isolatedModules": false
+  }
+}

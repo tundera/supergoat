@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "test-utils": ["./utils/test-utils"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["test"]
+}

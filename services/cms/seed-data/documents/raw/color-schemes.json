@@ -1,0 +1,212 @@
+[
+  {
+    "id": "ckuwyhzqd00003fva56fuhub0",
+    "createdAt": "2021-10-12T17:58:54.524Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#002D62",
+    "secondary": "#FDBB30"
+  },
+  {
+    "id": "ckuwyhzqo00073fva4unoxxmz",
+    "createdAt": "2021-10-12T17:58:54.563Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#0C2340",
+    "secondary": "#236192"
+  },
+  {
+    "id": "ckuwyhzqs00143fvaykh2j0cp",
+    "createdAt": "2021-10-12T17:58:54.565Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#CE1141",
+    "secondary": "#000000"
+  },
+  {
+    "id": "ckuwyhzqv00213fva5hppat25",
+    "createdAt": "2021-10-12T17:58:54.567Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#CE1141",
+    "secondary": "#000000"
+  },
+  {
+    "id": "ckuwyhzqy00283fva2ikqvn0l",
+    "createdAt": "2021-10-12T17:58:54.568Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#C4CED4",
+    "secondary": "#000000"
+  },
+  {
+    "id": "ckuwyhzr100353fvajr5ro6uh",
+    "createdAt": "2021-10-12T17:58:54.570Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#5A2D81",
+    "secondary": "#63727A"
+  },
+  {
+    "id": "ckuwyhzr600423fvay5455122",
+    "createdAt": "2021-10-12T17:58:54.571Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#002B5C",
+    "secondary": "#F9A01B"
+  },
+  {
+    "id": "ckuwyhzra00493fva0mcibiwr",
+    "createdAt": "2021-10-12T17:58:54.573Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#98002E",
+    "secondary": "#000000"
+  },
+  {
+    "id": "ckuwyhzre00563fvaslg6hcjl",
+    "createdAt": "2021-10-12T17:58:54.574Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#E03A3E",
+    "secondary": "#000000"
+  },
+  {
+    "id": "ckuwyhzs100633fvam249lerq",
+    "createdAt": "2021-10-12T17:58:54.575Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#1D1160",
+    "secondary": "#E56020"
+  },
+  {
+    "id": "ckuwyhzs500703fva78d1ukd0",
+    "createdAt": "2021-10-12T17:58:54.576Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#5D76A9",
+    "secondary": "#12173F"
+  },
+  {
+    "id": "ckuwyhzsb00773fvahu2qxmr0",
+    "createdAt": "2021-10-12T17:58:54.578Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#00471B",
+    "secondary": "#EEE1C6"
+  },
+  {
+    "id": "ckuwyhzse00843fvau054crjl",
+    "createdAt": "2021-10-12T17:58:54.579Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#007AC1",
+    "secondary": "#EF3B24"
+  },
+  {
+    "id": "ckuwyhzsi00913fvaykusxjvq",
+    "createdAt": "2021-10-12T17:58:54.580Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#006BB6",
+    "secondary": "#D50032"
+  },
+  {
+    "id": "ckuwyhzsm00983fvarj4rtys4",
+    "createdAt": "2021-10-12T17:58:54.582Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#006BB6",
+    "secondary": "#F58426"
+  },
+  {
+    "id": "ckuwyhzt901053fvag3tpcmn1",
+    "createdAt": "2021-10-12T17:58:54.583Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#0C2340",
+    "secondary": "#C8102E"
+  },
+  {
+    "id": "ckuwyhztc01123fvan2md5hc9",
+    "createdAt": "2021-10-12T17:58:54.585Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#C8102E",
+    "secondary": "#1D428A"
+  },
+  {
+    "id": "ckuwyhztf01193fva6ol4r9u1",
+    "createdAt": "2021-10-12T17:58:54.586Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#552583",
+    "secondary": "#FDB927"
+  },
+  {
+    "id": "ckuwyhzth01263fva0o9cnia2",
+    "createdAt": "2021-10-12T17:58:54.587Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#0077C0",
+    "secondary": "#C4CED4"
+  },
+  {
+    "id": "ckuwyhztk01333fvaa0aqyg52",
+    "createdAt": "2021-10-12T17:58:54.588Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#1D428A",
+    "secondary": "#FFC72C"
+  },
+  {
+    "id": "ckuwyhztm01403fvak3dpcnur",
+    "createdAt": "2021-10-12T17:58:54.590Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#0E2240",
+    "secondary": "#FEC524"
+  },
+  {
+    "id": "ckuwyhztp01473fvale9die59",
+    "createdAt": "2021-10-12T17:58:54.591Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#C8102E",
+    "secondary": "#1D42BA"
+  },
+  {
+    "id": "ckuwyhztr01543fvagjqdvt4r",
+    "createdAt": "2021-10-12T17:58:54.592Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#CE1141",
+    "secondary": "#000000"
+  },
+  {
+    "id": "ckuwyhztt01613fvaud60eatp",
+    "createdAt": "2021-10-12T17:58:54.593Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#00538C",
+    "secondary": "#B8C4CA"
+  },
+  {
+    "id": "ckuwyhzty01683fvab1yjttxe",
+    "createdAt": "2021-10-12T17:58:54.594Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#000000",
+    "secondary": "#FFFFFF"
+  },
+  {
+    "id": "ckuwyhzu101753fva19ns5csr",
+    "createdAt": "2021-10-12T17:58:54.596Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#E03A3E",
+    "secondary": "#C1D32F"
+  },
+  {
+    "id": "ckuwyhzu401823fvakrwe25tk",
+    "createdAt": "2021-10-12T17:58:54.597Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#007A33",
+    "secondary": "#BA9653"
+  },
+  {
+    "id": "ckuwyhzur01893fvaq7sxs2ls",
+    "createdAt": "2021-10-12T17:58:54.598Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#860038",
+    "secondary": "#041E42"
+  },
+  {
+    "id": "ckuwyhzuv01963fvap4u0zr0z",
+    "createdAt": "2021-10-12T17:58:54.599Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#1D1160",
+    "secondary": "#00788C"
+  },
+  {
+    "id": "ckuwyhzuy02033fvayy4qs1pi",
+    "createdAt": "2021-10-12T17:58:54.600Z",
+    "updatedAt": "2021-10-14T12:00:00.000Z",
+    "primary": "#002B5C",
+    "secondary": "#E31837"
+  }
+]

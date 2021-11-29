@@ -1,0 +1,32 @@
+# Docker related
+.dockerignore
+Dockerfile
+docker-compose.override.yml
+docker
+
+# Dot files (.env, .git, ...)
+.*
+!.pnp.js
+!.yarnrc.yml
+!.yarn/plugins
+!.yarn/releases
+
+# Log files
+logs
+*.log
+
+# Temp files
+tmp
+*.tmp
+
+# Deps directories
+**/node_modules
+
+# Build directories
+**/.next
+**/.keystone
+**/dist
+**/build
+
+# Other resources
+README.md

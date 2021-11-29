@@ -1,0 +1,22 @@
+schema: schema.gql
+documents:
+  - 'src/lib/graphql/operations/**/*.ts'
+  - 'src/lib/graphql/fragments/**/*.ts'
+generates:
+  src/services/graphql/generated/codegen.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+    config:
+      contextType: src/services/graphql/context#Context
+      maybeValue: 'T extends PromiseLike<infer U> ? Promise<U | null> : T | null'
+      useTypeImports: true
+
+  src/services/graphql/generated/hooks.ts:
+    preset: import-types
+    presetConfig:
+      typesPath: src/services/graphql/generated/codegen
+    plugins:
+      - typescript-react-query
+    config:
+      fetcher: graphql-request

@@ -1,0 +1,35 @@
+{
+  "folders": [
+    {
+      "name": "⚙️ @monorepo/scripts",
+      "path": "scripts"
+    },
+    {
+      "name": "✨ supergoat",
+      "path": "."
+    },
+    {
+      "name": "nextjs-example",
+      "path": "examples/nextjs"
+    },
+    {
+      "name": "📦 @supergoat/cli",
+      "path": "packages/cli"
+    },
+    {
+      "name": "📦 @supergoat/components",
+      "path": "packages/components"
+    },
+    {
+      "name": "📦 @supergoat/theme",
+      "path": "packages/theme"
+    },
+    {
+      "name": "@supergoat/cms",
+      "path": "services/cms"
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "✨ supergoat/node_modules/typescript/lib"
+  }
+}

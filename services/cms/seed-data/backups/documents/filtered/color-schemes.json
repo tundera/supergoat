@@ -1,0 +1,182 @@
+[
+  {
+    "createdAt": "2021-10-12T09:58:54.524Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#002D62",
+    "secondary": "#FDBB30"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.563Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#0C2340",
+    "secondary": "#236192"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.565Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#CE1141",
+    "secondary": "#000000"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.567Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#CE1141",
+    "secondary": "#000000"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.568Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#C4CED4",
+    "secondary": "#000000"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.570Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#5A2D81",
+    "secondary": "#63727A"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.571Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#002B5C",
+    "secondary": "#F9A01B"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.573Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#98002E",
+    "secondary": "#000000"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.574Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#E03A3E",
+    "secondary": "#000000"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.575Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#1D1160",
+    "secondary": "#E56020"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.576Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#5D76A9",
+    "secondary": "#12173F"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.578Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#00471B",
+    "secondary": "#EEE1C6"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.579Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#007AC1",
+    "secondary": "#EF3B24"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.580Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#006BB6",
+    "secondary": "#D50032"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.582Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#006BB6",
+    "secondary": "#F58426"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.583Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#0C2340",
+    "secondary": "#C8102E"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.585Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#C8102E",
+    "secondary": "#1D428A"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.586Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#552583",
+    "secondary": "#FDB927"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.587Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#0077C0",
+    "secondary": "#C4CED4"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.588Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#1D428A",
+    "secondary": "#FFC72C"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.590Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#0E2240",
+    "secondary": "#FEC524"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.591Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#C8102E",
+    "secondary": "#1D42BA"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.592Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#CE1141",
+    "secondary": "#000000"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.593Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#00538C",
+    "secondary": "#B8C4CA"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.594Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#000000",
+    "secondary": "#FFFFFF"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.596Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#E03A3E",
+    "secondary": "#C1D32F"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.597Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#007A33",
+    "secondary": "#BA9653"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.598Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#860038",
+    "secondary": "#041E42"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.599Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#1D1160",
+    "secondary": "#00788C"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:54.600Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "primary": "#002B5C",
+    "secondary": "#E31837"
+  }
+]

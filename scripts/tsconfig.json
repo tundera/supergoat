@@ -1,0 +1,27 @@
+{
+  "extends": "../tsconfig.json",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental",
+    "require": ["universal-dotenv/register", "tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.js"]
+}

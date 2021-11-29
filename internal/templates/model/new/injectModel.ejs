@@ -1,0 +1,14 @@
+---
+inject: true
+to: <%= h.prependModelsPath("db/schema.prisma") %>
+append: true
+skip_if: "model <%= h.changeCase.pascal(name) %>"
+sh: "yarn --cwd <%= h.modelsPath %> prisma format"
+---
+<% model = h.changeCase.pascal(name) -%>
+/// <%= model %> description
+model <%= model %> {
+  id            String   @id
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime
+}

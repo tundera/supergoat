@@ -1,0 +1,9 @@
+.yarn
+node_modules
+dist
+build
+.next
+**/templates
+**/template
+**/node_modules
+**/generated

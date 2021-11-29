@@ -1,0 +1,7 @@
+---
+inject: true
+to: <%= h.prependComponentsPath('src/index.ts') %>
+append: true
+skip_if: export * from './<%= h.changeCase.pascal(name) %>'
+---
+export * from './<%= h.changeCase.pascal(name) %>'

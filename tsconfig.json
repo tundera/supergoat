@@ -1,0 +1,29 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "commonjs"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental",
+    "require": ["universal-dotenv/register", "tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "jsx": "react-jsx",
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "exclude": ["node_modules", ".yarn", "*.test.ts", "*.test.tsx", "**/generated"]
+}

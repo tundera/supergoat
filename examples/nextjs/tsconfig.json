@@ -1,0 +1,40 @@
+{
+  "extends": "../../tsconfig.json",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "pretty": true,
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental",
+    "require": ["universal-dotenv/register", "tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
+    "incremental": true,
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["node", "react/next", "react-dom/next"],
+    "typeRoots": ["node_modules/@types", "types"],
+    "jsx": "preserve",
+    "plugins": [{ "name": "nexus/typescript-language-service" }],
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.cjs", "**/*.js"]
+}

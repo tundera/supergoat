@@ -1,0 +1,14 @@
+.yarn
+**/node_modules
+
+**/build
+**/dist
+**/tmp
+**/.next
+**/.cache
+**/template
+**/templates
+
+.ultra.cache.json
+
+**/tsconfig.tsbuildinfo

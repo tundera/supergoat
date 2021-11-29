@@ -1,0 +1,21 @@
+---
+to: <%= h.prependComponentsPath(`src/${h.changeCase.pascal(name)}/${h.changeCase.pascal(name)}.stories.tsx`) %>
+---
+<% component = h.changeCase.pascal(name) -%>
+import { Story, Meta } from '@storybook/react'
+
+import { <%= component %>, <%= component %>Props } from './<%= component %>'
+// import * as DependentStories from './Dependent.stories'
+
+export default {
+  title: '<%= component %>',
+  component: <%= component %>,
+} as Meta
+
+const Template: Story<<%= component %>Props> = (args) => <<%= component %> {...args} />
+
+export const Primary: Story = Template.bind({})
+
+Primary.args = {
+  //   ...DependentStories.Primary.args,
+}

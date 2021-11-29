@@ -1,0 +1,14 @@
+name: suspense-demo
+schema: ./schema.gql
+scopes:
+  AUTHENTICATED: 'cookie:session.sig|header:authorization'
+keyFields:
+  types: {}
+rules:
+  - types:
+      - Query
+    maxAge: 900
+    swr: 900
+    scope: AUTHENTICATED
+    description: Cache everything (default)
+originUrl: https://suspense-demo.vercel.app/api/graphql

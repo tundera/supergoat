@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next Build",
+      "type": "pwa-node",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeArgs": ["-r", "ts-node/register", "-r", "tsconfig-paths/register"],
+      "args": ["${workspaceFolder}/scripts/build.ts"],
+      "sourceMaps": true
+    },
+
+    {
+      "name": "Launch Node (Next.js Example)",
+      "type": "pwa-node",
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "port": 9229
+    },
+    {
+      "name": "Launch Chrome (Next.js Example)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "webpack:///./*": "${workspaceRoot}/examples/nextjs/*"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug Fullstack (Next.js Example)",
+      "configurations": ["Launch Node (Next.js Example)", "Launch Chrome (Next.js Example)"]
+    }
+  ]
+}

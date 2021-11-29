@@ -1,0 +1,104 @@
+{
+  "name": "@supergoat/components",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://github.com/tundera/monorepo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tundera/monorepo",
+    "directory": "packages/components"
+  },
+  "author": {
+    "name": "Philip Johnston",
+    "url": "https://github.com/tundera",
+    "email": "tunderadev@gmail.com"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": {
+      "require": "./dist/*.js",
+      "import": "./dist/*.mjs"
+    }
+  },
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf dist .ultra.cache.json",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "test": "run-s 'test:*'",
+    "test:unit": "echo \"No tests yet\"",
+    "build": "yarn clean && concurrently -n \"VITE,TSC\" -c \"blue,green\" \"yarn:build:src\" \"yarn:build:types\"",
+    "watch": "yarn clean && concurrently -n \"VITE,TSC\" -c \"blue,green\" \"yarn:watch:src\" \"yarn:watch:types\"",
+    "build:src": "vite build",
+    "watch:src": "vite build --watch",
+    "build:types": "tsc",
+    "watch:types": "tsc --watch"
+  },
+  "dependencies": {
+    "@supergoat/theme": "0.1.0"
+  },
+  "devDependencies": {
+    "@chakra-ui/icons": "1.0.16",
+    "@chakra-ui/react": "1.6.10",
+    "@emotion/react": "11.5.0",
+    "@emotion/styled": "11.3.0",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "13.0.0-alpha.1",
+    "@testing-library/react-hooks": "8.0.0-alpha.1",
+    "@types/concurrently": "6.3.0",
+    "@types/node": "16.11.1",
+    "@types/react": "17.0.30",
+    "@types/react-dom": "17.0.9",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "babel-plugin-module-resolver": "4.1.0",
+    "camelcase": "6.2.0",
+    "concurrently": "6.3.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-jest": "24.7.0",
+    "eslint-plugin-jest-dom": "3.9.2",
+    "eslint-plugin-jest-formatting": "3.0.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.26.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-testing-library": "4.12.4",
+    "framer-motion": "4.1.17",
+    "jest": "27.3.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.4.1",
+    "react": "npm:react@next",
+    "react-dom": "npm:react-dom@next",
+    "react-test-renderer": "npm:react-test-renderer@next",
+    "rimraf": "3.0.2",
+    "shell-quote": "1.7.2",
+    "ts-jest": "27.0.7",
+    "typescript": "4.4.4",
+    "vite": "2.6.10",
+    "vite-react-jsx": "1.1.2",
+    "vite-tsconfig-paths": "3.3.17"
+  },
+  "peerDependencies": {
+    "@chakra-ui/icons": "*",
+    "@chakra-ui/react": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "framer-motion": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}

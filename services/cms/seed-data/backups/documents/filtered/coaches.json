@@ -1,0 +1,1946 @@
+[
+  {
+    "createdAt": "2021-10-12T09:58:58.201Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jerome Allen",
+    "handle": "1627590",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.206Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Art Horne",
+    "handle": "1628765",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.210Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike D'Antoni",
+    "handle": "1783",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.214Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Adam Harrington",
+    "handle": "1627876",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.218Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jordan Ott",
+    "handle": "1627877",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.223Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Tiago Splitter",
+    "handle": "201168",
+    "type": "Assistant Coach for Player Development",
+    "isAssistant": "12"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.231Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "James Borrego",
+    "handle": "202435",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.236Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jay Triano",
+    "handle": "2472",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.241Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Joe Sharpe",
+    "handle": "101278",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.245Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Billy Donovan",
+    "handle": "1627310",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.254Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Wilhelm",
+    "handle": "2511",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.367Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jarron Collins",
+    "handle": "204239",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.258Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "John Bryant",
+    "handle": "202743",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.272Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "JB Bickerstaff",
+    "handle": "2794",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.276Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Antonio Lang",
+    "handle": "204238",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.280Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Gerrity",
+    "handle": "202565",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.291Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Zach Guthrie",
+    "handle": "1628785",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.295Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Casey Smith",
+    "handle": "2868",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.299Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dionne Calhoun",
+    "handle": "2871",
+    "type": "Assistant Trainer",
+    "isAssistant": "4"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.262Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Nate Bjorkgren",
+    "handle": "201765",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.303Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Michael Malone",
+    "handle": "2610",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.307Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Bob Weiss",
+    "handle": "203165",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.311Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Ryan Bowen",
+    "handle": "203391",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.323Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dwane Casey",
+    "handle": "1335",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.329Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Tim Grgurich",
+    "handle": "1336",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.333Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Tim Hardaway",
+    "handle": "204230",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.342Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Ron Adams",
+    "handle": "1796",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.346Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Bruce Fraser",
+    "handle": "204260",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.351Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "John Lucas",
+    "handle": "1786",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.355Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Rick Higgins",
+    "handle": "1630277",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.359Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Keith Jones",
+    "handle": "1257",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.363Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Greg Foster",
+    "handle": "203785",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.384Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Frank Vogel",
+    "handle": "2345",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.392Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Taylor Jenkins",
+    "handle": "203624",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.396Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "David McClure",
+    "handle": "1628234",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.400Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Eric Oetter",
+    "handle": "1630018",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.404Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Erik Spoelstra",
+    "handle": "1787",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.408Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Bob Beyer",
+    "handle": "2630",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.412Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Roger Hinds",
+    "handle": "1370",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.416Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "David Akinyooye",
+    "handle": "202859",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.420Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dave Bliss",
+    "handle": "1629758",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.433Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Randy Ayers",
+    "handle": "1865",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.437Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Lindsey Harding",
+    "handle": "201046",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.442Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Wes Unseld",
+    "handle": "1018",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.429Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Brad Stevens",
+    "handle": "203535",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.197Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Joe Mazzulla",
+    "handle": "1628210",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.250Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Pete Myers",
+    "handle": "2394",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.267Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chris Fleming",
+    "handle": "1627604",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.284Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Lindsay Gottlieb",
+    "handle": "1629710",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.337Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jim Scholler",
+    "handle": "201678",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.468Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Stephen Spiro",
+    "handle": "204286",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.472Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jenny Coucek",
+    "handle": "1630496",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.477Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Charles Klask",
+    "handle": "202894",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.481Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dan Shimensky",
+    "handle": "1627167",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.484Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Sean Sweeney",
+    "handle": "204085",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.489Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Steve Kerr",
+    "handle": "204005",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.501Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "DeSagana Diop",
+    "handle": "2205",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.513Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Rick Carlisle",
+    "handle": "1320",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.517Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Lloyd Pierce",
+    "handle": "202603",
+    "type": "Lead Assistant Coach",
+    "isAssistant": "13"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.526Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Tyronn Lue",
+    "handle": "202978",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.530Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Miles Simon",
+    "handle": "1628472",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.534Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Quinton Crawford",
+    "handle": "1629748",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.539Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Blake Ahearn",
+    "handle": "201336",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.544Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Caron Butler",
+    "handle": "2406",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.552Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Pat St. Andrews",
+    "handle": "1628784",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.557Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Joseph Blair",
+    "handle": "974",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.562Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Teresa Weatherspoon",
+    "handle": "100101",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.570Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Wilks",
+    "handle": "2366",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.575Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Donnie Strack",
+    "handle": "1629423",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.579Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Nate Tibbetts",
+    "handle": "202891",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.583Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Doc Rivers",
+    "handle": "1941",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.599Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Brian Randle",
+    "handle": "1629427",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.603Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "David Crewe",
+    "handle": "1629410",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.607Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chauncey Billups",
+    "handle": "1497",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.611Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Scott Brooks",
+    "handle": "2623",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.627Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Luke Walton",
+    "handle": "204012",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.632Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Stacey Augmon",
+    "handle": "278",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.636Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Rex Kalamian",
+    "handle": "1672",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.641Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Bobby Jackson",
+    "handle": "202985",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.649Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Becky Hammon",
+    "handle": "204019",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.653Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mitch Johnson",
+    "handle": "1628188",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.658Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Adrian Griffin",
+    "handle": "201878",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.662Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dell Demps",
+    "handle": "725",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.671Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Keyon Dooling",
+    "handle": "2039",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.695Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Tony Brown",
+    "handle": "1655",
+    "type": "Associate Head Coach",
+    "isAssistant": "9"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.700Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Corey Gaines",
+    "handle": "200744",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.704Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Robert Pack",
+    "handle": "202105",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.708Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Longabardi",
+    "handle": "201665",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.713Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jarell Christian",
+    "handle": "1627328",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.731Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dennis Williams",
+    "handle": "201666",
+    "type": "Assistant Trainer",
+    "isAssistant": "4"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.388Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Lionel Hollins",
+    "handle": "1353",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.424Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jamahl Mosley",
+    "handle": "202427",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.735Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Joshua Longstaff",
+    "handle": "204031",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.740Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Micah Nori",
+    "handle": "202101",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.745Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Brown",
+    "handle": "1658",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.749Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Calbert Cheaney",
+    "handle": "384",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.758Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Larry Drew",
+    "handle": "1271",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.781Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jasen Powell",
+    "handle": "2010",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.789Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Phil Handy",
+    "handle": "203597",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.793Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Nina Hsieh",
+    "handle": "201766",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.798Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Scoonie Penn",
+    "handle": "2086",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.802Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Vitaly Potapenko",
+    "handle": "202433",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.773Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Stan Van Gundy",
+    "handle": "1277",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.806Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Darko Rajakovic",
+    "handle": "204011",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.810Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Malik Allen",
+    "handle": "204229",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.817Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jay Sabol",
+    "handle": "1281",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.825Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Vin Baker",
+    "handle": "452",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.852Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Pablo Prigioni",
+    "handle": "203143",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.857Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Kevin Burleson",
+    "handle": "1628772",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.861Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Gregg Farnam",
+    "handle": "2146",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.865Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Tom Maystadt",
+    "handle": "1630382",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.873Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Todd Campbell",
+    "handle": "1629432",
+    "type": "Assistant Trainer",
+    "isAssistant": "4"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.877Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Tom Thibodeau",
+    "handle": "1301",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.885Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Kenny Payne",
+    "handle": "1630161",
+    "type": "Lead Assistant Coach",
+    "isAssistant": "13"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.889Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Woodson",
+    "handle": "1285",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.909Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mark Daigneault",
+    "handle": "1627327",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.869Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Steve Clifford",
+    "handle": "2168",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.913Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Ty Corbin",
+    "handle": "2821",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.917Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Steve Hetzel",
+    "handle": "204004",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.922Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Pat Delany",
+    "handle": "204013",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.926Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Bruce Kreutzer",
+    "handle": "1627164",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.930Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Batiste",
+    "handle": "1627341",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.939Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Monty Williams",
+    "handle": "101273",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.947Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jannero Pargo",
+    "handle": "2457",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.952Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dale Osbourne",
+    "handle": "203170",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.957Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Joe Resendez",
+    "handle": "203167",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.961Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Gregg Popovich",
+    "handle": "873",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.965Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Will Sevening",
+    "handle": "1264",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.969Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Nick Nurse",
+    "handle": "203606",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.973Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jama Mahlalela",
+    "handle": "203604",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.981Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Scott McCullough",
+    "handle": "1356",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.986Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Lamar Skeeter",
+    "handle": "1630281",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.990Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dan Liburd",
+    "handle": "1629412",
+    "type": "Strength and Conditioning Coach",
+    "isAssistant": "5"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.998Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Steve Nash",
+    "handle": "959",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.007Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Darrell Armstrong",
+    "handle": "202599",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.176Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Melvin Hunt",
+    "handle": "2384",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.183Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Matt Hill",
+    "handle": "1628770",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.187Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Scottie Parker",
+    "handle": "1628764",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.192Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "John Dusel",
+    "handle": "1630017",
+    "type": "Assistant Trainer",
+    "isAssistant": "4"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.227Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Sebastien Poirier",
+    "handle": "203550",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.451Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Marlon Garnett",
+    "handle": "1831",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.456Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Ime Udoka",
+    "handle": "203152",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.587Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "David Joerger",
+    "handle": "201220",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.591Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Popeye Jones",
+    "handle": "202434",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.595Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Brian Adams",
+    "handle": "1629169",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.717Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chris Jent",
+    "handle": "2607",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.726Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Royal Ivey",
+    "handle": "1628179",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.994Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Nate McMillan",
+    "handle": "1778",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.002Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Will Hardy",
+    "handle": "1628181",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.011Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Brandon Bailey",
+    "handle": "1628807",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.015Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chad Iske",
+    "handle": "202602",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.019Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "David Vanterpool",
+    "handle": "203150",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.024Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dan Geriot",
+    "handle": "1629110",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.028Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Will Weaver",
+    "handle": "1627657",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.093Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jay Larranaga",
+    "handle": "203168",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.046Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chris DeMarco",
+    "handle": "1627666",
+    "type": "Assistant Coach for Player Development",
+    "isAssistant": "12"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.050Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Sonia Raman",
+    "handle": "1630290",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.055Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Sidney Lowe",
+    "handle": "1226",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.060Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Kaleb Canales",
+    "handle": "201696",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.068Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dan Craig",
+    "handle": "203599",
+    "type": "Associate Head Coach",
+    "isAssistant": "9"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.073Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Rex Walters",
+    "handle": "777",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.081Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chris Quinn",
+    "handle": "204226",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.089Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Bryan Gates",
+    "handle": "202109",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.097Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Zach Peterson",
+    "handle": "1630455",
+    "type": "Assistant Coach for Player Development",
+    "isAssistant": "12"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.105Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Fred Vinson",
+    "handle": "201676",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.113Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Vin Bhavnani",
+    "handle": "1628178",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.118Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mark Bryant",
+    "handle": "101173",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.126Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dylan Murphy",
+    "handle": "1627336",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.138Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Will Scott",
+    "handle": "1627331",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.160Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Quin Snyder",
+    "handle": "202439",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.169Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Darius Songaila",
+    "handle": "2443",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.178Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jon Goodwillie",
+    "handle": "1629821",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.182Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "David Atkins",
+    "handle": "1630364",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.186Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chip Engelland",
+    "handle": "2887",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.190Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jeff Watkinson",
+    "handle": "1626233",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.194Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Fab Flournoy",
+    "handle": "1629761",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.198Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Terpstra",
+    "handle": "203601",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.202Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Eric Waters",
+    "handle": "101203",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.288Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Greg Buckner",
+    "handle": "203811",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.460Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Scott Morrison",
+    "handle": "1627329",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.464Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Ryan Forehan-Kelly",
+    "handle": "1628803",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.505Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jeff Hornacek",
+    "handle": "202898",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.548Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Octavio De La Grana",
+    "handle": "201682",
+    "type": "Assistant Coach for Player Development",
+    "isAssistant": "12"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.615Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jim Moran",
+    "handle": "1627471",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.667Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Wells",
+    "handle": "1997",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.722Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jacque Vaughn",
+    "handle": "202588",
+    "type": "Lead Assistant Coach",
+    "isAssistant": "13"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.813Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Terry Stotts",
+    "handle": "1337",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.785Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Penberthy",
+    "handle": "2130",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.821Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Budenholzer",
+    "handle": "1371",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.881Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Johnnie Bryant",
+    "handle": "204008",
+    "type": "Associate Head Coach",
+    "isAssistant": "9"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.943Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Kevin Young",
+    "handle": "202111",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.977Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Sergio Scariolo",
+    "handle": "1629144",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.033Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Maurice Cheeks",
+    "handle": "1312",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.042Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jason Kidd",
+    "handle": "203456",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.085Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Brad Jones",
+    "handle": "203797",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.147Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Alvin Gentry",
+    "handle": "1243",
+    "type": "Associate Head Coach",
+    "isAssistant": "9"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.206Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dean Oliver",
+    "handle": "1630363",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.375Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Weinar",
+    "handle": "1628782",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.315Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jordi Fernandez",
+    "handle": "203759",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.496Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Drew Yoder",
+    "handle": "1628227",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.319Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "David Adelman",
+    "handle": "203600",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.379Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Josh Corbeil",
+    "handle": "101200",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.371Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Tyler Marsh",
+    "handle": "203764",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.679Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Bryan Bailey",
+    "handle": "1628216",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.509Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jason Biles",
+    "handle": "202431",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.493Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Kenny Atkinson",
+    "handle": "201690",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.566Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Casey Hill",
+    "handle": "203243",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.623Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Geoff Clark",
+    "handle": "101272",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.522Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jenny Boucek",
+    "handle": "100616",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.675Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Alex Jensen",
+    "handle": "204007",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.619Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "John McCullough",
+    "handle": "1628240",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.687Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Sergi Oliva",
+    "handle": "1630282",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.645Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Roy Rana",
+    "handle": "1629711",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.753Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Carl Eaton",
+    "handle": "201675",
+    "type": "Assistant Trainer",
+    "isAssistant": "4"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.683Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Vince Legarza",
+    "handle": "1630280",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.897Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Darren Erman",
+    "handle": "203375",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.691Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Brian Zettler",
+    "handle": "101277",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.893Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Andy Greer",
+    "handle": "2519",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.763Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Brendan O'Connor",
+    "handle": "2814",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.768Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Roy Rogers",
+    "handle": "201689",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.777Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jeremy Castleberry",
+    "handle": "1630361",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.830Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chad Forcier",
+    "handle": "2649",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.834Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Darvin Ham",
+    "handle": "203005",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.838Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Ben Sullivan",
+    "handle": "204224",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.843Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Charles Lee",
+    "handle": "204225",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.847Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Scott Faust",
+    "handle": "201692",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.901Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Larry Greer",
+    "handle": "1629450",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.905Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Anthony Goenaga",
+    "handle": "101269",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.934Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Ernest Eugene",
+    "handle": "2720",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.037Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "John Beckett",
+    "handle": "1630491",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.064Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Stephen Silas",
+    "handle": "2152",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.077Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Ronald Nored",
+    "handle": "203753",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.101Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Chris Finch",
+    "handle": "202896",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.109Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Willie Green",
+    "handle": "1628228",
+    "type": "Head Coach",
+    "isAssistant": "1"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.122Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Mike Miller",
+    "handle": "203758",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.130Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Kameron Woods",
+    "handle": "1627380",
+    "type": "Assistant Coach for Player Development",
+    "isAssistant": "12"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.155Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jonah Herscu",
+    "handle": "1627564",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.165Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jesse Mermuys",
+    "handle": "203605",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.174Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Rico Hines",
+    "handle": "1627971",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.134Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Sam Cassell",
+    "handle": "202108",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.143Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Dan Burke",
+    "handle": "2515",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:59.151Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Kevin Johnson",
+    "handle": "1360",
+    "type": "Trainer",
+    "isAssistant": "3"
+  },
+  {
+    "createdAt": "2021-10-12T09:58:58.446Z",
+    "updatedAt": "2021-10-14T04:00:00.000Z",
+    "name": "Jamie Young",
+    "handle": "202979",
+    "type": "Assistant Coach",
+    "isAssistant": "2"
+  }
+]

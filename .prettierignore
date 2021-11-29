@@ -1,0 +1,7 @@
+.yarn
+**/.next/**
+**/dist/**
+**/tmp/**
+
+services/cms/schema.graphql
+services/cms/schema.prisma

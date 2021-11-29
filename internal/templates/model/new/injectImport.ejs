@@ -1,0 +1,7 @@
+---
+inject: true
+to: <%= h.prependModelsPath('src/modules/index.ts') %>
+append: true
+skip_if: export * from './<%= name %>'
+---
+export * from './<%= name %>'

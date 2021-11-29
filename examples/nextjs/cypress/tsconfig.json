@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["cypress", "node", "@testing-library/cypress"],
+    "isolatedModules": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/test-utils": ["../config/jest/test-utils"],
+      "@/components/*": ["./components/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
+}

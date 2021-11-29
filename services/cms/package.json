@@ -1,0 +1,43 @@
+{
+  "name": "@supergoat/cms",
+  "version": "0.1.0",
+  "private": true,
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
+  "scripts": {
+    "dev": "NODE_ENV='development' keystone-next dev",
+    "clean": "rimraf .keystone tsconfig.tsbuildinfo",
+    "seed": "NODE_ENV='development' keystone-next dev --seed-data",
+    "start": "NODE_ENV='production' keystone-next start",
+    "build": "NODE_ENV='production' keystone-next build",
+    "studio": "keystone-next prisma studio",
+    "postinstall": "keystone-next postinstall"
+  },
+  "dependencies": {
+    "@keystone-next/auth": "34.0.0",
+    "@keystone-next/fields-document": "11.0.0",
+    "@keystone-next/keystone": "26.1.1",
+    "@prisma/client": "3.2.1",
+    "@swc/core": "1.2.99",
+    "@swc/helpers": "0.2.13",
+    "@types/node": "16.11.1",
+    "execa": "5.1.1",
+    "listr": "0.14.3",
+    "tsconfig-paths": "3.11.0",
+    "tsm": "2.1.2",
+    "universal-dotenv": "3.2.6"
+  },
+  "devDependencies": {
+    "@types/listr": "0.14.4",
+    "@types/pg": "8.6.1",
+    "change-case": "4.1.2",
+    "pg": "8.7.1",
+    "prettier": "2.4.1",
+    "prisma": "3.2.1",
+    "prisma-repl": "1.2.0",
+    "rimraf": "3.0.2",
+    "ts-node": "10.3.0",
+    "typescript": "4.4.4"
+  }
+}

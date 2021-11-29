@@ -1,0 +1,147 @@
+{
+  "name": "@supergoat/cli",
+  "description": "Monorepo CLI",
+  "version": "0.1.0",
+  "author": {
+    "name": "Philip Johnston",
+    "email": "tunderadev@gmail.com",
+    "url": "https://github.com/tundera"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tundera/monorepo.git",
+    "directory": "packages/cli"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": {
+      "require": "./dist/*.js",
+      "import": "./dist/*.mjs"
+    }
+  },
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "bin",
+    "dist",
+    "oclif.manifest.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "monorepo",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-not-found",
+      "@oclif/plugin-update",
+      "@oclif/plugin-autocomplete"
+    ],
+    "hooks": {
+      "init": []
+    }
+  },
+  "bin": {
+    "mono": "./bin/run.mjs",
+    "monorepo": "./bin/run.mjs"
+  },
+  "scripts": {
+    "clean": "rimraf dist .ultra.cache.json",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "test": "run-s 'test:*'",
+    "test:unit": "echo \"No tests yet\"",
+    "build": "echo \"No build command yet. See package.json script build:temp for deferred command.\"",
+    "watch": "echo \"No watch command yet. See packages.json script watch:temp for deferred command.\"",
+    "build:temp": "yarn clean && concurrently -n \"VITE,TSC\" -c \"blue,green\" \"yarn:build:src\" \"yarn:build:types\"",
+    "watch:temp": "yarn clean && concurrently -n \"VITE,TSC\" -c \"blue,green\" \"yarn:watch:src\" \"yarn:watch:types\"",
+    "build:src": "vite build",
+    "watch:src": "vite build --watch",
+    "build:types": "tsc",
+    "watch:types": "tsc --watch",
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "dependencies": {
+    "@monorepo-utils/package-utils": "2.4.4",
+    "@oclif/command": "1.8.0",
+    "@oclif/config": "1.17.0",
+    "@oclif/core": "1.0.2",
+    "@oclif/plugin-autocomplete": "0.3.0",
+    "@oclif/plugin-help": "3.2.3",
+    "@oclif/plugin-not-found": "1.2.4",
+    "@oclif/plugin-plugins": "1.10.1",
+    "@oclif/plugin-update": "1.5.0",
+    "chalk": "4.1.2",
+    "cli-ux": "5.6.3",
+    "commander": "^8.2.0",
+    "cross-spawn": "7.0.3",
+    "esbuild-register": "3.0.0",
+    "eslint-plugin-mdx": "1.15.1",
+    "execa": "5.1.1",
+    "find-yarn-workspace-root": "2.0.0",
+    "fs-extra": "10.0.0",
+    "jest": "27.3.0",
+    "listr": "0.14.3",
+    "oclif": "2.0.0-main.8",
+    "ora": "6.0.1",
+    "p-retry": "4.6.1",
+    "prettier": "2.4.1",
+    "ts-node": "10.3.0",
+    "tsconfig-paths": "3.11.0",
+    "tslib": "2.3.1",
+    "update-notifier": "5.1.0",
+    "yarn-or-npm": "3.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "7.15.8",
+    "@oclif/dev-cli": "1.26.0",
+    "@oclif/test": "1.2.8",
+    "@testing-library/react": "13.0.0-alpha.1",
+    "@testing-library/react-hooks": "8.0.0-alpha.1",
+    "@types/chalk": "2.2.0",
+    "@types/concurrently": "6.3.0",
+    "@types/cross-spawn": "6.0.2",
+    "@types/fs-extra": "9.0.13",
+    "@types/jest": "27.0.2",
+    "@types/listr": "0.14.4",
+    "@types/node": "16.11.1",
+    "@types/react": "17.0.30",
+    "@types/react-dom": "17.0.9",
+    "@types/update-notifier": "5.1.0",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "concurrently": "6.3.0",
+    "eslint": "7.32.0",
+    "eslint-config-oclif": "4.0.0",
+    "eslint-config-oclif-typescript": "1.0.2",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.26.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "globby": "12.0.2",
+    "react": "npm:react@next",
+    "react-dom": "npm:react-dom@next",
+    "react-test-renderer": "npm:react-test-renderer@next",
+    "rimraf": "3.0.2",
+    "ts-jest": "27.0.7",
+    "typescript": "4.4.4",
+    "vite": "2.6.10",
+    "vite-react-jsx": "1.1.2",
+    "vite-tsconfig-paths": "3.3.17"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}
